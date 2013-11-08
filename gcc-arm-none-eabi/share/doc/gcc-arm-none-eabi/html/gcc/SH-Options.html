@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 1988, 1989, 1992, 1993, 1994, 1995, 1996, 1997,
+1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
+2010 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+Texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Using the GNU Compiler Collection (GCC): SH Options</title>
+
+<meta name="description" content="Using the GNU Compiler Collection (GCC): SH Options">
+<meta name="keywords" content="Using the GNU Compiler Collection (GCC): SH Options">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Option-Index.html#Option-Index" rel="index" title="Option Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Submodel-Options.html#Submodel-Options" rel="up" title="Submodel Options">
+<link href="Solaris-2-Options.html#Solaris-2-Options" rel="next" title="Solaris 2 Options">
+<link href="Score-Options.html#Score-Options" rel="prev" title="Score Options">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="SH-Options"></a>
+<div class="header">
+<p>
+Next: <a href="Solaris-2-Options.html#Solaris-2-Options" accesskey="n" rel="next">Solaris 2 Options</a>, Previous: <a href="Score-Options.html#Score-Options" accesskey="p" rel="prev">Score Options</a>, Up: <a href="Submodel-Options.html#Submodel-Options" accesskey="u" rel="up">Submodel Options</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html#Option-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="SH-Options-1"></a>
+<h4 class="subsection">3.17.38 SH Options</h4>
+
+<p>These &lsquo;<samp>-m</samp>&rsquo; options are defined for the SH implementations:
+</p>
+<dl compact="compact">
+<dt><code>-m1</code></dt>
+<dd><a name="index-m1"></a>
+<p>Generate code for the SH1.
+</p>
+</dd>
+<dt><code>-m2</code></dt>
+<dd><a name="index-m2"></a>
+<p>Generate code for the SH2.
+</p>
+</dd>
+<dt><code>-m2e</code></dt>
+<dd><p>Generate code for the SH2e.
+</p>
+</dd>
+<dt><code>-m2a-nofpu</code></dt>
+<dd><a name="index-m2a_002dnofpu"></a>
+<p>Generate code for the SH2a without FPU, or for a SH2a-FPU in such a way
+that the floating-point unit is not used.
+</p>
+</dd>
+<dt><code>-m2a-single-only</code></dt>
+<dd><a name="index-m2a_002dsingle_002donly"></a>
+<p>Generate code for the SH2a-FPU, in such a way that no double-precision
+floating-point operations are used.
+</p>
+</dd>
+<dt><code>-m2a-single</code></dt>
+<dd><a name="index-m2a_002dsingle"></a>
+<p>Generate code for the SH2a-FPU assuming the floating-point unit is in
+single-precision mode by default.
+</p>
+</dd>
+<dt><code>-m2a</code></dt>
+<dd><a name="index-m2a"></a>
+<p>Generate code for the SH2a-FPU assuming the floating-point unit is in
+double-precision mode by default.
+</p>
+</dd>
+<dt><code>-m3</code></dt>
+<dd><a name="index-m3"></a>
+<p>Generate code for the SH3.
+</p>
+</dd>
+<dt><code>-m3e</code></dt>
+<dd><a name="index-m3e"></a>
+<p>Generate code for the SH3e.
+</p>
+</dd>
+<dt><code>-m4-nofpu</code></dt>
+<dd><a name="index-m4_002dnofpu"></a>
+<p>Generate code for the SH4 without a floating-point unit.
+</p>
+</dd>
+<dt><code>-m4-single-only</code></dt>
+<dd><a name="index-m4_002dsingle_002donly"></a>
+<p>Generate code for the SH4 with a floating-point unit that only
+supports single-precision arithmetic.
+</p>
+</dd>
+<dt><code>-m4-single</code></dt>
+<dd><a name="index-m4_002dsingle"></a>
+<p>Generate code for the SH4 assuming the floating-point unit is in
+single-precision mode by default.
+</p>
+</dd>
+<dt><code>-m4</code></dt>
+<dd><a name="index-m4"></a>
+<p>Generate code for the SH4.
+</p>
+</dd>
+<dt><code>-m4a-nofpu</code></dt>
+<dd><a name="index-m4a_002dnofpu"></a>
+<p>Generate code for the SH4al-dsp, or for a SH4a in such a way that the
+floating-point unit is not used.
+</p>
+</dd>
+<dt><code>-m4a-single-only</code></dt>
+<dd><a name="index-m4a_002dsingle_002donly"></a>
+<p>Generate code for the SH4a, in such a way that no double-precision
+floating-point operations are used.
+</p>
+</dd>
+<dt><code>-m4a-single</code></dt>
+<dd><a name="index-m4a_002dsingle"></a>
+<p>Generate code for the SH4a assuming the floating-point unit is in
+single-precision mode by default.
+</p>
+</dd>
+<dt><code>-m4a</code></dt>
+<dd><a name="index-m4a"></a>
+<p>Generate code for the SH4a.
+</p>
+</dd>
+<dt><code>-m4al</code></dt>
+<dd><a name="index-m4al"></a>
+<p>Same as <samp>-m4a-nofpu</samp>, except that it implicitly passes
+<samp>-dsp</samp> to the assembler.  GCC doesn&rsquo;t generate any DSP
+instructions at the moment.
+</p>
+</dd>
+<dt><code>-mb</code></dt>
+<dd><a name="index-mb"></a>
+<p>Compile code for the processor in big-endian mode.
+</p>
+</dd>
+<dt><code>-ml</code></dt>
+<dd><a name="index-ml-1"></a>
+<p>Compile code for the processor in little-endian mode.
+</p>
+</dd>
+<dt><code>-mdalign</code></dt>
+<dd><a name="index-mdalign"></a>
+<p>Align doubles at 64-bit boundaries.  Note that this changes the calling
+conventions, and thus some functions from the standard C library will
+not work unless you recompile it first with <samp>-mdalign</samp>.
+</p>
+</dd>
+<dt><code>-mrelax</code></dt>
+<dd><a name="index-mrelax-4"></a>
+<p>Shorten some address references at link time, when possible; uses the
+linker option <samp>-relax</samp>.
+</p>
+</dd>
+<dt><code>-mbigtable</code></dt>
+<dd><a name="index-mbigtable"></a>
+<p>Use 32-bit offsets in <code>switch</code> tables.  The default is to use
+16-bit offsets.
+</p>
+</dd>
+<dt><code>-mbitops</code></dt>
+<dd><a name="index-mbitops-1"></a>
+<p>Enable the use of bit manipulation instructions on SH2A.
+</p>
+</dd>
+<dt><code>-mfmovd</code></dt>
+<dd><a name="index-mfmovd"></a>
+<p>Enable the use of the instruction <code>fmovd</code>.  Check <samp>-mdalign</samp> for
+alignment constraints.
+</p>
+</dd>
+<dt><code>-mhitachi</code></dt>
+<dd><a name="index-mhitachi"></a>
+<p>Comply with the calling conventions defined by Renesas.
+</p>
+</dd>
+<dt><code>-mrenesas</code></dt>
+<dd><a name="index-mhitachi-1"></a>
+<p>Comply with the calling conventions defined by Renesas.
+</p>
+</dd>
+<dt><code>-mno-renesas</code></dt>
+<dd><a name="index-mhitachi-2"></a>
+<p>Comply with the calling conventions defined for GCC before the Renesas
+conventions were available.  This option is the default for all
+targets of the SH toolchain.
+</p>
+</dd>
+<dt><code>-mnomacsave</code></dt>
+<dd><a name="index-mnomacsave"></a>
+<p>Mark the <code>MAC</code> register as call-clobbered, even if
+<samp>-mhitachi</samp> is given.
+</p>
+</dd>
+<dt><code>-mieee</code></dt>
+<dt><code>-mno-ieee</code></dt>
+<dd><a name="index-mieee-1"></a>
+<a name="index-mnoieee"></a>
+<p>Control the IEEE compliance of floating-point comparisons, which affects the
+handling of cases where the result of a comparison is unordered.  By default
+<samp>-mieee</samp> is implicitly enabled.  If <samp>-ffinite-math-only</samp> is
+enabled <samp>-mno-ieee</samp> is implicitly set, which results in faster
+floating-point greater-equal and less-equal comparisons.  The implcit settings
+can be overridden by specifying either <samp>-mieee</samp> or <samp>-mno-ieee</samp>.
+</p>
+</dd>
+<dt><code>-minline-ic_invalidate</code></dt>
+<dd><a name="index-minline_002dic_005finvalidate"></a>
+<p>Inline code to invalidate instruction cache entries after setting up
+nested function trampolines.
+This option has no effect if -musermode is in effect and the selected
+code generation option (e.g. -m4) does not allow the use of the icbi
+instruction.
+If the selected code generation option does not allow the use of the icbi
+instruction, and -musermode is not in effect, the inlined code will
+manipulate the instruction cache address array directly with an associative
+write.  This not only requires privileged mode, but it will also
+fail if the cache line had been mapped via the TLB and has become unmapped.
+</p>
+</dd>
+<dt><code>-misize</code></dt>
+<dd><a name="index-misize"></a>
+<p>Dump instruction size and location in the assembly code.
+</p>
+</dd>
+<dt><code>-mpadstruct</code></dt>
+<dd><a name="index-mpadstruct"></a>
+<p>This option is deprecated.  It pads structures to multiple of 4 bytes,
+which is incompatible with the SH ABI.
+</p>
+</dd>
+<dt><code>-msoft-atomic</code></dt>
+<dd><a name="index-msoft_002datomic"></a>
+<p>Generate GNU/Linux compatible gUSA software atomic sequences for the atomic
+built-in functions.  The generated atomic sequences require support from the 
+interrupt / exception handling code of the system and are only suitable for
+single-core systems.  They will not perform correctly on multi-core systems.
+This option is enabled by default when the target is <code>sh-*-linux*</code>.
+For details on the atomic built-in functions see <a href="_005f_005fatomic-Builtins.html#g_t_005f_005fatomic-Builtins">__atomic Builtins</a>.
+</p>
+</dd>
+<dt><code>-mspace</code></dt>
+<dd><a name="index-mspace"></a>
+<p>Optimize for space instead of speed.  Implied by <samp>-Os</samp>.
+</p>
+</dd>
+<dt><code>-mprefergot</code></dt>
+<dd><a name="index-mprefergot"></a>
+<p>When generating position-independent code, emit function calls using
+the Global Offset Table instead of the Procedure Linkage Table.
+</p>
+</dd>
+<dt><code>-musermode</code></dt>
+<dd><a name="index-musermode"></a>
+<p>Don&rsquo;t generate privileged mode only code; implies -mno-inline-ic_invalidate
+if the inlined code would not work in user mode.
+This is the default when the target is <code>sh-*-linux*</code>.
+</p>
+</dd>
+<dt><code>-multcost=<var>number</var></code></dt>
+<dd><a name="index-multcost_003dnumber"></a>
+<p>Set the cost to assume for a multiply insn.
+</p>
+</dd>
+<dt><code>-mdiv=<var>strategy</var></code></dt>
+<dd><a name="index-mdiv_003dstrategy"></a>
+<p>Set the division strategy to be used for integer division operations.
+For SHmedia <var>strategy</var> can be one of: 
+</p>
+<dl compact="compact">
+<dt>&lsquo;<samp>fp</samp>&rsquo;</dt>
+<dd><p>Performs the operation in floating point.  This has a very high latency,
+but needs only a few instructions, so it might be a good choice if
+your code has enough easily-exploitable ILP to allow the compiler to
+schedule the floating-point instructions together with other instructions.
+Division by zero causes a floating-point exception.
+</p>
+</dd>
+<dt>&lsquo;<samp>inv</samp>&rsquo;</dt>
+<dd><p>Uses integer operations to calculate the inverse of the divisor,
+and then multiplies the dividend with the inverse.  This strategy allows
+CSE and hoisting of the inverse calculation.  Division by zero calculates
+an unspecified result, but does not trap.
+</p>
+</dd>
+<dt>&lsquo;<samp>inv:minlat</samp>&rsquo;</dt>
+<dd><p>A variant of &lsquo;<samp>inv</samp>&rsquo; where, if no CSE or hoisting opportunities
+have been found, or if the entire operation has been hoisted to the same
+place, the last stages of the inverse calculation are intertwined with the
+final multiply to reduce the overall latency, at the expense of using a few
+more instructions, and thus offering fewer scheduling opportunities with
+other code.
+</p>
+</dd>
+<dt>&lsquo;<samp>call</samp>&rsquo;</dt>
+<dd><p>Calls a library function that usually implements the &lsquo;<samp>inv:minlat</samp>&rsquo;
+strategy.
+This gives high code density for <code>m5-*media-nofpu</code> compilations.
+</p>
+</dd>
+<dt>&lsquo;<samp>call2</samp>&rsquo;</dt>
+<dd><p>Uses a different entry point of the same library function, where it
+assumes that a pointer to a lookup table has already been set up, which
+exposes the pointer load to CSE and code hoisting optimizations.
+</p>
+</dd>
+<dt>&lsquo;<samp>inv:call</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>inv:call2</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>inv:fp</samp>&rsquo;</dt>
+<dd><p>Use the &lsquo;<samp>inv</samp>&rsquo; algorithm for initial
+code generation, but if the code stays unoptimized, revert to the &lsquo;<samp>call</samp>&rsquo;,
+&lsquo;<samp>call2</samp>&rsquo;, or &lsquo;<samp>fp</samp>&rsquo; strategies, respectively.  Note that the
+potentially-trapping side effect of division by zero is carried by a
+separate instruction, so it is possible that all the integer instructions
+are hoisted out, but the marker for the side effect stays where it is.
+A recombination to floating-point operations or a call is not possible
+in that case.
+</p>
+</dd>
+<dt>&lsquo;<samp>inv20u</samp>&rsquo;</dt>
+<dt>&lsquo;<samp>inv20l</samp>&rsquo;</dt>
+<dd><p>Variants of the &lsquo;<samp>inv:minlat</samp>&rsquo; strategy.  In the case
+that the inverse calculation is not separated from the multiply, they speed
+up division where the dividend fits into 20 bits (plus sign where applicable)
+by inserting a test to skip a number of operations in this case; this test
+slows down the case of larger dividends.  &lsquo;<samp>inv20u</samp>&rsquo; assumes the case of a such
+a small dividend to be unlikely, and &lsquo;<samp>inv20l</samp>&rsquo; assumes it to be likely.
+</p>
+</dd>
+</dl>
+
+<p>For targets other than SHmedia <var>strategy</var> can be one of:
+</p>
+<dl compact="compact">
+<dt>&lsquo;<samp>call-div1</samp>&rsquo;</dt>
+<dd><p>Calls a library function that uses the single-step division instruction
+<code>div1</code> to perform the operation.  Division by zero calculates an
+unspecified result and does not trap.  This is the default except for SH4,
+SH2A and SHcompact.
+</p>
+</dd>
+<dt>&lsquo;<samp>call-fp</samp>&rsquo;</dt>
+<dd><p>Calls a library function that performs the operation in double precision
+floating point.  Division by zero causes a floating-point exception.  This is
+the default for SHcompact with FPU.  Specifying this for targets that do not
+have a double precision FPU will default to <code>call-div1</code>.
+</p>
+</dd>
+<dt>&lsquo;<samp>call-table</samp>&rsquo;</dt>
+<dd><p>Calls a library function that uses a lookup table for small divisors and
+the <code>div1</code> instruction with case distinction for larger divisors.  Division
+by zero calculates an unspecified result and does not trap.  This is the default
+for SH4.  Specifying this for targets that do not have dynamic shift
+instructions will default to <code>call-div1</code>.
+</p>
+</dd>
+</dl>
+
+<p>When a division strategy has not been specified the default strategy will be
+selected based on the current target.  For SH2A the default strategy is to
+use the <code>divs</code> and <code>divu</code> instructions instead of library function
+calls.
+</p>
+</dd>
+<dt><code>-maccumulate-outgoing-args</code></dt>
+<dd><a name="index-maccumulate_002doutgoing_002dargs-1"></a>
+<p>Reserve space once for outgoing arguments in the function prologue rather
+than around each call.  Generally beneficial for performance and size.  Also
+needed for unwinding to avoid changing the stack frame around conditional code.
+</p>
+</dd>
+<dt><code>-mdivsi3_libfunc=<var>name</var></code></dt>
+<dd><a name="index-mdivsi3_005flibfunc_003dname"></a>
+<p>Set the name of the library function used for 32-bit signed division to
+<var>name</var>.  This only affect the name used in the call and inv:call
+division strategies, and the compiler will still expect the same
+sets of input/output/clobbered registers as if this option was not present.
+</p>
+</dd>
+<dt><code>-mfixed-range=<var>register-range</var></code></dt>
+<dd><a name="index-mfixed_002drange-2"></a>
+<p>Generate code treating the given register range as fixed registers.
+A fixed register is one that the register allocator can not use.  This is
+useful when compiling kernel code.  A register range is specified as
+two registers separated by a dash.  Multiple register ranges can be
+specified separated by a comma.
+</p>
+</dd>
+<dt><code>-madjust-unroll</code></dt>
+<dd><a name="index-madjust_002dunroll"></a>
+<p>Throttle unrolling to avoid thrashing target registers.
+This option only has an effect if the gcc code base supports the
+TARGET_ADJUST_UNROLL_MAX target hook.
+</p>
+</dd>
+<dt><code>-mindexed-addressing</code></dt>
+<dd><a name="index-mindexed_002daddressing"></a>
+<p>Enable the use of the indexed addressing mode for SHmedia32/SHcompact.
+This is only safe if the hardware and/or OS implement 32-bit wrap-around
+semantics for the indexed addressing mode.  The architecture allows the
+implementation of processors with 64-bit MMU, which the OS could use to
+get 32-bit addressing, but since no current hardware implementation supports
+this or any other way to make the indexed addressing mode safe to use in
+the 32-bit ABI, the default is <samp>-mno-indexed-addressing</samp>.
+</p>
+</dd>
+<dt><code>-mgettrcost=<var>number</var></code></dt>
+<dd><a name="index-mgettrcost_003dnumber"></a>
+<p>Set the cost assumed for the gettr instruction to <var>number</var>.
+The default is 2 if <samp>-mpt-fixed</samp> is in effect, 100 otherwise.
+</p>
+</dd>
+<dt><code>-mpt-fixed</code></dt>
+<dd><a name="index-mpt_002dfixed"></a>
+<p>Assume pt* instructions won&rsquo;t trap.  This will generally generate better
+scheduled code, but is unsafe on current hardware.  The current architecture
+definition says that ptabs and ptrel trap when the target anded with 3 is 3.
+This has the unintentional effect of making it unsafe to schedule ptabs /
+ptrel before a branch, or hoist it out of a loop.  For example,
+__do_global_ctors, a part of libgcc that runs constructors at program
+startup, calls functions in a list which is delimited by -1.  With the
+-mpt-fixed option, the ptabs will be done before testing against -1.
+That means that all the constructors will be run a bit quicker, but when
+the loop comes to the end of the list, the program crashes because ptabs
+loads -1 into a target register.  Since this option is unsafe for any
+hardware implementing the current architecture specification, the default
+is -mno-pt-fixed.  Unless the user specifies a specific cost with
+<samp>-mgettrcost</samp>, -mno-pt-fixed also implies <samp>-mgettrcost=100</samp>;
+this deters register allocation using target registers for storing
+ordinary integers.
+</p>
+</dd>
+<dt><code>-minvalid-symbols</code></dt>
+<dd><a name="index-minvalid_002dsymbols"></a>
+<p>Assume symbols might be invalid.  Ordinary function symbols generated by
+the compiler will always be valid to load with movi/shori/ptabs or
+movi/shori/ptrel, but with assembler and/or linker tricks it is possible
+to generate symbols that will cause ptabs / ptrel to trap.
+This option is only meaningful when <samp>-mno-pt-fixed</samp> is in effect.
+It will then prevent cross-basic-block cse, hoisting and most scheduling
+of symbol loads.  The default is <samp>-mno-invalid-symbols</samp>.
+</p>
+</dd>
+<dt><code>-mbranch-cost=<var>num</var></code></dt>
+<dd><a name="index-mbranch_002dcost_003dnum"></a>
+<p>Assume <var>num</var> to be the cost for a branch instruction.  Higher numbers
+will make the compiler try to generate more branch-free code if possible.  
+If not specified the value is selected depending on the processor type that
+is being compiled for.
+</p>
+</dd>
+<dt><code>-mcbranchdi</code></dt>
+<dd><a name="index-mcbranchdi"></a>
+<p>Enable the <code>cbranchdi4</code> instruction pattern.
+</p>
+</dd>
+<dt><code>-mcmpeqdi</code></dt>
+<dd><a name="index-mcmpeqdi"></a>
+<p>Emit the <code>cmpeqdi_t</code> instruction pattern even when <samp>-mcbranchdi</samp>
+is in effect.
+</p>
+</dd>
+<dt><code>-mfused-madd</code></dt>
+<dd><a name="index-mfused_002dmadd-4"></a>
+<p>Allow the usage of the <code>fmac</code> instruction (floating-point
+multiply-accumulate) if the processor type supports it.  Enabling this
+option might generate code that produces different numeric floating-point
+results compared to strict IEEE 754 arithmetic.
+</p>
+</dd>
+<dt><code>-mpretend-cmove</code></dt>
+<dd><a name="index-mpretend_002dcmove"></a>
+<p>Prefer zero-displacement conditional branches for conditional move instruction
+patterns.  This can result in faster code on the SH4 processor.
+</p>
+</dd>
+</dl>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Solaris-2-Options.html#Solaris-2-Options" accesskey="n" rel="next">Solaris 2 Options</a>, Previous: <a href="Score-Options.html#Score-Options" accesskey="p" rel="prev">Score Options</a>, Up: <a href="Submodel-Options.html#Submodel-Options" accesskey="u" rel="up">Submodel Options</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html#Option-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

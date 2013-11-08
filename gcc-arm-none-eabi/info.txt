@@ -1,0 +1,46 @@
+GNU Tools for ARM Embedded Processors / bleeding-edge-toolchain
+version: 131005
+build date: 05.10.2013
+package date: 05.10.2013
+build system: Linux 3.11.2-1-ARCH #1 SMP PREEMPT Fri Sep 27 07:35:36 CEST 2013 x86_64 GNU/Linux
+host systems:
+- 32-bit Windows (i686-w64-mingw32)
+- 64-bit Windows (x86_64-w64-mingw32)
+- 64-bit Linux (x86_64-unknown-linux-gnu)
+target system: bare-metal ARM (arm-none-eabi)
+compiler: GCC 4.8.0 for Windows (mingw32-w64; rubenvb 130323), GCC 4.8.1 for Linux
+
+Based on original linaro release GCC ARM Embedded 4.7-2013-q3-update
+https://launchpad.net/gcc-arm-embedded/4.7/4.7-2013-q3-update
+
+Components used:
+- gcc, ARM/embedded-4_7-branch, r202552 (13.09.2013 05:40:50), svn://gcc.gnu.org/svn/gcc/branches/ARM/embedded-4_7-branch
+- binutils, commit a2f5e13bc3da4a3a56b3691a2e23adc2860621f2 (05.10.2013 00:00:05), git://sourceware.org/git/binutils.git
+- newlib, commit 18a848530bdeeb37d1feac0bd4ea8bb9e9e28563 (03.10.2013 21:51:51), git://sourceware.org/git/newlib.git
+- gdb, commit 77243baca2a743f213316ce58b45e15f2e57f456 (05.10.2013 02:10:29), git://sourceware.org/git/gdb.git
+- cloog-ppl 0.15.11, ftp://gcc.gnu.org/pub/gcc/infrastructure/cloog-ppl-0.15.11.tar.gz
+- expat 2.0.1, http://space.dl.sourceforge.net/project/expat/expat/2.0.1/expat-2.0.1.tar.gz
+- gmp 5.0.5, ftp://ftp.gmplib.org/pub/gmp-5.0.5/gmp-5.0.5.tar.bz2
+- libelf 0.8.13, http://www.mr511.de/software/libelf-0.8.13.tar.gz
+- libiconv 1.14, http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
+- mpc 1.0.1, http://www.multiprecision.org/mpc/download/mpc-1.0.1.tar.gz
+- mpfr 3.1.2, http://www.mpfr.org/mpfr-current/mpfr-3.1.2.tar.xz
+- ppl 0.11, ftp://gcc.gnu.org/pub/gcc/infrastructure/ppl-0.11.tar.gz
+- zlib 1.2.8, http://zlib.net/zlib-1.2.8.tar.gz
+
+Differences from original linaro release:
+- the most recent components used where possible, core components directly from HEADs of repositories
+- compiled with recent toolchain, which results in much better performance on host system
+- libstdc++ with disabled exceptions (as in size-optimized libraries that come in "nano" set)
+- newlib with different configure options (--enable-newlib-register-fini removed, --enable-newlib-io-c99-formats,
+  --disable-newlib-atexit-dynamic-alloc, --enable-newlib-reent-small, --disable-newlib-fvwrite-in-streamio,
+  --disable-newlib-fseek-optimization, --disable-newlib-wide-orient, --disable-newlib-unbuf-stream-opt)
+- all libraries are not stripped - debugging them is possible
+- lack of some text files and documents
+
+Build commands used:
+./build-prerequisites.sh
+./build-toolchain.sh
+
+This package and info about it can be found on Freddie Chopin's website:
+http://www.freddiechopin.info/
