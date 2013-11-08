@@ -1,0 +1,12 @@
+How to install the stm32f0-Discovery Tools
+
+1) Run install.bat
+2) Install the appropriate USB Driver for your operating system
+3) Install the ST-Link Utility
+4) Connect your board and use the ST-Link utility to update your firmware to the newest version
+5) If you don't have Java Installed, install it
+6) Open Eclipse
+7) Set your workspace to the Projects folder
+8)
+
+You're ready to go!  For additional documentation, see the readme in the Documentation folder.
