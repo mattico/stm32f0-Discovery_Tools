@@ -1,0 +1,1164 @@
+
+ST_Library_Template.elf:     file format elf32-littlearm
+ST_Library_Template.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x08000475
+
+Program Header:
+    LOAD off    0x00008000 vaddr 0x08000000 paddr 0x08000000 align 2**15
+         filesz 0x00000574 memsz 0x00000574 flags r-x
+    LOAD off    0x00010000 vaddr 0x20000000 paddr 0x08000574 align 2**15
+         filesz 0x00000004 memsz 0x00000008 flags rw-
+private flags = 5000202: [Version5 EABI] [soft-float ABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .isr_vector   000000c4  08000000  08000000  00008000  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .text         000004b0  080000c4  080000c4  000080c4  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00000004  20000000  08000574  00010000  2**2  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000004  20000004  08000578  00010004  2**1  ALLOC
+  4 .comment      0000006a  00000000  00000000  00010004  2**0  CONTENTS, READONLY
+  5 .ARM.attributes 00000028  00000000  00000000  0001006e  2**0  CONTENTS, READONLY
+  6 .debug_aranges 000000f0  00000000  00000000  00010098  2**3  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000c77  00000000  00000000  00010188  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000389  00000000  00000000  00010dff  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000f0c  00000000  00000000  00011188  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000148  00000000  00000000  00012094  2**2  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    0002ccf1  00000000  00000000  000121dc  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000001c2  00000000  00000000  0003eecd  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000078  00000000  00000000  0003f090  2**3  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_macro  00006c7d  00000000  00000000  0003f108  2**0  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08000000 l    d  .isr_vector	00000000 .isr_vector
+080000c4 l    d  .text	00000000 .text
+20000000 l    d  .data	00000000 .data
+20000004 l    d  .bss	00000000 .bss
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    df *ABS*	00000000 ./Device/startup_stm32f0xx.o
+f108f85f l       *ABS*	00000000 BootRAM
+08000484 l       .text	00000000 LoopCopyDataInit
+0800047c l       .text	00000000 CopyDataInit
+08000498 l       .text	00000000 LoopFillZerobss
+08000492 l       .text	00000000 FillZerobss
+080004ac l       .text	00000000 LoopForever
+080004c8 l       .text	00000000 Infinite_Loop
+00000000 l    df *ABS*	00000000 _udivsi3.o
+080000c8 l       .text	00000000 .udivsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 main.c
+08000164 l     F .text	000000e0 NVIC_SetPriority
+08000244 l     F .text	0000004c SysTick_Config
+20000004 l     O .bss	00000002 tick.6066
+00000000 l    df *ABS*	00000000 system_stm32f0xx.c
+08000394 l     F .text	000000e0 SetSysClock
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/armv6-m/crti.o
+00000000 l    df *ABS*	00000000 c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/armv6-m/crtn.o
+00000000 l    df *ABS*	00000000 
+20000008 l       .bss	00000000 __exidx_end
+00000000 l       *UND*	00000000 __fini_array_end
+00000000 l       *UND*	00000000 malloc
+20000004 l       .bss	00000000 __bss_start__
+20000008 l       .bss	00000000 __exidx_start
+00000000 l       *UND*	00000000 __sf_fake_stderr
+00000000 l       *UND*	00000000 __deregister_frame_info
+20000008 l       .bss	00000000 __bss_end__
+00000000 l       *UND*	00000000 software_init_hook
+00000000 l       *UND*	00000000 __fini_array_start
+00000000 l       *UND*	00000000 __sf_fake_stdin
+00000000 l       *UND*	00000000 hardware_init_hook
+00000000 l       *UND*	00000000 __stack
+00000000 l       *UND*	00000000 __sf_fake_stdout
+00000000 l       *UND*	00000000 _Jv_RegisterClasses
+00000000 l       *UND*	00000000 __register_frame_info
+080004c8  w    F .text	00000002 TIM1_CC_IRQHandler
+080004c8  w    F .text	00000002 HardFault_Handler
+080004c8  w    F .text	00000002 ADC1_COMP_IRQHandler
+08000290 g     F .text	0000003c SysTick_Handler
+080004c8  w    F .text	00000002 PVD_IRQHandler
+08000574 g       .text	00000000 _sidata
+080004c8  w    F .text	00000002 PendSV_Handler
+080004c8  w    F .text	00000002 NMI_Handler
+080004c8  w    F .text	00000002 I2C1_IRQHandler
+08000574 g       .text	00000000 _etext
+20000004 g       .bss	00000000 _sbss
+20000000 g     O .data	00000004 SystemCoreClock
+080000c4 g     F .text	00000088 __udivsi3
+20000000 g       .data	00000000 _sdata
+080004c8  w    F .text	00000002 SPI1_IRQHandler
+080004c8  w    F .text	00000002 TIM6_DAC_IRQHandler
+080004cc g     F .text	00000090 __libc_init_array
+080004c8  w    F .text	00000002 EXTI2_3_IRQHandler
+0800055c g     F .text	00000000 _init
+080004c8  w    F .text	00000002 I2C2_IRQHandler
+080004c8  w    F .text	00000002 TIM17_IRQHandler
+080004c8  w    F .text	00000002 RTC_IRQHandler
+20000008 g       .bss	00000000 _ebss
+08000474  w    F .text	0000003a Reset_Handler
+080004c8  w    F .text	00000002 TIM16_IRQHandler
+080004c8  w    F .text	00000002 TIM3_IRQHandler
+080004c8  w    F .text	00000002 EXTI4_15_IRQHandler
+080004c8  w    F .text	00000002 RCC_IRQHandler
+20000004 g       .bss	00000000 _bss
+080004c8  w    F .text	00000002 DMA1_Channel1_IRQHandler
+080004c8 g       .text	00000002 Default_Handler
+080004c8  w    F .text	00000002 CEC_IRQHandler
+080004c8  w    F .text	00000002 TIM14_IRQHandler
+080004c8  w    F .text	00000002 DMA1_Channel4_5_IRQHandler
+080004c8  w    F .text	00000002 TIM15_IRQHandler
+080004c8  w    F .text	00000002 EXTI0_1_IRQHandler
+08000160  w    F .text	00000002 __aeabi_ldiv0
+080004c8  w    F .text	00000002 SPI2_IRQHandler
+080002cc g     F .text	0000003c main
+080000c4 g     F .text	00000000 __aeabi_uidiv
+080004c8  w    F .text	00000002 SVC_Handler
+00000000  w      *UND*	00000000 __init_array_end
+08000308 g     F .text	0000008c SystemInit
+08000568 g     F .text	00000000 _fini
+080004c8  w    F .text	00000002 TS_IRQHandler
+00000000  w      *UND*	00000000 __preinit_array_end
+080004c8  w    F .text	00000002 WWDG_IRQHandler
+20000000 g       .data	00000000 _data
+080004c8  w    F .text	00000002 TIM2_IRQHandler
+080004c8  w    F .text	00000002 DMA1_Channel2_3_IRQHandler
+20002000 g       *ABS*	00000000 _estack
+0800014c g     F .text	00000012 __aeabi_uidivmod
+20000004 g       .data	00000000 _edata
+080004c8  w    F .text	00000002 USART2_IRQHandler
+08000000 g     O .isr_vector	00000000 g_pfnVectors
+00000000  w      *UND*	00000000 __init_array_start
+08000160  w    F .text	00000002 __aeabi_idiv0
+080004c8  w    F .text	00000002 FLASH_IRQHandler
+080004aa g       .text	00000000 _exit
+080004c8  w    F .text	00000002 USART1_IRQHandler
+080004c8  w    F .text	00000002 TIM1_BRK_UP_TRG_COM_IRQHandler
+00000000  w      *UND*	00000000 __preinit_array_start
+
+
+
+Disassembly of section .text:
+
+080000c4 <__aeabi_uidiv>:
+__udivsi3():
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:754
+ 80000c4:	2900      	cmp	r1, #0
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:755
+ 80000c6:	d034      	beq.n	8000132 <.udivsi3_skip_div0_test+0x6a>
+
+080000c8 <.udivsi3_skip_div0_test>:
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:757
+ 80000c8:	2301      	movs	r3, #1
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:758
+ 80000ca:	2200      	movs	r2, #0
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:760
+ 80000cc:	b410      	push	{r4}
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:761
+ 80000ce:	4288      	cmp	r0, r1
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:762
+ 80000d0:	d32c      	bcc.n	800012c <.udivsi3_skip_div0_test+0x64>
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:764
+ 80000d2:	2401      	movs	r4, #1
+ 80000d4:	0724      	lsls	r4, r4, #28
+ 80000d6:	42a1      	cmp	r1, r4
+ 80000d8:	d204      	bcs.n	80000e4 <.udivsi3_skip_div0_test+0x1c>
+ 80000da:	4281      	cmp	r1, r0
+ 80000dc:	d202      	bcs.n	80000e4 <.udivsi3_skip_div0_test+0x1c>
+ 80000de:	0109      	lsls	r1, r1, #4
+ 80000e0:	011b      	lsls	r3, r3, #4
+ 80000e2:	e7f8      	b.n	80000d6 <.udivsi3_skip_div0_test+0xe>
+ 80000e4:	00e4      	lsls	r4, r4, #3
+ 80000e6:	42a1      	cmp	r1, r4
+ 80000e8:	d204      	bcs.n	80000f4 <.udivsi3_skip_div0_test+0x2c>
+ 80000ea:	4281      	cmp	r1, r0
+ 80000ec:	d202      	bcs.n	80000f4 <.udivsi3_skip_div0_test+0x2c>
+ 80000ee:	0049      	lsls	r1, r1, #1
+ 80000f0:	005b      	lsls	r3, r3, #1
+ 80000f2:	e7f8      	b.n	80000e6 <.udivsi3_skip_div0_test+0x1e>
+ 80000f4:	4288      	cmp	r0, r1
+ 80000f6:	d301      	bcc.n	80000fc <.udivsi3_skip_div0_test+0x34>
+ 80000f8:	1a40      	subs	r0, r0, r1
+ 80000fa:	431a      	orrs	r2, r3
+ 80000fc:	084c      	lsrs	r4, r1, #1
+ 80000fe:	42a0      	cmp	r0, r4
+ 8000100:	d302      	bcc.n	8000108 <.udivsi3_skip_div0_test+0x40>
+ 8000102:	1b00      	subs	r0, r0, r4
+ 8000104:	085c      	lsrs	r4, r3, #1
+ 8000106:	4322      	orrs	r2, r4
+ 8000108:	088c      	lsrs	r4, r1, #2
+ 800010a:	42a0      	cmp	r0, r4
+ 800010c:	d302      	bcc.n	8000114 <.udivsi3_skip_div0_test+0x4c>
+ 800010e:	1b00      	subs	r0, r0, r4
+ 8000110:	089c      	lsrs	r4, r3, #2
+ 8000112:	4322      	orrs	r2, r4
+ 8000114:	08cc      	lsrs	r4, r1, #3
+ 8000116:	42a0      	cmp	r0, r4
+ 8000118:	d302      	bcc.n	8000120 <.udivsi3_skip_div0_test+0x58>
+ 800011a:	1b00      	subs	r0, r0, r4
+ 800011c:	08dc      	lsrs	r4, r3, #3
+ 800011e:	4322      	orrs	r2, r4
+ 8000120:	2800      	cmp	r0, #0
+ 8000122:	d003      	beq.n	800012c <.udivsi3_skip_div0_test+0x64>
+ 8000124:	091b      	lsrs	r3, r3, #4
+ 8000126:	d001      	beq.n	800012c <.udivsi3_skip_div0_test+0x64>
+ 8000128:	0909      	lsrs	r1, r1, #4
+ 800012a:	e7e3      	b.n	80000f4 <.udivsi3_skip_div0_test+0x2c>
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:766
+ 800012c:	1c10      	adds	r0, r2, #0
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:767
+ 800012e:	bc10      	pop	{r4}
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:768
+ 8000130:	4770      	bx	lr
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:999
+ 8000132:	2800      	cmp	r0, #0
+ 8000134:	d001      	beq.n	800013a <.udivsi3_skip_div0_test+0x72>
+ 8000136:	2000      	movs	r0, #0
+ 8000138:	43c0      	mvns	r0, r0
+ 800013a:	b407      	push	{r0, r1, r2}
+ 800013c:	4802      	ldr	r0, [pc, #8]	; (8000148 <.udivsi3_skip_div0_test+0x80>)
+ 800013e:	a102      	add	r1, pc, #8	; (adr r1, 8000148 <.udivsi3_skip_div0_test+0x80>)
+ 8000140:	1840      	adds	r0, r0, r1
+ 8000142:	9002      	str	r0, [sp, #8]
+ 8000144:	bd03      	pop	{r0, r1, pc}
+ 8000146:	46c0      	nop			; (mov r8, r8)
+ 8000148:	00000019 	.word	0x00000019
+
+0800014c <__aeabi_uidivmod>:
+__aeabi_uidivmod():
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1003
+ 800014c:	2900      	cmp	r1, #0
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1004
+ 800014e:	d0f0      	beq.n	8000132 <.udivsi3_skip_div0_test+0x6a>
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1005
+ 8000150:	b503      	push	{r0, r1, lr}
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1006
+ 8000152:	f7ff ffb9 	bl	80000c8 <.udivsi3_skip_div0_test>
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1007
+ 8000156:	bc0e      	pop	{r1, r2, r3}
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1008
+ 8000158:	4342      	muls	r2, r0
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1009
+ 800015a:	1a89      	subs	r1, r1, r2
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1010
+ 800015c:	4718      	bx	r3
+ 800015e:	46c0      	nop			; (mov r8, r8)
+
+08000160 <__aeabi_idiv0>:
+__aeabi_ldiv0():
+/home/freddie/bleeding-edge-toolchain/src/gcc/libgcc/config/arm/lib1funcs.S:1300
+ 8000160:	4770      	bx	lr
+ 8000162:	46c0      	nop			; (mov r8, r8)
+
+08000164 <NVIC_SetPriority>:
+NVIC_SetPriority():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:572
+
+    \param [in]      IRQn  Number of the interrupt for set priority
+    \param [in]  priority  Priority to set
+ */
+static __INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+{
+ 8000164:	b5b0      	push	{r4, r5, r7, lr}
+ 8000166:	b082      	sub	sp, #8
+ 8000168:	af00      	add	r7, sp, #0
+ 800016a:	1c02      	adds	r2, r0, #0
+ 800016c:	6039      	str	r1, [r7, #0]
+ 800016e:	1dfb      	adds	r3, r7, #7
+ 8000170:	701a      	strb	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:573
+  if(IRQn < 0) {
+ 8000172:	1dfb      	adds	r3, r7, #7
+ 8000174:	781b      	ldrb	r3, [r3, #0]
+ 8000176:	2b7f      	cmp	r3, #127	; 0x7f
+ 8000178:	d932      	bls.n	80001e0 <NVIC_SetPriority+0x7c>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:574
+    SCB->SHP[_SHP_IDX(IRQn)] = (SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+ 800017a:	4930      	ldr	r1, [pc, #192]	; (800023c <NVIC_SetPriority+0xd8>)
+ 800017c:	1dfb      	adds	r3, r7, #7
+ 800017e:	781b      	ldrb	r3, [r3, #0]
+ 8000180:	1c1a      	adds	r2, r3, #0
+ 8000182:	230f      	movs	r3, #15
+ 8000184:	4013      	ands	r3, r2
+ 8000186:	3b08      	subs	r3, #8
+ 8000188:	0898      	lsrs	r0, r3, #2
+ 800018a:	4a2c      	ldr	r2, [pc, #176]	; (800023c <NVIC_SetPriority+0xd8>)
+ 800018c:	1dfb      	adds	r3, r7, #7
+ 800018e:	781b      	ldrb	r3, [r3, #0]
+ 8000190:	1c1c      	adds	r4, r3, #0
+ 8000192:	230f      	movs	r3, #15
+ 8000194:	4023      	ands	r3, r4
+ 8000196:	3b08      	subs	r3, #8
+ 8000198:	089b      	lsrs	r3, r3, #2
+ 800019a:	3306      	adds	r3, #6
+ 800019c:	009b      	lsls	r3, r3, #2
+ 800019e:	18d3      	adds	r3, r2, r3
+ 80001a0:	685b      	ldr	r3, [r3, #4]
+ 80001a2:	1dfa      	adds	r2, r7, #7
+ 80001a4:	7812      	ldrb	r2, [r2, #0]
+ 80001a6:	1c14      	adds	r4, r2, #0
+ 80001a8:	2203      	movs	r2, #3
+ 80001aa:	4022      	ands	r2, r4
+ 80001ac:	00d2      	lsls	r2, r2, #3
+ 80001ae:	24ff      	movs	r4, #255	; 0xff
+ 80001b0:	1c25      	adds	r5, r4, #0
+ 80001b2:	4095      	lsls	r5, r2
+ 80001b4:	1c2a      	adds	r2, r5, #0
+ 80001b6:	43d2      	mvns	r2, r2
+ 80001b8:	401a      	ands	r2, r3
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:575
+        (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+ 80001ba:	683b      	ldr	r3, [r7, #0]
+ 80001bc:	019c      	lsls	r4, r3, #6
+ 80001be:	23ff      	movs	r3, #255	; 0xff
+ 80001c0:	401c      	ands	r4, r3
+ 80001c2:	1dfb      	adds	r3, r7, #7
+ 80001c4:	781b      	ldrb	r3, [r3, #0]
+ 80001c6:	1c1d      	adds	r5, r3, #0
+ 80001c8:	2303      	movs	r3, #3
+ 80001ca:	402b      	ands	r3, r5
+ 80001cc:	00db      	lsls	r3, r3, #3
+ 80001ce:	1c25      	adds	r5, r4, #0
+ 80001d0:	409d      	lsls	r5, r3
+ 80001d2:	1c2b      	adds	r3, r5, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:574
+    \param [in]  priority  Priority to set
+ */
+static __INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+{
+  if(IRQn < 0) {
+    SCB->SHP[_SHP_IDX(IRQn)] = (SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+ 80001d4:	431a      	orrs	r2, r3
+ 80001d6:	1d83      	adds	r3, r0, #6
+ 80001d8:	009b      	lsls	r3, r3, #2
+ 80001da:	18cb      	adds	r3, r1, r3
+ 80001dc:	605a      	str	r2, [r3, #4]
+ 80001de:	e029      	b.n	8000234 <NVIC_SetPriority+0xd0>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:577
+        (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+  else {
+    NVIC->IP[_IP_IDX(IRQn)] = (NVIC->IP[_IP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+ 80001e0:	4b17      	ldr	r3, [pc, #92]	; (8000240 <NVIC_SetPriority+0xdc>)
+ 80001e2:	1dfa      	adds	r2, r7, #7
+ 80001e4:	7812      	ldrb	r2, [r2, #0]
+ 80001e6:	b252      	sxtb	r2, r2
+ 80001e8:	0892      	lsrs	r2, r2, #2
+ 80001ea:	4915      	ldr	r1, [pc, #84]	; (8000240 <NVIC_SetPriority+0xdc>)
+ 80001ec:	1df8      	adds	r0, r7, #7
+ 80001ee:	7800      	ldrb	r0, [r0, #0]
+ 80001f0:	b240      	sxtb	r0, r0
+ 80001f2:	0880      	lsrs	r0, r0, #2
+ 80001f4:	30c0      	adds	r0, #192	; 0xc0
+ 80001f6:	0080      	lsls	r0, r0, #2
+ 80001f8:	5841      	ldr	r1, [r0, r1]
+ 80001fa:	1df8      	adds	r0, r7, #7
+ 80001fc:	7800      	ldrb	r0, [r0, #0]
+ 80001fe:	1c04      	adds	r4, r0, #0
+ 8000200:	2003      	movs	r0, #3
+ 8000202:	4020      	ands	r0, r4
+ 8000204:	00c0      	lsls	r0, r0, #3
+ 8000206:	24ff      	movs	r4, #255	; 0xff
+ 8000208:	1c25      	adds	r5, r4, #0
+ 800020a:	4085      	lsls	r5, r0
+ 800020c:	1c28      	adds	r0, r5, #0
+ 800020e:	43c0      	mvns	r0, r0
+ 8000210:	4008      	ands	r0, r1
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:578
+        (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+ 8000212:	6839      	ldr	r1, [r7, #0]
+ 8000214:	018c      	lsls	r4, r1, #6
+ 8000216:	21ff      	movs	r1, #255	; 0xff
+ 8000218:	400c      	ands	r4, r1
+ 800021a:	1df9      	adds	r1, r7, #7
+ 800021c:	7809      	ldrb	r1, [r1, #0]
+ 800021e:	1c0d      	adds	r5, r1, #0
+ 8000220:	2103      	movs	r1, #3
+ 8000222:	4029      	ands	r1, r5
+ 8000224:	00c9      	lsls	r1, r1, #3
+ 8000226:	1c25      	adds	r5, r4, #0
+ 8000228:	408d      	lsls	r5, r1
+ 800022a:	1c29      	adds	r1, r5, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:577
+{
+  if(IRQn < 0) {
+    SCB->SHP[_SHP_IDX(IRQn)] = (SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+        (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+  else {
+    NVIC->IP[_IP_IDX(IRQn)] = (NVIC->IP[_IP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+ 800022c:	4301      	orrs	r1, r0
+ 800022e:	32c0      	adds	r2, #192	; 0xc0
+ 8000230:	0092      	lsls	r2, r2, #2
+ 8000232:	50d1      	str	r1, [r2, r3]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:579
+        (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+}
+ 8000234:	46bd      	mov	sp, r7
+ 8000236:	b002      	add	sp, #8
+ 8000238:	bdb0      	pop	{r4, r5, r7, pc}
+ 800023a:	46c0      	nop			; (mov r8, r8)
+ 800023c:	e000ed00 	.word	0xe000ed00
+ 8000240:	e000e100 	.word	0xe000e100
+
+08000244 <SysTick_Config>:
+SysTick_Config():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:640
+    \param [in]  ticks  Number of ticks between two interrupts
+    \return          0  Function succeeded
+    \return          1  Function failed
+ */
+static __INLINE uint32_t SysTick_Config(uint32_t ticks)
+{
+ 8000244:	b580      	push	{r7, lr}
+ 8000246:	b082      	sub	sp, #8
+ 8000248:	af00      	add	r7, sp, #0
+ 800024a:	6078      	str	r0, [r7, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:641
+  if (ticks > SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
+ 800024c:	687a      	ldr	r2, [r7, #4]
+ 800024e:	4b0e      	ldr	r3, [pc, #56]	; (8000288 <SysTick_Config+0x44>)
+ 8000250:	429a      	cmp	r2, r3
+ 8000252:	d901      	bls.n	8000258 <SysTick_Config+0x14>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:641 (discriminator 1)
+ 8000254:	2301      	movs	r3, #1
+ 8000256:	e012      	b.n	800027e <SysTick_Config+0x3a>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:643
+
+  SysTick->LOAD  = (ticks & SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
+ 8000258:	4b0c      	ldr	r3, [pc, #48]	; (800028c <SysTick_Config+0x48>)
+ 800025a:	687a      	ldr	r2, [r7, #4]
+ 800025c:	0212      	lsls	r2, r2, #8
+ 800025e:	0a12      	lsrs	r2, r2, #8
+ 8000260:	3a01      	subs	r2, #1
+ 8000262:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:644
+  NVIC_SetPriority (SysTick_IRQn, (1<<__NVIC_PRIO_BITS) - 1);  /* set Priority for Cortex-M0 System Interrupts */
+ 8000264:	2301      	movs	r3, #1
+ 8000266:	425b      	negs	r3, r3
+ 8000268:	1c18      	adds	r0, r3, #0
+ 800026a:	2103      	movs	r1, #3
+ 800026c:	f7ff ff7a 	bl	8000164 <NVIC_SetPriority>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:645
+  SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
+ 8000270:	4b06      	ldr	r3, [pc, #24]	; (800028c <SysTick_Config+0x48>)
+ 8000272:	2200      	movs	r2, #0
+ 8000274:	609a      	str	r2, [r3, #8]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:646
+  SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk |
+ 8000276:	4b05      	ldr	r3, [pc, #20]	; (800028c <SysTick_Config+0x48>)
+ 8000278:	2207      	movs	r2, #7
+ 800027a:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:649
+                   SysTick_CTRL_TICKINT_Msk   |
+                   SysTick_CTRL_ENABLE_Msk;                    /* Enable SysTick IRQ and SysTick Timer */
+  return (0);                                                  /* Function successful */
+ 800027c:	2300      	movs	r3, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Libraries\CMSIS\Include/core_cm0.h:650
+}
+ 800027e:	1c18      	adds	r0, r3, #0
+ 8000280:	46bd      	mov	sp, r7
+ 8000282:	b002      	add	sp, #8
+ 8000284:	bd80      	pop	{r7, pc}
+ 8000286:	46c0      	nop			; (mov r8, r8)
+ 8000288:	00ffffff 	.word	0x00ffffff
+ 800028c:	e000e010 	.word	0xe000e010
+
+08000290 <SysTick_Handler>:
+SysTick_Handler():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:3
+#include "stm32f0xx_conf.h"
+
+void SysTick_Handler(void) {
+ 8000290:	b580      	push	{r7, lr}
+ 8000292:	af00      	add	r7, sp, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:6
+  static uint16_t tick = 0;
+
+  switch (tick++) {
+ 8000294:	4b0b      	ldr	r3, [pc, #44]	; (80002c4 <SysTick_Handler+0x34>)
+ 8000296:	881b      	ldrh	r3, [r3, #0]
+ 8000298:	1c1a      	adds	r2, r3, #0
+ 800029a:	3301      	adds	r3, #1
+ 800029c:	b299      	uxth	r1, r3
+ 800029e:	4b09      	ldr	r3, [pc, #36]	; (80002c4 <SysTick_Handler+0x34>)
+ 80002a0:	8019      	strh	r1, [r3, #0]
+ 80002a2:	2a64      	cmp	r2, #100	; 0x64
+ 80002a4:	d10c      	bne.n	80002c0 <SysTick_Handler+0x30>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:8
+  	case 100:
+  		tick = 0;
+ 80002a6:	4b07      	ldr	r3, [pc, #28]	; (80002c4 <SysTick_Handler+0x34>)
+ 80002a8:	2200      	movs	r2, #0
+ 80002aa:	801a      	strh	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:9
+  		GPIOC->ODR ^= (1 << 8);
+ 80002ac:	4b06      	ldr	r3, [pc, #24]	; (80002c8 <SysTick_Handler+0x38>)
+ 80002ae:	4a06      	ldr	r2, [pc, #24]	; (80002c8 <SysTick_Handler+0x38>)
+ 80002b0:	8a92      	ldrh	r2, [r2, #20]
+ 80002b2:	b292      	uxth	r2, r2
+ 80002b4:	2180      	movs	r1, #128	; 0x80
+ 80002b6:	0049      	lsls	r1, r1, #1
+ 80002b8:	404a      	eors	r2, r1
+ 80002ba:	b292      	uxth	r2, r2
+ 80002bc:	829a      	strh	r2, [r3, #20]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:10
+  		break;
+ 80002be:	46c0      	nop			; (mov r8, r8)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:12
+  }
+}
+ 80002c0:	46bd      	mov	sp, r7
+ 80002c2:	bd80      	pop	{r7, pc}
+ 80002c4:	20000004 	.word	0x20000004
+ 80002c8:	48000800 	.word	0x48000800
+
+080002cc <main>:
+main():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:15
+
+int main(void)
+{
+ 80002cc:	b580      	push	{r7, lr}
+ 80002ce:	af00      	add	r7, sp, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:17
+
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN; 	// enable the clock to GPIOC
+ 80002d0:	4b0a      	ldr	r3, [pc, #40]	; (80002fc <main+0x30>)
+ 80002d2:	4a0a      	ldr	r2, [pc, #40]	; (80002fc <main+0x30>)
+ 80002d4:	6952      	ldr	r2, [r2, #20]
+ 80002d6:	2180      	movs	r1, #128	; 0x80
+ 80002d8:	0309      	lsls	r1, r1, #12
+ 80002da:	430a      	orrs	r2, r1
+ 80002dc:	615a      	str	r2, [r3, #20]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:20
+						//(RM0091 lists this as IOPCEN, not GPIOCEN)
+
+	GPIOC->MODER = (1 << 16);
+ 80002de:	4b08      	ldr	r3, [pc, #32]	; (8000300 <main+0x34>)
+ 80002e0:	2280      	movs	r2, #128	; 0x80
+ 80002e2:	0252      	lsls	r2, r2, #9
+ 80002e4:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:22
+
+	SysTick_Config(SystemCoreClock/100);
+ 80002e6:	4b07      	ldr	r3, [pc, #28]	; (8000304 <main+0x38>)
+ 80002e8:	681b      	ldr	r3, [r3, #0]
+ 80002ea:	1c18      	adds	r0, r3, #0
+ 80002ec:	2164      	movs	r1, #100	; 0x64
+ 80002ee:	f7ff fee9 	bl	80000c4 <__aeabi_uidiv>
+ 80002f2:	1c03      	adds	r3, r0, #0
+ 80002f4:	1c18      	adds	r0, r3, #0
+ 80002f6:	f7ff ffa5 	bl	8000244 <SysTick_Config>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../src/main.c:24 (discriminator 1)
+
+	while(1);
+ 80002fa:	e7fe      	b.n	80002fa <main+0x2e>
+ 80002fc:	40021000 	.word	0x40021000
+ 8000300:	48000800 	.word	0x48000800
+ 8000304:	20000000 	.word	0x20000000
+
+08000308 <SystemInit>:
+SystemInit():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:160
+  *         SystemCoreClock variable.
+  * @param  None
+  * @retval None
+  */
+void SystemInit (void)
+{    
+ 8000308:	b580      	push	{r7, lr}
+ 800030a:	af00      	add	r7, sp, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:162
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+ 800030c:	4b1b      	ldr	r3, [pc, #108]	; (800037c <SystemInit+0x74>)
+ 800030e:	4a1b      	ldr	r2, [pc, #108]	; (800037c <SystemInit+0x74>)
+ 8000310:	6812      	ldr	r2, [r2, #0]
+ 8000312:	2101      	movs	r1, #1
+ 8000314:	430a      	orrs	r2, r1
+ 8000316:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:165
+
+  /* Reset SW[1:0], HPRE[3:0], PPRE[2:0], ADCPRE and MCOSEL[2:0] bits */
+  RCC->CFGR &= (uint32_t)0xF8FFB80C;
+ 8000318:	4b18      	ldr	r3, [pc, #96]	; (800037c <SystemInit+0x74>)
+ 800031a:	4a18      	ldr	r2, [pc, #96]	; (800037c <SystemInit+0x74>)
+ 800031c:	6851      	ldr	r1, [r2, #4]
+ 800031e:	4a18      	ldr	r2, [pc, #96]	; (8000380 <SystemInit+0x78>)
+ 8000320:	400a      	ands	r2, r1
+ 8000322:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:168
+  
+  /* Reset HSEON, CSSON and PLLON bits */
+  RCC->CR &= (uint32_t)0xFEF6FFFF;
+ 8000324:	4b15      	ldr	r3, [pc, #84]	; (800037c <SystemInit+0x74>)
+ 8000326:	4a15      	ldr	r2, [pc, #84]	; (800037c <SystemInit+0x74>)
+ 8000328:	6811      	ldr	r1, [r2, #0]
+ 800032a:	4a16      	ldr	r2, [pc, #88]	; (8000384 <SystemInit+0x7c>)
+ 800032c:	400a      	ands	r2, r1
+ 800032e:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:171
+
+  /* Reset HSEBYP bit */
+  RCC->CR &= (uint32_t)0xFFFBFFFF;
+ 8000330:	4b12      	ldr	r3, [pc, #72]	; (800037c <SystemInit+0x74>)
+ 8000332:	4a12      	ldr	r2, [pc, #72]	; (800037c <SystemInit+0x74>)
+ 8000334:	6811      	ldr	r1, [r2, #0]
+ 8000336:	4a14      	ldr	r2, [pc, #80]	; (8000388 <SystemInit+0x80>)
+ 8000338:	400a      	ands	r2, r1
+ 800033a:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:174
+
+  /* Reset PLLSRC, PLLXTPRE and PLLMUL[3:0] bits */
+  RCC->CFGR &= (uint32_t)0xFFC0FFFF;
+ 800033c:	4b0f      	ldr	r3, [pc, #60]	; (800037c <SystemInit+0x74>)
+ 800033e:	4a0f      	ldr	r2, [pc, #60]	; (800037c <SystemInit+0x74>)
+ 8000340:	6851      	ldr	r1, [r2, #4]
+ 8000342:	4a12      	ldr	r2, [pc, #72]	; (800038c <SystemInit+0x84>)
+ 8000344:	400a      	ands	r2, r1
+ 8000346:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:177
+
+  /* Reset PREDIV1[3:0] bits */
+  RCC->CFGR2 &= (uint32_t)0xFFFFFFF0;
+ 8000348:	4b0c      	ldr	r3, [pc, #48]	; (800037c <SystemInit+0x74>)
+ 800034a:	4a0c      	ldr	r2, [pc, #48]	; (800037c <SystemInit+0x74>)
+ 800034c:	6ad2      	ldr	r2, [r2, #44]	; 0x2c
+ 800034e:	210f      	movs	r1, #15
+ 8000350:	438a      	bics	r2, r1
+ 8000352:	62da      	str	r2, [r3, #44]	; 0x2c
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:180
+
+  /* Reset USARTSW[1:0], I2CSW, CECSW and ADCSW bits */
+  RCC->CFGR3 &= (uint32_t)0xFFFFFEAC;
+ 8000354:	4b09      	ldr	r3, [pc, #36]	; (800037c <SystemInit+0x74>)
+ 8000356:	4a09      	ldr	r2, [pc, #36]	; (800037c <SystemInit+0x74>)
+ 8000358:	6b11      	ldr	r1, [r2, #48]	; 0x30
+ 800035a:	4a0d      	ldr	r2, [pc, #52]	; (8000390 <SystemInit+0x88>)
+ 800035c:	400a      	ands	r2, r1
+ 800035e:	631a      	str	r2, [r3, #48]	; 0x30
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:183
+
+  /* Reset HSI14 bit */
+  RCC->CR2 &= (uint32_t)0xFFFFFFFE;
+ 8000360:	4b06      	ldr	r3, [pc, #24]	; (800037c <SystemInit+0x74>)
+ 8000362:	4a06      	ldr	r2, [pc, #24]	; (800037c <SystemInit+0x74>)
+ 8000364:	6b52      	ldr	r2, [r2, #52]	; 0x34
+ 8000366:	2101      	movs	r1, #1
+ 8000368:	438a      	bics	r2, r1
+ 800036a:	635a      	str	r2, [r3, #52]	; 0x34
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:186
+
+  /* Disable all interrupts */
+  RCC->CIR = 0x00000000;
+ 800036c:	4b03      	ldr	r3, [pc, #12]	; (800037c <SystemInit+0x74>)
+ 800036e:	2200      	movs	r2, #0
+ 8000370:	609a      	str	r2, [r3, #8]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:189
+
+  /* Configure the System clock frequency, AHB/APBx prescalers and Flash settings */
+  SetSysClock();
+ 8000372:	f000 f80f 	bl	8000394 <SetSysClock>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:190
+}
+ 8000376:	46bd      	mov	sp, r7
+ 8000378:	bd80      	pop	{r7, pc}
+ 800037a:	46c0      	nop			; (mov r8, r8)
+ 800037c:	40021000 	.word	0x40021000
+ 8000380:	f8ffb80c 	.word	0xf8ffb80c
+ 8000384:	fef6ffff 	.word	0xfef6ffff
+ 8000388:	fffbffff 	.word	0xfffbffff
+ 800038c:	ffc0ffff 	.word	0xffc0ffff
+ 8000390:	fffffeac 	.word	0xfffffeac
+
+08000394 <SetSysClock>:
+SetSysClock():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:280
+  *         is reset to the default reset state (done in SystemInit() function).
+  * @param  None
+  * @retval None
+  */
+static void SetSysClock(void)
+{
+ 8000394:	b580      	push	{r7, lr}
+ 8000396:	b082      	sub	sp, #8
+ 8000398:	af00      	add	r7, sp, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:281
+  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+ 800039a:	2300      	movs	r3, #0
+ 800039c:	607b      	str	r3, [r7, #4]
+ 800039e:	2300      	movs	r3, #0
+ 80003a0:	603b      	str	r3, [r7, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:285
+  
+  /* SYSCLK, HCLK, PCLK configuration ----------------------------------------*/
+  /* Enable HSE */    
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
+ 80003a2:	4b31      	ldr	r3, [pc, #196]	; (8000468 <SetSysClock+0xd4>)
+ 80003a4:	4a30      	ldr	r2, [pc, #192]	; (8000468 <SetSysClock+0xd4>)
+ 80003a6:	6812      	ldr	r2, [r2, #0]
+ 80003a8:	2180      	movs	r1, #128	; 0x80
+ 80003aa:	0249      	lsls	r1, r1, #9
+ 80003ac:	430a      	orrs	r2, r1
+ 80003ae:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:290 (discriminator 1)
+ 
+  /* Wait till HSE is ready and if Time out is reached exit */
+  do
+  {
+    HSEStatus = RCC->CR & RCC_CR_HSERDY;
+ 80003b0:	4b2d      	ldr	r3, [pc, #180]	; (8000468 <SetSysClock+0xd4>)
+ 80003b2:	681a      	ldr	r2, [r3, #0]
+ 80003b4:	2380      	movs	r3, #128	; 0x80
+ 80003b6:	029b      	lsls	r3, r3, #10
+ 80003b8:	4013      	ands	r3, r2
+ 80003ba:	603b      	str	r3, [r7, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:291 (discriminator 1)
+    StartUpCounter++;  
+ 80003bc:	687b      	ldr	r3, [r7, #4]
+ 80003be:	3301      	adds	r3, #1
+ 80003c0:	607b      	str	r3, [r7, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:292 (discriminator 1)
+  } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+ 80003c2:	683b      	ldr	r3, [r7, #0]
+ 80003c4:	2b00      	cmp	r3, #0
+ 80003c6:	d104      	bne.n	80003d2 <SetSysClock+0x3e>
+ 80003c8:	687a      	ldr	r2, [r7, #4]
+ 80003ca:	23a0      	movs	r3, #160	; 0xa0
+ 80003cc:	00db      	lsls	r3, r3, #3
+ 80003ce:	429a      	cmp	r2, r3
+ 80003d0:	d1ee      	bne.n	80003b0 <SetSysClock+0x1c>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:294
+
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
+ 80003d2:	4b25      	ldr	r3, [pc, #148]	; (8000468 <SetSysClock+0xd4>)
+ 80003d4:	681a      	ldr	r2, [r3, #0]
+ 80003d6:	2380      	movs	r3, #128	; 0x80
+ 80003d8:	029b      	lsls	r3, r3, #10
+ 80003da:	4013      	ands	r3, r2
+ 80003dc:	d002      	beq.n	80003e4 <SetSysClock+0x50>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:296
+  {
+    HSEStatus = (uint32_t)0x01;
+ 80003de:	2301      	movs	r3, #1
+ 80003e0:	603b      	str	r3, [r7, #0]
+ 80003e2:	e001      	b.n	80003e8 <SetSysClock+0x54>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:300
+  }
+  else
+  {
+    HSEStatus = (uint32_t)0x00;
+ 80003e4:	2300      	movs	r3, #0
+ 80003e6:	603b      	str	r3, [r7, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:303
+  }  
+
+  if (HSEStatus == (uint32_t)0x01)
+ 80003e8:	683b      	ldr	r3, [r7, #0]
+ 80003ea:	2b01      	cmp	r3, #1
+ 80003ec:	d138      	bne.n	8000460 <SetSysClock+0xcc>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:306
+  {
+    /* Enable Prefetch Buffer and set Flash Latency */
+    FLASH->ACR = FLASH_ACR_PRFTBE | FLASH_ACR_LATENCY;
+ 80003ee:	4b1f      	ldr	r3, [pc, #124]	; (800046c <SetSysClock+0xd8>)
+ 80003f0:	2211      	movs	r2, #17
+ 80003f2:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:309
+ 
+    /* HCLK = SYSCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+ 80003f4:	4b1c      	ldr	r3, [pc, #112]	; (8000468 <SetSysClock+0xd4>)
+ 80003f6:	4a1c      	ldr	r2, [pc, #112]	; (8000468 <SetSysClock+0xd4>)
+ 80003f8:	6852      	ldr	r2, [r2, #4]
+ 80003fa:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:312
+      
+    /* PCLK = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE_DIV1;
+ 80003fc:	4b1a      	ldr	r3, [pc, #104]	; (8000468 <SetSysClock+0xd4>)
+ 80003fe:	4a1a      	ldr	r2, [pc, #104]	; (8000468 <SetSysClock+0xd4>)
+ 8000400:	6852      	ldr	r2, [r2, #4]
+ 8000402:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:315
+
+    /* PLL configuration = HSE * 6 = 48 MHz */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLMULL));
+ 8000404:	4b18      	ldr	r3, [pc, #96]	; (8000468 <SetSysClock+0xd4>)
+ 8000406:	4a18      	ldr	r2, [pc, #96]	; (8000468 <SetSysClock+0xd4>)
+ 8000408:	6851      	ldr	r1, [r2, #4]
+ 800040a:	4a19      	ldr	r2, [pc, #100]	; (8000470 <SetSysClock+0xdc>)
+ 800040c:	400a      	ands	r2, r1
+ 800040e:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:316
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLMULL6);
+ 8000410:	4b15      	ldr	r3, [pc, #84]	; (8000468 <SetSysClock+0xd4>)
+ 8000412:	4a15      	ldr	r2, [pc, #84]	; (8000468 <SetSysClock+0xd4>)
+ 8000414:	6852      	ldr	r2, [r2, #4]
+ 8000416:	2188      	movs	r1, #136	; 0x88
+ 8000418:	0349      	lsls	r1, r1, #13
+ 800041a:	430a      	orrs	r2, r1
+ 800041c:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:319
+            
+    /* Enable PLL */
+    RCC->CR |= RCC_CR_PLLON;
+ 800041e:	4b12      	ldr	r3, [pc, #72]	; (8000468 <SetSysClock+0xd4>)
+ 8000420:	4a11      	ldr	r2, [pc, #68]	; (8000468 <SetSysClock+0xd4>)
+ 8000422:	6812      	ldr	r2, [r2, #0]
+ 8000424:	2180      	movs	r1, #128	; 0x80
+ 8000426:	0449      	lsls	r1, r1, #17
+ 8000428:	430a      	orrs	r2, r1
+ 800042a:	601a      	str	r2, [r3, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:322
+
+    /* Wait till PLL is ready */
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)
+ 800042c:	46c0      	nop			; (mov r8, r8)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:322 (discriminator 1)
+ 800042e:	4b0e      	ldr	r3, [pc, #56]	; (8000468 <SetSysClock+0xd4>)
+ 8000430:	681a      	ldr	r2, [r3, #0]
+ 8000432:	2380      	movs	r3, #128	; 0x80
+ 8000434:	049b      	lsls	r3, r3, #18
+ 8000436:	4013      	ands	r3, r2
+ 8000438:	d0f9      	beq.n	800042e <SetSysClock+0x9a>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:327
+    {
+    }
+
+    /* Select PLL as system clock source */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+ 800043a:	4b0b      	ldr	r3, [pc, #44]	; (8000468 <SetSysClock+0xd4>)
+ 800043c:	4a0a      	ldr	r2, [pc, #40]	; (8000468 <SetSysClock+0xd4>)
+ 800043e:	6852      	ldr	r2, [r2, #4]
+ 8000440:	2103      	movs	r1, #3
+ 8000442:	438a      	bics	r2, r1
+ 8000444:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:328
+    RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
+ 8000446:	4b08      	ldr	r3, [pc, #32]	; (8000468 <SetSysClock+0xd4>)
+ 8000448:	4a07      	ldr	r2, [pc, #28]	; (8000468 <SetSysClock+0xd4>)
+ 800044a:	6852      	ldr	r2, [r2, #4]
+ 800044c:	2102      	movs	r1, #2
+ 800044e:	430a      	orrs	r2, r1
+ 8000450:	605a      	str	r2, [r3, #4]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:331
+
+    /* Wait till PLL is used as system clock source */
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)RCC_CFGR_SWS_PLL)
+ 8000452:	46c0      	nop			; (mov r8, r8)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:331 (discriminator 1)
+ 8000454:	4b04      	ldr	r3, [pc, #16]	; (8000468 <SetSysClock+0xd4>)
+ 8000456:	685a      	ldr	r2, [r3, #4]
+ 8000458:	230c      	movs	r3, #12
+ 800045a:	4013      	ands	r3, r2
+ 800045c:	2b08      	cmp	r3, #8
+ 800045e:	d1f9      	bne.n	8000454 <SetSysClock+0xc0>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c:339
+  }
+  else
+  { /* If HSE fails to start-up, the application will have wrong clock 
+         configuration. User can add here some code to deal with this error */
+  }  
+}
+ 8000460:	46bd      	mov	sp, r7
+ 8000462:	b002      	add	sp, #8
+ 8000464:	bd80      	pop	{r7, pc}
+ 8000466:	46c0      	nop			; (mov r8, r8)
+ 8000468:	40021000 	.word	0x40021000
+ 800046c:	40022000 	.word	0x40022000
+ 8000470:	ffc0ffff 	.word	0xffc0ffff
+
+08000474 <Reset_Handler>:
+Reset_Handler():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:71
+
+  .section .text.Reset_Handler
+  .weak Reset_Handler
+  .type Reset_Handler, %function
+Reset_Handler:
+  ldr   r0, =_estack
+ 8000474:	480e      	ldr	r0, [pc, #56]	; (80004b0 <LoopForever+0x4>)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:72
+  mov   sp, r0          /* set stack pointer */
+ 8000476:	4685      	mov	sp, r0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:75
+
+/* Copy the data segment initializers from flash to SRAM */
+  movs r1, #0
+ 8000478:	2100      	movs	r1, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:76
+  b LoopCopyDataInit
+ 800047a:	e003      	b.n	8000484 <LoopCopyDataInit>
+
+0800047c <CopyDataInit>:
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:79
+
+CopyDataInit:
+  ldr r3, =_sidata
+ 800047c:	4b0d      	ldr	r3, [pc, #52]	; (80004b4 <LoopForever+0x8>)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:80
+  ldr r3, [r3, r1]
+ 800047e:	585b      	ldr	r3, [r3, r1]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:81
+  str r3, [r0, r1]
+ 8000480:	5043      	str	r3, [r0, r1]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:82
+  adds r1, r1, #4
+ 8000482:	3104      	adds	r1, #4
+
+08000484 <LoopCopyDataInit>:
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:85
+
+LoopCopyDataInit:
+  ldr r0, =_sdata
+ 8000484:	480c      	ldr	r0, [pc, #48]	; (80004b8 <LoopForever+0xc>)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:86
+  ldr r3, =_edata
+ 8000486:	4b0d      	ldr	r3, [pc, #52]	; (80004bc <LoopForever+0x10>)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:87
+  adds r2, r0, r1
+ 8000488:	1842      	adds	r2, r0, r1
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:88
+  cmp r2, r3
+ 800048a:	429a      	cmp	r2, r3
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:89
+  bcc CopyDataInit
+ 800048c:	d3f6      	bcc.n	800047c <CopyDataInit>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:90
+  ldr r2, =_sbss
+ 800048e:	4a0c      	ldr	r2, [pc, #48]	; (80004c0 <LoopForever+0x14>)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:91
+  b LoopFillZerobss
+ 8000490:	e002      	b.n	8000498 <LoopFillZerobss>
+
+08000492 <FillZerobss>:
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:94
+/* Zero fill the bss segment. */
+FillZerobss:
+  movs r3, #0
+ 8000492:	2300      	movs	r3, #0
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:95
+  str  r3, [r2]
+ 8000494:	6013      	str	r3, [r2, #0]
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:96
+  adds r2, r2, #4
+ 8000496:	3204      	adds	r2, #4
+
+08000498 <LoopFillZerobss>:
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:100
+
+
+LoopFillZerobss:
+  ldr r3, = _ebss
+ 8000498:	4b0a      	ldr	r3, [pc, #40]	; (80004c4 <LoopForever+0x18>)
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:101
+  cmp r2, r3
+ 800049a:	429a      	cmp	r2, r3
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:102
+  bcc FillZerobss
+ 800049c:	d3f9      	bcc.n	8000492 <FillZerobss>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:105
+
+/* Call the clock system intitialization function.*/
+    bl  SystemInit
+ 800049e:	f7ff ff33 	bl	8000308 <SystemInit>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:107
+/* Call static constructors */
+    bl __libc_init_array
+ 80004a2:	f000 f813 	bl	80004cc <__libc_init_array>
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:109
+/* Call the application's entry point.*/
+  bl main
+ 80004a6:	f7ff ff11 	bl	80002cc <main>
+
+080004aa <_exit>:
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:113
+  
+.globl _exit
+_exit:
+	b .
+ 80004aa:	e7fe      	b.n	80004aa <_exit>
+
+080004ac <LoopForever>:
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:116
+
+LoopForever:
+    b LoopForever
+ 80004ac:	e7fe      	b.n	80004ac <LoopForever>
+$d():
+ 80004ae:	0000      	.short	0x0000
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:71
+
+  .section .text.Reset_Handler
+  .weak Reset_Handler
+  .type Reset_Handler, %function
+Reset_Handler:
+  ldr   r0, =_estack
+ 80004b0:	20002000 	.word	0x20002000
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:79
+/* Copy the data segment initializers from flash to SRAM */
+  movs r1, #0
+  b LoopCopyDataInit
+
+CopyDataInit:
+  ldr r3, =_sidata
+ 80004b4:	08000574 	.word	0x08000574
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:85
+  ldr r3, [r3, r1]
+  str r3, [r0, r1]
+  adds r1, r1, #4
+
+LoopCopyDataInit:
+  ldr r0, =_sdata
+ 80004b8:	20000000 	.word	0x20000000
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:86
+  ldr r3, =_edata
+ 80004bc:	20000004 	.word	0x20000004
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:90
+  adds r2, r0, r1
+  cmp r2, r3
+  bcc CopyDataInit
+  ldr r2, =_sbss
+ 80004c0:	20000004 	.word	0x20000004
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:100
+  str  r3, [r2]
+  adds r2, r2, #4
+
+
+LoopFillZerobss:
+  ldr r3, = _ebss
+ 80004c4:	20000008 	.word	0x20000008
+
+080004c8 <ADC1_COMP_IRQHandler>:
+TIM1_CC_IRQHandler():
+C:\stm32f0-Discovery_Tools\Projects\ST_Library_Template\Debug/../Device/startup_stm32f0xx.S:132
+ * @retval : None
+*/
+    .section .text.Default_Handler,"ax",%progbits
+Default_Handler:
+Infinite_Loop:
+  b Infinite_Loop
+ 80004c8:	e7fe      	b.n	80004c8 <ADC1_COMP_IRQHandler>
+	...
+
+080004cc <__libc_init_array>:
+__libc_init_array():
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:29
+ 80004cc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:33
+ 80004ce:	4f1f      	ldr	r7, [pc, #124]	; (800054c <__libc_init_array+0x80>)
+ 80004d0:	4c1f      	ldr	r4, [pc, #124]	; (8000550 <__libc_init_array+0x84>)
+ 80004d2:	1b38      	subs	r0, r7, r4
+ 80004d4:	1087      	asrs	r7, r0, #2
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:34
+ 80004d6:	d018      	beq.n	800050a <__libc_init_array+0x3e>
+ 80004d8:	2201      	movs	r2, #1
+ 80004da:	1e7b      	subs	r3, r7, #1
+ 80004dc:	1c15      	adds	r5, r2, #0
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:35
+ 80004de:	cc02      	ldmia	r4!, {r1}
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:34
+ 80004e0:	2601      	movs	r6, #1
+ 80004e2:	401d      	ands	r5, r3
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:35
+ 80004e4:	4788      	blx	r1
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:34
+ 80004e6:	42b7      	cmp	r7, r6
+ 80004e8:	d00f      	beq.n	800050a <__libc_init_array+0x3e>
+ 80004ea:	2d00      	cmp	r5, #0
+ 80004ec:	d004      	beq.n	80004f8 <__libc_init_array+0x2c>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:35
+ 80004ee:	cc40      	ldmia	r4!, {r6}
+ 80004f0:	47b0      	blx	r6
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:34
+ 80004f2:	2602      	movs	r6, #2
+ 80004f4:	42b7      	cmp	r7, r6
+ 80004f6:	d008      	beq.n	800050a <__libc_init_array+0x3e>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:35 (discriminator 2)
+ 80004f8:	1c25      	adds	r5, r4, #0
+ 80004fa:	cd01      	ldmia	r5!, {r0}
+ 80004fc:	4780      	blx	r0
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:34 (discriminator 2)
+ 80004fe:	3602      	adds	r6, #2
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:35 (discriminator 2)
+ 8000500:	6863      	ldr	r3, [r4, #4]
+ 8000502:	4798      	blx	r3
+ 8000504:	1d2c      	adds	r4, r5, #4
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:34 (discriminator 2)
+ 8000506:	42b7      	cmp	r7, r6
+ 8000508:	d1f6      	bne.n	80004f8 <__libc_init_array+0x2c>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:37
+ 800050a:	f000 f827 	bl	800055c <_init>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:39
+ 800050e:	4f11      	ldr	r7, [pc, #68]	; (8000554 <__libc_init_array+0x88>)
+ 8000510:	4c11      	ldr	r4, [pc, #68]	; (8000558 <__libc_init_array+0x8c>)
+ 8000512:	1b3a      	subs	r2, r7, r4
+ 8000514:	1097      	asrs	r7, r2, #2
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40
+ 8000516:	d018      	beq.n	800054a <__libc_init_array+0x7e>
+ 8000518:	2601      	movs	r6, #1
+ 800051a:	1e79      	subs	r1, r7, #1
+ 800051c:	1c35      	adds	r5, r6, #0
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:41
+ 800051e:	cc01      	ldmia	r4!, {r0}
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40
+ 8000520:	2601      	movs	r6, #1
+ 8000522:	400d      	ands	r5, r1
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:41
+ 8000524:	4780      	blx	r0
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40
+ 8000526:	42b7      	cmp	r7, r6
+ 8000528:	d00f      	beq.n	800054a <__libc_init_array+0x7e>
+ 800052a:	2d00      	cmp	r5, #0
+ 800052c:	d004      	beq.n	8000538 <__libc_init_array+0x6c>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:41
+ 800052e:	cc08      	ldmia	r4!, {r3}
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40
+ 8000530:	2602      	movs	r6, #2
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:41
+ 8000532:	4798      	blx	r3
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40
+ 8000534:	42b7      	cmp	r7, r6
+ 8000536:	d008      	beq.n	800054a <__libc_init_array+0x7e>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:41 (discriminator 2)
+ 8000538:	1c25      	adds	r5, r4, #0
+ 800053a:	cd04      	ldmia	r5!, {r2}
+ 800053c:	4790      	blx	r2
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40 (discriminator 2)
+ 800053e:	3602      	adds	r6, #2
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:41 (discriminator 2)
+ 8000540:	6861      	ldr	r1, [r4, #4]
+ 8000542:	4788      	blx	r1
+ 8000544:	1d2c      	adds	r4, r5, #4
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:40 (discriminator 2)
+ 8000546:	42b7      	cmp	r7, r6
+ 8000548:	d1f6      	bne.n	8000538 <__libc_init_array+0x6c>
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/misc/init.c:42
+ 800054a:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+	...
+
+0800055c <_init>:
+$t():
+ 800055c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800055e:	46c0      	nop			; (mov r8, r8)
+ 8000560:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8000562:	bc08      	pop	{r3}
+ 8000564:	469e      	mov	lr, r3
+ 8000566:	4770      	bx	lr
+
+08000568 <_fini>:
+ 8000568:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800056a:	46c0      	nop			; (mov r8, r8)
+ 800056c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 800056e:	bc08      	pop	{r3}
+ 8000570:	469e      	mov	lr, r3
+ 8000572:	4770      	bx	lr

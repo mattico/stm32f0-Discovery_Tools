@@ -1,0 +1,12 @@
+23:22:01 **** Incremental Build of configuration Debug for project Test ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size  --format=berkeley "Test.elf"
+bash.exe: warning: could not find /tmp, please create!
+   text	   data	    bss	    dec	    hex	filename
+  35160	   1624	    260	  37044	   90b4	Test.elf
+Finished building: Test.siz
+ 
+
+23:22:01 Build Finished (took 194ms)
+

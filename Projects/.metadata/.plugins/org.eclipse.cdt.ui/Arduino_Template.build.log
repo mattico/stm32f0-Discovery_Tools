@@ -1,0 +1,11 @@
+18:03:04 **** Incremental Build of configuration Debug for project Arduino_Template ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size  --format=berkeley "Arduino_Template.elf"
+   text	   data	    bss	    dec	    hex	filename
+  47148	    640	    372	  48160	   bc20	Arduino_Template.elf
+Finished building: Arduino_Template.siz
+ 
+
+18:03:05 Build Finished (took 719ms)
+

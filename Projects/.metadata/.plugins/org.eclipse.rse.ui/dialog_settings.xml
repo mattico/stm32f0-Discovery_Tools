@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.rse.ui.wizards.newconnection.RSEMainNewConnectionWizard">
+		<item value="org.eclipse.rse.systemtype.local" key="lastSelectedSystemTypeId"/>
+		<section name="org.eclipse.rse.ui.wizards.newconnection.RSENewConnectionWizardSelectionPage">
+		</section>
+	</section>
+	<section name="RemoteSearchPage">
+	</section>
+</section>

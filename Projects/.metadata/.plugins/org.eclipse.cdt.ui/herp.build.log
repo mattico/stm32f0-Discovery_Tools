@@ -1,0 +1,31 @@
+17:14:10 **** Build of configuration Debug for project herp ****
+make all 
+Building file: ../src/herp.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -MMD -MP -MF"src/herp.d" -MT"src/herp.d" -c -o "src/herp.o" "../src/herp.c"
+Finished building: ../src/herp.c
+ 
+Building target: herp.elf
+Invoking: Cross ARM C Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -Wl,-Map,"herp.map" -o "herp.elf"  ./src/herp.o   -lc -lm
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-exit.o): In function `exit':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/stdlib/exit.c:70: undefined reference to `_exit'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-sbrkr.o): In function `_sbrk_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/sbrkr.c:58: undefined reference to `_sbrk'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-writer.o): In function `_write_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/writer.c:58: undefined reference to `_write'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-closer.o): In function `_close_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/closer.c:53: undefined reference to `_close'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-fstatr.o): In function `_fstat_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/fstatr.c:62: undefined reference to `_fstat'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-isattyr.o): In function `_isatty_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/isattyr.c:58: undefined reference to `_isatty'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-lseekr.o): In function `_lseek_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/lseekr.c:58: undefined reference to `_lseek'
+c:/stm32f0-discovery_tools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-readr.o): In function `_read_r':
+/home/freddie/bleeding-edge-toolchain/src/newlib/newlib/libc/reent/readr.c:58: undefined reference to `_read'
+collect2.exe: error: ld returned 1 exit status
+make: *** [herp.elf] Error 1
+
+17:14:12 Build Finished (took 1s.174ms)
+

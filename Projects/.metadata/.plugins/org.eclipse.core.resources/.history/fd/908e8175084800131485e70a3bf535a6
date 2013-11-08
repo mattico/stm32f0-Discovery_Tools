@@ -1,0 +1,35 @@
+#include "stm32f0xx_conf.h"
+#include "stm32f0_discovery.h"
+#include "utilities.h"
+#include "gpio.h"
+
+void setup() {
+
+	// Insert Setup Code Here
+
+	pinMode(9, OUTPUT); // LED 1 Pin
+	pinMode(8, OUTPUT); // LED 2 Pin
+
+}
+
+void loop() {
+
+	// Insert Loop Code Here
+
+//	digitalWrite(9, HIGH);
+//	delay(1);
+//	digitalWrite(9, LOW);
+	STM_EVAL_LEDToggle();
+	delay(1);
+
+}
+
+
+int main(void)
+{
+	DISCOVERY_Configuration();
+	setup();
+	while(1) {
+		loop();
+	}
+}

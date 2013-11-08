@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+environment/workspace/PATH/delimiter=;
+environment/workspace/PATH/operation=append
+environment/workspace/PATH/value=${eclipse_home}/../coreutils/bin
+environment/workspace/append=true
+environment/workspace/appendContributed=false
+macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<macros/>\r\n
