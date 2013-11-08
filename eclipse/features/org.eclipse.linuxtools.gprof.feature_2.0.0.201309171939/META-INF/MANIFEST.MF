@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_25
+Built-By: genie.tools.linuxtools
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+
+Name: epl-v10.html
+SHA1-Digest: tBapBqAbnDhd5lp2Ytb9WCVbIuE=
+
+Name: META-INF/maven/org.eclipse.linuxtools.gprof/org.eclipse.linuxtoo
+ ls.gprof.feature/pom.properties
+SHA1-Digest: 9D+wMWp5RVXEb7/0X6p31GiW5ds=
+
+Name: META-INF/maven/org.eclipse.linuxtools.gprof/org.eclipse.linuxtoo
+ ls.gprof.feature/pom.xml
+SHA1-Digest: ik8kZyFrBoGXp5rEu+A5aGN/Ed0=
+
+Name: p2.inf
+SHA1-Digest: g35hIX+M8tP/f5uVyX/ojV7x1WI=
+
+Name: license.html
+SHA1-Digest: DfTuvnbPyEXFVNsPlqPwc2FvL+U=
+
+Name: feature.properties
+SHA1-Digest: ekcs4AwKssgby7+JYKB6h4zDV6g=
+
+Name: feature.xml
+SHA1-Digest: u4Iv7D76iaGlRSeew/nyszxJ0fg=
+

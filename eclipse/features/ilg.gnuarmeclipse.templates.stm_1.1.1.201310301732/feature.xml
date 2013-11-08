@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ilg.gnuarmeclipse.templates.stm"
+      label="%featureName"
+      version="1.1.1.201310301732"
+      provider-name="%providerName"
+      plugin="ilg.gnuarmeclipse.templates.stm">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://gnuarmeclipse.sourceforge.net/updates"/>
+   </url>
+
+   <plugin
+         id="ilg.gnuarmeclipse.templates.core"
+         download-size="21"
+         install-size="52"
+         version="1.1.0.201310301732"
+         unpack="false"/>
+
+   <plugin
+         id="ilg.gnuarmeclipse.templates.stm"
+         download-size="1202"
+         install-size="7365"
+         version="1.1.1.201310301732"
+         unpack="false"/>
+
+</feature>

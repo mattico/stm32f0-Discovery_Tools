@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.linuxtools.lttng2"
+      label="%featureName"
+      version="2.1.0.201309171939"
+      provider-name="%featureProvider">
+
+   <description url="http://www.example.com/description">
+      %description
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="Linux Tools Update Site" url="http://download.eclipse.org/linuxtools/update"/>
+   </url>
+
+   <includes
+         id="org.eclipse.linuxtools.tmf"
+         version="2.1.0.201309171939"
+         name="Tracing and Monitoring Framework (TMF)"/>
+
+   <includes
+         id="org.eclipse.linuxtools.ctf"
+         version="2.1.0.201309171939"
+         name="Common Trace Format (CTF)"/>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.linuxtools.lttng2.core" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.linuxtools.tmf.core" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.linuxtools.tmf.ui" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help"/>
+      <import feature="org.eclipse.rse" version="3.1.100" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.linuxtools.lttng2.core"
+         download-size="42"
+         install-size="78"
+         version="2.1.0.201309171939"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.linuxtools.lttng2.ui"
+         download-size="318"
+         install-size="763"
+         version="2.1.0.201309171939"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.linuxtools.lttng.help"
+         download-size="5169"
+         install-size="5632"
+         version="2.1.0.201309171939"/>
+
+</feature>

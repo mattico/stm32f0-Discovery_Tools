@@ -1,0 +1,8 @@
+#encoding=UTF-8
+#version=1
+org.eclipse.cdt.launch.remote.source,2.4.0.201309180223,plugins/org.eclipse.cdt.launch.remote.source_2.4.0.201309180223.jar,-1,false
+org.eclipse.tm.terminal.serial.source,2.1.300.201308290741,plugins/org.eclipse.tm.terminal.serial.source_2.1.300.201308290741.jar,-1,false
+org.eclipse.tm.terminal.source,3.2.100.201308011444,plugins/org.eclipse.tm.terminal.source_3.2.100.201308011444.jar,-1,false
+org.eclipse.tm.terminal.ssh.source,2.1.300.201305201712,plugins/org.eclipse.tm.terminal.ssh.source_2.1.300.201305201712.jar,-1,false
+org.eclipse.tm.terminal.telnet.source,2.1.300.201305201712,plugins/org.eclipse.tm.terminal.telnet.source_2.1.300.201305201712.jar,-1,false
+org.eclipse.tm.terminal.view.source,2.4.100.201305201712,plugins/org.eclipse.tm.terminal.view.source_2.4.100.201305201712.jar,-1,false

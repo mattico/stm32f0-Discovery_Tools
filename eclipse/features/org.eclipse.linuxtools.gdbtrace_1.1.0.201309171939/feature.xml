@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.linuxtools.gdbtrace"
+      label="%featureName"
+      version="1.1.0.201309171939"
+      provider-name="%featureProvider">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.linuxtools.tmf"
+         version="2.1.0.201309171939"
+         name="Tracing and Monitoring Framework (TMF)"/>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.debug.core"/>
+      <import plugin="org.eclipse.debug.ui"/>
+      <import plugin="org.eclipse.help"/>
+      <import plugin="org.eclipse.cdt.core"/>
+      <import plugin="org.eclipse.cdt.dsf"/>
+      <import plugin="org.eclipse.cdt.dsf.gdb"/>
+      <import plugin="org.eclipse.cdt.dsf.gdb.ui"/>
+      <import plugin="org.eclipse.linuxtools.tmf.core" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.linuxtools.tmf.ui" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.linuxtools.gdbtrace.core" version="1.1.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.linuxtools.gdbtrace.core"
+         download-size="43"
+         install-size="91"
+         version="1.1.0.201309171939"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.linuxtools.gdbtrace.ui"
+         download-size="26"
+         install-size="47"
+         version="1.1.0.201309171939"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.linuxtools.gdbtrace.help"
+         download-size="183"
+         install-size="214"
+         version="1.1.0.201309171939"/>
+
+</feature>
