@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.cdt.launch.applicationLaunchType">
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.DEBUG_NAME" value="gdb"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=".gdbinit"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.protocol" value="mi"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="org.eclipse.rse.remotecdt.RemoteGDBDebugger"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="build/ch.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="ChibiOS_Template"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="0.2077824274"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_GDBSERVER_COMMAND" value="gdbserver"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_GDBSERVER_PORT" value="2345"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/ChibiOS_Template"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
+</launchConfiguration>

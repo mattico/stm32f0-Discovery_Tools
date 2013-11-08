@@ -1,5 +1,5 @@
-18:07:06 **** Incremental Build of configuration Debug for project ST_Library_Template ****
-make all 
+00:37:28 **** Incremental Build of configuration Debug for project ST_Library_Template ****
+make -j4 all 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size  --format=berkeley "ST_Library_Template.elf"
    text	   data	    bss	    dec	    hex	filename
@@ -7,5 +7,5 @@ arm-none-eabi-size  --format=berkeley "ST_Library_Template.elf"
 Finished building: ST_Library_Template.siz
  
 
-18:07:06 Build Finished (took 621ms)
+00:37:28 Build Finished (took 626ms)
 

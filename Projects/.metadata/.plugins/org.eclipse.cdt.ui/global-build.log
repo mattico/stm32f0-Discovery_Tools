@@ -1,32 +1,12 @@
-18:06:35 **** Incremental Build of configuration Debug for project ST_Library_Template ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size  --format=berkeley "ST_Library_Template.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1396	      4	      4	   1404	    57c	ST_Library_Template.elf
-Finished building: ST_Library_Template.siz
- 
-18:06:44 **** Incremental Build of configuration Debug for project ST_Library_Template ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size  --format=berkeley "ST_Library_Template.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1396	      4	      4	   1404	    57c	ST_Library_Template.elf
-Finished building: ST_Library_Template.siz
- 
-18:06:47 **** Incremental Build of configuration Debug for project ST_Library_Template ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size  --format=berkeley "ST_Library_Template.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1396	      4	      4	   1404	    57c	ST_Library_Template.elf
-Finished building: ST_Library_Template.siz
- 
-18:07:06 **** Incremental Build of configuration Debug for project ST_Library_Template ****
-make all 
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size  --format=berkeley "ST_Library_Template.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1396	      4	      4	   1404	    57c	ST_Library_Template.elf
-Finished building: ST_Library_Template.siz
- 
+00:39:16 **** Incremental Build of configuration Default for project ChibiOS_Template ****
+make -j4 all 
+make: Nothing to be done for `all'.
+00:40:13 **** Incremental Build of configuration Default for project ChibiOS_Template ****
+make -j4 all 
+make: Nothing to be done for `all'.
+00:41:01 **** Incremental Build of configuration Default for project ChibiOS_Template ****
+make -j4 all 
+make: Nothing to be done for `all'.
+00:42:54 **** Incremental Build of configuration Default for project ChibiOS_Template ****
+make -j4 all 
+make: Nothing to be done for `all'.

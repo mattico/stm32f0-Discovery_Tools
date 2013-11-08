@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/0.2077824274/PATH/delimiter=;
+environment/project/0.2077824274/PATH/operation=replace
+environment/project/0.2077824274/PATH/value=C\:/Program Files (x86)/Java/jre7/bin/client;C\:/Program Files (x86)/Java/jre7/bin;C\:/Program Files (x86)/Java/jre7/lib/i386;C\:\\windows\\system32;C\:\\windows;C\:\\windows\\System32\\Wbem;C\:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C\:\\Program Files (x86)\\PuTTY;C\:\\Program Files\\Mercurial\\;C\:\\go\\bin;C\:\\Program Files (x86)\\Java\\jre7\\bin;;C\:\\stm32f0-Discovery_Tools\\eclipse;${eclipse_home}/../coreutils/bin;C\:/stm32f0-Discovery_Tools/gcc-arm-none-eabi/bin;
+environment/project/0.2077824274/append=true
+environment/project/0.2077824274/appendContributed=true

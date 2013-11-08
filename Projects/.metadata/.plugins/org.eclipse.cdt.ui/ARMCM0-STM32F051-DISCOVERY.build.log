@@ -1,0 +1,8 @@
+23:36:50 **** Clean-only build of configuration Default for project ARMCM0-STM32F051-DISCOVERY ****
+make -j4 clean 
+Cleaning
+rm -fR .dep build
+Done
+
+23:36:52 Build Finished (took 1s.771ms)
+

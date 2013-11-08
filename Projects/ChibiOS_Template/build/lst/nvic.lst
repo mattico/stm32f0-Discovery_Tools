@@ -1,0 +1,1530 @@
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"nvic.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.nvicEnableVector,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	nvicEnableVector
+  21              		.code	16
+  22              		.thumb_func
+  23              		.type	nvicEnableVector, %function
+  24              	nvicEnableVector:
+  25              	.LFB7:
+  26              		.file 1 "../../ChibiOS_2.6.1/os/ports/common/ARMCMx/nvic.c"
+  27              		.loc 1 46 0
+  28              		.cfi_startproc
+  29              	.LVL0:
+  30              		.loc 1 49 0
+  31 0000 8208     		lsr	r2, r0, #2
+  32              		.loc 1 46 0
+  33 0002 70B5     		push	{r4, r5, r6, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 4, -16
+  37              		.cfi_offset 5, -12
+  38              		.cfi_offset 6, -8
+  39              		.cfi_offset 14, -4
+  40              		.loc 1 49 0
+  41 0004 0C4B     		ldr	r3, .L2
+  42 0006 C032     		add	r2, r2, #192
+  43              		.loc 1 47 0
+  44 0008 0324     		mov	r4, #3
+  45              		.loc 1 49 0
+  46 000a 9200     		lsl	r2, r2, #2
+  47              		.loc 1 47 0
+  48 000c 0440     		and	r4, r0
+  49              		.loc 1 49 0
+  50 000e D558     		ldr	r5, [r2, r3]
+  51              		.loc 1 47 0
+  52 0010 E400     		lsl	r4, r4, #3
+  53              	.LVL1:
+  54              		.loc 1 49 0
+  55 0012 FF26     		mov	r6, #255
+  56 0014 A640     		lsl	r6, r6, r4
+  57 0016 A140     		lsl	r1, r1, r4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 2
+
+
+  58              	.LVL2:
+  59 0018 B543     		bic	r5, r6
+  60 001a 0D43     		orr	r5, r1
+  61 001c D550     		str	r5, [r2, r3]
+  62              		.loc 1 50 0
+  63 001e 4209     		lsr	r2, r0, #5
+  64 0020 1F21     		mov	r1, #31
+  65 0022 161C     		mov	r6, r2
+  66 0024 6036     		add	r6, r6, #96
+  67 0026 0840     		and	r0, r1
+  68              	.LVL3:
+  69 0028 0124     		mov	r4, #1
+  70              	.LVL4:
+  71 002a B500     		lsl	r5, r6, #2
+  72 002c 8440     		lsl	r4, r4, r0
+  73              		.loc 1 51 0
+  74 002e 9200     		lsl	r2, r2, #2
+  75              		.loc 1 50 0
+  76 0030 EC50     		str	r4, [r5, r3]
+  77              		.loc 1 52 0
+  78              		@ sp needed for prologue
+  79              		.loc 1 51 0
+  80 0032 D450     		str	r4, [r2, r3]
+  81              		.loc 1 52 0
+  82 0034 70BD     		pop	{r4, r5, r6, pc}
+  83              	.L3:
+  84 0036 C046     		.align	2
+  85              	.L2:
+  86 0038 00E100E0 		.word	-536813312
+  87              		.cfi_endproc
+  88              	.LFE7:
+  89              		.size	nvicEnableVector, .-nvicEnableVector
+  90 003c C046C046 		.section	.text.nvicDisableVector,"ax",%progbits
+  91              		.align	2
+  92              		.p2align 4,,15
+  93              		.global	nvicDisableVector
+  94              		.code	16
+  95              		.thumb_func
+  96              		.type	nvicDisableVector, %function
+  97              	nvicDisableVector:
+  98              	.LFB8:
+  99              		.loc 1 60 0
+ 100              		.cfi_startproc
+ 101              	.LVL5:
+ 102              		.loc 1 63 0
+ 103 0000 1F21     		mov	r1, #31
+ 104 0002 0140     		and	r1, r0
+ 105 0004 0123     		mov	r3, #1
+ 106 0006 8B40     		lsl	r3, r3, r1
+ 107 0008 4209     		lsr	r2, r0, #5
+ 108              		.loc 1 60 0
+ 109 000a 10B5     		push	{r4, lr}
+ 110              	.LCFI1:
+ 111              		.cfi_def_cfa_offset 8
+ 112              		.cfi_offset 4, -8
+ 113              		.cfi_offset 14, -4
+ 114              		.loc 1 63 0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 3
+
+
+ 115 000c 2032     		add	r2, r2, #32
+ 116 000e 1C1C     		mov	r4, r3
+ 117 0010 074B     		ldr	r3, .L5
+ 118 0012 9200     		lsl	r2, r2, #2
+ 119              		.loc 1 64 0
+ 120 0014 8108     		lsr	r1, r0, #2
+ 121              		.loc 1 63 0
+ 122 0016 D450     		str	r4, [r2, r3]
+ 123              		.loc 1 64 0
+ 124 0018 C031     		add	r1, r1, #192
+ 125              		.loc 1 61 0
+ 126 001a 0324     		mov	r4, #3
+ 127              		.loc 1 64 0
+ 128 001c 8A00     		lsl	r2, r1, #2
+ 129              		.loc 1 61 0
+ 130 001e 2040     		and	r0, r4
+ 131              	.LVL6:
+ 132              		.loc 1 64 0
+ 133 0020 D158     		ldr	r1, [r2, r3]
+ 134              		.loc 1 61 0
+ 135 0022 C000     		lsl	r0, r0, #3
+ 136              	.LVL7:
+ 137              		.loc 1 64 0
+ 138 0024 FF24     		mov	r4, #255
+ 139 0026 8440     		lsl	r4, r4, r0
+ 140 0028 A143     		bic	r1, r4
+ 141 002a D150     		str	r1, [r2, r3]
+ 142              		.loc 1 65 0
+ 143              		@ sp needed for prologue
+ 144 002c 10BD     		pop	{r4, pc}
+ 145              	.L6:
+ 146 002e C046     		.align	2
+ 147              	.L5:
+ 148 0030 00E100E0 		.word	-536813312
+ 149              		.cfi_endproc
+ 150              	.LFE8:
+ 151              		.size	nvicDisableVector, .-nvicDisableVector
+ 152 0034 C046C046 		.section	.text.nvicSetSystemHandlerPriority,"ax",%progbits
+ 152      C046C046 
+ 152      C046C046 
+ 153              		.align	2
+ 154              		.p2align 4,,15
+ 155              		.global	nvicSetSystemHandlerPriority
+ 156              		.code	16
+ 157              		.thumb_func
+ 158              		.type	nvicSetSystemHandlerPriority, %function
+ 159              	nvicSetSystemHandlerPriority:
+ 160              	.LFB9:
+ 161              		.loc 1 74 0
+ 162              		.cfi_startproc
+ 163              	.LVL8:
+ 164              		.loc 1 77 0
+ 165 0000 8208     		lsr	r2, r0, #2
+ 166              		.loc 1 74 0
+ 167 0002 30B5     		push	{r4, r5, lr}
+ 168              	.LCFI2:
+ 169              		.cfi_def_cfa_offset 12
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 4
+
+
+ 170              		.cfi_offset 4, -12
+ 171              		.cfi_offset 5, -8
+ 172              		.cfi_offset 14, -4
+ 173              		.loc 1 77 0
+ 174 0004 064B     		ldr	r3, .L8
+ 175              		.loc 1 75 0
+ 176 0006 0325     		mov	r5, #3
+ 177              		.loc 1 77 0
+ 178 0008 0632     		add	r2, r2, #6
+ 179 000a 9200     		lsl	r2, r2, #2
+ 180              		.loc 1 75 0
+ 181 000c 2840     		and	r0, r5
+ 182              	.LVL9:
+ 183              		.loc 1 77 0
+ 184 000e D458     		ldr	r4, [r2, r3]
+ 185              		.loc 1 75 0
+ 186 0010 C000     		lsl	r0, r0, #3
+ 187              	.LVL10:
+ 188              		.loc 1 78 0
+ 189 0012 FF25     		mov	r5, #255
+ 190 0014 8540     		lsl	r5, r5, r0
+ 191              		.loc 1 77 0
+ 192 0016 AC43     		bic	r4, r5
+ 193              		.loc 1 78 0
+ 194 0018 8140     		lsl	r1, r1, r0
+ 195              	.LVL11:
+ 196 001a 0C43     		orr	r4, r1
+ 197              		.loc 1 77 0
+ 198 001c D450     		str	r4, [r2, r3]
+ 199              		.loc 1 79 0
+ 200              		@ sp needed for prologue
+ 201 001e 30BD     		pop	{r4, r5, pc}
+ 202              	.L9:
+ 203              		.align	2
+ 204              	.L8:
+ 205 0020 00ED00E0 		.word	-536810240
+ 206              		.cfi_endproc
+ 207              	.LFE9:
+ 208              		.size	nvicSetSystemHandlerPriority, .-nvicSetSystemHandlerPriority
+ 209 0024 C046C046 		.text
+ 209      C046C046 
+ 209      C046C046 
+ 210              	.Letext0:
+ 211              		.file 2 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/../..
+ 212              		.file 3 "../../ChibiOS_2.6.1/os/ports/common/ARMCMx/nvic.h"
+ 213              		.section	.debug_info,"",%progbits
+ 214              	.Ldebug_info0:
+ 215 0000 51040000 		.4byte	0x451
+ 216 0004 0200     		.2byte	0x2
+ 217 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 218 000a 04       		.byte	0x4
+ 219 000b 01       		.uleb128 0x1
+ 220 000c 0A000000 		.4byte	.LASF46
+ 221 0010 01       		.byte	0x1
+ 222 0011 16010000 		.4byte	.LASF47
+ 223 0015 D7000000 		.4byte	.LASF48
+ 224 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 5
+
+
+ 225 001d 00000000 		.4byte	0
+ 226 0021 00000000 		.4byte	0
+ 227 0025 00000000 		.4byte	.Ldebug_line0
+ 228 0029 02       		.uleb128 0x2
+ 229 002a 04       		.byte	0x4
+ 230 002b 05       		.byte	0x5
+ 231 002c 696E7400 		.ascii	"int\000"
+ 232 0030 03       		.uleb128 0x3
+ 233 0031 04       		.byte	0x4
+ 234 0032 07       		.byte	0x7
+ 235 0033 48010000 		.4byte	.LASF0
+ 236 0037 03       		.uleb128 0x3
+ 237 0038 01       		.byte	0x1
+ 238 0039 06       		.byte	0x6
+ 239 003a EA010000 		.4byte	.LASF1
+ 240 003e 03       		.uleb128 0x3
+ 241 003f 01       		.byte	0x1
+ 242 0040 08       		.byte	0x8
+ 243 0041 64000000 		.4byte	.LASF2
+ 244 0045 03       		.uleb128 0x3
+ 245 0046 02       		.byte	0x2
+ 246 0047 05       		.byte	0x5
+ 247 0048 0C010000 		.4byte	.LASF3
+ 248 004c 03       		.uleb128 0x3
+ 249 004d 02       		.byte	0x2
+ 250 004e 07       		.byte	0x7
+ 251 004f A2000000 		.4byte	.LASF4
+ 252 0053 03       		.uleb128 0x3
+ 253 0054 04       		.byte	0x4
+ 254 0055 05       		.byte	0x5
+ 255 0056 DC010000 		.4byte	.LASF5
+ 256 005a 04       		.uleb128 0x4
+ 257 005b D3010000 		.4byte	.LASF10
+ 258 005f 02       		.byte	0x2
+ 259 0060 50       		.byte	0x50
+ 260 0061 65000000 		.4byte	0x65
+ 261 0065 03       		.uleb128 0x3
+ 262 0066 04       		.byte	0x4
+ 263 0067 07       		.byte	0x7
+ 264 0068 BF000000 		.4byte	.LASF6
+ 265 006c 03       		.uleb128 0x3
+ 266 006d 08       		.byte	0x8
+ 267 006e 05       		.byte	0x5
+ 268 006f A4010000 		.4byte	.LASF7
+ 269 0073 03       		.uleb128 0x3
+ 270 0074 08       		.byte	0x8
+ 271 0075 07       		.byte	0x7
+ 272 0076 5F010000 		.4byte	.LASF8
+ 273 007a 03       		.uleb128 0x3
+ 274 007b 01       		.byte	0x1
+ 275 007c 02       		.byte	0x2
+ 276 007d 31000000 		.4byte	.LASF9
+ 277 0081 04       		.uleb128 0x4
+ 278 0082 5C000000 		.4byte	.LASF11
+ 279 0086 03       		.byte	0x3
+ 280 0087 3A       		.byte	0x3a
+ 281 0088 8C000000 		.4byte	0x8c
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 6
+
+
+ 282 008c 05       		.uleb128 0x5
+ 283 008d 5A000000 		.4byte	0x5a
+ 284 0091 06       		.uleb128 0x6
+ 285 0092 040E     		.2byte	0xe04
+ 286 0094 03       		.byte	0x3
+ 287 0095 6A       		.byte	0x6a
+ 288 0096 5C010000 		.4byte	0x15c
+ 289 009a 07       		.uleb128 0x7
+ 290 009b BD010000 		.4byte	.LASF12
+ 291 009f 03       		.byte	0x3
+ 292 00a0 6B       		.byte	0x6b
+ 293 00a1 73010000 		.4byte	0x173
+ 294 00a5 02       		.byte	0x2
+ 295 00a6 23       		.byte	0x23
+ 296 00a7 00       		.uleb128 0
+ 297 00a8 07       		.uleb128 0x7
+ 298 00a9 72000000 		.4byte	.LASF13
+ 299 00ad 03       		.byte	0x3
+ 300 00ae 6C       		.byte	0x6c
+ 301 00af 88010000 		.4byte	0x188
+ 302 00b3 02       		.byte	0x2
+ 303 00b4 23       		.byte	0x23
+ 304 00b5 20       		.uleb128 0x20
+ 305 00b6 07       		.uleb128 0x7
+ 306 00b7 57000000 		.4byte	.LASF14
+ 307 00bb 03       		.byte	0x3
+ 308 00bc 6D       		.byte	0x6d
+ 309 00bd 8D010000 		.4byte	0x18d
+ 310 00c1 03       		.byte	0x3
+ 311 00c2 23       		.byte	0x23
+ 312 00c3 8001     		.uleb128 0x80
+ 313 00c5 07       		.uleb128 0x7
+ 314 00c6 7A000000 		.4byte	.LASF15
+ 315 00ca 03       		.byte	0x3
+ 316 00cb 6E       		.byte	0x6e
+ 317 00cc 92010000 		.4byte	0x192
+ 318 00d0 03       		.byte	0x3
+ 319 00d1 23       		.byte	0x23
+ 320 00d2 A001     		.uleb128 0xa0
+ 321 00d4 07       		.uleb128 0x7
+ 322 00d5 55010000 		.4byte	.LASF16
+ 323 00d9 03       		.byte	0x3
+ 324 00da 6F       		.byte	0x6f
+ 325 00db 97010000 		.4byte	0x197
+ 326 00df 03       		.byte	0x3
+ 327 00e0 23       		.byte	0x23
+ 328 00e1 8002     		.uleb128 0x100
+ 329 00e3 07       		.uleb128 0x7
+ 330 00e4 82000000 		.4byte	.LASF17
+ 331 00e8 03       		.byte	0x3
+ 332 00e9 70       		.byte	0x70
+ 333 00ea 9C010000 		.4byte	0x19c
+ 334 00ee 03       		.byte	0x3
+ 335 00ef 23       		.byte	0x23
+ 336 00f0 A002     		.uleb128 0x120
+ 337 00f2 07       		.uleb128 0x7
+ 338 00f3 05000000 		.4byte	.LASF18
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 7
+
+
+ 339 00f7 03       		.byte	0x3
+ 340 00f8 71       		.byte	0x71
+ 341 00f9 A1010000 		.4byte	0x1a1
+ 342 00fd 03       		.byte	0x3
+ 343 00fe 23       		.byte	0x23
+ 344 00ff 8003     		.uleb128 0x180
+ 345 0101 07       		.uleb128 0x7
+ 346 0102 8A000000 		.4byte	.LASF19
+ 347 0106 03       		.byte	0x3
+ 348 0107 72       		.byte	0x72
+ 349 0108 A6010000 		.4byte	0x1a6
+ 350 010c 03       		.byte	0x3
+ 351 010d 23       		.byte	0x23
+ 352 010e A003     		.uleb128 0x1a0
+ 353 0110 07       		.uleb128 0x7
+ 354 0111 13020000 		.4byte	.LASF20
+ 355 0115 03       		.byte	0x3
+ 356 0116 73       		.byte	0x73
+ 357 0117 AB010000 		.4byte	0x1ab
+ 358 011b 03       		.byte	0x3
+ 359 011c 23       		.byte	0x23
+ 360 011d 8004     		.uleb128 0x200
+ 361 011f 07       		.uleb128 0x7
+ 362 0120 92000000 		.4byte	.LASF21
+ 363 0124 03       		.byte	0x3
+ 364 0125 74       		.byte	0x74
+ 365 0126 C0010000 		.4byte	0x1c0
+ 366 012a 03       		.byte	0x3
+ 367 012b 23       		.byte	0x23
+ 368 012c A004     		.uleb128 0x220
+ 369 012e 08       		.uleb128 0x8
+ 370 012f 49505200 		.ascii	"IPR\000"
+ 371 0133 03       		.byte	0x3
+ 372 0134 75       		.byte	0x75
+ 373 0135 D5010000 		.4byte	0x1d5
+ 374 0139 03       		.byte	0x3
+ 375 013a 23       		.byte	0x23
+ 376 013b 8006     		.uleb128 0x300
+ 377 013d 07       		.uleb128 0x7
+ 378 013e 9A000000 		.4byte	.LASF22
+ 379 0142 03       		.byte	0x3
+ 380 0143 76       		.byte	0x76
+ 381 0144 EB010000 		.4byte	0x1eb
+ 382 0148 03       		.byte	0x3
+ 383 0149 23       		.byte	0x23
+ 384 014a F007     		.uleb128 0x3f0
+ 385 014c 07       		.uleb128 0x7
+ 386 014d 9F010000 		.4byte	.LASF23
+ 387 0151 03       		.byte	0x3
+ 388 0152 77       		.byte	0x77
+ 389 0153 81000000 		.4byte	0x81
+ 390 0157 03       		.byte	0x3
+ 391 0158 23       		.byte	0x23
+ 392 0159 801C     		.uleb128 0xe00
+ 393 015b 00       		.byte	0
+ 394 015c 09       		.uleb128 0x9
+ 395 015d 81000000 		.4byte	0x81
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 8
+
+
+ 396 0161 6C010000 		.4byte	0x16c
+ 397 0165 0A       		.uleb128 0xa
+ 398 0166 6C010000 		.4byte	0x16c
+ 399 016a 07       		.byte	0x7
+ 400 016b 00       		.byte	0
+ 401 016c 03       		.uleb128 0x3
+ 402 016d 04       		.byte	0x4
+ 403 016e 07       		.byte	0x7
+ 404 016f 96010000 		.4byte	.LASF24
+ 405 0173 05       		.uleb128 0x5
+ 406 0174 5C010000 		.4byte	0x15c
+ 407 0178 09       		.uleb128 0x9
+ 408 0179 81000000 		.4byte	0x81
+ 409 017d 88010000 		.4byte	0x188
+ 410 0181 0A       		.uleb128 0xa
+ 411 0182 6C010000 		.4byte	0x16c
+ 412 0186 17       		.byte	0x17
+ 413 0187 00       		.byte	0
+ 414 0188 05       		.uleb128 0x5
+ 415 0189 78010000 		.4byte	0x178
+ 416 018d 05       		.uleb128 0x5
+ 417 018e 5C010000 		.4byte	0x15c
+ 418 0192 05       		.uleb128 0x5
+ 419 0193 78010000 		.4byte	0x178
+ 420 0197 05       		.uleb128 0x5
+ 421 0198 5C010000 		.4byte	0x15c
+ 422 019c 05       		.uleb128 0x5
+ 423 019d 78010000 		.4byte	0x178
+ 424 01a1 05       		.uleb128 0x5
+ 425 01a2 5C010000 		.4byte	0x15c
+ 426 01a6 05       		.uleb128 0x5
+ 427 01a7 78010000 		.4byte	0x178
+ 428 01ab 05       		.uleb128 0x5
+ 429 01ac 5C010000 		.4byte	0x15c
+ 430 01b0 09       		.uleb128 0x9
+ 431 01b1 81000000 		.4byte	0x81
+ 432 01b5 C0010000 		.4byte	0x1c0
+ 433 01b9 0A       		.uleb128 0xa
+ 434 01ba 6C010000 		.4byte	0x16c
+ 435 01be 37       		.byte	0x37
+ 436 01bf 00       		.byte	0
+ 437 01c0 05       		.uleb128 0x5
+ 438 01c1 B0010000 		.4byte	0x1b0
+ 439 01c5 09       		.uleb128 0x9
+ 440 01c6 81000000 		.4byte	0x81
+ 441 01ca D5010000 		.4byte	0x1d5
+ 442 01ce 0A       		.uleb128 0xa
+ 443 01cf 6C010000 		.4byte	0x16c
+ 444 01d3 3B       		.byte	0x3b
+ 445 01d4 00       		.byte	0
+ 446 01d5 05       		.uleb128 0x5
+ 447 01d6 C5010000 		.4byte	0x1c5
+ 448 01da 09       		.uleb128 0x9
+ 449 01db 81000000 		.4byte	0x81
+ 450 01df EB010000 		.4byte	0x1eb
+ 451 01e3 0B       		.uleb128 0xb
+ 452 01e4 6C010000 		.4byte	0x16c
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 9
+
+
+ 453 01e8 8302     		.2byte	0x283
+ 454 01ea 00       		.byte	0
+ 455 01eb 05       		.uleb128 0x5
+ 456 01ec DA010000 		.4byte	0x1da
+ 457 01f0 04       		.uleb128 0x4
+ 458 01f1 49000000 		.4byte	.LASF25
+ 459 01f5 03       		.byte	0x3
+ 460 01f6 78       		.byte	0x78
+ 461 01f7 91000000 		.4byte	0x91
+ 462 01fb 0C       		.uleb128 0xc
+ 463 01fc 8C       		.byte	0x8c
+ 464 01fd 03       		.byte	0x3
+ 465 01fe 89       		.byte	0x89
+ 466 01ff 2B030000 		.4byte	0x32b
+ 467 0203 07       		.uleb128 0x7
+ 468 0204 B2010000 		.4byte	.LASF26
+ 469 0208 03       		.byte	0x3
+ 470 0209 8A       		.byte	0x8a
+ 471 020a 81000000 		.4byte	0x81
+ 472 020e 02       		.byte	0x2
+ 473 020f 23       		.byte	0x23
+ 474 0210 00       		.uleb128 0
+ 475 0211 07       		.uleb128 0x7
+ 476 0212 76010000 		.4byte	.LASF27
+ 477 0216 03       		.byte	0x3
+ 478 0217 8B       		.byte	0x8b
+ 479 0218 81000000 		.4byte	0x81
+ 480 021c 02       		.byte	0x2
+ 481 021d 23       		.byte	0x23
+ 482 021e 04       		.uleb128 0x4
+ 483 021f 07       		.uleb128 0x7
+ 484 0220 52000000 		.4byte	.LASF28
+ 485 0224 03       		.byte	0x3
+ 486 0225 8C       		.byte	0x8c
+ 487 0226 81000000 		.4byte	0x81
+ 488 022a 02       		.byte	0x2
+ 489 022b 23       		.byte	0x23
+ 490 022c 08       		.uleb128 0x8
+ 491 022d 07       		.uleb128 0x7
+ 492 022e 83010000 		.4byte	.LASF29
+ 493 0232 03       		.byte	0x3
+ 494 0233 8D       		.byte	0x8d
+ 495 0234 81000000 		.4byte	0x81
+ 496 0238 02       		.byte	0x2
+ 497 0239 23       		.byte	0x23
+ 498 023a 0C       		.uleb128 0xc
+ 499 023b 08       		.uleb128 0x8
+ 500 023c 53435200 		.ascii	"SCR\000"
+ 501 0240 03       		.byte	0x3
+ 502 0241 8E       		.byte	0x8e
+ 503 0242 81000000 		.4byte	0x81
+ 504 0246 02       		.byte	0x2
+ 505 0247 23       		.byte	0x23
+ 506 0248 10       		.uleb128 0x10
+ 507 0249 08       		.uleb128 0x8
+ 508 024a 43435200 		.ascii	"CCR\000"
+ 509 024e 03       		.byte	0x3
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 10
+
+
+ 510 024f 8F       		.byte	0x8f
+ 511 0250 81000000 		.4byte	0x81
+ 512 0254 02       		.byte	0x2
+ 513 0255 23       		.byte	0x23
+ 514 0256 14       		.uleb128 0x14
+ 515 0257 07       		.uleb128 0x7
+ 516 0258 E5010000 		.4byte	.LASF30
+ 517 025c 03       		.byte	0x3
+ 518 025d 90       		.byte	0x90
+ 519 025e 3B030000 		.4byte	0x33b
+ 520 0262 02       		.byte	0x2
+ 521 0263 23       		.byte	0x23
+ 522 0264 18       		.uleb128 0x18
+ 523 0265 07       		.uleb128 0x7
+ 524 0266 CD010000 		.4byte	.LASF31
+ 525 026a 03       		.byte	0x3
+ 526 026b 91       		.byte	0x91
+ 527 026c 81000000 		.4byte	0x81
+ 528 0270 02       		.byte	0x2
+ 529 0271 23       		.byte	0x23
+ 530 0272 24       		.uleb128 0x24
+ 531 0273 07       		.uleb128 0x7
+ 532 0274 B5000000 		.4byte	.LASF32
+ 533 0278 03       		.byte	0x3
+ 534 0279 92       		.byte	0x92
+ 535 027a 81000000 		.4byte	0x81
+ 536 027e 02       		.byte	0x2
+ 537 027f 23       		.byte	0x23
+ 538 0280 28       		.uleb128 0x28
+ 539 0281 07       		.uleb128 0x7
+ 540 0282 BA000000 		.4byte	.LASF33
+ 541 0286 03       		.byte	0x3
+ 542 0287 93       		.byte	0x93
+ 543 0288 81000000 		.4byte	0x81
+ 544 028c 02       		.byte	0x2
+ 545 028d 23       		.byte	0x23
+ 546 028e 2C       		.uleb128 0x2c
+ 547 028f 07       		.uleb128 0x7
+ 548 0290 5A010000 		.4byte	.LASF34
+ 549 0294 03       		.byte	0x3
+ 550 0295 94       		.byte	0x94
+ 551 0296 81000000 		.4byte	0x81
+ 552 029a 02       		.byte	0x2
+ 553 029b 23       		.byte	0x23
+ 554 029c 30       		.uleb128 0x30
+ 555 029d 07       		.uleb128 0x7
+ 556 029e C7010000 		.4byte	.LASF35
+ 557 02a2 03       		.byte	0x3
+ 558 02a3 95       		.byte	0x95
+ 559 02a4 81000000 		.4byte	0x81
+ 560 02a8 02       		.byte	0x2
+ 561 02a9 23       		.byte	0x23
+ 562 02aa 34       		.uleb128 0x34
+ 563 02ab 07       		.uleb128 0x7
+ 564 02ac 89010000 		.4byte	.LASF36
+ 565 02b0 03       		.byte	0x3
+ 566 02b1 96       		.byte	0x96
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 11
+
+
+ 567 02b2 81000000 		.4byte	0x81
+ 568 02b6 02       		.byte	0x2
+ 569 02b7 23       		.byte	0x23
+ 570 02b8 38       		.uleb128 0x38
+ 571 02b9 07       		.uleb128 0x7
+ 572 02ba C2010000 		.4byte	.LASF37
+ 573 02be 03       		.byte	0x3
+ 574 02bf 97       		.byte	0x97
+ 575 02c0 81000000 		.4byte	0x81
+ 576 02c4 02       		.byte	0x2
+ 577 02c5 23       		.byte	0x23
+ 578 02c6 3C       		.uleb128 0x3c
+ 579 02c7 08       		.uleb128 0x8
+ 580 02c8 50465200 		.ascii	"PFR\000"
+ 581 02cc 03       		.byte	0x3
+ 582 02cd 98       		.byte	0x98
+ 583 02ce 50030000 		.4byte	0x350
+ 584 02d2 02       		.byte	0x2
+ 585 02d3 23       		.byte	0x23
+ 586 02d4 40       		.uleb128 0x40
+ 587 02d5 08       		.uleb128 0x8
+ 588 02d6 44465200 		.ascii	"DFR\000"
+ 589 02da 03       		.byte	0x3
+ 590 02db 99       		.byte	0x99
+ 591 02dc 81000000 		.4byte	0x81
+ 592 02e0 02       		.byte	0x2
+ 593 02e1 23       		.byte	0x23
+ 594 02e2 48       		.uleb128 0x48
+ 595 02e3 08       		.uleb128 0x8
+ 596 02e4 41445200 		.ascii	"ADR\000"
+ 597 02e8 03       		.byte	0x3
+ 598 02e9 9A       		.byte	0x9a
+ 599 02ea 81000000 		.4byte	0x81
+ 600 02ee 02       		.byte	0x2
+ 601 02ef 23       		.byte	0x23
+ 602 02f0 4C       		.uleb128 0x4c
+ 603 02f1 07       		.uleb128 0x7
+ 604 02f2 2C000000 		.4byte	.LASF38
+ 605 02f6 03       		.byte	0x3
+ 606 02f7 9B       		.byte	0x9b
+ 607 02f8 65030000 		.4byte	0x365
+ 608 02fc 02       		.byte	0x2
+ 609 02fd 23       		.byte	0x23
+ 610 02fe 50       		.uleb128 0x50
+ 611 02ff 08       		.uleb128 0x8
+ 612 0300 53415200 		.ascii	"SAR\000"
+ 613 0304 03       		.byte	0x3
+ 614 0305 9C       		.byte	0x9c
+ 615 0306 7A030000 		.4byte	0x37a
+ 616 030a 02       		.byte	0x2
+ 617 030b 23       		.byte	0x23
+ 618 030c 60       		.uleb128 0x60
+ 619 030d 07       		.uleb128 0x7
+ 620 030e 72000000 		.4byte	.LASF13
+ 621 0312 03       		.byte	0x3
+ 622 0313 9D       		.byte	0x9d
+ 623 0314 7F030000 		.4byte	0x37f
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 12
+
+
+ 624 0318 02       		.byte	0x2
+ 625 0319 23       		.byte	0x23
+ 626 031a 74       		.uleb128 0x74
+ 627 031b 07       		.uleb128 0x7
+ 628 031c D1000000 		.4byte	.LASF39
+ 629 0320 03       		.byte	0x3
+ 630 0321 9E       		.byte	0x9e
+ 631 0322 81000000 		.4byte	0x81
+ 632 0326 03       		.byte	0x3
+ 633 0327 23       		.byte	0x23
+ 634 0328 8801     		.uleb128 0x88
+ 635 032a 00       		.byte	0
+ 636 032b 09       		.uleb128 0x9
+ 637 032c 81000000 		.4byte	0x81
+ 638 0330 3B030000 		.4byte	0x33b
+ 639 0334 0A       		.uleb128 0xa
+ 640 0335 6C010000 		.4byte	0x16c
+ 641 0339 02       		.byte	0x2
+ 642 033a 00       		.byte	0
+ 643 033b 05       		.uleb128 0x5
+ 644 033c 2B030000 		.4byte	0x32b
+ 645 0340 09       		.uleb128 0x9
+ 646 0341 81000000 		.4byte	0x81
+ 647 0345 50030000 		.4byte	0x350
+ 648 0349 0A       		.uleb128 0xa
+ 649 034a 6C010000 		.4byte	0x16c
+ 650 034e 01       		.byte	0x1
+ 651 034f 00       		.byte	0
+ 652 0350 05       		.uleb128 0x5
+ 653 0351 40030000 		.4byte	0x340
+ 654 0355 09       		.uleb128 0x9
+ 655 0356 81000000 		.4byte	0x81
+ 656 035a 65030000 		.4byte	0x365
+ 657 035e 0A       		.uleb128 0xa
+ 658 035f 6C010000 		.4byte	0x16c
+ 659 0363 03       		.byte	0x3
+ 660 0364 00       		.byte	0
+ 661 0365 05       		.uleb128 0x5
+ 662 0366 55030000 		.4byte	0x355
+ 663 036a 09       		.uleb128 0x9
+ 664 036b 81000000 		.4byte	0x81
+ 665 036f 7A030000 		.4byte	0x37a
+ 666 0373 0A       		.uleb128 0xa
+ 667 0374 6C010000 		.4byte	0x16c
+ 668 0378 04       		.byte	0x4
+ 669 0379 00       		.byte	0
+ 670 037a 05       		.uleb128 0x5
+ 671 037b 6A030000 		.4byte	0x36a
+ 672 037f 05       		.uleb128 0x5
+ 673 0380 6A030000 		.4byte	0x36a
+ 674 0384 04       		.uleb128 0x4
+ 675 0385 7B010000 		.4byte	.LASF40
+ 676 0389 03       		.byte	0x3
+ 677 038a 9F       		.byte	0x9f
+ 678 038b FB010000 		.4byte	0x1fb
+ 679 038f 03       		.uleb128 0x3
+ 680 0390 01       		.byte	0x1
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 13
+
+
+ 681 0391 08       		.byte	0x8
+ 682 0392 B8010000 		.4byte	.LASF41
+ 683 0396 0D       		.uleb128 0xd
+ 684 0397 01       		.byte	0x1
+ 685 0398 18020000 		.4byte	.LASF43
+ 686 039c 01       		.byte	0x1
+ 687 039d 2E       		.byte	0x2e
+ 688 039e 01       		.byte	0x1
+ 689 039f 00000000 		.4byte	.LFB7
+ 690 03a3 3C000000 		.4byte	.LFE7
+ 691 03a7 00000000 		.4byte	.LLST0
+ 692 03ab 01       		.byte	0x1
+ 693 03ac DB030000 		.4byte	0x3db
+ 694 03b0 0E       		.uleb128 0xe
+ 695 03b1 6E00     		.ascii	"n\000"
+ 696 03b3 01       		.byte	0x1
+ 697 03b4 2E       		.byte	0x2e
+ 698 03b5 5A000000 		.4byte	0x5a
+ 699 03b9 20000000 		.4byte	.LLST1
+ 700 03bd 0F       		.uleb128 0xf
+ 701 03be 00000000 		.4byte	.LASF42
+ 702 03c2 01       		.byte	0x1
+ 703 03c3 2E       		.byte	0x2e
+ 704 03c4 5A000000 		.4byte	0x5a
+ 705 03c8 41000000 		.4byte	.LLST2
+ 706 03cc 10       		.uleb128 0x10
+ 707 03cd 736800   		.ascii	"sh\000"
+ 708 03d0 01       		.byte	0x1
+ 709 03d1 2F       		.byte	0x2f
+ 710 03d2 30000000 		.4byte	0x30
+ 711 03d6 62000000 		.4byte	.LLST3
+ 712 03da 00       		.byte	0
+ 713 03db 0D       		.uleb128 0xd
+ 714 03dc 01       		.byte	0x1
+ 715 03dd 37000000 		.4byte	.LASF44
+ 716 03e1 01       		.byte	0x1
+ 717 03e2 3C       		.byte	0x3c
+ 718 03e3 01       		.byte	0x1
+ 719 03e4 00000000 		.4byte	.LFB8
+ 720 03e8 34000000 		.4byte	.LFE8
+ 721 03ec 98000000 		.4byte	.LLST4
+ 722 03f0 01       		.byte	0x1
+ 723 03f1 11040000 		.4byte	0x411
+ 724 03f5 0E       		.uleb128 0xe
+ 725 03f6 6E00     		.ascii	"n\000"
+ 726 03f8 01       		.byte	0x1
+ 727 03f9 3C       		.byte	0x3c
+ 728 03fa 5A000000 		.4byte	0x5a
+ 729 03fe B8000000 		.4byte	.LLST5
+ 730 0402 10       		.uleb128 0x10
+ 731 0403 736800   		.ascii	"sh\000"
+ 732 0406 01       		.byte	0x1
+ 733 0407 3D       		.byte	0x3d
+ 734 0408 30000000 		.4byte	0x30
+ 735 040c D9000000 		.4byte	.LLST6
+ 736 0410 00       		.byte	0
+ 737 0411 11       		.uleb128 0x11
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 14
+
+
+ 738 0412 01       		.byte	0x1
+ 739 0413 F6010000 		.4byte	.LASF49
+ 740 0417 01       		.byte	0x1
+ 741 0418 4A       		.byte	0x4a
+ 742 0419 01       		.byte	0x1
+ 743 041a 00000000 		.4byte	.LFB9
+ 744 041e 24000000 		.4byte	.LFE9
+ 745 0422 0F010000 		.4byte	.LLST7
+ 746 0426 01       		.byte	0x1
+ 747 0427 0F       		.uleb128 0xf
+ 748 0428 8E010000 		.4byte	.LASF45
+ 749 042c 01       		.byte	0x1
+ 750 042d 4A       		.byte	0x4a
+ 751 042e 5A000000 		.4byte	0x5a
+ 752 0432 2F010000 		.4byte	.LLST8
+ 753 0436 0F       		.uleb128 0xf
+ 754 0437 00000000 		.4byte	.LASF42
+ 755 043b 01       		.byte	0x1
+ 756 043c 4A       		.byte	0x4a
+ 757 043d 5A000000 		.4byte	0x5a
+ 758 0441 50010000 		.4byte	.LLST9
+ 759 0445 10       		.uleb128 0x10
+ 760 0446 736800   		.ascii	"sh\000"
+ 761 0449 01       		.byte	0x1
+ 762 044a 4B       		.byte	0x4b
+ 763 044b 30000000 		.4byte	0x30
+ 764 044f 71010000 		.4byte	.LLST10
+ 765 0453 00       		.byte	0
+ 766 0454 00       		.byte	0
+ 767              		.section	.debug_abbrev,"",%progbits
+ 768              	.Ldebug_abbrev0:
+ 769 0000 01       		.uleb128 0x1
+ 770 0001 11       		.uleb128 0x11
+ 771 0002 01       		.byte	0x1
+ 772 0003 25       		.uleb128 0x25
+ 773 0004 0E       		.uleb128 0xe
+ 774 0005 13       		.uleb128 0x13
+ 775 0006 0B       		.uleb128 0xb
+ 776 0007 03       		.uleb128 0x3
+ 777 0008 0E       		.uleb128 0xe
+ 778 0009 1B       		.uleb128 0x1b
+ 779 000a 0E       		.uleb128 0xe
+ 780 000b 55       		.uleb128 0x55
+ 781 000c 06       		.uleb128 0x6
+ 782 000d 11       		.uleb128 0x11
+ 783 000e 01       		.uleb128 0x1
+ 784 000f 52       		.uleb128 0x52
+ 785 0010 01       		.uleb128 0x1
+ 786 0011 10       		.uleb128 0x10
+ 787 0012 06       		.uleb128 0x6
+ 788 0013 00       		.byte	0
+ 789 0014 00       		.byte	0
+ 790 0015 02       		.uleb128 0x2
+ 791 0016 24       		.uleb128 0x24
+ 792 0017 00       		.byte	0
+ 793 0018 0B       		.uleb128 0xb
+ 794 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 15
+
+
+ 795 001a 3E       		.uleb128 0x3e
+ 796 001b 0B       		.uleb128 0xb
+ 797 001c 03       		.uleb128 0x3
+ 798 001d 08       		.uleb128 0x8
+ 799 001e 00       		.byte	0
+ 800 001f 00       		.byte	0
+ 801 0020 03       		.uleb128 0x3
+ 802 0021 24       		.uleb128 0x24
+ 803 0022 00       		.byte	0
+ 804 0023 0B       		.uleb128 0xb
+ 805 0024 0B       		.uleb128 0xb
+ 806 0025 3E       		.uleb128 0x3e
+ 807 0026 0B       		.uleb128 0xb
+ 808 0027 03       		.uleb128 0x3
+ 809 0028 0E       		.uleb128 0xe
+ 810 0029 00       		.byte	0
+ 811 002a 00       		.byte	0
+ 812 002b 04       		.uleb128 0x4
+ 813 002c 16       		.uleb128 0x16
+ 814 002d 00       		.byte	0
+ 815 002e 03       		.uleb128 0x3
+ 816 002f 0E       		.uleb128 0xe
+ 817 0030 3A       		.uleb128 0x3a
+ 818 0031 0B       		.uleb128 0xb
+ 819 0032 3B       		.uleb128 0x3b
+ 820 0033 0B       		.uleb128 0xb
+ 821 0034 49       		.uleb128 0x49
+ 822 0035 13       		.uleb128 0x13
+ 823 0036 00       		.byte	0
+ 824 0037 00       		.byte	0
+ 825 0038 05       		.uleb128 0x5
+ 826 0039 35       		.uleb128 0x35
+ 827 003a 00       		.byte	0
+ 828 003b 49       		.uleb128 0x49
+ 829 003c 13       		.uleb128 0x13
+ 830 003d 00       		.byte	0
+ 831 003e 00       		.byte	0
+ 832 003f 06       		.uleb128 0x6
+ 833 0040 13       		.uleb128 0x13
+ 834 0041 01       		.byte	0x1
+ 835 0042 0B       		.uleb128 0xb
+ 836 0043 05       		.uleb128 0x5
+ 837 0044 3A       		.uleb128 0x3a
+ 838 0045 0B       		.uleb128 0xb
+ 839 0046 3B       		.uleb128 0x3b
+ 840 0047 0B       		.uleb128 0xb
+ 841 0048 01       		.uleb128 0x1
+ 842 0049 13       		.uleb128 0x13
+ 843 004a 00       		.byte	0
+ 844 004b 00       		.byte	0
+ 845 004c 07       		.uleb128 0x7
+ 846 004d 0D       		.uleb128 0xd
+ 847 004e 00       		.byte	0
+ 848 004f 03       		.uleb128 0x3
+ 849 0050 0E       		.uleb128 0xe
+ 850 0051 3A       		.uleb128 0x3a
+ 851 0052 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 16
+
+
+ 852 0053 3B       		.uleb128 0x3b
+ 853 0054 0B       		.uleb128 0xb
+ 854 0055 49       		.uleb128 0x49
+ 855 0056 13       		.uleb128 0x13
+ 856 0057 38       		.uleb128 0x38
+ 857 0058 0A       		.uleb128 0xa
+ 858 0059 00       		.byte	0
+ 859 005a 00       		.byte	0
+ 860 005b 08       		.uleb128 0x8
+ 861 005c 0D       		.uleb128 0xd
+ 862 005d 00       		.byte	0
+ 863 005e 03       		.uleb128 0x3
+ 864 005f 08       		.uleb128 0x8
+ 865 0060 3A       		.uleb128 0x3a
+ 866 0061 0B       		.uleb128 0xb
+ 867 0062 3B       		.uleb128 0x3b
+ 868 0063 0B       		.uleb128 0xb
+ 869 0064 49       		.uleb128 0x49
+ 870 0065 13       		.uleb128 0x13
+ 871 0066 38       		.uleb128 0x38
+ 872 0067 0A       		.uleb128 0xa
+ 873 0068 00       		.byte	0
+ 874 0069 00       		.byte	0
+ 875 006a 09       		.uleb128 0x9
+ 876 006b 01       		.uleb128 0x1
+ 877 006c 01       		.byte	0x1
+ 878 006d 49       		.uleb128 0x49
+ 879 006e 13       		.uleb128 0x13
+ 880 006f 01       		.uleb128 0x1
+ 881 0070 13       		.uleb128 0x13
+ 882 0071 00       		.byte	0
+ 883 0072 00       		.byte	0
+ 884 0073 0A       		.uleb128 0xa
+ 885 0074 21       		.uleb128 0x21
+ 886 0075 00       		.byte	0
+ 887 0076 49       		.uleb128 0x49
+ 888 0077 13       		.uleb128 0x13
+ 889 0078 2F       		.uleb128 0x2f
+ 890 0079 0B       		.uleb128 0xb
+ 891 007a 00       		.byte	0
+ 892 007b 00       		.byte	0
+ 893 007c 0B       		.uleb128 0xb
+ 894 007d 21       		.uleb128 0x21
+ 895 007e 00       		.byte	0
+ 896 007f 49       		.uleb128 0x49
+ 897 0080 13       		.uleb128 0x13
+ 898 0081 2F       		.uleb128 0x2f
+ 899 0082 05       		.uleb128 0x5
+ 900 0083 00       		.byte	0
+ 901 0084 00       		.byte	0
+ 902 0085 0C       		.uleb128 0xc
+ 903 0086 13       		.uleb128 0x13
+ 904 0087 01       		.byte	0x1
+ 905 0088 0B       		.uleb128 0xb
+ 906 0089 0B       		.uleb128 0xb
+ 907 008a 3A       		.uleb128 0x3a
+ 908 008b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 17
+
+
+ 909 008c 3B       		.uleb128 0x3b
+ 910 008d 0B       		.uleb128 0xb
+ 911 008e 01       		.uleb128 0x1
+ 912 008f 13       		.uleb128 0x13
+ 913 0090 00       		.byte	0
+ 914 0091 00       		.byte	0
+ 915 0092 0D       		.uleb128 0xd
+ 916 0093 2E       		.uleb128 0x2e
+ 917 0094 01       		.byte	0x1
+ 918 0095 3F       		.uleb128 0x3f
+ 919 0096 0C       		.uleb128 0xc
+ 920 0097 03       		.uleb128 0x3
+ 921 0098 0E       		.uleb128 0xe
+ 922 0099 3A       		.uleb128 0x3a
+ 923 009a 0B       		.uleb128 0xb
+ 924 009b 3B       		.uleb128 0x3b
+ 925 009c 0B       		.uleb128 0xb
+ 926 009d 27       		.uleb128 0x27
+ 927 009e 0C       		.uleb128 0xc
+ 928 009f 11       		.uleb128 0x11
+ 929 00a0 01       		.uleb128 0x1
+ 930 00a1 12       		.uleb128 0x12
+ 931 00a2 01       		.uleb128 0x1
+ 932 00a3 40       		.uleb128 0x40
+ 933 00a4 06       		.uleb128 0x6
+ 934 00a5 9742     		.uleb128 0x2117
+ 935 00a7 0C       		.uleb128 0xc
+ 936 00a8 01       		.uleb128 0x1
+ 937 00a9 13       		.uleb128 0x13
+ 938 00aa 00       		.byte	0
+ 939 00ab 00       		.byte	0
+ 940 00ac 0E       		.uleb128 0xe
+ 941 00ad 05       		.uleb128 0x5
+ 942 00ae 00       		.byte	0
+ 943 00af 03       		.uleb128 0x3
+ 944 00b0 08       		.uleb128 0x8
+ 945 00b1 3A       		.uleb128 0x3a
+ 946 00b2 0B       		.uleb128 0xb
+ 947 00b3 3B       		.uleb128 0x3b
+ 948 00b4 0B       		.uleb128 0xb
+ 949 00b5 49       		.uleb128 0x49
+ 950 00b6 13       		.uleb128 0x13
+ 951 00b7 02       		.uleb128 0x2
+ 952 00b8 06       		.uleb128 0x6
+ 953 00b9 00       		.byte	0
+ 954 00ba 00       		.byte	0
+ 955 00bb 0F       		.uleb128 0xf
+ 956 00bc 05       		.uleb128 0x5
+ 957 00bd 00       		.byte	0
+ 958 00be 03       		.uleb128 0x3
+ 959 00bf 0E       		.uleb128 0xe
+ 960 00c0 3A       		.uleb128 0x3a
+ 961 00c1 0B       		.uleb128 0xb
+ 962 00c2 3B       		.uleb128 0x3b
+ 963 00c3 0B       		.uleb128 0xb
+ 964 00c4 49       		.uleb128 0x49
+ 965 00c5 13       		.uleb128 0x13
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 18
+
+
+ 966 00c6 02       		.uleb128 0x2
+ 967 00c7 06       		.uleb128 0x6
+ 968 00c8 00       		.byte	0
+ 969 00c9 00       		.byte	0
+ 970 00ca 10       		.uleb128 0x10
+ 971 00cb 34       		.uleb128 0x34
+ 972 00cc 00       		.byte	0
+ 973 00cd 03       		.uleb128 0x3
+ 974 00ce 08       		.uleb128 0x8
+ 975 00cf 3A       		.uleb128 0x3a
+ 976 00d0 0B       		.uleb128 0xb
+ 977 00d1 3B       		.uleb128 0x3b
+ 978 00d2 0B       		.uleb128 0xb
+ 979 00d3 49       		.uleb128 0x49
+ 980 00d4 13       		.uleb128 0x13
+ 981 00d5 02       		.uleb128 0x2
+ 982 00d6 06       		.uleb128 0x6
+ 983 00d7 00       		.byte	0
+ 984 00d8 00       		.byte	0
+ 985 00d9 11       		.uleb128 0x11
+ 986 00da 2E       		.uleb128 0x2e
+ 987 00db 01       		.byte	0x1
+ 988 00dc 3F       		.uleb128 0x3f
+ 989 00dd 0C       		.uleb128 0xc
+ 990 00de 03       		.uleb128 0x3
+ 991 00df 0E       		.uleb128 0xe
+ 992 00e0 3A       		.uleb128 0x3a
+ 993 00e1 0B       		.uleb128 0xb
+ 994 00e2 3B       		.uleb128 0x3b
+ 995 00e3 0B       		.uleb128 0xb
+ 996 00e4 27       		.uleb128 0x27
+ 997 00e5 0C       		.uleb128 0xc
+ 998 00e6 11       		.uleb128 0x11
+ 999 00e7 01       		.uleb128 0x1
+ 1000 00e8 12       		.uleb128 0x12
+ 1001 00e9 01       		.uleb128 0x1
+ 1002 00ea 40       		.uleb128 0x40
+ 1003 00eb 06       		.uleb128 0x6
+ 1004 00ec 9742     		.uleb128 0x2117
+ 1005 00ee 0C       		.uleb128 0xc
+ 1006 00ef 00       		.byte	0
+ 1007 00f0 00       		.byte	0
+ 1008 00f1 00       		.byte	0
+ 1009              		.section	.debug_loc,"",%progbits
+ 1010              	.Ldebug_loc0:
+ 1011              	.LLST0:
+ 1012 0000 00000000 		.4byte	.LFB7
+ 1013 0004 04000000 		.4byte	.LCFI0
+ 1014 0008 0200     		.2byte	0x2
+ 1015 000a 7D       		.byte	0x7d
+ 1016 000b 00       		.sleb128 0
+ 1017 000c 04000000 		.4byte	.LCFI0
+ 1018 0010 3C000000 		.4byte	.LFE7
+ 1019 0014 0200     		.2byte	0x2
+ 1020 0016 7D       		.byte	0x7d
+ 1021 0017 10       		.sleb128 16
+ 1022 0018 00000000 		.4byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 19
+
+
+ 1023 001c 00000000 		.4byte	0
+ 1024              	.LLST1:
+ 1025 0020 00000000 		.4byte	.LVL0
+ 1026 0024 28000000 		.4byte	.LVL3
+ 1027 0028 0100     		.2byte	0x1
+ 1028 002a 50       		.byte	0x50
+ 1029 002b 28000000 		.4byte	.LVL3
+ 1030 002f 3C000000 		.4byte	.LFE7
+ 1031 0033 0400     		.2byte	0x4
+ 1032 0035 F3       		.byte	0xf3
+ 1033 0036 01       		.uleb128 0x1
+ 1034 0037 50       		.byte	0x50
+ 1035 0038 9F       		.byte	0x9f
+ 1036 0039 00000000 		.4byte	0
+ 1037 003d 00000000 		.4byte	0
+ 1038              	.LLST2:
+ 1039 0041 00000000 		.4byte	.LVL0
+ 1040 0045 18000000 		.4byte	.LVL2
+ 1041 0049 0100     		.2byte	0x1
+ 1042 004b 51       		.byte	0x51
+ 1043 004c 18000000 		.4byte	.LVL2
+ 1044 0050 3C000000 		.4byte	.LFE7
+ 1045 0054 0400     		.2byte	0x4
+ 1046 0056 F3       		.byte	0xf3
+ 1047 0057 01       		.uleb128 0x1
+ 1048 0058 51       		.byte	0x51
+ 1049 0059 9F       		.byte	0x9f
+ 1050 005a 00000000 		.4byte	0
+ 1051 005e 00000000 		.4byte	0
+ 1052              	.LLST3:
+ 1053 0062 00000000 		.4byte	.LVL0
+ 1054 0066 12000000 		.4byte	.LVL1
+ 1055 006a 0700     		.2byte	0x7
+ 1056 006c 70       		.byte	0x70
+ 1057 006d 00       		.sleb128 0
+ 1058 006e 33       		.byte	0x33
+ 1059 006f 1A       		.byte	0x1a
+ 1060 0070 33       		.byte	0x33
+ 1061 0071 24       		.byte	0x24
+ 1062 0072 9F       		.byte	0x9f
+ 1063 0073 12000000 		.4byte	.LVL1
+ 1064 0077 2A000000 		.4byte	.LVL4
+ 1065 007b 0100     		.2byte	0x1
+ 1066 007d 54       		.byte	0x54
+ 1067 007e 2A000000 		.4byte	.LVL4
+ 1068 0082 3C000000 		.4byte	.LFE7
+ 1069 0086 0800     		.2byte	0x8
+ 1070 0088 F3       		.byte	0xf3
+ 1071 0089 01       		.uleb128 0x1
+ 1072 008a 50       		.byte	0x50
+ 1073 008b 33       		.byte	0x33
+ 1074 008c 1A       		.byte	0x1a
+ 1075 008d 33       		.byte	0x33
+ 1076 008e 24       		.byte	0x24
+ 1077 008f 9F       		.byte	0x9f
+ 1078 0090 00000000 		.4byte	0
+ 1079 0094 00000000 		.4byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 20
+
+
+ 1080              	.LLST4:
+ 1081 0098 00000000 		.4byte	.LFB8
+ 1082 009c 0C000000 		.4byte	.LCFI1
+ 1083 00a0 0200     		.2byte	0x2
+ 1084 00a2 7D       		.byte	0x7d
+ 1085 00a3 00       		.sleb128 0
+ 1086 00a4 0C000000 		.4byte	.LCFI1
+ 1087 00a8 34000000 		.4byte	.LFE8
+ 1088 00ac 0200     		.2byte	0x2
+ 1089 00ae 7D       		.byte	0x7d
+ 1090 00af 08       		.sleb128 8
+ 1091 00b0 00000000 		.4byte	0
+ 1092 00b4 00000000 		.4byte	0
+ 1093              	.LLST5:
+ 1094 00b8 00000000 		.4byte	.LVL5
+ 1095 00bc 20000000 		.4byte	.LVL6
+ 1096 00c0 0100     		.2byte	0x1
+ 1097 00c2 50       		.byte	0x50
+ 1098 00c3 20000000 		.4byte	.LVL6
+ 1099 00c7 34000000 		.4byte	.LFE8
+ 1100 00cb 0400     		.2byte	0x4
+ 1101 00cd F3       		.byte	0xf3
+ 1102 00ce 01       		.uleb128 0x1
+ 1103 00cf 50       		.byte	0x50
+ 1104 00d0 9F       		.byte	0x9f
+ 1105 00d1 00000000 		.4byte	0
+ 1106 00d5 00000000 		.4byte	0
+ 1107              	.LLST6:
+ 1108 00d9 00000000 		.4byte	.LVL5
+ 1109 00dd 20000000 		.4byte	.LVL6
+ 1110 00e1 0700     		.2byte	0x7
+ 1111 00e3 70       		.byte	0x70
+ 1112 00e4 00       		.sleb128 0
+ 1113 00e5 33       		.byte	0x33
+ 1114 00e6 1A       		.byte	0x1a
+ 1115 00e7 33       		.byte	0x33
+ 1116 00e8 24       		.byte	0x24
+ 1117 00e9 9F       		.byte	0x9f
+ 1118 00ea 20000000 		.4byte	.LVL6
+ 1119 00ee 24000000 		.4byte	.LVL7
+ 1120 00f2 0800     		.2byte	0x8
+ 1121 00f4 F3       		.byte	0xf3
+ 1122 00f5 01       		.uleb128 0x1
+ 1123 00f6 50       		.byte	0x50
+ 1124 00f7 33       		.byte	0x33
+ 1125 00f8 1A       		.byte	0x1a
+ 1126 00f9 33       		.byte	0x33
+ 1127 00fa 24       		.byte	0x24
+ 1128 00fb 9F       		.byte	0x9f
+ 1129 00fc 24000000 		.4byte	.LVL7
+ 1130 0100 34000000 		.4byte	.LFE8
+ 1131 0104 0100     		.2byte	0x1
+ 1132 0106 50       		.byte	0x50
+ 1133 0107 00000000 		.4byte	0
+ 1134 010b 00000000 		.4byte	0
+ 1135              	.LLST7:
+ 1136 010f 00000000 		.4byte	.LFB9
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 21
+
+
+ 1137 0113 04000000 		.4byte	.LCFI2
+ 1138 0117 0200     		.2byte	0x2
+ 1139 0119 7D       		.byte	0x7d
+ 1140 011a 00       		.sleb128 0
+ 1141 011b 04000000 		.4byte	.LCFI2
+ 1142 011f 24000000 		.4byte	.LFE9
+ 1143 0123 0200     		.2byte	0x2
+ 1144 0125 7D       		.byte	0x7d
+ 1145 0126 0C       		.sleb128 12
+ 1146 0127 00000000 		.4byte	0
+ 1147 012b 00000000 		.4byte	0
+ 1148              	.LLST8:
+ 1149 012f 00000000 		.4byte	.LVL8
+ 1150 0133 0E000000 		.4byte	.LVL9
+ 1151 0137 0100     		.2byte	0x1
+ 1152 0139 50       		.byte	0x50
+ 1153 013a 0E000000 		.4byte	.LVL9
+ 1154 013e 24000000 		.4byte	.LFE9
+ 1155 0142 0400     		.2byte	0x4
+ 1156 0144 F3       		.byte	0xf3
+ 1157 0145 01       		.uleb128 0x1
+ 1158 0146 50       		.byte	0x50
+ 1159 0147 9F       		.byte	0x9f
+ 1160 0148 00000000 		.4byte	0
+ 1161 014c 00000000 		.4byte	0
+ 1162              	.LLST9:
+ 1163 0150 00000000 		.4byte	.LVL8
+ 1164 0154 1A000000 		.4byte	.LVL11
+ 1165 0158 0100     		.2byte	0x1
+ 1166 015a 51       		.byte	0x51
+ 1167 015b 1A000000 		.4byte	.LVL11
+ 1168 015f 24000000 		.4byte	.LFE9
+ 1169 0163 0400     		.2byte	0x4
+ 1170 0165 F3       		.byte	0xf3
+ 1171 0166 01       		.uleb128 0x1
+ 1172 0167 51       		.byte	0x51
+ 1173 0168 9F       		.byte	0x9f
+ 1174 0169 00000000 		.4byte	0
+ 1175 016d 00000000 		.4byte	0
+ 1176              	.LLST10:
+ 1177 0171 00000000 		.4byte	.LVL8
+ 1178 0175 0E000000 		.4byte	.LVL9
+ 1179 0179 0700     		.2byte	0x7
+ 1180 017b 70       		.byte	0x70
+ 1181 017c 00       		.sleb128 0
+ 1182 017d 33       		.byte	0x33
+ 1183 017e 1A       		.byte	0x1a
+ 1184 017f 33       		.byte	0x33
+ 1185 0180 24       		.byte	0x24
+ 1186 0181 9F       		.byte	0x9f
+ 1187 0182 0E000000 		.4byte	.LVL9
+ 1188 0186 12000000 		.4byte	.LVL10
+ 1189 018a 0800     		.2byte	0x8
+ 1190 018c F3       		.byte	0xf3
+ 1191 018d 01       		.uleb128 0x1
+ 1192 018e 50       		.byte	0x50
+ 1193 018f 33       		.byte	0x33
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 22
+
+
+ 1194 0190 1A       		.byte	0x1a
+ 1195 0191 33       		.byte	0x33
+ 1196 0192 24       		.byte	0x24
+ 1197 0193 9F       		.byte	0x9f
+ 1198 0194 12000000 		.4byte	.LVL10
+ 1199 0198 24000000 		.4byte	.LFE9
+ 1200 019c 0100     		.2byte	0x1
+ 1201 019e 50       		.byte	0x50
+ 1202 019f 00000000 		.4byte	0
+ 1203 01a3 00000000 		.4byte	0
+ 1204              		.section	.debug_aranges,"",%progbits
+ 1205 0000 2C000000 		.4byte	0x2c
+ 1206 0004 0200     		.2byte	0x2
+ 1207 0006 00000000 		.4byte	.Ldebug_info0
+ 1208 000a 04       		.byte	0x4
+ 1209 000b 00       		.byte	0
+ 1210 000c 0000     		.2byte	0
+ 1211 000e 0000     		.2byte	0
+ 1212 0010 00000000 		.4byte	.LFB7
+ 1213 0014 3C000000 		.4byte	.LFE7-.LFB7
+ 1214 0018 00000000 		.4byte	.LFB8
+ 1215 001c 34000000 		.4byte	.LFE8-.LFB8
+ 1216 0020 00000000 		.4byte	.LFB9
+ 1217 0024 24000000 		.4byte	.LFE9-.LFB9
+ 1218 0028 00000000 		.4byte	0
+ 1219 002c 00000000 		.4byte	0
+ 1220              		.section	.debug_ranges,"",%progbits
+ 1221              	.Ldebug_ranges0:
+ 1222 0000 00000000 		.4byte	.LFB7
+ 1223 0004 3C000000 		.4byte	.LFE7
+ 1224 0008 00000000 		.4byte	.LFB8
+ 1225 000c 34000000 		.4byte	.LFE8
+ 1226 0010 00000000 		.4byte	.LFB9
+ 1227 0014 24000000 		.4byte	.LFE9
+ 1228 0018 00000000 		.4byte	0
+ 1229 001c 00000000 		.4byte	0
+ 1230              		.section	.debug_line,"",%progbits
+ 1231              	.Ldebug_line0:
+ 1232 0000 2D010000 		.section	.debug_str,"MS",%progbits,1
+ 1232      0200D000 
+ 1232      00000201 
+ 1232      FB0E0D00 
+ 1232      01010101 
+ 1233              	.LASF42:
+ 1234 0000 7072696F 		.ascii	"prio\000"
+ 1234      00
+ 1235              	.LASF18:
+ 1236 0005 49435052 		.ascii	"ICPR\000"
+ 1236      00
+ 1237              	.LASF46:
+ 1238 000a 474E5520 		.ascii	"GNU C 4.7.4 20130913 (prerelease)\000"
+ 1238      4320342E 
+ 1238      372E3420 
+ 1238      32303133 
+ 1238      30393133 
+ 1239              	.LASF38:
+ 1240 002c 4D4D4652 		.ascii	"MMFR\000"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 23
+
+
+ 1240      00
+ 1241              	.LASF9:
+ 1242 0031 5F426F6F 		.ascii	"_Bool\000"
+ 1242      6C00
+ 1243              	.LASF44:
+ 1244 0037 6E766963 		.ascii	"nvicDisableVector\000"
+ 1244      44697361 
+ 1244      626C6556 
+ 1244      6563746F 
+ 1244      7200
+ 1245              	.LASF25:
+ 1246 0049 434D785F 		.ascii	"CMx_NVIC\000"
+ 1246      4E564943 
+ 1246      00
+ 1247              	.LASF28:
+ 1248 0052 56544F52 		.ascii	"VTOR\000"
+ 1248      00
+ 1249              	.LASF14:
+ 1250 0057 49434552 		.ascii	"ICER\000"
+ 1250      00
+ 1251              	.LASF11:
+ 1252 005c 494F5245 		.ascii	"IOREG32\000"
+ 1252      47333200 
+ 1253              	.LASF2:
+ 1254 0064 756E7369 		.ascii	"unsigned char\000"
+ 1254      676E6564 
+ 1254      20636861 
+ 1254      7200
+ 1255              	.LASF13:
+ 1256 0072 756E7573 		.ascii	"unused1\000"
+ 1256      65643100 
+ 1257              	.LASF15:
+ 1258 007a 756E7573 		.ascii	"unused2\000"
+ 1258      65643200 
+ 1259              	.LASF17:
+ 1260 0082 756E7573 		.ascii	"unused3\000"
+ 1260      65643300 
+ 1261              	.LASF19:
+ 1262 008a 756E7573 		.ascii	"unused4\000"
+ 1262      65643400 
+ 1263              	.LASF21:
+ 1264 0092 756E7573 		.ascii	"unused5\000"
+ 1264      65643500 
+ 1265              	.LASF22:
+ 1266 009a 756E7573 		.ascii	"unused6\000"
+ 1266      65643600 
+ 1267              	.LASF4:
+ 1268 00a2 73686F72 		.ascii	"short unsigned int\000"
+ 1268      7420756E 
+ 1268      7369676E 
+ 1268      65642069 
+ 1268      6E7400
+ 1269              	.LASF32:
+ 1270 00b5 43465352 		.ascii	"CFSR\000"
+ 1270      00
+ 1271              	.LASF33:
+ 1272 00ba 48465352 		.ascii	"HFSR\000"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 24
+
+
+ 1272      00
+ 1273              	.LASF6:
+ 1274 00bf 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1274      20756E73 
+ 1274      69676E65 
+ 1274      6420696E 
+ 1274      7400
+ 1275              	.LASF39:
+ 1276 00d1 43504143 		.ascii	"CPACR\000"
+ 1276      5200
+ 1277              	.LASF48:
+ 1278 00d7 433A5C73 		.ascii	"C:\\stm32f0-Discovery_Tools\\Projects\\ChibiOS_Temp"
+ 1278      746D3332 
+ 1278      66302D44 
+ 1278      6973636F 
+ 1278      76657279 
+ 1279 0107 6C617465 		.ascii	"late\000"
+ 1279      00
+ 1280              	.LASF3:
+ 1281 010c 73686F72 		.ascii	"short int\000"
+ 1281      7420696E 
+ 1281      7400
+ 1282              	.LASF47:
+ 1283 0116 2E2E2F2E 		.ascii	"../../ChibiOS_2.6.1/os/ports/common/ARMCMx/nvic.c\000"
+ 1283      2E2F4368 
+ 1283      6962694F 
+ 1283      535F322E 
+ 1283      362E312F 
+ 1284              	.LASF0:
+ 1285 0148 756E7369 		.ascii	"unsigned int\000"
+ 1285      676E6564 
+ 1285      20696E74 
+ 1285      00
+ 1286              	.LASF16:
+ 1287 0155 49535052 		.ascii	"ISPR\000"
+ 1287      00
+ 1288              	.LASF34:
+ 1289 015a 44465352 		.ascii	"DFSR\000"
+ 1289      00
+ 1290              	.LASF8:
+ 1291 015f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1291      206C6F6E 
+ 1291      6720756E 
+ 1291      7369676E 
+ 1291      65642069 
+ 1292              	.LASF27:
+ 1293 0176 49435352 		.ascii	"ICSR\000"
+ 1293      00
+ 1294              	.LASF40:
+ 1295 017b 434D785F 		.ascii	"CMx_SCB\000"
+ 1295      53434200 
+ 1296              	.LASF29:
+ 1297 0183 41495243 		.ascii	"AIRCR\000"
+ 1297      5200
+ 1298              	.LASF36:
+ 1299 0189 42464152 		.ascii	"BFAR\000"
+ 1299      00
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 25
+
+
+ 1300              	.LASF45:
+ 1301 018e 68616E64 		.ascii	"handler\000"
+ 1301      6C657200 
+ 1302              	.LASF24:
+ 1303 0196 73697A65 		.ascii	"sizetype\000"
+ 1303      74797065 
+ 1303      00
+ 1304              	.LASF23:
+ 1305 019f 53544952 		.ascii	"STIR\000"
+ 1305      00
+ 1306              	.LASF7:
+ 1307 01a4 6C6F6E67 		.ascii	"long long int\000"
+ 1307      206C6F6E 
+ 1307      6720696E 
+ 1307      7400
+ 1308              	.LASF26:
+ 1309 01b2 43505549 		.ascii	"CPUID\000"
+ 1309      4400
+ 1310              	.LASF41:
+ 1311 01b8 63686172 		.ascii	"char\000"
+ 1311      00
+ 1312              	.LASF12:
+ 1313 01bd 49534552 		.ascii	"ISER\000"
+ 1313      00
+ 1314              	.LASF37:
+ 1315 01c2 41465352 		.ascii	"AFSR\000"
+ 1315      00
+ 1316              	.LASF35:
+ 1317 01c7 4D4D4641 		.ascii	"MMFAR\000"
+ 1317      5200
+ 1318              	.LASF31:
+ 1319 01cd 53484353 		.ascii	"SHCSR\000"
+ 1319      5200
+ 1320              	.LASF10:
+ 1321 01d3 75696E74 		.ascii	"uint32_t\000"
+ 1321      33325F74 
+ 1321      00
+ 1322              	.LASF5:
+ 1323 01dc 6C6F6E67 		.ascii	"long int\000"
+ 1323      20696E74 
+ 1323      00
+ 1324              	.LASF30:
+ 1325 01e5 53485052 		.ascii	"SHPR\000"
+ 1325      00
+ 1326              	.LASF1:
+ 1327 01ea 7369676E 		.ascii	"signed char\000"
+ 1327      65642063 
+ 1327      68617200 
+ 1328              	.LASF49:
+ 1329 01f6 6E766963 		.ascii	"nvicSetSystemHandlerPriority\000"
+ 1329      53657453 
+ 1329      79737465 
+ 1329      6D48616E 
+ 1329      646C6572 
+ 1330              	.LASF20:
+ 1331 0213 49414252 		.ascii	"IABR\000"
+ 1331      00
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 26
+
+
+ 1332              	.LASF43:
+ 1333 0218 6E766963 		.ascii	"nvicEnableVector\000"
+ 1333      456E6162 
+ 1333      6C655665 
+ 1333      63746F72 
+ 1333      00
+ 1334              		.ident	"GCC: (GNU Tools for ARM Embedded Processors / bleeding-edge-toolchain-131005) 4.7.4 201309
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s 			page 27
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 nvic.c
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:18     .text.nvicEnableVector:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:24     .text.nvicEnableVector:00000000 nvicEnableVector
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:86     .text.nvicEnableVector:00000038 $d
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:91     .text.nvicDisableVector:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:97     .text.nvicDisableVector:00000000 nvicDisableVector
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:148    .text.nvicDisableVector:00000030 $d
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:153    .text.nvicSetSystemHandlerPriority:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:159    .text.nvicSetSystemHandlerPriority:00000000 nvicSetSystemHandlerPriority
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:205    .text.nvicSetSystemHandlerPriority:00000020 $d
+                     .debug_frame:00000010 $d
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:90     .text.nvicEnableVector:0000003c $t
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:152    .text.nvicDisableVector:00000034 $t
+C:\Users\3130\AppData\Local\Temp\ccYIRpRE.s:209    .text.nvicSetSystemHandlerPriority:00000024 $t
+
+NO UNDEFINED SYMBOLS

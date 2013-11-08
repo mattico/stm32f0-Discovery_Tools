@@ -1,11 +1,29 @@
-18:03:04 **** Incremental Build of configuration Debug for project Arduino_Template ****
-make all 
+00:37:21 **** Incremental Build of configuration Debug for project Arduino_Template ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -DUSE_STDPERIPH_DRIVER -DUSE_STM32F0_DISCOVERY -DSTM32F0XX -I"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\Libraries\Arduino\inc" -I"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\Libraries\CMSIS\Device\ST\STM32F0xx\Include" -I"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\Libraries\STM32F0xx_StdPeriph_Driver\inc" -I"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\Libraries\CMSIS\Include" -I"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\src" -I"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\Libraries\Utilities" -MMD -MP -MF"src/main.d" -MT"src/main.d" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: Arduino_Template.elf
+Invoking: Cross ARM C Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -T stm32f0.ld -L"C:\stm32f0-Discovery_Tools\Projects\Arduino_Template\Device\ldscripts" -Wl,-Map,"Arduino_Template.map" -o "Arduino_Template.elf"  ./src/main.o  ./Libraries/Utilities/stm32f0_discovery.o ./Libraries/Utilities/stm32f0xx_it.o ./Libraries/Utilities/utilities.o  ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_adc.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_cec.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_comp.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_crc.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_dac.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_dbgmcu.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_dma.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_exti.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_flash.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_gpio.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_i2c.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_iwdg.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_misc.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_pwr.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_rcc.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_rtc.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_spi.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_syscfg.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_tim.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_usart.o ./Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_wwdg.o  ./Libraries/CMSIS/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.o  ./Libraries/Arduino/src/gpio.o ./Libraries/Arduino/src/serial.o ./Libraries/Arduino/src/spi.o  ./Device/startup_stm32f0xx.o   
+Finished building target: Arduino_Template.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+Invoking: Cross ARM GNU Create Listing
+arm-none-eabi-objcopy "Arduino_Template.elf" -O ihex  "Arduino_Template.hex"
+arm-none-eabi-objdump "Arduino_Template.elf" --source --all-headers --demangle --line-numbers --wide > "Arduino_Template.lst"
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size  --format=berkeley "Arduino_Template.elf"
    text	   data	    bss	    dec	    hex	filename
-  47148	    640	    372	  48160	   bc20	Arduino_Template.elf
+  47132	    640	    372	  48144	   bc10	Arduino_Template.elf
+Finished building: Arduino_Template.hex
 Finished building: Arduino_Template.siz
  
+ 
+Finished building: Arduino_Template.lst
+ 
 
-18:03:05 Build Finished (took 719ms)
+00:37:24 Build Finished (took 2s.534ms)
 

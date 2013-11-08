@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ChibiOS_Template/ST_STM32F0_DISCOVERY&apos; to &apos;board&apos;" description="Rename resource &apos;ST_STM32F0_DISCOVERY&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ST_STM32F0_DISCOVERY" name="board" stamp="1383888691486" updateReferences="true"/>
+</session>

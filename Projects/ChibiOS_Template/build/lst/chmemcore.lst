@@ -1,0 +1,1137 @@
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"chmemcore.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text._core_init,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_core_init
+  21              		.code	16
+  22              		.thumb_func
+  23              		.type	_core_init, %function
+  24              	_core_init:
+  25              	.LFB7:
+  26              		.file 1 "../../ChibiOS_2.6.1/os/kernel/src/chmemcore.c"
+  27              		.loc 1 66 0
+  28              		.cfi_startproc
+  29              		.loc 1 70 0
+  30 0000 0549     		ldr	r1, .L2
+  31              		.loc 1 71 0
+  32 0002 0648     		ldr	r0, .L2+4
+  33              		.loc 1 70 0
+  34 0004 0723     		mov	r3, #7
+  35 0006 0731     		add	r1, r1, #7
+  36 0008 9943     		bic	r1, r3
+  37              		.loc 1 71 0
+  38 000a 9843     		bic	r0, r3
+  39              		.loc 1 70 0
+  40 000c 044A     		ldr	r2, .L2+8
+  41              		.loc 1 71 0
+  42 000e 054B     		ldr	r3, .L2+12
+  43              		.loc 1 70 0
+  44 0010 1160     		str	r1, [r2]
+  45              		.loc 1 71 0
+  46 0012 1860     		str	r0, [r3]
+  47              		.loc 1 77 0
+  48              		@ sp needed for prologue
+  49 0014 7047     		bx	lr
+  50              	.L3:
+  51 0016 C046     		.align	2
+  52              	.L2:
+  53 0018 00000000 		.word	__heap_base__
+  54 001c 00000000 		.word	__heap_end__
+  55 0020 00000000 		.word	.LANCHOR0
+  56 0024 00000000 		.word	.LANCHOR1
+  57              		.cfi_endproc
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 2
+
+
+  58              	.LFE7:
+  59              		.size	_core_init, .-_core_init
+  60 0028 C046C046 		.section	.text.chCoreAlloc,"ax",%progbits
+  60      C046C046 
+  61              		.align	2
+  62              		.p2align 4,,15
+  63              		.global	chCoreAlloc
+  64              		.code	16
+  65              		.thumb_func
+  66              		.type	chCoreAlloc, %function
+  67              	chCoreAlloc:
+  68              	.LFB8:
+  69              		.loc 1 91 0
+  70              		.cfi_startproc
+  71              	.LVL0:
+  72              		.loc 1 94 0
+  73              	@ 94 "../../ChibiOS_2.6.1/os/kernel/src/chmemcore.c" 1
+  74 0000 72B6     		cpsid   i
+  75              	@ 0 "" 2
+  76              	.LVL1:
+  77              		.code	16
+  78              	.LBB4:
+  79              	.LBB5:
+  80              		.loc 1 117 0
+  81 0002 0723     		mov	r3, #7
+  82 0004 C21D     		add	r2, r0, #7
+  83 0006 9A43     		bic	r2, r3
+  84              	.LVL2:
+  85              		.loc 1 118 0
+  86 0008 0649     		ldr	r1, .L8
+  87 000a 074B     		ldr	r3, .L8+4
+  88 000c 0968     		ldr	r1, [r1]
+  89 000e 1868     		ldr	r0, [r3]
+  90              	.LVL3:
+  91 0010 091A     		sub	r1, r1, r0
+  92 0012 8A42     		cmp	r2, r1
+  93 0014 03D8     		bhi	.L6
+  94              	.LVL4:
+  95              		.loc 1 121 0
+  96 0016 8218     		add	r2, r0, r2
+  97              	.LVL5:
+  98 0018 1A60     		str	r2, [r3]
+  99              	.LVL6:
+ 100              	.L5:
+ 101              	.LBE5:
+ 102              	.LBE4:
+ 103              		.loc 1 96 0
+ 104              	@ 96 "../../ChibiOS_2.6.1/os/kernel/src/chmemcore.c" 1
+ 105 001a 62B6     		cpsie   i
+ 106              	@ 0 "" 2
+ 107              		.loc 1 98 0
+ 108              		.code	16
+ 109              		@ sp needed for prologue
+ 110 001c 7047     		bx	lr
+ 111              	.LVL7:
+ 112              	.L6:
+ 113              	.LBB7:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 3
+
+
+ 114              	.LBB6:
+ 115              		.loc 1 119 0
+ 116 001e 0020     		mov	r0, #0
+ 117 0020 FBE7     		b	.L5
+ 118              	.L9:
+ 119 0022 C046     		.align	2
+ 120              	.L8:
+ 121 0024 00000000 		.word	.LANCHOR1
+ 122 0028 00000000 		.word	.LANCHOR0
+ 123              	.LBE6:
+ 124              	.LBE7:
+ 125              		.cfi_endproc
+ 126              	.LFE8:
+ 127              		.size	chCoreAlloc, .-chCoreAlloc
+ 128 002c C046C046 		.section	.text.chCoreAllocI,"ax",%progbits
+ 129              		.align	2
+ 130              		.p2align 4,,15
+ 131              		.global	chCoreAllocI
+ 132              		.code	16
+ 133              		.thumb_func
+ 134              		.type	chCoreAllocI, %function
+ 135              	chCoreAllocI:
+ 136              	.LFB9:
+ 137              		.loc 1 112 0
+ 138              		.cfi_startproc
+ 139              	.LVL8:
+ 140              		.loc 1 117 0
+ 141 0000 C21D     		add	r2, r0, #7
+ 142 0002 0723     		mov	r3, #7
+ 143 0004 9A43     		bic	r2, r3
+ 144              	.LVL9:
+ 145              		.loc 1 118 0
+ 146 0006 0649     		ldr	r1, .L13
+ 147 0008 064B     		ldr	r3, .L13+4
+ 148 000a 0968     		ldr	r1, [r1]
+ 149 000c 1868     		ldr	r0, [r3]
+ 150 000e 091A     		sub	r1, r1, r0
+ 151 0010 8A42     		cmp	r2, r1
+ 152 0012 02D8     		bhi	.L12
+ 153              	.LVL10:
+ 154              		.loc 1 121 0
+ 155 0014 8218     		add	r2, r0, r2
+ 156              	.LVL11:
+ 157 0016 1A60     		str	r2, [r3]
+ 158              	.LVL12:
+ 159              	.L11:
+ 160              		.loc 1 123 0
+ 161              		@ sp needed for prologue
+ 162 0018 7047     		bx	lr
+ 163              	.LVL13:
+ 164              	.L12:
+ 165              		.loc 1 119 0
+ 166 001a 0020     		mov	r0, #0
+ 167 001c FCE7     		b	.L11
+ 168              	.L14:
+ 169 001e C046     		.align	2
+ 170              	.L13:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 4
+
+
+ 171 0020 00000000 		.word	.LANCHOR1
+ 172 0024 00000000 		.word	.LANCHOR0
+ 173              		.cfi_endproc
+ 174              	.LFE9:
+ 175              		.size	chCoreAllocI, .-chCoreAllocI
+ 176 0028 C046C046 		.section	.text.chCoreStatus,"ax",%progbits
+ 176      C046C046 
+ 177              		.align	2
+ 178              		.p2align 4,,15
+ 179              		.global	chCoreStatus
+ 180              		.code	16
+ 181              		.thumb_func
+ 182              		.type	chCoreStatus, %function
+ 183              	chCoreStatus:
+ 184              	.LFB10:
+ 185              		.loc 1 132 0
+ 186              		.cfi_startproc
+ 187              		.loc 1 134 0
+ 188 0000 024B     		ldr	r3, .L16
+ 189 0002 0349     		ldr	r1, .L16+4
+ 190 0004 1868     		ldr	r0, [r3]
+ 191 0006 0A68     		ldr	r2, [r1]
+ 192              		.loc 1 135 0
+ 193              		@ sp needed for prologue
+ 194              		.loc 1 134 0
+ 195 0008 801A     		sub	r0, r0, r2
+ 196              		.loc 1 135 0
+ 197 000a 7047     		bx	lr
+ 198              	.L17:
+ 199              		.align	2
+ 200              	.L16:
+ 201 000c 00000000 		.word	.LANCHOR1
+ 202 0010 00000000 		.word	.LANCHOR0
+ 203              		.cfi_endproc
+ 204              	.LFE10:
+ 205              		.size	chCoreStatus, .-chCoreStatus
+ 206 0014 C046C046 		.section	.bss.endmem,"aw",%nobits
+ 206      C046C046 
+ 206      C046C046 
+ 207              		.align	2
+ 208              		.set	.LANCHOR1,. + 0
+ 209              		.type	endmem, %object
+ 210              		.size	endmem, 4
+ 211              	endmem:
+ 212 0000 00000000 		.space	4
+ 213              		.section	.bss.nextmem,"aw",%nobits
+ 214              		.align	2
+ 215              		.set	.LANCHOR0,. + 0
+ 216              		.type	nextmem, %object
+ 217              		.size	nextmem, 4
+ 218              	nextmem:
+ 219 0000 00000000 		.space	4
+ 220              		.text
+ 221              	.Letext0:
+ 222              		.file 2 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/inclu
+ 223              		.file 3 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/../..
+ 224              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 5
+
+
+ 225              	.Ldebug_info0:
+ 226 0000 E2010000 		.4byte	0x1e2
+ 227 0004 0200     		.2byte	0x2
+ 228 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 229 000a 04       		.byte	0x4
+ 230 000b 01       		.uleb128 0x1
+ 231 000c 54010000 		.4byte	.LASF18
+ 232 0010 01       		.byte	0x1
+ 233 0011 0F010000 		.4byte	.LASF19
+ 234 0015 9B000000 		.4byte	.LASF20
+ 235 0019 30000000 		.4byte	.Ldebug_ranges0+0x30
+ 236 001d 00000000 		.4byte	0
+ 237 0021 00000000 		.4byte	0
+ 238 0025 00000000 		.4byte	.Ldebug_line0
+ 239 0029 02       		.uleb128 0x2
+ 240 002a 04       		.byte	0x4
+ 241 002b 05       		.byte	0x5
+ 242 002c 696E7400 		.ascii	"int\000"
+ 243 0030 03       		.uleb128 0x3
+ 244 0031 21000000 		.4byte	.LASF2
+ 245 0035 02       		.byte	0x2
+ 246 0036 D5       		.byte	0xd5
+ 247 0037 3B000000 		.4byte	0x3b
+ 248 003b 04       		.uleb128 0x4
+ 249 003c 04       		.byte	0x4
+ 250 003d 07       		.byte	0x7
+ 251 003e 47010000 		.4byte	.LASF0
+ 252 0042 04       		.uleb128 0x4
+ 253 0043 01       		.byte	0x1
+ 254 0044 06       		.byte	0x6
+ 255 0045 F3000000 		.4byte	.LASF1
+ 256 0049 03       		.uleb128 0x3
+ 257 004a 74000000 		.4byte	.LASF3
+ 258 004e 03       		.byte	0x3
+ 259 004f 2A       		.byte	0x2a
+ 260 0050 54000000 		.4byte	0x54
+ 261 0054 04       		.uleb128 0x4
+ 262 0055 01       		.byte	0x1
+ 263 0056 08       		.byte	0x8
+ 264 0057 7C000000 		.4byte	.LASF4
+ 265 005b 04       		.uleb128 0x4
+ 266 005c 02       		.byte	0x2
+ 267 005d 05       		.byte	0x5
+ 268 005e 3D010000 		.4byte	.LASF5
+ 269 0062 04       		.uleb128 0x4
+ 270 0063 02       		.byte	0x2
+ 271 0064 07       		.byte	0x7
+ 272 0065 0E000000 		.4byte	.LASF6
+ 273 0069 04       		.uleb128 0x4
+ 274 006a 04       		.byte	0x4
+ 275 006b 05       		.byte	0x5
+ 276 006c D0000000 		.4byte	.LASF7
+ 277 0070 04       		.uleb128 0x4
+ 278 0071 04       		.byte	0x4
+ 279 0072 07       		.byte	0x7
+ 280 0073 4B000000 		.4byte	.LASF8
+ 281 0077 04       		.uleb128 0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 6
+
+
+ 282 0078 08       		.byte	0x8
+ 283 0079 05       		.byte	0x5
+ 284 007a 00000000 		.4byte	.LASF9
+ 285 007e 04       		.uleb128 0x4
+ 286 007f 08       		.byte	0x8
+ 287 0080 07       		.byte	0x7
+ 288 0081 5D000000 		.4byte	.LASF10
+ 289 0085 04       		.uleb128 0x4
+ 290 0086 01       		.byte	0x1
+ 291 0087 02       		.byte	0x2
+ 292 0088 D9000000 		.4byte	.LASF11
+ 293 008c 05       		.uleb128 0x5
+ 294 008d 04       		.byte	0x4
+ 295 008e 04       		.uleb128 0x4
+ 296 008f 04       		.byte	0x4
+ 297 0090 07       		.byte	0x7
+ 298 0091 76010000 		.4byte	.LASF12
+ 299 0095 04       		.uleb128 0x4
+ 300 0096 01       		.byte	0x1
+ 301 0097 08       		.byte	0x8
+ 302 0098 8A000000 		.4byte	.LASF13
+ 303 009c 06       		.uleb128 0x6
+ 304 009d 04       		.byte	0x4
+ 305 009e 49000000 		.4byte	0x49
+ 306 00a2 07       		.uleb128 0x7
+ 307 00a3 01       		.byte	0x1
+ 308 00a4 E6000000 		.4byte	.LASF21
+ 309 00a8 01       		.byte	0x1
+ 310 00a9 70       		.byte	0x70
+ 311 00aa 01       		.byte	0x1
+ 312 00ab 8C000000 		.4byte	0x8c
+ 313 00af 01       		.byte	0x1
+ 314 00b0 C9000000 		.4byte	0xc9
+ 315 00b4 08       		.uleb128 0x8
+ 316 00b5 FF000000 		.4byte	.LASF22
+ 317 00b9 01       		.byte	0x1
+ 318 00ba 70       		.byte	0x70
+ 319 00bb 30000000 		.4byte	0x30
+ 320 00bf 09       		.uleb128 0x9
+ 321 00c0 7000     		.ascii	"p\000"
+ 322 00c2 01       		.byte	0x1
+ 323 00c3 71       		.byte	0x71
+ 324 00c4 8C000000 		.4byte	0x8c
+ 325 00c8 00       		.byte	0
+ 326 00c9 0A       		.uleb128 0xa
+ 327 00ca 01       		.byte	0x1
+ 328 00cb 04010000 		.4byte	.LASF23
+ 329 00cf 01       		.byte	0x1
+ 330 00d0 42       		.byte	0x42
+ 331 00d1 01       		.byte	0x1
+ 332 00d2 00000000 		.4byte	.LFB7
+ 333 00d6 28000000 		.4byte	.LFE7
+ 334 00da 02       		.byte	0x2
+ 335 00db 7D       		.byte	0x7d
+ 336 00dc 00       		.sleb128 0
+ 337 00dd 01       		.byte	0x1
+ 338 00de FD000000 		.4byte	0xfd
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 7
+
+
+ 339 00e2 0B       		.uleb128 0xb
+ 340 00e3 3D000000 		.4byte	.LASF14
+ 341 00e7 01       		.byte	0x1
+ 342 00e8 44       		.byte	0x44
+ 343 00e9 FD000000 		.4byte	0xfd
+ 344 00ed 01       		.byte	0x1
+ 345 00ee 01       		.byte	0x1
+ 346 00ef 0B       		.uleb128 0xb
+ 347 00f0 30000000 		.4byte	.LASF15
+ 348 00f4 01       		.byte	0x1
+ 349 00f5 45       		.byte	0x45
+ 350 00f6 FD000000 		.4byte	0xfd
+ 351 00fa 01       		.byte	0x1
+ 352 00fb 01       		.byte	0x1
+ 353 00fc 00       		.byte	0
+ 354 00fd 0C       		.uleb128 0xc
+ 355 00fe 49000000 		.4byte	0x49
+ 356 0102 08010000 		.4byte	0x108
+ 357 0106 0D       		.uleb128 0xd
+ 358 0107 00       		.byte	0
+ 359 0108 0E       		.uleb128 0xe
+ 360 0109 01       		.byte	0x1
+ 361 010a 8F000000 		.4byte	.LASF24
+ 362 010e 01       		.byte	0x1
+ 363 010f 5B       		.byte	0x5b
+ 364 0110 01       		.byte	0x1
+ 365 0111 8C000000 		.4byte	0x8c
+ 366 0115 00000000 		.4byte	.LFB8
+ 367 0119 2C000000 		.4byte	.LFE8
+ 368 011d 02       		.byte	0x2
+ 369 011e 7D       		.byte	0x7d
+ 370 011f 00       		.sleb128 0
+ 371 0120 01       		.byte	0x1
+ 372 0121 68010000 		.4byte	0x168
+ 373 0125 0F       		.uleb128 0xf
+ 374 0126 FF000000 		.4byte	.LASF22
+ 375 012a 01       		.byte	0x1
+ 376 012b 5B       		.byte	0x5b
+ 377 012c 30000000 		.4byte	0x30
+ 378 0130 00000000 		.4byte	.LLST0
+ 379 0134 10       		.uleb128 0x10
+ 380 0135 7000     		.ascii	"p\000"
+ 381 0137 01       		.byte	0x1
+ 382 0138 5C       		.byte	0x5c
+ 383 0139 8C000000 		.4byte	0x8c
+ 384 013d 01       		.byte	0x1
+ 385 013e 50       		.byte	0x50
+ 386 013f 11       		.uleb128 0x11
+ 387 0140 A2000000 		.4byte	0xa2
+ 388 0144 02000000 		.4byte	.LBB4
+ 389 0148 00000000 		.4byte	.Ldebug_ranges0+0
+ 390 014c 01       		.byte	0x1
+ 391 014d 5F       		.byte	0x5f
+ 392 014e 12       		.uleb128 0x12
+ 393 014f B4000000 		.4byte	0xb4
+ 394 0153 21000000 		.4byte	.LLST1
+ 395 0157 13       		.uleb128 0x13
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 8
+
+
+ 396 0158 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 397 015c 14       		.uleb128 0x14
+ 398 015d BF000000 		.4byte	0xbf
+ 399 0161 5D000000 		.4byte	.LLST2
+ 400 0165 00       		.byte	0
+ 401 0166 00       		.byte	0
+ 402 0167 00       		.byte	0
+ 403 0168 15       		.uleb128 0x15
+ 404 0169 A2000000 		.4byte	0xa2
+ 405 016d 00000000 		.4byte	.LFB9
+ 406 0171 28000000 		.4byte	.LFE9
+ 407 0175 02       		.byte	0x2
+ 408 0176 7D       		.byte	0x7d
+ 409 0177 00       		.sleb128 0
+ 410 0178 01       		.byte	0x1
+ 411 0179 90010000 		.4byte	0x190
+ 412 017d 12       		.uleb128 0x12
+ 413 017e B4000000 		.4byte	0xb4
+ 414 0182 70000000 		.4byte	.LLST3
+ 415 0186 14       		.uleb128 0x14
+ 416 0187 BF000000 		.4byte	0xbf
+ 417 018b AC000000 		.4byte	.LLST4
+ 418 018f 00       		.byte	0
+ 419 0190 16       		.uleb128 0x16
+ 420 0191 01       		.byte	0x1
+ 421 0192 7F010000 		.4byte	.LASF25
+ 422 0196 01       		.byte	0x1
+ 423 0197 84       		.byte	0x84
+ 424 0198 01       		.byte	0x1
+ 425 0199 30000000 		.4byte	0x30
+ 426 019d 00000000 		.4byte	.LFB10
+ 427 01a1 14000000 		.4byte	.LFE10
+ 428 01a5 02       		.byte	0x2
+ 429 01a6 7D       		.byte	0x7d
+ 430 01a7 00       		.sleb128 0
+ 431 01a8 01       		.byte	0x1
+ 432 01a9 17       		.uleb128 0x17
+ 433 01aa 28000000 		.4byte	.LASF16
+ 434 01ae 01       		.byte	0x1
+ 435 01af 3A       		.byte	0x3a
+ 436 01b0 9C000000 		.4byte	0x9c
+ 437 01b4 05       		.byte	0x5
+ 438 01b5 03       		.byte	0x3
+ 439 01b6 00000000 		.4byte	nextmem
+ 440 01ba 17       		.uleb128 0x17
+ 441 01bb DF000000 		.4byte	.LASF17
+ 442 01bf 01       		.byte	0x1
+ 443 01c0 3B       		.byte	0x3b
+ 444 01c1 9C000000 		.4byte	0x9c
+ 445 01c5 05       		.byte	0x5
+ 446 01c6 03       		.byte	0x3
+ 447 01c7 00000000 		.4byte	endmem
+ 448 01cb 0B       		.uleb128 0xb
+ 449 01cc 3D000000 		.4byte	.LASF14
+ 450 01d0 01       		.byte	0x1
+ 451 01d1 44       		.byte	0x44
+ 452 01d2 FD000000 		.4byte	0xfd
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 9
+
+
+ 453 01d6 01       		.byte	0x1
+ 454 01d7 01       		.byte	0x1
+ 455 01d8 0B       		.uleb128 0xb
+ 456 01d9 30000000 		.4byte	.LASF15
+ 457 01dd 01       		.byte	0x1
+ 458 01de 45       		.byte	0x45
+ 459 01df FD000000 		.4byte	0xfd
+ 460 01e3 01       		.byte	0x1
+ 461 01e4 01       		.byte	0x1
+ 462 01e5 00       		.byte	0
+ 463              		.section	.debug_abbrev,"",%progbits
+ 464              	.Ldebug_abbrev0:
+ 465 0000 01       		.uleb128 0x1
+ 466 0001 11       		.uleb128 0x11
+ 467 0002 01       		.byte	0x1
+ 468 0003 25       		.uleb128 0x25
+ 469 0004 0E       		.uleb128 0xe
+ 470 0005 13       		.uleb128 0x13
+ 471 0006 0B       		.uleb128 0xb
+ 472 0007 03       		.uleb128 0x3
+ 473 0008 0E       		.uleb128 0xe
+ 474 0009 1B       		.uleb128 0x1b
+ 475 000a 0E       		.uleb128 0xe
+ 476 000b 55       		.uleb128 0x55
+ 477 000c 06       		.uleb128 0x6
+ 478 000d 11       		.uleb128 0x11
+ 479 000e 01       		.uleb128 0x1
+ 480 000f 52       		.uleb128 0x52
+ 481 0010 01       		.uleb128 0x1
+ 482 0011 10       		.uleb128 0x10
+ 483 0012 06       		.uleb128 0x6
+ 484 0013 00       		.byte	0
+ 485 0014 00       		.byte	0
+ 486 0015 02       		.uleb128 0x2
+ 487 0016 24       		.uleb128 0x24
+ 488 0017 00       		.byte	0
+ 489 0018 0B       		.uleb128 0xb
+ 490 0019 0B       		.uleb128 0xb
+ 491 001a 3E       		.uleb128 0x3e
+ 492 001b 0B       		.uleb128 0xb
+ 493 001c 03       		.uleb128 0x3
+ 494 001d 08       		.uleb128 0x8
+ 495 001e 00       		.byte	0
+ 496 001f 00       		.byte	0
+ 497 0020 03       		.uleb128 0x3
+ 498 0021 16       		.uleb128 0x16
+ 499 0022 00       		.byte	0
+ 500 0023 03       		.uleb128 0x3
+ 501 0024 0E       		.uleb128 0xe
+ 502 0025 3A       		.uleb128 0x3a
+ 503 0026 0B       		.uleb128 0xb
+ 504 0027 3B       		.uleb128 0x3b
+ 505 0028 0B       		.uleb128 0xb
+ 506 0029 49       		.uleb128 0x49
+ 507 002a 13       		.uleb128 0x13
+ 508 002b 00       		.byte	0
+ 509 002c 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 10
+
+
+ 510 002d 04       		.uleb128 0x4
+ 511 002e 24       		.uleb128 0x24
+ 512 002f 00       		.byte	0
+ 513 0030 0B       		.uleb128 0xb
+ 514 0031 0B       		.uleb128 0xb
+ 515 0032 3E       		.uleb128 0x3e
+ 516 0033 0B       		.uleb128 0xb
+ 517 0034 03       		.uleb128 0x3
+ 518 0035 0E       		.uleb128 0xe
+ 519 0036 00       		.byte	0
+ 520 0037 00       		.byte	0
+ 521 0038 05       		.uleb128 0x5
+ 522 0039 0F       		.uleb128 0xf
+ 523 003a 00       		.byte	0
+ 524 003b 0B       		.uleb128 0xb
+ 525 003c 0B       		.uleb128 0xb
+ 526 003d 00       		.byte	0
+ 527 003e 00       		.byte	0
+ 528 003f 06       		.uleb128 0x6
+ 529 0040 0F       		.uleb128 0xf
+ 530 0041 00       		.byte	0
+ 531 0042 0B       		.uleb128 0xb
+ 532 0043 0B       		.uleb128 0xb
+ 533 0044 49       		.uleb128 0x49
+ 534 0045 13       		.uleb128 0x13
+ 535 0046 00       		.byte	0
+ 536 0047 00       		.byte	0
+ 537 0048 07       		.uleb128 0x7
+ 538 0049 2E       		.uleb128 0x2e
+ 539 004a 01       		.byte	0x1
+ 540 004b 3F       		.uleb128 0x3f
+ 541 004c 0C       		.uleb128 0xc
+ 542 004d 03       		.uleb128 0x3
+ 543 004e 0E       		.uleb128 0xe
+ 544 004f 3A       		.uleb128 0x3a
+ 545 0050 0B       		.uleb128 0xb
+ 546 0051 3B       		.uleb128 0x3b
+ 547 0052 0B       		.uleb128 0xb
+ 548 0053 27       		.uleb128 0x27
+ 549 0054 0C       		.uleb128 0xc
+ 550 0055 49       		.uleb128 0x49
+ 551 0056 13       		.uleb128 0x13
+ 552 0057 20       		.uleb128 0x20
+ 553 0058 0B       		.uleb128 0xb
+ 554 0059 01       		.uleb128 0x1
+ 555 005a 13       		.uleb128 0x13
+ 556 005b 00       		.byte	0
+ 557 005c 00       		.byte	0
+ 558 005d 08       		.uleb128 0x8
+ 559 005e 05       		.uleb128 0x5
+ 560 005f 00       		.byte	0
+ 561 0060 03       		.uleb128 0x3
+ 562 0061 0E       		.uleb128 0xe
+ 563 0062 3A       		.uleb128 0x3a
+ 564 0063 0B       		.uleb128 0xb
+ 565 0064 3B       		.uleb128 0x3b
+ 566 0065 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 11
+
+
+ 567 0066 49       		.uleb128 0x49
+ 568 0067 13       		.uleb128 0x13
+ 569 0068 00       		.byte	0
+ 570 0069 00       		.byte	0
+ 571 006a 09       		.uleb128 0x9
+ 572 006b 34       		.uleb128 0x34
+ 573 006c 00       		.byte	0
+ 574 006d 03       		.uleb128 0x3
+ 575 006e 08       		.uleb128 0x8
+ 576 006f 3A       		.uleb128 0x3a
+ 577 0070 0B       		.uleb128 0xb
+ 578 0071 3B       		.uleb128 0x3b
+ 579 0072 0B       		.uleb128 0xb
+ 580 0073 49       		.uleb128 0x49
+ 581 0074 13       		.uleb128 0x13
+ 582 0075 00       		.byte	0
+ 583 0076 00       		.byte	0
+ 584 0077 0A       		.uleb128 0xa
+ 585 0078 2E       		.uleb128 0x2e
+ 586 0079 01       		.byte	0x1
+ 587 007a 3F       		.uleb128 0x3f
+ 588 007b 0C       		.uleb128 0xc
+ 589 007c 03       		.uleb128 0x3
+ 590 007d 0E       		.uleb128 0xe
+ 591 007e 3A       		.uleb128 0x3a
+ 592 007f 0B       		.uleb128 0xb
+ 593 0080 3B       		.uleb128 0x3b
+ 594 0081 0B       		.uleb128 0xb
+ 595 0082 27       		.uleb128 0x27
+ 596 0083 0C       		.uleb128 0xc
+ 597 0084 11       		.uleb128 0x11
+ 598 0085 01       		.uleb128 0x1
+ 599 0086 12       		.uleb128 0x12
+ 600 0087 01       		.uleb128 0x1
+ 601 0088 40       		.uleb128 0x40
+ 602 0089 0A       		.uleb128 0xa
+ 603 008a 9742     		.uleb128 0x2117
+ 604 008c 0C       		.uleb128 0xc
+ 605 008d 01       		.uleb128 0x1
+ 606 008e 13       		.uleb128 0x13
+ 607 008f 00       		.byte	0
+ 608 0090 00       		.byte	0
+ 609 0091 0B       		.uleb128 0xb
+ 610 0092 34       		.uleb128 0x34
+ 611 0093 00       		.byte	0
+ 612 0094 03       		.uleb128 0x3
+ 613 0095 0E       		.uleb128 0xe
+ 614 0096 3A       		.uleb128 0x3a
+ 615 0097 0B       		.uleb128 0xb
+ 616 0098 3B       		.uleb128 0x3b
+ 617 0099 0B       		.uleb128 0xb
+ 618 009a 49       		.uleb128 0x49
+ 619 009b 13       		.uleb128 0x13
+ 620 009c 3F       		.uleb128 0x3f
+ 621 009d 0C       		.uleb128 0xc
+ 622 009e 3C       		.uleb128 0x3c
+ 623 009f 0C       		.uleb128 0xc
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 12
+
+
+ 624 00a0 00       		.byte	0
+ 625 00a1 00       		.byte	0
+ 626 00a2 0C       		.uleb128 0xc
+ 627 00a3 01       		.uleb128 0x1
+ 628 00a4 01       		.byte	0x1
+ 629 00a5 49       		.uleb128 0x49
+ 630 00a6 13       		.uleb128 0x13
+ 631 00a7 01       		.uleb128 0x1
+ 632 00a8 13       		.uleb128 0x13
+ 633 00a9 00       		.byte	0
+ 634 00aa 00       		.byte	0
+ 635 00ab 0D       		.uleb128 0xd
+ 636 00ac 21       		.uleb128 0x21
+ 637 00ad 00       		.byte	0
+ 638 00ae 00       		.byte	0
+ 639 00af 00       		.byte	0
+ 640 00b0 0E       		.uleb128 0xe
+ 641 00b1 2E       		.uleb128 0x2e
+ 642 00b2 01       		.byte	0x1
+ 643 00b3 3F       		.uleb128 0x3f
+ 644 00b4 0C       		.uleb128 0xc
+ 645 00b5 03       		.uleb128 0x3
+ 646 00b6 0E       		.uleb128 0xe
+ 647 00b7 3A       		.uleb128 0x3a
+ 648 00b8 0B       		.uleb128 0xb
+ 649 00b9 3B       		.uleb128 0x3b
+ 650 00ba 0B       		.uleb128 0xb
+ 651 00bb 27       		.uleb128 0x27
+ 652 00bc 0C       		.uleb128 0xc
+ 653 00bd 49       		.uleb128 0x49
+ 654 00be 13       		.uleb128 0x13
+ 655 00bf 11       		.uleb128 0x11
+ 656 00c0 01       		.uleb128 0x1
+ 657 00c1 12       		.uleb128 0x12
+ 658 00c2 01       		.uleb128 0x1
+ 659 00c3 40       		.uleb128 0x40
+ 660 00c4 0A       		.uleb128 0xa
+ 661 00c5 9742     		.uleb128 0x2117
+ 662 00c7 0C       		.uleb128 0xc
+ 663 00c8 01       		.uleb128 0x1
+ 664 00c9 13       		.uleb128 0x13
+ 665 00ca 00       		.byte	0
+ 666 00cb 00       		.byte	0
+ 667 00cc 0F       		.uleb128 0xf
+ 668 00cd 05       		.uleb128 0x5
+ 669 00ce 00       		.byte	0
+ 670 00cf 03       		.uleb128 0x3
+ 671 00d0 0E       		.uleb128 0xe
+ 672 00d1 3A       		.uleb128 0x3a
+ 673 00d2 0B       		.uleb128 0xb
+ 674 00d3 3B       		.uleb128 0x3b
+ 675 00d4 0B       		.uleb128 0xb
+ 676 00d5 49       		.uleb128 0x49
+ 677 00d6 13       		.uleb128 0x13
+ 678 00d7 02       		.uleb128 0x2
+ 679 00d8 06       		.uleb128 0x6
+ 680 00d9 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 13
+
+
+ 681 00da 00       		.byte	0
+ 682 00db 10       		.uleb128 0x10
+ 683 00dc 34       		.uleb128 0x34
+ 684 00dd 00       		.byte	0
+ 685 00de 03       		.uleb128 0x3
+ 686 00df 08       		.uleb128 0x8
+ 687 00e0 3A       		.uleb128 0x3a
+ 688 00e1 0B       		.uleb128 0xb
+ 689 00e2 3B       		.uleb128 0x3b
+ 690 00e3 0B       		.uleb128 0xb
+ 691 00e4 49       		.uleb128 0x49
+ 692 00e5 13       		.uleb128 0x13
+ 693 00e6 02       		.uleb128 0x2
+ 694 00e7 0A       		.uleb128 0xa
+ 695 00e8 00       		.byte	0
+ 696 00e9 00       		.byte	0
+ 697 00ea 11       		.uleb128 0x11
+ 698 00eb 1D       		.uleb128 0x1d
+ 699 00ec 01       		.byte	0x1
+ 700 00ed 31       		.uleb128 0x31
+ 701 00ee 13       		.uleb128 0x13
+ 702 00ef 52       		.uleb128 0x52
+ 703 00f0 01       		.uleb128 0x1
+ 704 00f1 55       		.uleb128 0x55
+ 705 00f2 06       		.uleb128 0x6
+ 706 00f3 58       		.uleb128 0x58
+ 707 00f4 0B       		.uleb128 0xb
+ 708 00f5 59       		.uleb128 0x59
+ 709 00f6 0B       		.uleb128 0xb
+ 710 00f7 00       		.byte	0
+ 711 00f8 00       		.byte	0
+ 712 00f9 12       		.uleb128 0x12
+ 713 00fa 05       		.uleb128 0x5
+ 714 00fb 00       		.byte	0
+ 715 00fc 31       		.uleb128 0x31
+ 716 00fd 13       		.uleb128 0x13
+ 717 00fe 02       		.uleb128 0x2
+ 718 00ff 06       		.uleb128 0x6
+ 719 0100 00       		.byte	0
+ 720 0101 00       		.byte	0
+ 721 0102 13       		.uleb128 0x13
+ 722 0103 0B       		.uleb128 0xb
+ 723 0104 01       		.byte	0x1
+ 724 0105 55       		.uleb128 0x55
+ 725 0106 06       		.uleb128 0x6
+ 726 0107 00       		.byte	0
+ 727 0108 00       		.byte	0
+ 728 0109 14       		.uleb128 0x14
+ 729 010a 34       		.uleb128 0x34
+ 730 010b 00       		.byte	0
+ 731 010c 31       		.uleb128 0x31
+ 732 010d 13       		.uleb128 0x13
+ 733 010e 02       		.uleb128 0x2
+ 734 010f 06       		.uleb128 0x6
+ 735 0110 00       		.byte	0
+ 736 0111 00       		.byte	0
+ 737 0112 15       		.uleb128 0x15
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 14
+
+
+ 738 0113 2E       		.uleb128 0x2e
+ 739 0114 01       		.byte	0x1
+ 740 0115 31       		.uleb128 0x31
+ 741 0116 13       		.uleb128 0x13
+ 742 0117 11       		.uleb128 0x11
+ 743 0118 01       		.uleb128 0x1
+ 744 0119 12       		.uleb128 0x12
+ 745 011a 01       		.uleb128 0x1
+ 746 011b 40       		.uleb128 0x40
+ 747 011c 0A       		.uleb128 0xa
+ 748 011d 9742     		.uleb128 0x2117
+ 749 011f 0C       		.uleb128 0xc
+ 750 0120 01       		.uleb128 0x1
+ 751 0121 13       		.uleb128 0x13
+ 752 0122 00       		.byte	0
+ 753 0123 00       		.byte	0
+ 754 0124 16       		.uleb128 0x16
+ 755 0125 2E       		.uleb128 0x2e
+ 756 0126 00       		.byte	0
+ 757 0127 3F       		.uleb128 0x3f
+ 758 0128 0C       		.uleb128 0xc
+ 759 0129 03       		.uleb128 0x3
+ 760 012a 0E       		.uleb128 0xe
+ 761 012b 3A       		.uleb128 0x3a
+ 762 012c 0B       		.uleb128 0xb
+ 763 012d 3B       		.uleb128 0x3b
+ 764 012e 0B       		.uleb128 0xb
+ 765 012f 27       		.uleb128 0x27
+ 766 0130 0C       		.uleb128 0xc
+ 767 0131 49       		.uleb128 0x49
+ 768 0132 13       		.uleb128 0x13
+ 769 0133 11       		.uleb128 0x11
+ 770 0134 01       		.uleb128 0x1
+ 771 0135 12       		.uleb128 0x12
+ 772 0136 01       		.uleb128 0x1
+ 773 0137 40       		.uleb128 0x40
+ 774 0138 0A       		.uleb128 0xa
+ 775 0139 9742     		.uleb128 0x2117
+ 776 013b 0C       		.uleb128 0xc
+ 777 013c 00       		.byte	0
+ 778 013d 00       		.byte	0
+ 779 013e 17       		.uleb128 0x17
+ 780 013f 34       		.uleb128 0x34
+ 781 0140 00       		.byte	0
+ 782 0141 03       		.uleb128 0x3
+ 783 0142 0E       		.uleb128 0xe
+ 784 0143 3A       		.uleb128 0x3a
+ 785 0144 0B       		.uleb128 0xb
+ 786 0145 3B       		.uleb128 0x3b
+ 787 0146 0B       		.uleb128 0xb
+ 788 0147 49       		.uleb128 0x49
+ 789 0148 13       		.uleb128 0x13
+ 790 0149 02       		.uleb128 0x2
+ 791 014a 0A       		.uleb128 0xa
+ 792 014b 00       		.byte	0
+ 793 014c 00       		.byte	0
+ 794 014d 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 15
+
+
+ 795              		.section	.debug_loc,"",%progbits
+ 796              	.Ldebug_loc0:
+ 797              	.LLST0:
+ 798 0000 00000000 		.4byte	.LVL0
+ 799 0004 10000000 		.4byte	.LVL3
+ 800 0008 0100     		.2byte	0x1
+ 801 000a 50       		.byte	0x50
+ 802 000b 10000000 		.4byte	.LVL3
+ 803 000f 2C000000 		.4byte	.LFE8
+ 804 0013 0400     		.2byte	0x4
+ 805 0015 F3       		.byte	0xf3
+ 806 0016 01       		.uleb128 0x1
+ 807 0017 50       		.byte	0x50
+ 808 0018 9F       		.byte	0x9f
+ 809 0019 00000000 		.4byte	0
+ 810 001d 00000000 		.4byte	0
+ 811              	.LLST1:
+ 812 0021 02000000 		.4byte	.LVL1
+ 813 0025 08000000 		.4byte	.LVL2
+ 814 0029 0100     		.2byte	0x1
+ 815 002b 50       		.byte	0x50
+ 816 002c 08000000 		.4byte	.LVL2
+ 817 0030 18000000 		.4byte	.LVL5
+ 818 0034 0100     		.2byte	0x1
+ 819 0036 52       		.byte	0x52
+ 820 0037 18000000 		.4byte	.LVL5
+ 821 003b 1E000000 		.4byte	.LVL7
+ 822 003f 0900     		.2byte	0x9
+ 823 0041 F3       		.byte	0xf3
+ 824 0042 01       		.uleb128 0x1
+ 825 0043 50       		.byte	0x50
+ 826 0044 23       		.byte	0x23
+ 827 0045 07       		.uleb128 0x7
+ 828 0046 09       		.byte	0x9
+ 829 0047 F8       		.byte	0xf8
+ 830 0048 1A       		.byte	0x1a
+ 831 0049 9F       		.byte	0x9f
+ 832 004a 1E000000 		.4byte	.LVL7
+ 833 004e 2C000000 		.4byte	.LFE8
+ 834 0052 0100     		.2byte	0x1
+ 835 0054 52       		.byte	0x52
+ 836 0055 00000000 		.4byte	0
+ 837 0059 00000000 		.4byte	0
+ 838              	.LLST2:
+ 839 005d 16000000 		.4byte	.LVL4
+ 840 0061 1A000000 		.4byte	.LVL6
+ 841 0065 0100     		.2byte	0x1
+ 842 0067 50       		.byte	0x50
+ 843 0068 00000000 		.4byte	0
+ 844 006c 00000000 		.4byte	0
+ 845              	.LLST3:
+ 846 0070 00000000 		.4byte	.LVL8
+ 847 0074 06000000 		.4byte	.LVL9
+ 848 0078 0100     		.2byte	0x1
+ 849 007a 50       		.byte	0x50
+ 850 007b 06000000 		.4byte	.LVL9
+ 851 007f 16000000 		.4byte	.LVL11
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 16
+
+
+ 852 0083 0100     		.2byte	0x1
+ 853 0085 52       		.byte	0x52
+ 854 0086 16000000 		.4byte	.LVL11
+ 855 008a 1A000000 		.4byte	.LVL13
+ 856 008e 0900     		.2byte	0x9
+ 857 0090 F3       		.byte	0xf3
+ 858 0091 01       		.uleb128 0x1
+ 859 0092 50       		.byte	0x50
+ 860 0093 23       		.byte	0x23
+ 861 0094 07       		.uleb128 0x7
+ 862 0095 09       		.byte	0x9
+ 863 0096 F8       		.byte	0xf8
+ 864 0097 1A       		.byte	0x1a
+ 865 0098 9F       		.byte	0x9f
+ 866 0099 1A000000 		.4byte	.LVL13
+ 867 009d 28000000 		.4byte	.LFE9
+ 868 00a1 0100     		.2byte	0x1
+ 869 00a3 52       		.byte	0x52
+ 870 00a4 00000000 		.4byte	0
+ 871 00a8 00000000 		.4byte	0
+ 872              	.LLST4:
+ 873 00ac 14000000 		.4byte	.LVL10
+ 874 00b0 18000000 		.4byte	.LVL12
+ 875 00b4 0100     		.2byte	0x1
+ 876 00b6 50       		.byte	0x50
+ 877 00b7 00000000 		.4byte	0
+ 878 00bb 00000000 		.4byte	0
+ 879              		.section	.debug_aranges,"",%progbits
+ 880 0000 34000000 		.4byte	0x34
+ 881 0004 0200     		.2byte	0x2
+ 882 0006 00000000 		.4byte	.Ldebug_info0
+ 883 000a 04       		.byte	0x4
+ 884 000b 00       		.byte	0
+ 885 000c 0000     		.2byte	0
+ 886 000e 0000     		.2byte	0
+ 887 0010 00000000 		.4byte	.LFB7
+ 888 0014 28000000 		.4byte	.LFE7-.LFB7
+ 889 0018 00000000 		.4byte	.LFB8
+ 890 001c 2C000000 		.4byte	.LFE8-.LFB8
+ 891 0020 00000000 		.4byte	.LFB9
+ 892 0024 28000000 		.4byte	.LFE9-.LFB9
+ 893 0028 00000000 		.4byte	.LFB10
+ 894 002c 14000000 		.4byte	.LFE10-.LFB10
+ 895 0030 00000000 		.4byte	0
+ 896 0034 00000000 		.4byte	0
+ 897              		.section	.debug_ranges,"",%progbits
+ 898              	.Ldebug_ranges0:
+ 899 0000 02000000 		.4byte	.LBB4
+ 900 0004 1A000000 		.4byte	.LBE4
+ 901 0008 1E000000 		.4byte	.LBB7
+ 902 000c 2C000000 		.4byte	.LBE7
+ 903 0010 00000000 		.4byte	0
+ 904 0014 00000000 		.4byte	0
+ 905 0018 02000000 		.4byte	.LBB5
+ 906 001c 1A000000 		.4byte	.LBE5
+ 907 0020 1E000000 		.4byte	.LBB6
+ 908 0024 2C000000 		.4byte	.LBE6
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 17
+
+
+ 909 0028 00000000 		.4byte	0
+ 910 002c 00000000 		.4byte	0
+ 911 0030 00000000 		.4byte	.LFB7
+ 912 0034 28000000 		.4byte	.LFE7
+ 913 0038 00000000 		.4byte	.LFB8
+ 914 003c 2C000000 		.4byte	.LFE8
+ 915 0040 00000000 		.4byte	.LFB9
+ 916 0044 28000000 		.4byte	.LFE9
+ 917 0048 00000000 		.4byte	.LFB10
+ 918 004c 14000000 		.4byte	.LFE10
+ 919 0050 00000000 		.4byte	0
+ 920 0054 00000000 		.4byte	0
+ 921              		.section	.debug_line,"",%progbits
+ 922              	.Ldebug_line0:
+ 923 0000 8B010000 		.section	.debug_str,"MS",%progbits,1
+ 923      02002601 
+ 923      00000201 
+ 923      FB0E0D00 
+ 923      01010101 
+ 924              	.LASF9:
+ 925 0000 6C6F6E67 		.ascii	"long long int\000"
+ 925      206C6F6E 
+ 925      6720696E 
+ 925      7400
+ 926              	.LASF6:
+ 927 000e 73686F72 		.ascii	"short unsigned int\000"
+ 927      7420756E 
+ 927      7369676E 
+ 927      65642069 
+ 927      6E7400
+ 928              	.LASF2:
+ 929 0021 73697A65 		.ascii	"size_t\000"
+ 929      5F7400
+ 930              	.LASF16:
+ 931 0028 6E657874 		.ascii	"nextmem\000"
+ 931      6D656D00 
+ 932              	.LASF15:
+ 933 0030 5F5F6865 		.ascii	"__heap_end__\000"
+ 933      61705F65 
+ 933      6E645F5F 
+ 933      00
+ 934              	.LASF14:
+ 935 003d 5F5F6865 		.ascii	"__heap_base__\000"
+ 935      61705F62 
+ 935      6173655F 
+ 935      5F00
+ 936              	.LASF8:
+ 937 004b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 937      20756E73 
+ 937      69676E65 
+ 937      6420696E 
+ 937      7400
+ 938              	.LASF10:
+ 939 005d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 939      206C6F6E 
+ 939      6720756E 
+ 939      7369676E 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 18
+
+
+ 939      65642069 
+ 940              	.LASF3:
+ 941 0074 75696E74 		.ascii	"uint8_t\000"
+ 941      385F7400 
+ 942              	.LASF4:
+ 943 007c 756E7369 		.ascii	"unsigned char\000"
+ 943      676E6564 
+ 943      20636861 
+ 943      7200
+ 944              	.LASF13:
+ 945 008a 63686172 		.ascii	"char\000"
+ 945      00
+ 946              	.LASF24:
+ 947 008f 6368436F 		.ascii	"chCoreAlloc\000"
+ 947      7265416C 
+ 947      6C6F6300 
+ 948              	.LASF20:
+ 949 009b 433A5C73 		.ascii	"C:\\stm32f0-Discovery_Tools\\Projects\\ChibiOS_Temp"
+ 949      746D3332 
+ 949      66302D44 
+ 949      6973636F 
+ 949      76657279 
+ 950 00cb 6C617465 		.ascii	"late\000"
+ 950      00
+ 951              	.LASF7:
+ 952 00d0 6C6F6E67 		.ascii	"long int\000"
+ 952      20696E74 
+ 952      00
+ 953              	.LASF11:
+ 954 00d9 5F426F6F 		.ascii	"_Bool\000"
+ 954      6C00
+ 955              	.LASF17:
+ 956 00df 656E646D 		.ascii	"endmem\000"
+ 956      656D00
+ 957              	.LASF21:
+ 958 00e6 6368436F 		.ascii	"chCoreAllocI\000"
+ 958      7265416C 
+ 958      6C6F6349 
+ 958      00
+ 959              	.LASF1:
+ 960 00f3 7369676E 		.ascii	"signed char\000"
+ 960      65642063 
+ 960      68617200 
+ 961              	.LASF22:
+ 962 00ff 73697A65 		.ascii	"size\000"
+ 962      00
+ 963              	.LASF23:
+ 964 0104 5F636F72 		.ascii	"_core_init\000"
+ 964      655F696E 
+ 964      697400
+ 965              	.LASF19:
+ 966 010f 2E2E2F2E 		.ascii	"../../ChibiOS_2.6.1/os/kernel/src/chmemcore.c\000"
+ 966      2E2F4368 
+ 966      6962694F 
+ 966      535F322E 
+ 966      362E312F 
+ 967              	.LASF5:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 19
+
+
+ 968 013d 73686F72 		.ascii	"short int\000"
+ 968      7420696E 
+ 968      7400
+ 969              	.LASF0:
+ 970 0147 756E7369 		.ascii	"unsigned int\000"
+ 970      676E6564 
+ 970      20696E74 
+ 970      00
+ 971              	.LASF18:
+ 972 0154 474E5520 		.ascii	"GNU C 4.7.4 20130913 (prerelease)\000"
+ 972      4320342E 
+ 972      372E3420 
+ 972      32303133 
+ 972      30393133 
+ 973              	.LASF12:
+ 974 0176 73697A65 		.ascii	"sizetype\000"
+ 974      74797065 
+ 974      00
+ 975              	.LASF25:
+ 976 017f 6368436F 		.ascii	"chCoreStatus\000"
+ 976      72655374 
+ 976      61747573 
+ 976      00
+ 977              		.ident	"GCC: (GNU Tools for ARM Embedded Processors / bleeding-edge-toolchain-131005) 4.7.4 201309
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccAJphpq.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chmemcore.c
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:18     .text._core_init:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:24     .text._core_init:00000000 _core_init
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:53     .text._core_init:00000018 $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:61     .text.chCoreAlloc:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:67     .text.chCoreAlloc:00000000 chCoreAlloc
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:121    .text.chCoreAlloc:00000024 $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:129    .text.chCoreAllocI:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:135    .text.chCoreAllocI:00000000 chCoreAllocI
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:171    .text.chCoreAllocI:00000020 $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:177    .text.chCoreStatus:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:183    .text.chCoreStatus:00000000 chCoreStatus
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:201    .text.chCoreStatus:0000000c $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:207    .bss.endmem:00000000 $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:211    .bss.endmem:00000000 endmem
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:214    .bss.nextmem:00000000 $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:218    .bss.nextmem:00000000 nextmem
+                     .debug_frame:00000010 $d
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:60     .text._core_init:00000028 $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:128    .text.chCoreAlloc:0000002c $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:176    .text.chCoreAllocI:00000028 $t
+C:\Users\3130\AppData\Local\Temp\ccAJphpq.s:206    .text.chCoreStatus:00000014 $t
+
+UNDEFINED SYMBOLS
+__heap_base__
+__heap_end__

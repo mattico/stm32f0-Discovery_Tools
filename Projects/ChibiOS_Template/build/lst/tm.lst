@@ -1,0 +1,234 @@
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccMd7Fyc.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"tm.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              	.Letext0:
+  18              		.section	.debug_info,"",%progbits
+  19              	.Ldebug_info0:
+  20 0000 75000000 		.4byte	0x75
+  21 0004 0200     		.2byte	0x2
+  22 0006 00000000 		.4byte	.Ldebug_abbrev0
+  23 000a 04       		.byte	0x4
+  24 000b 01       		.uleb128 0x1
+  25 000c E8000000 		.4byte	.LASF12
+  26 0010 01       		.byte	0x1
+  27 0011 2D000000 		.4byte	.LASF13
+  28 0015 7B000000 		.4byte	.LASF14
+  29 0019 00000000 		.4byte	.Ldebug_line0
+  30 001d 02       		.uleb128 0x2
+  31 001e 04       		.byte	0x4
+  32 001f 05       		.byte	0x5
+  33 0020 696E7400 		.ascii	"int\000"
+  34 0024 03       		.uleb128 0x3
+  35 0025 04       		.byte	0x4
+  36 0026 07       		.byte	0x7
+  37 0027 0E000000 		.4byte	.LASF0
+  38 002b 03       		.uleb128 0x3
+  39 002c 01       		.byte	0x1
+  40 002d 06       		.byte	0x6
+  41 002e D2000000 		.4byte	.LASF1
+  42 0032 03       		.uleb128 0x3
+  43 0033 01       		.byte	0x1
+  44 0034 08       		.byte	0x8
+  45 0035 68000000 		.4byte	.LASF2
+  46 0039 03       		.uleb128 0x3
+  47 003a 02       		.byte	0x2
+  48 003b 05       		.byte	0x5
+  49 003c DE000000 		.4byte	.LASF3
+  50 0040 03       		.uleb128 0x3
+  51 0041 02       		.byte	0x2
+  52 0042 07       		.byte	0x7
+  53 0043 BF000000 		.4byte	.LASF4
+  54 0047 03       		.uleb128 0x3
+  55 0048 04       		.byte	0x4
+  56 0049 05       		.byte	0x5
+  57 004a B0000000 		.4byte	.LASF5
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccMd7Fyc.s 			page 2
+
+
+  58 004e 03       		.uleb128 0x3
+  59 004f 04       		.byte	0x4
+  60 0050 07       		.byte	0x7
+  61 0051 1B000000 		.4byte	.LASF6
+  62 0055 03       		.uleb128 0x3
+  63 0056 08       		.byte	0x8
+  64 0057 05       		.byte	0x5
+  65 0058 00000000 		.4byte	.LASF7
+  66 005c 03       		.uleb128 0x3
+  67 005d 08       		.byte	0x8
+  68 005e 07       		.byte	0x7
+  69 005f 51000000 		.4byte	.LASF8
+  70 0063 03       		.uleb128 0x3
+  71 0064 01       		.byte	0x1
+  72 0065 02       		.byte	0x2
+  73 0066 B9000000 		.4byte	.LASF9
+  74 006a 03       		.uleb128 0x3
+  75 006b 04       		.byte	0x4
+  76 006c 07       		.byte	0x7
+  77 006d 0A010000 		.4byte	.LASF10
+  78 0071 03       		.uleb128 0x3
+  79 0072 01       		.byte	0x1
+  80 0073 08       		.byte	0x8
+  81 0074 76000000 		.4byte	.LASF11
+  82 0078 00       		.byte	0
+  83              		.section	.debug_abbrev,"",%progbits
+  84              	.Ldebug_abbrev0:
+  85 0000 01       		.uleb128 0x1
+  86 0001 11       		.uleb128 0x11
+  87 0002 01       		.byte	0x1
+  88 0003 25       		.uleb128 0x25
+  89 0004 0E       		.uleb128 0xe
+  90 0005 13       		.uleb128 0x13
+  91 0006 0B       		.uleb128 0xb
+  92 0007 03       		.uleb128 0x3
+  93 0008 0E       		.uleb128 0xe
+  94 0009 1B       		.uleb128 0x1b
+  95 000a 0E       		.uleb128 0xe
+  96 000b 10       		.uleb128 0x10
+  97 000c 06       		.uleb128 0x6
+  98 000d 00       		.byte	0
+  99 000e 00       		.byte	0
+ 100 000f 02       		.uleb128 0x2
+ 101 0010 24       		.uleb128 0x24
+ 102 0011 00       		.byte	0
+ 103 0012 0B       		.uleb128 0xb
+ 104 0013 0B       		.uleb128 0xb
+ 105 0014 3E       		.uleb128 0x3e
+ 106 0015 0B       		.uleb128 0xb
+ 107 0016 03       		.uleb128 0x3
+ 108 0017 08       		.uleb128 0x8
+ 109 0018 00       		.byte	0
+ 110 0019 00       		.byte	0
+ 111 001a 03       		.uleb128 0x3
+ 112 001b 24       		.uleb128 0x24
+ 113 001c 00       		.byte	0
+ 114 001d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccMd7Fyc.s 			page 3
+
+
+ 115 001e 0B       		.uleb128 0xb
+ 116 001f 3E       		.uleb128 0x3e
+ 117 0020 0B       		.uleb128 0xb
+ 118 0021 03       		.uleb128 0x3
+ 119 0022 0E       		.uleb128 0xe
+ 120 0023 00       		.byte	0
+ 121 0024 00       		.byte	0
+ 122 0025 00       		.byte	0
+ 123              		.section	.debug_aranges,"",%progbits
+ 124 0000 14000000 		.4byte	0x14
+ 125 0004 0200     		.2byte	0x2
+ 126 0006 00000000 		.4byte	.Ldebug_info0
+ 127 000a 04       		.byte	0x4
+ 128 000b 00       		.byte	0
+ 129 000c 0000     		.2byte	0
+ 130 000e 0000     		.2byte	0
+ 131 0010 00000000 		.4byte	0
+ 132 0014 00000000 		.4byte	0
+ 133              		.section	.debug_line,"",%progbits
+ 134              	.Ldebug_line0:
+ 135 0000 19000000 		.section	.debug_str,"MS",%progbits,1
+ 135      02001300 
+ 135      00000201 
+ 135      FB0E0D00 
+ 135      01010101 
+ 136              	.LASF7:
+ 137 0000 6C6F6E67 		.ascii	"long long int\000"
+ 137      206C6F6E 
+ 137      6720696E 
+ 137      7400
+ 138              	.LASF0:
+ 139 000e 756E7369 		.ascii	"unsigned int\000"
+ 139      676E6564 
+ 139      20696E74 
+ 139      00
+ 140              	.LASF6:
+ 141 001b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 141      20756E73 
+ 141      69676E65 
+ 141      6420696E 
+ 141      7400
+ 142              	.LASF13:
+ 143 002d 2E2E2F2E 		.ascii	"../../ChibiOS_2.6.1/os/hal/src/tm.c\000"
+ 143      2E2F4368 
+ 143      6962694F 
+ 143      535F322E 
+ 143      362E312F 
+ 144              	.LASF8:
+ 145 0051 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 145      206C6F6E 
+ 145      6720756E 
+ 145      7369676E 
+ 145      65642069 
+ 146              	.LASF2:
+ 147 0068 756E7369 		.ascii	"unsigned char\000"
+ 147      676E6564 
+ 147      20636861 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccMd7Fyc.s 			page 4
+
+
+ 147      7200
+ 148              	.LASF11:
+ 149 0076 63686172 		.ascii	"char\000"
+ 149      00
+ 150              	.LASF14:
+ 151 007b 433A5C73 		.ascii	"C:\\stm32f0-Discovery_Tools\\Projects\\ChibiOS_Temp"
+ 151      746D3332 
+ 151      66302D44 
+ 151      6973636F 
+ 151      76657279 
+ 152 00ab 6C617465 		.ascii	"late\000"
+ 152      00
+ 153              	.LASF5:
+ 154 00b0 6C6F6E67 		.ascii	"long int\000"
+ 154      20696E74 
+ 154      00
+ 155              	.LASF9:
+ 156 00b9 5F426F6F 		.ascii	"_Bool\000"
+ 156      6C00
+ 157              	.LASF4:
+ 158 00bf 73686F72 		.ascii	"short unsigned int\000"
+ 158      7420756E 
+ 158      7369676E 
+ 158      65642069 
+ 158      6E7400
+ 159              	.LASF1:
+ 160 00d2 7369676E 		.ascii	"signed char\000"
+ 160      65642063 
+ 160      68617200 
+ 161              	.LASF3:
+ 162 00de 73686F72 		.ascii	"short int\000"
+ 162      7420696E 
+ 162      7400
+ 163              	.LASF12:
+ 164 00e8 474E5520 		.ascii	"GNU C 4.7.4 20130913 (prerelease)\000"
+ 164      4320342E 
+ 164      372E3420 
+ 164      32303133 
+ 164      30393133 
+ 165              	.LASF10:
+ 166 010a 73697A65 		.ascii	"sizetype\000"
+ 166      74797065 
+ 166      00
+ 167              		.ident	"GCC: (GNU Tools for ARM Embedded Processors / bleeding-edge-toolchain-131005) 4.7.4 201309
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccMd7Fyc.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tm.c
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,3487 @@
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Thread2,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	Thread2, %function
+  23              	Thread2:
+  24              	.LFB41:
+  25              		.file 1 "main.c"
+  26              		.loc 1 41 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+  29              		.loc 1 44 0
+  30 0000 084B     		ldr	r3, .L4
+  31              		.loc 1 41 0
+  32 0002 70B5     		push	{r4, r5, r6, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 4, -16
+  36              		.cfi_offset 5, -12
+  37              		.cfi_offset 6, -8
+  38              		.cfi_offset 14, -4
+  39              		.loc 1 44 0
+  40 0004 9869     		ldr	r0, [r3, #24]
+  41              	.LVL1:
+  42 0006 084A     		ldr	r2, .L4+4
+  43              		.loc 1 46 0
+  44 0008 8025     		mov	r5, #128
+  45 000a AD00     		lsl	r5, r5, #2
+  46 000c 074C     		ldr	r4, .L4+8
+  47              		.loc 1 44 0
+  48 000e 8261     		str	r2, [r0, #24]
+  49              		.loc 1 46 0
+  50 0010 2E1C     		add	r6, r5, #0
+  51              	.L2:
+  52              		.loc 1 46 0 is_stmt 0 discriminator 1
+  53 0012 6683     		strh	r6, [r4, #26]
+  54              		.loc 1 47 0 is_stmt 1 discriminator 1
+  55 0014 FA20     		mov	r0, #250
+  56 0016 FFF7FEFF 		bl	chThdSleep
+  57              	.LVL2:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 2
+
+
+  58              		.loc 1 48 0 discriminator 1
+  59 001a 2583     		strh	r5, [r4, #24]
+  60              		.loc 1 49 0 discriminator 1
+  61 001c FA20     		mov	r0, #250
+  62 001e FFF7FEFF 		bl	chThdSleep
+  63              	.LVL3:
+  64 0022 F6E7     		b	.L2
+  65              	.L5:
+  66              		.align	2
+  67              	.L4:
+  68 0024 00000000 		.word	rlist
+  69 0028 00000000 		.word	.LC1
+  70 002c 00080048 		.word	1207961600
+  71              		.cfi_endproc
+  72              	.LFE41:
+  73              		.size	Thread2, .-Thread2
+  74              		.section	.text.Thread1,"ax",%progbits
+  75              		.align	2
+  76              		.p2align 4,,15
+  77              		.code	16
+  78              		.thumb_func
+  79              		.type	Thread1, %function
+  80              	Thread1:
+  81              	.LFB40:
+  82              		.loc 1 25 0
+  83              		.cfi_startproc
+  84              	.LVL4:
+  85              		.loc 1 28 0
+  86 0000 094B     		ldr	r3, .L8
+  87              		.loc 1 25 0
+  88 0002 70B5     		push	{r4, r5, r6, lr}
+  89              	.LCFI1:
+  90              		.cfi_def_cfa_offset 16
+  91              		.cfi_offset 4, -16
+  92              		.cfi_offset 5, -12
+  93              		.cfi_offset 6, -8
+  94              		.cfi_offset 14, -4
+  95              		.loc 1 28 0
+  96 0004 9869     		ldr	r0, [r3, #24]
+  97              	.LVL5:
+  98 0006 094A     		ldr	r2, .L8+4
+  99              		.loc 1 30 0
+ 100 0008 8025     		mov	r5, #128
+ 101 000a 6D00     		lsl	r5, r5, #1
+ 102 000c 084C     		ldr	r4, .L8+8
+ 103              		.loc 1 28 0
+ 104 000e 8261     		str	r2, [r0, #24]
+ 105              		.loc 1 30 0
+ 106 0010 2E1C     		add	r6, r5, #0
+ 107              	.L7:
+ 108              		.loc 1 31 0 discriminator 1
+ 109 0012 FA21     		mov	r1, #250
+ 110 0014 4800     		lsl	r0, r1, #1
+ 111              		.loc 1 30 0 discriminator 1
+ 112 0016 6683     		strh	r6, [r4, #26]
+ 113              		.loc 1 31 0 discriminator 1
+ 114 0018 FFF7FEFF 		bl	chThdSleep
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 3
+
+
+ 115              	.LVL6:
+ 116              		.loc 1 33 0 discriminator 1
+ 117 001c FA23     		mov	r3, #250
+ 118              		.loc 1 32 0 discriminator 1
+ 119 001e 2583     		strh	r5, [r4, #24]
+ 120              		.loc 1 33 0 discriminator 1
+ 121 0020 5800     		lsl	r0, r3, #1
+ 122 0022 FFF7FEFF 		bl	chThdSleep
+ 123              	.LVL7:
+ 124 0026 F4E7     		b	.L7
+ 125              	.L9:
+ 126              		.align	2
+ 127              	.L8:
+ 128 0028 00000000 		.word	rlist
+ 129 002c 0C000000 		.word	.LC4
+ 130 0030 00080048 		.word	1207961600
+ 131              		.cfi_endproc
+ 132              	.LFE40:
+ 133              		.size	Thread1, .-Thread1
+ 134 0034 C046C046 		.section	.text.startup.main,"ax",%progbits
+ 134      C046C046 
+ 134      C046C046 
+ 135              		.align	2
+ 136              		.p2align 4,,15
+ 137              		.global	main
+ 138              		.code	16
+ 139              		.thumb_func
+ 140              		.type	main, %function
+ 141              	main:
+ 142              	.LFB42:
+ 143              		.loc 1 56 0
+ 144              		.cfi_startproc
+ 145 0000 70B5     		push	{r4, r5, r6, lr}
+ 146              	.LCFI2:
+ 147              		.cfi_def_cfa_offset 16
+ 148              		.cfi_offset 4, -16
+ 149              		.cfi_offset 5, -12
+ 150              		.cfi_offset 6, -8
+ 151              		.cfi_offset 14, -4
+ 152 0002 82B0     		sub	sp, sp, #8
+ 153              	.LCFI3:
+ 154              		.cfi_def_cfa_offset 24
+ 155              		.loc 1 65 0
+ 156 0004 FFF7FEFF 		bl	halInit
+ 157              	.LVL8:
+ 158              		.loc 1 66 0
+ 159 0008 FFF7FEFF 		bl	chSysInit
+ 160              	.LVL9:
+ 161              		.loc 1 72 0
+ 162 000c 194E     		ldr	r6, .L16
+ 163 000e 0021     		mov	r1, #0
+ 164 0010 301C     		mov	r0, r6
+ 165 0012 FFF7FEFF 		bl	sdStart
+ 166              	.LVL10:
+ 167              		.loc 1 73 0
+ 168 0016 9020     		mov	r0, #144
+ 169 0018 8021     		mov	r1, #128
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 4
+
+
+ 170 001a C005     		lsl	r0, r0, #23
+ 171 001c 8900     		lsl	r1, r1, #2
+ 172 001e 8222     		mov	r2, #130
+ 173 0020 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 174              	.LVL11:
+ 175              		.loc 1 74 0
+ 176 0024 8023     		mov	r3, #128
+ 177 0026 9022     		mov	r2, #144
+ 178 0028 D005     		lsl	r0, r2, #23
+ 179 002a D900     		lsl	r1, r3, #3
+ 180              		.loc 1 79 0
+ 181 002c 0024     		mov	r4, #0
+ 182              		.loc 1 74 0
+ 183 002e 8222     		mov	r2, #130
+ 184              		.loc 1 79 0
+ 185 0030 9825     		mov	r5, #152
+ 186              		.loc 1 74 0
+ 187 0032 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 188              	.LVL12:
+ 189              		.loc 1 79 0
+ 190 0036 6900     		lsl	r1, r5, #1
+ 191 0038 0094     		str	r4, [sp]
+ 192 003a 4022     		mov	r2, #64
+ 193 003c 0E4B     		ldr	r3, .L16+4
+ 194 003e 0F48     		ldr	r0, .L16+8
+ 195 0040 FFF7FEFF 		bl	chThdCreateStatic
+ 196              	.LVL13:
+ 197              		.loc 1 80 0
+ 198 0044 9821     		mov	r1, #152
+ 199 0046 0094     		str	r4, [sp]
+ 200 0048 0D48     		ldr	r0, .L16+12
+ 201 004a 4900     		lsl	r1, r1, #1
+ 202 004c 4022     		mov	r2, #64
+ 203 004e 0D4B     		ldr	r3, .L16+16
+ 204 0050 FFF7FEFF 		bl	chThdCreateStatic
+ 205              	.LVL14:
+ 206              		.loc 1 89 0
+ 207 0054 9020     		mov	r0, #144
+ 208 0056 C505     		lsl	r5, r0, #23
+ 209 0058 0124     		mov	r4, #1
+ 210 005a 03E0     		b	.L12
+ 211              	.L11:
+ 212              		.loc 1 91 0
+ 213 005c FA23     		mov	r3, #250
+ 214 005e 5800     		lsl	r0, r3, #1
+ 215 0060 FFF7FEFF 		bl	chThdSleep
+ 216              	.LVL15:
+ 217              	.L12:
+ 218              		.loc 1 89 0
+ 219 0064 2A69     		ldr	r2, [r5, #16]
+ 220 0066 1442     		tst	r4, r2
+ 221 0068 F8D0     		beq	.L11
+ 222              		.loc 1 90 0
+ 223 006a 301C     		mov	r0, r6
+ 224 006c FFF7FEFF 		bl	TestThread
+ 225              	.LVL16:
+ 226 0070 F4E7     		b	.L11
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 5
+
+
+ 227              	.L17:
+ 228 0072 C046     		.align	2
+ 229              	.L16:
+ 230 0074 00000000 		.word	SD1
+ 231 0078 00000000 		.word	Thread1
+ 232 007c 00000000 		.word	.LANCHOR0
+ 233 0080 00000000 		.word	.LANCHOR1
+ 234 0084 00000000 		.word	Thread2
+ 235              		.cfi_endproc
+ 236              	.LFE42:
+ 237              		.size	main, .-main
+ 238 0088 C046C046 		.section	.bss.waThread1,"aw",%nobits
+ 238      C046C046 
+ 239              		.align	3
+ 240              		.set	.LANCHOR0,. + 0
+ 241              		.type	waThread1, %object
+ 242              		.size	waThread1, 304
+ 243              	waThread1:
+ 244 0000 00000000 		.space	304
+ 244      00000000 
+ 244      00000000 
+ 244      00000000 
+ 244      00000000 
+ 245              		.section	.bss.waThread2,"aw",%nobits
+ 246              		.align	3
+ 247              		.set	.LANCHOR1,. + 0
+ 248              		.type	waThread2, %object
+ 249              		.size	waThread2, 304
+ 250              	waThread2:
+ 251 0000 00000000 		.space	304
+ 251      00000000 
+ 251      00000000 
+ 251      00000000 
+ 251      00000000 
+ 252              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 253              		.align	2
+ 254              	.LC1:
+ 255 0000 626C696E 		.ascii	"blinker2\000"
+ 255      6B657232 
+ 255      00
+ 256 0009 000000   		.space	3
+ 257              	.LC4:
+ 258 000c 626C696E 		.ascii	"blinker1\000"
+ 258      6B657231 
+ 258      00
+ 259 0015 000000   		.text
+ 260              	.Letext0:
+ 261              		.file 2 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/inclu
+ 262              		.file 3 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/../..
+ 263              		.file 4 "../../ChibiOS_2.6.1/os/ports/GCC/ARMCMx/chtypes.h"
+ 264              		.file 5 "../../ChibiOS_2.6.1/os/kernel/include/chlists.h"
+ 265              		.file 6 "../../ChibiOS_2.6.1/os/kernel/include/chthreads.h"
+ 266              		.file 7 "../../ChibiOS_2.6.1/os/ports/GCC/ARMCMx/chcore_v6m.h"
+ 267              		.file 8 "../../ChibiOS_2.6.1/os/kernel/include/chschd.h"
+ 268              		.file 9 "../../ChibiOS_2.6.1/os/kernel/include/chmtx.h"
+ 269              		.file 10 "../../ChibiOS_2.6.1/os/kernel/include/chevents.h"
+ 270              		.file 11 "../../ChibiOS_2.6.1/os/kernel/include/chqueues.h"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 6
+
+
+ 271              		.file 12 "../../ChibiOS_2.6.1/os/hal/platforms/STM32F0xx/stm32f0xx.h"
+ 272              		.file 13 "../../ChibiOS_2.6.1/os/hal/platforms/STM32/GPIOv2/pal_lld.h"
+ 273              		.file 14 "../../ChibiOS_2.6.1/os/hal/include/serial.h"
+ 274              		.file 15 "../../ChibiOS_2.6.1/os/hal/platforms/STM32/USARTv2/serial_lld.h"
+ 275              		.file 16 "../../ChibiOS_2.6.1/os/hal/include/hal.h"
+ 276              		.file 17 "../../ChibiOS_2.6.1/os/kernel/include/chsys.h"
+ 277              		.file 18 "../../ChibiOS_2.6.1/test/test.h"
+ 278              		.section	.debug_info,"",%progbits
+ 279              	.Ldebug_info0:
+ 280 0000 370D0000 		.4byte	0xd37
+ 281 0004 0200     		.2byte	0x2
+ 282 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 283 000a 04       		.byte	0x4
+ 284 000b 01       		.uleb128 0x1
+ 285 000c 16000000 		.4byte	.LASF140
+ 286 0010 01       		.byte	0x1
+ 287 0011 45000000 		.4byte	.LASF141
+ 288 0015 92000000 		.4byte	.LASF142
+ 289 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 290 001d 00000000 		.4byte	0
+ 291 0021 00000000 		.4byte	0
+ 292 0025 00000000 		.4byte	.Ldebug_line0
+ 293 0029 02       		.uleb128 0x2
+ 294 002a 04       		.byte	0x4
+ 295 002b 05       		.byte	0x5
+ 296 002c 696E7400 		.ascii	"int\000"
+ 297 0030 03       		.uleb128 0x3
+ 298 0031 C6010000 		.4byte	.LASF2
+ 299 0035 02       		.byte	0x2
+ 300 0036 D5       		.byte	0xd5
+ 301 0037 3B000000 		.4byte	0x3b
+ 302 003b 04       		.uleb128 0x4
+ 303 003c 04       		.byte	0x4
+ 304 003d 07       		.byte	0x7
+ 305 003e 85000000 		.4byte	.LASF0
+ 306 0042 04       		.uleb128 0x4
+ 307 0043 01       		.byte	0x1
+ 308 0044 06       		.byte	0x6
+ 309 0045 0E050000 		.4byte	.LASF1
+ 310 0049 03       		.uleb128 0x3
+ 311 004a 7D020000 		.4byte	.LASF3
+ 312 004e 03       		.byte	0x3
+ 313 004f 2A       		.byte	0x2a
+ 314 0050 54000000 		.4byte	0x54
+ 315 0054 04       		.uleb128 0x4
+ 316 0055 01       		.byte	0x1
+ 317 0056 08       		.byte	0x8
+ 318 0057 AC040000 		.4byte	.LASF4
+ 319 005b 04       		.uleb128 0x4
+ 320 005c 02       		.byte	0x2
+ 321 005d 05       		.byte	0x5
+ 322 005e BD030000 		.4byte	.LASF5
+ 323 0062 03       		.uleb128 0x3
+ 324 0063 57030000 		.4byte	.LASF6
+ 325 0067 03       		.byte	0x3
+ 326 0068 36       		.byte	0x36
+ 327 0069 6D000000 		.4byte	0x6d
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 7
+
+
+ 328 006d 04       		.uleb128 0x4
+ 329 006e 02       		.byte	0x2
+ 330 006f 07       		.byte	0x7
+ 331 0070 20050000 		.4byte	.LASF7
+ 332 0074 03       		.uleb128 0x3
+ 333 0075 90040000 		.4byte	.LASF8
+ 334 0079 03       		.byte	0x3
+ 335 007a 4F       		.byte	0x4f
+ 336 007b 7F000000 		.4byte	0x7f
+ 337 007f 04       		.uleb128 0x4
+ 338 0080 04       		.byte	0x4
+ 339 0081 05       		.byte	0x5
+ 340 0082 E4030000 		.4byte	.LASF9
+ 341 0086 03       		.uleb128 0x3
+ 342 0087 25010000 		.4byte	.LASF10
+ 343 008b 03       		.byte	0x3
+ 344 008c 50       		.byte	0x50
+ 345 008d 91000000 		.4byte	0x91
+ 346 0091 04       		.uleb128 0x4
+ 347 0092 04       		.byte	0x4
+ 348 0093 07       		.byte	0x7
+ 349 0094 7E040000 		.4byte	.LASF11
+ 350 0098 04       		.uleb128 0x4
+ 351 0099 08       		.byte	0x8
+ 352 009a 05       		.byte	0x5
+ 353 009b AE020000 		.4byte	.LASF12
+ 354 009f 03       		.uleb128 0x3
+ 355 00a0 FB030000 		.4byte	.LASF13
+ 356 00a4 03       		.byte	0x3
+ 357 00a5 78       		.byte	0x78
+ 358 00a6 AA000000 		.4byte	0xaa
+ 359 00aa 04       		.uleb128 0x4
+ 360 00ab 08       		.byte	0x8
+ 361 00ac 07       		.byte	0x7
+ 362 00ad 6E010000 		.4byte	.LASF14
+ 363 00b1 04       		.uleb128 0x4
+ 364 00b2 01       		.byte	0x1
+ 365 00b3 02       		.byte	0x2
+ 366 00b4 D4010000 		.4byte	.LASF15
+ 367 00b8 03       		.uleb128 0x3
+ 368 00b9 33030000 		.4byte	.LASF16
+ 369 00bd 04       		.byte	0x4
+ 370 00be 2C       		.byte	0x2c
+ 371 00bf 49000000 		.4byte	0x49
+ 372 00c3 03       		.uleb128 0x3
+ 373 00c4 5C020000 		.4byte	.LASF17
+ 374 00c8 04       		.byte	0x4
+ 375 00c9 2D       		.byte	0x2d
+ 376 00ca 49000000 		.4byte	0x49
+ 377 00ce 03       		.uleb128 0x3
+ 378 00cf 68040000 		.4byte	.LASF18
+ 379 00d3 04       		.byte	0x4
+ 380 00d4 2E       		.byte	0x2e
+ 381 00d5 49000000 		.4byte	0x49
+ 382 00d9 03       		.uleb128 0x3
+ 383 00da 01030000 		.4byte	.LASF19
+ 384 00de 04       		.byte	0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 8
+
+
+ 385 00df 2F       		.byte	0x2f
+ 386 00e0 49000000 		.4byte	0x49
+ 387 00e4 03       		.uleb128 0x3
+ 388 00e5 5E010000 		.4byte	.LASF20
+ 389 00e9 04       		.byte	0x4
+ 390 00ea 30       		.byte	0x30
+ 391 00eb 86000000 		.4byte	0x86
+ 392 00ef 03       		.uleb128 0x3
+ 393 00f0 D3020000 		.4byte	.LASF21
+ 394 00f4 04       		.byte	0x4
+ 395 00f5 31       		.byte	0x31
+ 396 00f6 74000000 		.4byte	0x74
+ 397 00fa 03       		.uleb128 0x3
+ 398 00fb 2E010000 		.4byte	.LASF22
+ 399 00ff 04       		.byte	0x4
+ 400 0100 33       		.byte	0x33
+ 401 0101 86000000 		.4byte	0x86
+ 402 0105 03       		.uleb128 0x3
+ 403 0106 85020000 		.4byte	.LASF23
+ 404 010a 04       		.byte	0x4
+ 405 010b 34       		.byte	0x34
+ 406 010c 86000000 		.4byte	0x86
+ 407 0110 03       		.uleb128 0x3
+ 408 0111 68000000 		.4byte	.LASF24
+ 409 0115 04       		.byte	0x4
+ 410 0116 35       		.byte	0x35
+ 411 0117 86000000 		.4byte	0x86
+ 412 011b 03       		.uleb128 0x3
+ 413 011c 55020000 		.4byte	.LASF25
+ 414 0120 05       		.byte	0x5
+ 415 0121 2A       		.byte	0x2a
+ 416 0122 26010000 		.4byte	0x126
+ 417 0126 05       		.uleb128 0x5
+ 418 0127 55020000 		.4byte	.LASF25
+ 419 012b 48       		.byte	0x48
+ 420 012c 06       		.byte	0x6
+ 421 012d 5E       		.byte	0x5e
+ 422 012e 4B020000 		.4byte	0x24b
+ 423 0132 06       		.uleb128 0x6
+ 424 0133 F4030000 		.4byte	.LASF26
+ 425 0137 06       		.byte	0x6
+ 426 0138 5F       		.byte	0x5f
+ 427 0139 70020000 		.4byte	0x270
+ 428 013d 02       		.byte	0x2
+ 429 013e 23       		.byte	0x23
+ 430 013f 00       		.uleb128 0
+ 431 0140 06       		.uleb128 0x6
+ 432 0141 58040000 		.4byte	.LASF27
+ 433 0145 06       		.byte	0x6
+ 434 0146 61       		.byte	0x61
+ 435 0147 70020000 		.4byte	0x270
+ 436 014b 02       		.byte	0x2
+ 437 014c 23       		.byte	0x23
+ 438 014d 04       		.uleb128 0x4
+ 439 014e 06       		.uleb128 0x6
+ 440 014f 61000000 		.4byte	.LASF28
+ 441 0153 06       		.byte	0x6
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 9
+
+
+ 442 0154 63       		.byte	0x63
+ 443 0155 E4000000 		.4byte	0xe4
+ 444 0159 02       		.byte	0x2
+ 445 015a 23       		.byte	0x23
+ 446 015b 08       		.uleb128 0x8
+ 447 015c 06       		.uleb128 0x6
+ 448 015d 04040000 		.4byte	.LASF29
+ 449 0161 06       		.byte	0x6
+ 450 0162 64       		.byte	0x64
+ 451 0163 3F030000 		.4byte	0x33f
+ 452 0167 02       		.byte	0x2
+ 453 0168 23       		.byte	0x23
+ 454 0169 0C       		.uleb128 0xc
+ 455 016a 06       		.uleb128 0x6
+ 456 016b 9D010000 		.4byte	.LASF30
+ 457 016f 06       		.byte	0x6
+ 458 0170 66       		.byte	0x66
+ 459 0171 70020000 		.4byte	0x270
+ 460 0175 02       		.byte	0x2
+ 461 0176 23       		.byte	0x23
+ 462 0177 10       		.uleb128 0x10
+ 463 0178 06       		.uleb128 0x6
+ 464 0179 6D020000 		.4byte	.LASF31
+ 465 017d 06       		.byte	0x6
+ 466 017e 67       		.byte	0x67
+ 467 017f 70020000 		.4byte	0x270
+ 468 0183 02       		.byte	0x2
+ 469 0184 23       		.byte	0x23
+ 470 0185 14       		.uleb128 0x14
+ 471 0186 06       		.uleb128 0x6
+ 472 0187 17020000 		.4byte	.LASF32
+ 473 018b 06       		.byte	0x6
+ 474 018c 6E       		.byte	0x6e
+ 475 018d D2040000 		.4byte	0x4d2
+ 476 0191 02       		.byte	0x2
+ 477 0192 23       		.byte	0x23
+ 478 0193 18       		.uleb128 0x18
+ 479 0194 06       		.uleb128 0x6
+ 480 0195 75020000 		.4byte	.LASF33
+ 481 0199 06       		.byte	0x6
+ 482 019a 79       		.byte	0x79
+ 483 019b C3000000 		.4byte	0xc3
+ 484 019f 02       		.byte	0x2
+ 485 01a0 23       		.byte	0x23
+ 486 01a1 1C       		.uleb128 0x1c
+ 487 01a2 06       		.uleb128 0x6
+ 488 01a3 EC020000 		.4byte	.LASF34
+ 489 01a7 06       		.byte	0x6
+ 490 01a8 7D       		.byte	0x7d
+ 491 01a9 B8000000 		.4byte	0xb8
+ 492 01ad 02       		.byte	0x2
+ 493 01ae 23       		.byte	0x23
+ 494 01af 1D       		.uleb128 0x1d
+ 495 01b0 06       		.uleb128 0x6
+ 496 01b1 BA040000 		.4byte	.LASF35
+ 497 01b5 06       		.byte	0x6
+ 498 01b6 82       		.byte	0x82
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 10
+
+
+ 499 01b7 CE000000 		.4byte	0xce
+ 500 01bb 02       		.byte	0x2
+ 501 01bc 23       		.byte	0x23
+ 502 01bd 1E       		.uleb128 0x1e
+ 503 01be 06       		.uleb128 0x6
+ 504 01bf D6040000 		.4byte	.LASF36
+ 505 01c3 06       		.byte	0x6
+ 506 01c4 88       		.byte	0x88
+ 507 01c5 D9000000 		.4byte	0xd9
+ 508 01c9 02       		.byte	0x2
+ 509 01ca 23       		.byte	0x23
+ 510 01cb 1F       		.uleb128 0x1f
+ 511 01cc 06       		.uleb128 0x6
+ 512 01cd 4C000000 		.4byte	.LASF37
+ 513 01d1 06       		.byte	0x6
+ 514 01d2 8F       		.byte	0x8f
+ 515 01d3 6C030000 		.4byte	0x36c
+ 516 01d7 02       		.byte	0x2
+ 517 01d8 23       		.byte	0x23
+ 518 01d9 20       		.uleb128 0x20
+ 519 01da 07       		.uleb128 0x7
+ 520 01db 705F7500 		.ascii	"p_u\000"
+ 521 01df 06       		.byte	0x6
+ 522 01e0 B4       		.byte	0xb4
+ 523 01e1 9D040000 		.4byte	0x49d
+ 524 01e5 02       		.byte	0x2
+ 525 01e6 23       		.byte	0x23
+ 526 01e7 24       		.uleb128 0x24
+ 527 01e8 06       		.uleb128 0x6
+ 528 01e9 0C000000 		.4byte	.LASF38
+ 529 01ed 06       		.byte	0x6
+ 530 01ee B9       		.byte	0xb9
+ 531 01ef 98020000 		.4byte	0x298
+ 532 01f3 02       		.byte	0x2
+ 533 01f4 23       		.byte	0x23
+ 534 01f5 28       		.uleb128 0x28
+ 535 01f6 06       		.uleb128 0x6
+ 536 01f7 7A000000 		.4byte	.LASF39
+ 537 01fb 06       		.byte	0x6
+ 538 01fc BF       		.byte	0xbf
+ 539 01fd 76020000 		.4byte	0x276
+ 540 0201 02       		.byte	0x2
+ 541 0202 23       		.byte	0x23
+ 542 0203 2C       		.uleb128 0x2c
+ 543 0204 06       		.uleb128 0x6
+ 544 0205 2D030000 		.4byte	.LASF40
+ 545 0209 06       		.byte	0x6
+ 546 020a C3       		.byte	0xc3
+ 547 020b EF000000 		.4byte	0xef
+ 548 020f 02       		.byte	0x2
+ 549 0210 23       		.byte	0x23
+ 550 0211 34       		.uleb128 0x34
+ 551 0212 06       		.uleb128 0x6
+ 552 0213 D1030000 		.4byte	.LASF41
+ 553 0217 06       		.byte	0x6
+ 554 0218 C9       		.byte	0xc9
+ 555 0219 FA000000 		.4byte	0xfa
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 11
+
+
+ 556 021d 02       		.byte	0x2
+ 557 021e 23       		.byte	0x23
+ 558 021f 38       		.uleb128 0x38
+ 559 0220 06       		.uleb128 0x6
+ 560 0221 9E020000 		.4byte	.LASF42
+ 561 0225 06       		.byte	0x6
+ 562 0226 D0       		.byte	0xd0
+ 563 0227 E4040000 		.4byte	0x4e4
+ 564 022b 02       		.byte	0x2
+ 565 022c 23       		.byte	0x23
+ 566 022d 3C       		.uleb128 0x3c
+ 567 022e 06       		.uleb128 0x6
+ 568 022f 80030000 		.4byte	.LASF43
+ 569 0233 06       		.byte	0x6
+ 570 0234 D4       		.byte	0xd4
+ 571 0235 E4000000 		.4byte	0xe4
+ 572 0239 02       		.byte	0x2
+ 573 023a 23       		.byte	0x23
+ 574 023b 40       		.uleb128 0x40
+ 575 023c 06       		.uleb128 0x6
+ 576 023d 96020000 		.4byte	.LASF44
+ 577 0241 06       		.byte	0x6
+ 578 0242 DA       		.byte	0xda
+ 579 0243 AE020000 		.4byte	0x2ae
+ 580 0247 02       		.byte	0x2
+ 581 0248 23       		.byte	0x23
+ 582 0249 44       		.uleb128 0x44
+ 583 024a 00       		.byte	0
+ 584 024b 08       		.uleb128 0x8
+ 585 024c 08       		.byte	0x8
+ 586 024d 05       		.byte	0x5
+ 587 024e 61       		.byte	0x61
+ 588 024f 70020000 		.4byte	0x270
+ 589 0253 06       		.uleb128 0x6
+ 590 0254 F4030000 		.4byte	.LASF26
+ 591 0258 05       		.byte	0x5
+ 592 0259 62       		.byte	0x62
+ 593 025a 70020000 		.4byte	0x270
+ 594 025e 02       		.byte	0x2
+ 595 025f 23       		.byte	0x23
+ 596 0260 00       		.uleb128 0
+ 597 0261 06       		.uleb128 0x6
+ 598 0262 58040000 		.4byte	.LASF27
+ 599 0266 05       		.byte	0x5
+ 600 0267 64       		.byte	0x64
+ 601 0268 70020000 		.4byte	0x270
+ 602 026c 02       		.byte	0x2
+ 603 026d 23       		.byte	0x23
+ 604 026e 04       		.uleb128 0x4
+ 605 026f 00       		.byte	0
+ 606 0270 09       		.uleb128 0x9
+ 607 0271 04       		.byte	0x4
+ 608 0272 1B010000 		.4byte	0x11b
+ 609 0276 03       		.uleb128 0x3
+ 610 0277 29020000 		.4byte	.LASF45
+ 611 027b 05       		.byte	0x5
+ 612 027c 66       		.byte	0x66
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 12
+
+
+ 613 027d 4B020000 		.4byte	0x24b
+ 614 0281 08       		.uleb128 0x8
+ 615 0282 04       		.byte	0x4
+ 616 0283 05       		.byte	0x5
+ 617 0284 6B       		.byte	0x6b
+ 618 0285 98020000 		.4byte	0x298
+ 619 0289 06       		.uleb128 0x6
+ 620 028a F4030000 		.4byte	.LASF26
+ 621 028e 05       		.byte	0x5
+ 622 028f 6D       		.byte	0x6d
+ 623 0290 70020000 		.4byte	0x270
+ 624 0294 02       		.byte	0x2
+ 625 0295 23       		.byte	0x23
+ 626 0296 00       		.uleb128 0
+ 627 0297 00       		.byte	0
+ 628 0298 03       		.uleb128 0x3
+ 629 0299 00000000 		.4byte	.LASF46
+ 630 029d 05       		.byte	0x5
+ 631 029e 70       		.byte	0x70
+ 632 029f 81020000 		.4byte	0x281
+ 633 02a3 03       		.uleb128 0x3
+ 634 02a4 58000000 		.4byte	.LASF47
+ 635 02a8 07       		.byte	0x7
+ 636 02a9 A7       		.byte	0xa7
+ 637 02aa AE020000 		.4byte	0x2ae
+ 638 02ae 0A       		.uleb128 0xa
+ 639 02af 04       		.byte	0x4
+ 640 02b0 03       		.uleb128 0x3
+ 641 02b1 39050000 		.4byte	.LASF48
+ 642 02b5 07       		.byte	0x7
+ 643 02b6 AD       		.byte	0xad
+ 644 02b7 9F000000 		.4byte	0x9f
+ 645 02bb 05       		.uleb128 0x5
+ 646 02bc 60030000 		.4byte	.LASF49
+ 647 02c0 24       		.byte	0x24
+ 648 02c1 07       		.byte	0x7
+ 649 02c2 BA       		.byte	0xba
+ 650 02c3 3F030000 		.4byte	0x33f
+ 651 02c7 07       		.uleb128 0x7
+ 652 02c8 723800   		.ascii	"r8\000"
+ 653 02cb 07       		.byte	0x7
+ 654 02cc BB       		.byte	0xbb
+ 655 02cd A3020000 		.4byte	0x2a3
+ 656 02d1 02       		.byte	0x2
+ 657 02d2 23       		.byte	0x23
+ 658 02d3 00       		.uleb128 0
+ 659 02d4 07       		.uleb128 0x7
+ 660 02d5 723900   		.ascii	"r9\000"
+ 661 02d8 07       		.byte	0x7
+ 662 02d9 BC       		.byte	0xbc
+ 663 02da A3020000 		.4byte	0x2a3
+ 664 02de 02       		.byte	0x2
+ 665 02df 23       		.byte	0x23
+ 666 02e0 04       		.uleb128 0x4
+ 667 02e1 07       		.uleb128 0x7
+ 668 02e2 72313000 		.ascii	"r10\000"
+ 669 02e6 07       		.byte	0x7
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 13
+
+
+ 670 02e7 BD       		.byte	0xbd
+ 671 02e8 A3020000 		.4byte	0x2a3
+ 672 02ec 02       		.byte	0x2
+ 673 02ed 23       		.byte	0x23
+ 674 02ee 08       		.uleb128 0x8
+ 675 02ef 07       		.uleb128 0x7
+ 676 02f0 72313100 		.ascii	"r11\000"
+ 677 02f4 07       		.byte	0x7
+ 678 02f5 BE       		.byte	0xbe
+ 679 02f6 A3020000 		.4byte	0x2a3
+ 680 02fa 02       		.byte	0x2
+ 681 02fb 23       		.byte	0x23
+ 682 02fc 0C       		.uleb128 0xc
+ 683 02fd 07       		.uleb128 0x7
+ 684 02fe 723400   		.ascii	"r4\000"
+ 685 0301 07       		.byte	0x7
+ 686 0302 BF       		.byte	0xbf
+ 687 0303 A3020000 		.4byte	0x2a3
+ 688 0307 02       		.byte	0x2
+ 689 0308 23       		.byte	0x23
+ 690 0309 10       		.uleb128 0x10
+ 691 030a 07       		.uleb128 0x7
+ 692 030b 723500   		.ascii	"r5\000"
+ 693 030e 07       		.byte	0x7
+ 694 030f C0       		.byte	0xc0
+ 695 0310 A3020000 		.4byte	0x2a3
+ 696 0314 02       		.byte	0x2
+ 697 0315 23       		.byte	0x23
+ 698 0316 14       		.uleb128 0x14
+ 699 0317 07       		.uleb128 0x7
+ 700 0318 723600   		.ascii	"r6\000"
+ 701 031b 07       		.byte	0x7
+ 702 031c C1       		.byte	0xc1
+ 703 031d A3020000 		.4byte	0x2a3
+ 704 0321 02       		.byte	0x2
+ 705 0322 23       		.byte	0x23
+ 706 0323 18       		.uleb128 0x18
+ 707 0324 07       		.uleb128 0x7
+ 708 0325 723700   		.ascii	"r7\000"
+ 709 0328 07       		.byte	0x7
+ 710 0329 C2       		.byte	0xc2
+ 711 032a A3020000 		.4byte	0x2a3
+ 712 032e 02       		.byte	0x2
+ 713 032f 23       		.byte	0x23
+ 714 0330 1C       		.uleb128 0x1c
+ 715 0331 07       		.uleb128 0x7
+ 716 0332 6C7200   		.ascii	"lr\000"
+ 717 0335 07       		.byte	0x7
+ 718 0336 C3       		.byte	0xc3
+ 719 0337 A3020000 		.4byte	0x2a3
+ 720 033b 02       		.byte	0x2
+ 721 033c 23       		.byte	0x23
+ 722 033d 20       		.uleb128 0x20
+ 723 033e 00       		.byte	0
+ 724 033f 05       		.uleb128 0x5
+ 725 0340 D9020000 		.4byte	.LASF50
+ 726 0344 04       		.byte	0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 14
+
+
+ 727 0345 07       		.byte	0x7
+ 728 0346 CD       		.byte	0xcd
+ 729 0347 5A030000 		.4byte	0x35a
+ 730 034b 07       		.uleb128 0x7
+ 731 034c 72313300 		.ascii	"r13\000"
+ 732 0350 07       		.byte	0x7
+ 733 0351 CE       		.byte	0xce
+ 734 0352 5A030000 		.4byte	0x35a
+ 735 0356 02       		.byte	0x2
+ 736 0357 23       		.byte	0x23
+ 737 0358 00       		.uleb128 0
+ 738 0359 00       		.byte	0
+ 739 035a 09       		.uleb128 0x9
+ 740 035b 04       		.byte	0x4
+ 741 035c BB020000 		.4byte	0x2bb
+ 742 0360 0B       		.uleb128 0xb
+ 743 0361 86000000 		.4byte	0x86
+ 744 0365 04       		.uleb128 0x4
+ 745 0366 04       		.byte	0x4
+ 746 0367 07       		.byte	0x7
+ 747 0368 5F040000 		.4byte	.LASF51
+ 748 036c 0B       		.uleb128 0xb
+ 749 036d 10010000 		.4byte	0x110
+ 750 0371 08       		.uleb128 0x8
+ 751 0372 1C       		.byte	0x1c
+ 752 0373 08       		.byte	0x8
+ 753 0374 5E       		.byte	0x5e
+ 754 0375 CE030000 		.4byte	0x3ce
+ 755 0379 06       		.uleb128 0x6
+ 756 037a CB020000 		.4byte	.LASF52
+ 757 037e 08       		.byte	0x8
+ 758 037f 5F       		.byte	0x5f
+ 759 0380 76020000 		.4byte	0x276
+ 760 0384 02       		.byte	0x2
+ 761 0385 23       		.byte	0x23
+ 762 0386 00       		.uleb128 0
+ 763 0387 06       		.uleb128 0x6
+ 764 0388 3A010000 		.4byte	.LASF53
+ 765 038c 08       		.byte	0x8
+ 766 038d 60       		.byte	0x60
+ 767 038e E4000000 		.4byte	0xe4
+ 768 0392 02       		.byte	0x2
+ 769 0393 23       		.byte	0x23
+ 770 0394 08       		.uleb128 0x8
+ 771 0395 06       		.uleb128 0x6
+ 772 0396 33050000 		.4byte	.LASF54
+ 773 039a 08       		.byte	0x8
+ 774 039b 62       		.byte	0x62
+ 775 039c 3F030000 		.4byte	0x33f
+ 776 03a0 02       		.byte	0x2
+ 777 03a1 23       		.byte	0x23
+ 778 03a2 0C       		.uleb128 0xc
+ 779 03a3 06       		.uleb128 0x6
+ 780 03a4 45020000 		.4byte	.LASF55
+ 781 03a8 08       		.byte	0x8
+ 782 03a9 65       		.byte	0x65
+ 783 03aa 70020000 		.4byte	0x270
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 15
+
+
+ 784 03ae 02       		.byte	0x2
+ 785 03af 23       		.byte	0x23
+ 786 03b0 10       		.uleb128 0x10
+ 787 03b1 06       		.uleb128 0x6
+ 788 03b2 0B030000 		.4byte	.LASF56
+ 789 03b6 08       		.byte	0x8
+ 790 03b7 66       		.byte	0x66
+ 791 03b8 70020000 		.4byte	0x270
+ 792 03bc 02       		.byte	0x2
+ 793 03bd 23       		.byte	0x23
+ 794 03be 14       		.uleb128 0x14
+ 795 03bf 06       		.uleb128 0x6
+ 796 03c0 C7030000 		.4byte	.LASF57
+ 797 03c4 08       		.byte	0x8
+ 798 03c5 69       		.byte	0x69
+ 799 03c6 70020000 		.4byte	0x270
+ 800 03ca 02       		.byte	0x2
+ 801 03cb 23       		.byte	0x23
+ 802 03cc 18       		.uleb128 0x18
+ 803 03cd 00       		.byte	0
+ 804 03ce 03       		.uleb128 0x3
+ 805 03cf C1040000 		.4byte	.LASF58
+ 806 03d3 08       		.byte	0x8
+ 807 03d4 6B       		.byte	0x6b
+ 808 03d5 71030000 		.4byte	0x371
+ 809 03d9 05       		.uleb128 0x5
+ 810 03da F0010000 		.4byte	.LASF59
+ 811 03de 10       		.byte	0x10
+ 812 03df 09       		.byte	0x9
+ 813 03e0 2C       		.byte	0x2c
+ 814 03e1 10040000 		.4byte	0x410
+ 815 03e5 06       		.uleb128 0x6
+ 816 03e6 DC030000 		.4byte	.LASF60
+ 817 03ea 09       		.byte	0x9
+ 818 03eb 2D       		.byte	0x2d
+ 819 03ec 76020000 		.4byte	0x276
+ 820 03f0 02       		.byte	0x2
+ 821 03f1 23       		.byte	0x23
+ 822 03f2 00       		.uleb128 0
+ 823 03f3 06       		.uleb128 0x6
+ 824 03f4 72000000 		.4byte	.LASF61
+ 825 03f8 09       		.byte	0x9
+ 826 03f9 2F       		.byte	0x2f
+ 827 03fa 70020000 		.4byte	0x270
+ 828 03fe 02       		.byte	0x2
+ 829 03ff 23       		.byte	0x23
+ 830 0400 08       		.uleb128 0x8
+ 831 0401 06       		.uleb128 0x6
+ 832 0402 07050000 		.4byte	.LASF62
+ 833 0406 09       		.byte	0x9
+ 834 0407 31       		.byte	0x31
+ 835 0408 10040000 		.4byte	0x410
+ 836 040c 02       		.byte	0x2
+ 837 040d 23       		.byte	0x23
+ 838 040e 0C       		.uleb128 0xc
+ 839 040f 00       		.byte	0
+ 840 0410 09       		.uleb128 0x9
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 16
+
+
+ 841 0411 04       		.byte	0x4
+ 842 0412 D9030000 		.4byte	0x3d9
+ 843 0416 03       		.uleb128 0x3
+ 844 0417 F0010000 		.4byte	.LASF59
+ 845 041b 09       		.byte	0x9
+ 846 041c 33       		.byte	0x33
+ 847 041d D9030000 		.4byte	0x3d9
+ 848 0421 03       		.uleb128 0x3
+ 849 0422 70040000 		.4byte	.LASF63
+ 850 0426 0A       		.byte	0xa
+ 851 0427 2C       		.byte	0x2c
+ 852 0428 2C040000 		.4byte	0x42c
+ 853 042c 05       		.uleb128 0x5
+ 854 042d 70040000 		.4byte	.LASF63
+ 855 0431 10       		.byte	0x10
+ 856 0432 0A       		.byte	0xa
+ 857 0433 31       		.byte	0x31
+ 858 0434 71040000 		.4byte	0x471
+ 859 0438 06       		.uleb128 0x6
+ 860 0439 25030000 		.4byte	.LASF64
+ 861 043d 0A       		.byte	0xa
+ 862 043e 32       		.byte	0x32
+ 863 043f 71040000 		.4byte	0x471
+ 864 0443 02       		.byte	0x2
+ 865 0444 23       		.byte	0x23
+ 866 0445 00       		.uleb128 0
+ 867 0446 06       		.uleb128 0x6
+ 868 0447 20040000 		.4byte	.LASF65
+ 869 044b 0A       		.byte	0xa
+ 870 044c 35       		.byte	0x35
+ 871 044d 70020000 		.4byte	0x270
+ 872 0451 02       		.byte	0x2
+ 873 0452 23       		.byte	0x23
+ 874 0453 04       		.uleb128 0x4
+ 875 0454 06       		.uleb128 0x6
+ 876 0455 EF000000 		.4byte	.LASF66
+ 877 0459 0A       		.byte	0xa
+ 878 045a 37       		.byte	0x37
+ 879 045b FA000000 		.4byte	0xfa
+ 880 045f 02       		.byte	0x2
+ 881 0460 23       		.byte	0x23
+ 882 0461 08       		.uleb128 0x8
+ 883 0462 06       		.uleb128 0x6
+ 884 0463 49050000 		.4byte	.LASF67
+ 885 0467 0A       		.byte	0xa
+ 886 0468 3A       		.byte	0x3a
+ 887 0469 05010000 		.4byte	0x105
+ 888 046d 02       		.byte	0x2
+ 889 046e 23       		.byte	0x23
+ 890 046f 0C       		.uleb128 0xc
+ 891 0470 00       		.byte	0
+ 892 0471 09       		.uleb128 0x9
+ 893 0472 04       		.byte	0x4
+ 894 0473 21040000 		.4byte	0x421
+ 895 0477 05       		.uleb128 0x5
+ 896 0478 BA010000 		.4byte	.LASF68
+ 897 047c 04       		.byte	0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 17
+
+
+ 898 047d 0A       		.byte	0xa
+ 899 047e 41       		.byte	0x41
+ 900 047f 92040000 		.4byte	0x492
+ 901 0483 06       		.uleb128 0x6
+ 902 0484 E0040000 		.4byte	.LASF69
+ 903 0488 0A       		.byte	0xa
+ 904 0489 42       		.byte	0x42
+ 905 048a 71040000 		.4byte	0x471
+ 906 048e 02       		.byte	0x2
+ 907 048f 23       		.byte	0x23
+ 908 0490 00       		.uleb128 0
+ 909 0491 00       		.byte	0
+ 910 0492 03       		.uleb128 0x3
+ 911 0493 BA010000 		.4byte	.LASF68
+ 912 0497 0A       		.byte	0xa
+ 913 0498 45       		.byte	0x45
+ 914 0499 77040000 		.4byte	0x477
+ 915 049d 0C       		.uleb128 0xc
+ 916 049e 04       		.byte	0x4
+ 917 049f 06       		.byte	0x6
+ 918 04a0 96       		.byte	0x96
+ 919 04a1 D2040000 		.4byte	0x4d2
+ 920 04a5 0D       		.uleb128 0xd
+ 921 04a6 CD010000 		.4byte	.LASF70
+ 922 04aa 06       		.byte	0x6
+ 923 04ab 9D       		.byte	0x9d
+ 924 04ac EF000000 		.4byte	0xef
+ 925 04b0 0D       		.uleb128 0xd
+ 926 04b1 52050000 		.4byte	.LASF71
+ 927 04b5 06       		.byte	0x6
+ 928 04b6 A4       		.byte	0xa4
+ 929 04b7 EF000000 		.4byte	0xef
+ 930 04bb 0D       		.uleb128 0xd
+ 931 04bc F7000000 		.4byte	.LASF72
+ 932 04c0 06       		.byte	0x6
+ 933 04c1 AB       		.byte	0xab
+ 934 04c2 AE020000 		.4byte	0x2ae
+ 935 04c6 0D       		.uleb128 0xd
+ 936 04c7 05010000 		.4byte	.LASF73
+ 937 04cb 06       		.byte	0x6
+ 938 04cc B2       		.byte	0xb2
+ 939 04cd FA000000 		.4byte	0xfa
+ 940 04d1 00       		.byte	0
+ 941 04d2 09       		.uleb128 0x9
+ 942 04d3 04       		.byte	0x4
+ 943 04d4 D8040000 		.4byte	0x4d8
+ 944 04d8 0E       		.uleb128 0xe
+ 945 04d9 DD040000 		.4byte	0x4dd
+ 946 04dd 04       		.uleb128 0x4
+ 947 04de 01       		.byte	0x1
+ 948 04df 08       		.byte	0x8
+ 949 04e0 36020000 		.4byte	.LASF74
+ 950 04e4 09       		.uleb128 0x9
+ 951 04e5 04       		.byte	0x4
+ 952 04e6 16040000 		.4byte	0x416
+ 953 04ea 03       		.uleb128 0x3
+ 954 04eb 66010000 		.4byte	.LASF75
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 18
+
+
+ 955 04ef 06       		.byte	0x6
+ 956 04f0 E5       		.byte	0xe5
+ 957 04f1 F5040000 		.4byte	0x4f5
+ 958 04f5 09       		.uleb128 0x9
+ 959 04f6 04       		.byte	0x4
+ 960 04f7 FB040000 		.4byte	0x4fb
+ 961 04fb 0F       		.uleb128 0xf
+ 962 04fc 01       		.byte	0x1
+ 963 04fd EF000000 		.4byte	0xef
+ 964 0501 0B050000 		.4byte	0x50b
+ 965 0505 10       		.uleb128 0x10
+ 966 0506 AE020000 		.4byte	0x2ae
+ 967 050a 00       		.byte	0
+ 968 050b 03       		.uleb128 0x3
+ 969 050c 43030000 		.4byte	.LASF76
+ 970 0510 0B       		.byte	0xb
+ 971 0511 37       		.byte	0x37
+ 972 0512 16050000 		.4byte	0x516
+ 973 0516 05       		.uleb128 0x5
+ 974 0517 43030000 		.4byte	.LASF76
+ 975 051b 24       		.byte	0x24
+ 976 051c 0B       		.byte	0xb
+ 977 051d 45       		.byte	0x45
+ 978 051e 93050000 		.4byte	0x593
+ 979 0522 06       		.uleb128 0x6
+ 980 0523 AB010000 		.4byte	.LASF77
+ 981 0527 0B       		.byte	0xb
+ 982 0528 46       		.byte	0x46
+ 983 0529 76020000 		.4byte	0x276
+ 984 052d 02       		.byte	0x2
+ 985 052e 23       		.byte	0x23
+ 986 052f 00       		.uleb128 0
+ 987 0530 06       		.uleb128 0x6
+ 988 0531 43040000 		.4byte	.LASF78
+ 989 0535 0B       		.byte	0xb
+ 990 0536 47       		.byte	0x47
+ 991 0537 30000000 		.4byte	0x30
+ 992 053b 02       		.byte	0x2
+ 993 053c 23       		.byte	0x23
+ 994 053d 08       		.uleb128 0x8
+ 995 053e 06       		.uleb128 0x6
+ 996 053f C2020000 		.4byte	.LASF79
+ 997 0543 0B       		.byte	0xb
+ 998 0544 48       		.byte	0x48
+ 999 0545 B6050000 		.4byte	0x5b6
+ 1000 0549 02       		.byte	0x2
+ 1001 054a 23       		.byte	0x23
+ 1002 054b 0C       		.uleb128 0xc
+ 1003 054c 06       		.uleb128 0x6
+ 1004 054d 52040000 		.4byte	.LASF80
+ 1005 0551 0B       		.byte	0xb
+ 1006 0552 49       		.byte	0x49
+ 1007 0553 B6050000 		.4byte	0x5b6
+ 1008 0557 02       		.byte	0x2
+ 1009 0558 23       		.byte	0x23
+ 1010 0559 10       		.uleb128 0x10
+ 1011 055a 06       		.uleb128 0x6
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 19
+
+
+ 1012 055b 4D020000 		.4byte	.LASF81
+ 1013 055f 0B       		.byte	0xb
+ 1014 0560 4B       		.byte	0x4b
+ 1015 0561 B6050000 		.4byte	0x5b6
+ 1016 0565 02       		.byte	0x2
+ 1017 0566 23       		.byte	0x23
+ 1018 0567 14       		.uleb128 0x14
+ 1019 0568 06       		.uleb128 0x6
+ 1020 0569 DD000000 		.4byte	.LASF82
+ 1021 056d 0B       		.byte	0xb
+ 1022 056e 4C       		.byte	0x4c
+ 1023 056f B6050000 		.4byte	0x5b6
+ 1024 0573 02       		.byte	0x2
+ 1025 0574 23       		.byte	0x23
+ 1026 0575 18       		.uleb128 0x18
+ 1027 0576 06       		.uleb128 0x6
+ 1028 0577 02020000 		.4byte	.LASF83
+ 1029 057b 0B       		.byte	0xb
+ 1030 057c 4D       		.byte	0x4d
+ 1031 057d 93050000 		.4byte	0x593
+ 1032 0581 02       		.byte	0x2
+ 1033 0582 23       		.byte	0x23
+ 1034 0583 1C       		.uleb128 0x1c
+ 1035 0584 06       		.uleb128 0x6
+ 1036 0585 FE000000 		.4byte	.LASF84
+ 1037 0589 0B       		.byte	0xb
+ 1038 058a 4E       		.byte	0x4e
+ 1039 058b AE020000 		.4byte	0x2ae
+ 1040 058f 02       		.byte	0x2
+ 1041 0590 23       		.byte	0x23
+ 1042 0591 20       		.uleb128 0x20
+ 1043 0592 00       		.byte	0
+ 1044 0593 03       		.uleb128 0x3
+ 1045 0594 E5000000 		.4byte	.LASF85
+ 1046 0598 0B       		.byte	0xb
+ 1047 0599 3A       		.byte	0x3a
+ 1048 059a 9E050000 		.4byte	0x59e
+ 1049 059e 09       		.uleb128 0x9
+ 1050 059f 04       		.byte	0x4
+ 1051 05a0 A4050000 		.4byte	0x5a4
+ 1052 05a4 11       		.uleb128 0x11
+ 1053 05a5 01       		.byte	0x1
+ 1054 05a6 B0050000 		.4byte	0x5b0
+ 1055 05aa 10       		.uleb128 0x10
+ 1056 05ab B0050000 		.4byte	0x5b0
+ 1057 05af 00       		.byte	0
+ 1058 05b0 09       		.uleb128 0x9
+ 1059 05b1 04       		.byte	0x4
+ 1060 05b2 0B050000 		.4byte	0x50b
+ 1061 05b6 09       		.uleb128 0x9
+ 1062 05b7 04       		.byte	0x4
+ 1063 05b8 49000000 		.4byte	0x49
+ 1064 05bc 03       		.uleb128 0x3
+ 1065 05bd 1E020000 		.4byte	.LASF86
+ 1066 05c1 0B       		.byte	0xb
+ 1067 05c2 82       		.byte	0x82
+ 1068 05c3 0B050000 		.4byte	0x50b
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 20
+
+
+ 1069 05c7 03       		.uleb128 0x3
+ 1070 05c8 F6010000 		.4byte	.LASF87
+ 1071 05cc 0B       		.byte	0xb
+ 1072 05cd F5       		.byte	0xf5
+ 1073 05ce 0B050000 		.4byte	0x50b
+ 1074 05d2 0F       		.uleb128 0xf
+ 1075 05d3 01       		.byte	0x1
+ 1076 05d4 30000000 		.4byte	0x30
+ 1077 05d8 EC050000 		.4byte	0x5ec
+ 1078 05dc 10       		.uleb128 0x10
+ 1079 05dd AE020000 		.4byte	0x2ae
+ 1080 05e1 10       		.uleb128 0x10
+ 1081 05e2 EC050000 		.4byte	0x5ec
+ 1082 05e6 10       		.uleb128 0x10
+ 1083 05e7 30000000 		.4byte	0x30
+ 1084 05eb 00       		.byte	0
+ 1085 05ec 09       		.uleb128 0x9
+ 1086 05ed 04       		.byte	0x4
+ 1087 05ee F2050000 		.4byte	0x5f2
+ 1088 05f2 0E       		.uleb128 0xe
+ 1089 05f3 49000000 		.4byte	0x49
+ 1090 05f7 09       		.uleb128 0x9
+ 1091 05f8 04       		.byte	0x4
+ 1092 05f9 D2050000 		.4byte	0x5d2
+ 1093 05fd 0F       		.uleb128 0xf
+ 1094 05fe 01       		.byte	0x1
+ 1095 05ff 30000000 		.4byte	0x30
+ 1096 0603 17060000 		.4byte	0x617
+ 1097 0607 10       		.uleb128 0x10
+ 1098 0608 AE020000 		.4byte	0x2ae
+ 1099 060c 10       		.uleb128 0x10
+ 1100 060d B6050000 		.4byte	0x5b6
+ 1101 0611 10       		.uleb128 0x10
+ 1102 0612 30000000 		.4byte	0x30
+ 1103 0616 00       		.byte	0
+ 1104 0617 09       		.uleb128 0x9
+ 1105 0618 04       		.byte	0x4
+ 1106 0619 FD050000 		.4byte	0x5fd
+ 1107 061d 0F       		.uleb128 0xf
+ 1108 061e 01       		.byte	0x1
+ 1109 061f EF000000 		.4byte	0xef
+ 1110 0623 32060000 		.4byte	0x632
+ 1111 0627 10       		.uleb128 0x10
+ 1112 0628 AE020000 		.4byte	0x2ae
+ 1113 062c 10       		.uleb128 0x10
+ 1114 062d 49000000 		.4byte	0x49
+ 1115 0631 00       		.byte	0
+ 1116 0632 09       		.uleb128 0x9
+ 1117 0633 04       		.byte	0x4
+ 1118 0634 1D060000 		.4byte	0x61d
+ 1119 0638 0B       		.uleb128 0xb
+ 1120 0639 62000000 		.4byte	0x62
+ 1121 063d 12       		.uleb128 0x12
+ 1122 063e 2C       		.byte	0x2c
+ 1123 063f 0C       		.byte	0xc
+ 1124 0640 6F02     		.2byte	0x26f
+ 1125 0642 37070000 		.4byte	0x737
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 21
+
+
+ 1126 0646 13       		.uleb128 0x13
+ 1127 0647 43523100 		.ascii	"CR1\000"
+ 1128 064b 0C       		.byte	0xc
+ 1129 064c 7102     		.2byte	0x271
+ 1130 064e 60030000 		.4byte	0x360
+ 1131 0652 02       		.byte	0x2
+ 1132 0653 23       		.byte	0x23
+ 1133 0654 00       		.uleb128 0
+ 1134 0655 13       		.uleb128 0x13
+ 1135 0656 43523200 		.ascii	"CR2\000"
+ 1136 065a 0C       		.byte	0xc
+ 1137 065b 7202     		.2byte	0x272
+ 1138 065d 60030000 		.4byte	0x360
+ 1139 0661 02       		.byte	0x2
+ 1140 0662 23       		.byte	0x23
+ 1141 0663 04       		.uleb128 0x4
+ 1142 0664 13       		.uleb128 0x13
+ 1143 0665 43523300 		.ascii	"CR3\000"
+ 1144 0669 0C       		.byte	0xc
+ 1145 066a 7302     		.2byte	0x273
+ 1146 066c 60030000 		.4byte	0x360
+ 1147 0670 02       		.byte	0x2
+ 1148 0671 23       		.byte	0x23
+ 1149 0672 08       		.uleb128 0x8
+ 1150 0673 13       		.uleb128 0x13
+ 1151 0674 42525200 		.ascii	"BRR\000"
+ 1152 0678 0C       		.byte	0xc
+ 1153 0679 7402     		.2byte	0x274
+ 1154 067b 38060000 		.4byte	0x638
+ 1155 067f 02       		.byte	0x2
+ 1156 0680 23       		.byte	0x23
+ 1157 0681 0C       		.uleb128 0xc
+ 1158 0682 14       		.uleb128 0x14
+ 1159 0683 8B030000 		.4byte	.LASF88
+ 1160 0687 0C       		.byte	0xc
+ 1161 0688 7502     		.2byte	0x275
+ 1162 068a 62000000 		.4byte	0x62
+ 1163 068e 02       		.byte	0x2
+ 1164 068f 23       		.byte	0x23
+ 1165 0690 0E       		.uleb128 0xe
+ 1166 0691 14       		.uleb128 0x14
+ 1167 0692 19010000 		.4byte	.LASF89
+ 1168 0696 0C       		.byte	0xc
+ 1169 0697 7602     		.2byte	0x276
+ 1170 0699 38060000 		.4byte	0x638
+ 1171 069d 02       		.byte	0x2
+ 1172 069e 23       		.byte	0x23
+ 1173 069f 10       		.uleb128 0x10
+ 1174 06a0 14       		.uleb128 0x14
+ 1175 06a1 95030000 		.4byte	.LASF90
+ 1176 06a5 0C       		.byte	0xc
+ 1177 06a6 7702     		.2byte	0x277
+ 1178 06a8 62000000 		.4byte	0x62
+ 1179 06ac 02       		.byte	0x2
+ 1180 06ad 23       		.byte	0x23
+ 1181 06ae 12       		.uleb128 0x12
+ 1182 06af 14       		.uleb128 0x14
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 22
+
+
+ 1183 06b0 91020000 		.4byte	.LASF91
+ 1184 06b4 0C       		.byte	0xc
+ 1185 06b5 7802     		.2byte	0x278
+ 1186 06b7 60030000 		.4byte	0x360
+ 1187 06bb 02       		.byte	0x2
+ 1188 06bc 23       		.byte	0x23
+ 1189 06bd 14       		.uleb128 0x14
+ 1190 06be 13       		.uleb128 0x13
+ 1191 06bf 52515200 		.ascii	"RQR\000"
+ 1192 06c3 0C       		.byte	0xc
+ 1193 06c4 7902     		.2byte	0x279
+ 1194 06c6 38060000 		.4byte	0x638
+ 1195 06ca 02       		.byte	0x2
+ 1196 06cb 23       		.byte	0x23
+ 1197 06cc 18       		.uleb128 0x18
+ 1198 06cd 14       		.uleb128 0x14
+ 1199 06ce 9F030000 		.4byte	.LASF92
+ 1200 06d2 0C       		.byte	0xc
+ 1201 06d3 7A02     		.2byte	0x27a
+ 1202 06d5 62000000 		.4byte	0x62
+ 1203 06d9 02       		.byte	0x2
+ 1204 06da 23       		.byte	0x23
+ 1205 06db 1A       		.uleb128 0x1a
+ 1206 06dc 13       		.uleb128 0x13
+ 1207 06dd 49535200 		.ascii	"ISR\000"
+ 1208 06e1 0C       		.byte	0xc
+ 1209 06e2 7B02     		.2byte	0x27b
+ 1210 06e4 60030000 		.4byte	0x360
+ 1211 06e8 02       		.byte	0x2
+ 1212 06e9 23       		.byte	0x23
+ 1213 06ea 1C       		.uleb128 0x1c
+ 1214 06eb 13       		.uleb128 0x13
+ 1215 06ec 49435200 		.ascii	"ICR\000"
+ 1216 06f0 0C       		.byte	0xc
+ 1217 06f1 7C02     		.2byte	0x27c
+ 1218 06f3 60030000 		.4byte	0x360
+ 1219 06f7 02       		.byte	0x2
+ 1220 06f8 23       		.byte	0x23
+ 1221 06f9 20       		.uleb128 0x20
+ 1222 06fa 13       		.uleb128 0x13
+ 1223 06fb 52445200 		.ascii	"RDR\000"
+ 1224 06ff 0C       		.byte	0xc
+ 1225 0700 7D02     		.2byte	0x27d
+ 1226 0702 38060000 		.4byte	0x638
+ 1227 0706 02       		.byte	0x2
+ 1228 0707 23       		.byte	0x23
+ 1229 0708 24       		.uleb128 0x24
+ 1230 0709 14       		.uleb128 0x14
+ 1231 070a A9030000 		.4byte	.LASF93
+ 1232 070e 0C       		.byte	0xc
+ 1233 070f 7E02     		.2byte	0x27e
+ 1234 0711 62000000 		.4byte	0x62
+ 1235 0715 02       		.byte	0x2
+ 1236 0716 23       		.byte	0x23
+ 1237 0717 26       		.uleb128 0x26
+ 1238 0718 13       		.uleb128 0x13
+ 1239 0719 54445200 		.ascii	"TDR\000"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 23
+
+
+ 1240 071d 0C       		.byte	0xc
+ 1241 071e 7F02     		.2byte	0x27f
+ 1242 0720 38060000 		.4byte	0x638
+ 1243 0724 02       		.byte	0x2
+ 1244 0725 23       		.byte	0x23
+ 1245 0726 28       		.uleb128 0x28
+ 1246 0727 14       		.uleb128 0x14
+ 1247 0728 B3030000 		.4byte	.LASF94
+ 1248 072c 0C       		.byte	0xc
+ 1249 072d 8002     		.2byte	0x280
+ 1250 072f 62000000 		.4byte	0x62
+ 1251 0733 02       		.byte	0x2
+ 1252 0734 23       		.byte	0x23
+ 1253 0735 2A       		.uleb128 0x2a
+ 1254 0736 00       		.byte	0
+ 1255 0737 15       		.uleb128 0x15
+ 1256 0738 E2010000 		.4byte	.LASF95
+ 1257 073c 0C       		.byte	0xc
+ 1258 073d 8102     		.2byte	0x281
+ 1259 073f 3D060000 		.4byte	0x63d
+ 1260 0743 0F       		.uleb128 0xf
+ 1261 0744 01       		.byte	0x1
+ 1262 0745 EF000000 		.4byte	0xef
+ 1263 0749 5D070000 		.4byte	0x75d
+ 1264 074d 10       		.uleb128 0x10
+ 1265 074e AE020000 		.4byte	0x2ae
+ 1266 0752 10       		.uleb128 0x10
+ 1267 0753 49000000 		.4byte	0x49
+ 1268 0757 10       		.uleb128 0x10
+ 1269 0758 10010000 		.4byte	0x110
+ 1270 075c 00       		.byte	0
+ 1271 075d 09       		.uleb128 0x9
+ 1272 075e 04       		.byte	0x4
+ 1273 075f 43070000 		.4byte	0x743
+ 1274 0763 0F       		.uleb128 0xf
+ 1275 0764 01       		.byte	0x1
+ 1276 0765 EF000000 		.4byte	0xef
+ 1277 0769 78070000 		.4byte	0x778
+ 1278 076d 10       		.uleb128 0x10
+ 1279 076e AE020000 		.4byte	0x2ae
+ 1280 0772 10       		.uleb128 0x10
+ 1281 0773 10010000 		.4byte	0x110
+ 1282 0777 00       		.byte	0
+ 1283 0778 09       		.uleb128 0x9
+ 1284 0779 04       		.byte	0x4
+ 1285 077a 63070000 		.4byte	0x763
+ 1286 077e 0F       		.uleb128 0xf
+ 1287 077f 01       		.byte	0x1
+ 1288 0780 30000000 		.4byte	0x30
+ 1289 0784 9D070000 		.4byte	0x79d
+ 1290 0788 10       		.uleb128 0x10
+ 1291 0789 AE020000 		.4byte	0x2ae
+ 1292 078d 10       		.uleb128 0x10
+ 1293 078e EC050000 		.4byte	0x5ec
+ 1294 0792 10       		.uleb128 0x10
+ 1295 0793 30000000 		.4byte	0x30
+ 1296 0797 10       		.uleb128 0x10
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 24
+
+
+ 1297 0798 10010000 		.4byte	0x110
+ 1298 079c 00       		.byte	0
+ 1299 079d 09       		.uleb128 0x9
+ 1300 079e 04       		.byte	0x4
+ 1301 079f 7E070000 		.4byte	0x77e
+ 1302 07a3 0F       		.uleb128 0xf
+ 1303 07a4 01       		.byte	0x1
+ 1304 07a5 30000000 		.4byte	0x30
+ 1305 07a9 C2070000 		.4byte	0x7c2
+ 1306 07ad 10       		.uleb128 0x10
+ 1307 07ae AE020000 		.4byte	0x2ae
+ 1308 07b2 10       		.uleb128 0x10
+ 1309 07b3 B6050000 		.4byte	0x5b6
+ 1310 07b7 10       		.uleb128 0x10
+ 1311 07b8 30000000 		.4byte	0x30
+ 1312 07bc 10       		.uleb128 0x10
+ 1313 07bd 10010000 		.4byte	0x110
+ 1314 07c1 00       		.byte	0
+ 1315 07c2 09       		.uleb128 0x9
+ 1316 07c3 04       		.byte	0x4
+ 1317 07c4 A3070000 		.4byte	0x7a3
+ 1318 07c8 08       		.uleb128 0x8
+ 1319 07c9 04       		.byte	0x4
+ 1320 07ca 0D       		.byte	0xd
+ 1321 07cb 96       		.byte	0x96
+ 1322 07cc ED070000 		.4byte	0x7ed
+ 1323 07d0 07       		.uleb128 0x7
+ 1324 07d1 73657400 		.ascii	"set\000"
+ 1325 07d5 0D       		.byte	0xd
+ 1326 07d6 97       		.byte	0x97
+ 1327 07d7 62000000 		.4byte	0x62
+ 1328 07db 02       		.byte	0x2
+ 1329 07dc 23       		.byte	0x23
+ 1330 07dd 00       		.uleb128 0
+ 1331 07de 06       		.uleb128 0x6
+ 1332 07df A5010000 		.4byte	.LASF96
+ 1333 07e3 0D       		.byte	0xd
+ 1334 07e4 98       		.byte	0x98
+ 1335 07e5 62000000 		.4byte	0x62
+ 1336 07e9 02       		.byte	0x2
+ 1337 07ea 23       		.byte	0x23
+ 1338 07eb 02       		.uleb128 0x2
+ 1339 07ec 00       		.byte	0
+ 1340 07ed 0C       		.uleb128 0xc
+ 1341 07ee 04       		.byte	0x4
+ 1342 07ef 0D       		.byte	0xd
+ 1343 07f0 94       		.byte	0x94
+ 1344 07f1 08080000 		.4byte	0x808
+ 1345 07f5 16       		.uleb128 0x16
+ 1346 07f6 5700     		.ascii	"W\000"
+ 1347 07f8 0D       		.byte	0xd
+ 1348 07f9 95       		.byte	0x95
+ 1349 07fa 86000000 		.4byte	0x86
+ 1350 07fe 16       		.uleb128 0x16
+ 1351 07ff 4800     		.ascii	"H\000"
+ 1352 0801 0D       		.byte	0xd
+ 1353 0802 99       		.byte	0x99
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 25
+
+
+ 1354 0803 C8070000 		.4byte	0x7c8
+ 1355 0807 00       		.byte	0
+ 1356 0808 08       		.uleb128 0x8
+ 1357 0809 28       		.byte	0x28
+ 1358 080a 0D       		.byte	0xd
+ 1359 080b 8C       		.byte	0x8c
+ 1360 080c 9D080000 		.4byte	0x89d
+ 1361 0810 06       		.uleb128 0x6
+ 1362 0811 8D010000 		.4byte	.LASF97
+ 1363 0815 0D       		.byte	0xd
+ 1364 0816 8E       		.byte	0x8e
+ 1365 0817 60030000 		.4byte	0x360
+ 1366 081b 02       		.byte	0x2
+ 1367 081c 23       		.byte	0x23
+ 1368 081d 00       		.uleb128 0
+ 1369 081e 06       		.uleb128 0x6
+ 1370 081f ED030000 		.4byte	.LASF98
+ 1371 0823 0D       		.byte	0xd
+ 1372 0824 8F       		.byte	0x8f
+ 1373 0825 60030000 		.4byte	0x360
+ 1374 0829 02       		.byte	0x2
+ 1375 082a 23       		.byte	0x23
+ 1376 082b 04       		.uleb128 0x4
+ 1377 082c 06       		.uleb128 0x6
+ 1378 082d 3B030000 		.4byte	.LASF99
+ 1379 0831 0D       		.byte	0xd
+ 1380 0832 90       		.byte	0x90
+ 1381 0833 60030000 		.4byte	0x360
+ 1382 0837 02       		.byte	0x2
+ 1383 0838 23       		.byte	0x23
+ 1384 0839 08       		.uleb128 0x8
+ 1385 083a 06       		.uleb128 0x6
+ 1386 083b 11020000 		.4byte	.LASF100
+ 1387 083f 0D       		.byte	0xd
+ 1388 0840 91       		.byte	0x91
+ 1389 0841 60030000 		.4byte	0x360
+ 1390 0845 02       		.byte	0x2
+ 1391 0846 23       		.byte	0x23
+ 1392 0847 0C       		.uleb128 0xc
+ 1393 0848 07       		.uleb128 0x7
+ 1394 0849 49445200 		.ascii	"IDR\000"
+ 1395 084d 0D       		.byte	0xd
+ 1396 084e 92       		.byte	0x92
+ 1397 084f 60030000 		.4byte	0x360
+ 1398 0853 02       		.byte	0x2
+ 1399 0854 23       		.byte	0x23
+ 1400 0855 10       		.uleb128 0x10
+ 1401 0856 07       		.uleb128 0x7
+ 1402 0857 4F445200 		.ascii	"ODR\000"
+ 1403 085b 0D       		.byte	0xd
+ 1404 085c 93       		.byte	0x93
+ 1405 085d 60030000 		.4byte	0x360
+ 1406 0861 02       		.byte	0x2
+ 1407 0862 23       		.byte	0x23
+ 1408 0863 14       		.uleb128 0x14
+ 1409 0864 06       		.uleb128 0x6
+ 1410 0865 53000000 		.4byte	.LASF101
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 26
+
+
+ 1411 0869 0D       		.byte	0xd
+ 1412 086a 9A       		.byte	0x9a
+ 1413 086b 9D080000 		.4byte	0x89d
+ 1414 086f 02       		.byte	0x2
+ 1415 0870 23       		.byte	0x23
+ 1416 0871 18       		.uleb128 0x18
+ 1417 0872 06       		.uleb128 0x6
+ 1418 0873 5B050000 		.4byte	.LASF102
+ 1419 0877 0D       		.byte	0xd
+ 1420 0878 9B       		.byte	0x9b
+ 1421 0879 60030000 		.4byte	0x360
+ 1422 087d 02       		.byte	0x2
+ 1423 087e 23       		.byte	0x23
+ 1424 087f 1C       		.uleb128 0x1c
+ 1425 0880 06       		.uleb128 0x6
+ 1426 0881 98010000 		.4byte	.LASF103
+ 1427 0885 0D       		.byte	0xd
+ 1428 0886 9C       		.byte	0x9c
+ 1429 0887 60030000 		.4byte	0x360
+ 1430 088b 02       		.byte	0x2
+ 1431 088c 23       		.byte	0x23
+ 1432 088d 20       		.uleb128 0x20
+ 1433 088e 06       		.uleb128 0x6
+ 1434 088f 93010000 		.4byte	.LASF104
+ 1435 0893 0D       		.byte	0xd
+ 1436 0894 9D       		.byte	0x9d
+ 1437 0895 60030000 		.4byte	0x360
+ 1438 0899 02       		.byte	0x2
+ 1439 089a 23       		.byte	0x23
+ 1440 089b 24       		.uleb128 0x24
+ 1441 089c 00       		.byte	0
+ 1442 089d 0B       		.uleb128 0xb
+ 1443 089e ED070000 		.4byte	0x7ed
+ 1444 08a2 03       		.uleb128 0x3
+ 1445 08a3 36040000 		.4byte	.LASF105
+ 1446 08a7 0D       		.byte	0xd
+ 1447 08a8 9E       		.byte	0x9e
+ 1448 08a9 08080000 		.4byte	0x808
+ 1449 08ad 03       		.uleb128 0x3
+ 1450 08ae F4020000 		.4byte	.LASF106
+ 1451 08b2 0D       		.byte	0xd
+ 1452 08b3 E8       		.byte	0xe8
+ 1453 08b4 86000000 		.4byte	0x86
+ 1454 08b8 03       		.uleb128 0x3
+ 1455 08b9 FE040000 		.4byte	.LASF107
+ 1456 08bd 0D       		.byte	0xd
+ 1457 08be ED       		.byte	0xed
+ 1458 08bf 86000000 		.4byte	0x86
+ 1459 08c3 03       		.uleb128 0x3
+ 1460 08c4 10040000 		.4byte	.LASF108
+ 1461 08c8 0D       		.byte	0xd
+ 1462 08c9 F5       		.byte	0xf5
+ 1463 08ca CE080000 		.4byte	0x8ce
+ 1464 08ce 09       		.uleb128 0x9
+ 1465 08cf 04       		.byte	0x4
+ 1466 08d0 A2080000 		.4byte	0x8a2
+ 1467 08d4 17       		.uleb128 0x17
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 27
+
+
+ 1468 08d5 01       		.byte	0x1
+ 1469 08d6 0E       		.byte	0xe
+ 1470 08d7 64       		.byte	0x64
+ 1471 08d8 EF080000 		.4byte	0x8ef
+ 1472 08dc 18       		.uleb128 0x18
+ 1473 08dd 2C040000 		.4byte	.LASF109
+ 1474 08e1 00       		.sleb128 0
+ 1475 08e2 18       		.uleb128 0x18
+ 1476 08e3 DA010000 		.4byte	.LASF110
+ 1477 08e7 01       		.sleb128 1
+ 1478 08e8 18       		.uleb128 0x18
+ 1479 08e9 67030000 		.4byte	.LASF111
+ 1480 08ed 02       		.sleb128 2
+ 1481 08ee 00       		.byte	0
+ 1482 08ef 03       		.uleb128 0x3
+ 1483 08f0 4E010000 		.4byte	.LASF112
+ 1484 08f4 0E       		.byte	0xe
+ 1485 08f5 68       		.byte	0x68
+ 1486 08f6 D4080000 		.4byte	0x8d4
+ 1487 08fa 03       		.uleb128 0x3
+ 1488 08fb 38000000 		.4byte	.LASF113
+ 1489 08ff 0E       		.byte	0xe
+ 1490 0900 6D       		.byte	0x6d
+ 1491 0901 05090000 		.4byte	0x905
+ 1492 0905 05       		.uleb128 0x5
+ 1493 0906 38000000 		.4byte	.LASF113
+ 1494 090a 7C       		.byte	0x7c
+ 1495 090b 0E       		.byte	0xe
+ 1496 090c 87       		.byte	0x87
+ 1497 090d 8E090000 		.4byte	0x98e
+ 1498 0911 07       		.uleb128 0x7
+ 1499 0912 766D7400 		.ascii	"vmt\000"
+ 1500 0916 0E       		.byte	0xe
+ 1501 0917 89       		.byte	0x89
+ 1502 0918 570A0000 		.4byte	0xa57
+ 1503 091c 02       		.byte	0x2
+ 1504 091d 23       		.byte	0x23
+ 1505 091e 00       		.uleb128 0
+ 1506 091f 06       		.uleb128 0x6
+ 1507 0920 58010000 		.4byte	.LASF114
+ 1508 0924 0E       		.byte	0xe
+ 1509 0925 8A       		.byte	0x8a
+ 1510 0926 92040000 		.4byte	0x492
+ 1511 092a 02       		.byte	0x2
+ 1512 092b 23       		.byte	0x23
+ 1513 092c 04       		.uleb128 0x4
+ 1514 092d 06       		.uleb128 0x6
+ 1515 092e E8040000 		.4byte	.LASF115
+ 1516 0932 0E       		.byte	0xe
+ 1517 0933 8A       		.byte	0x8a
+ 1518 0934 EF080000 		.4byte	0x8ef
+ 1519 0938 02       		.byte	0x2
+ 1520 0939 23       		.byte	0x23
+ 1521 093a 08       		.uleb128 0x8
+ 1522 093b 06       		.uleb128 0x6
+ 1523 093c 1E010000 		.4byte	.LASF116
+ 1524 0940 0E       		.byte	0xe
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 28
+
+
+ 1525 0941 8A       		.byte	0x8a
+ 1526 0942 BC050000 		.4byte	0x5bc
+ 1527 0946 02       		.byte	0x2
+ 1528 0947 23       		.byte	0x23
+ 1529 0948 0C       		.uleb128 0xc
+ 1530 0949 06       		.uleb128 0x6
+ 1531 094a 50030000 		.4byte	.LASF117
+ 1532 094e 0E       		.byte	0xe
+ 1533 094f 8A       		.byte	0x8a
+ 1534 0950 C7050000 		.4byte	0x5c7
+ 1535 0954 02       		.byte	0x2
+ 1536 0955 23       		.byte	0x23
+ 1537 0956 30       		.uleb128 0x30
+ 1538 0957 07       		.uleb128 0x7
+ 1539 0958 696200   		.ascii	"ib\000"
+ 1540 095b 0E       		.byte	0xe
+ 1541 095c 8A       		.byte	0x8a
+ 1542 095d 620A0000 		.4byte	0xa62
+ 1543 0961 02       		.byte	0x2
+ 1544 0962 23       		.byte	0x23
+ 1545 0963 54       		.uleb128 0x54
+ 1546 0964 07       		.uleb128 0x7
+ 1547 0965 6F6200   		.ascii	"ob\000"
+ 1548 0968 0E       		.byte	0xe
+ 1549 0969 8A       		.byte	0x8a
+ 1550 096a 620A0000 		.4byte	0xa62
+ 1551 096e 02       		.byte	0x2
+ 1552 096f 23       		.byte	0x23
+ 1553 0970 64       		.uleb128 0x64
+ 1554 0971 06       		.uleb128 0x6
+ 1555 0972 A8020000 		.4byte	.LASF118
+ 1556 0976 0E       		.byte	0xe
+ 1557 0977 8A       		.byte	0x8a
+ 1558 0978 720A0000 		.4byte	0xa72
+ 1559 097c 02       		.byte	0x2
+ 1560 097d 23       		.byte	0x23
+ 1561 097e 74       		.uleb128 0x74
+ 1562 097f 06       		.uleb128 0x6
+ 1563 0980 0B020000 		.4byte	.LASF119
+ 1564 0984 0E       		.byte	0xe
+ 1565 0985 8A       		.byte	0x8a
+ 1566 0986 86000000 		.4byte	0x86
+ 1567 098a 02       		.byte	0x2
+ 1568 098b 23       		.byte	0x23
+ 1569 098c 78       		.uleb128 0x78
+ 1570 098d 00       		.byte	0
+ 1571 098e 08       		.uleb128 0x8
+ 1572 098f 10       		.byte	0x10
+ 1573 0990 0F       		.byte	0xf
+ 1574 0991 D7       		.byte	0xd7
+ 1575 0992 CF090000 		.4byte	0x9cf
+ 1576 0996 06       		.uleb128 0x6
+ 1577 0997 0C010000 		.4byte	.LASF120
+ 1578 099b 0F       		.byte	0xf
+ 1579 099c DB       		.byte	0xdb
+ 1580 099d 86000000 		.4byte	0x86
+ 1581 09a1 02       		.byte	0x2
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 29
+
+
+ 1582 09a2 23       		.byte	0x23
+ 1583 09a3 00       		.uleb128 0
+ 1584 09a4 07       		.uleb128 0x7
+ 1585 09a5 63723100 		.ascii	"cr1\000"
+ 1586 09a9 0F       		.byte	0xf
+ 1587 09aa E0       		.byte	0xe0
+ 1588 09ab 86000000 		.4byte	0x86
+ 1589 09af 02       		.byte	0x2
+ 1590 09b0 23       		.byte	0x23
+ 1591 09b1 04       		.uleb128 0x4
+ 1592 09b2 07       		.uleb128 0x7
+ 1593 09b3 63723200 		.ascii	"cr2\000"
+ 1594 09b7 0F       		.byte	0xf
+ 1595 09b8 E4       		.byte	0xe4
+ 1596 09b9 86000000 		.4byte	0x86
+ 1597 09bd 02       		.byte	0x2
+ 1598 09be 23       		.byte	0x23
+ 1599 09bf 08       		.uleb128 0x8
+ 1600 09c0 07       		.uleb128 0x7
+ 1601 09c1 63723300 		.ascii	"cr3\000"
+ 1602 09c5 0F       		.byte	0xf
+ 1603 09c6 E8       		.byte	0xe8
+ 1604 09c7 86000000 		.4byte	0x86
+ 1605 09cb 02       		.byte	0x2
+ 1606 09cc 23       		.byte	0x23
+ 1607 09cd 0C       		.uleb128 0xc
+ 1608 09ce 00       		.byte	0
+ 1609 09cf 03       		.uleb128 0x3
+ 1610 09d0 41010000 		.4byte	.LASF121
+ 1611 09d4 0F       		.byte	0xf
+ 1612 09d5 E9       		.byte	0xe9
+ 1613 09d6 8E090000 		.4byte	0x98e
+ 1614 09da 05       		.uleb128 0x5
+ 1615 09db 70030000 		.4byte	.LASF122
+ 1616 09df 20       		.byte	0x20
+ 1617 09e0 0E       		.byte	0xe
+ 1618 09e1 7C       		.byte	0x7c
+ 1619 09e2 570A0000 		.4byte	0xa57
+ 1620 09e6 06       		.uleb128 0x6
+ 1621 09e7 BC020000 		.4byte	.LASF123
+ 1622 09eb 0E       		.byte	0xe
+ 1623 09ec 7D       		.byte	0x7d
+ 1624 09ed F7050000 		.4byte	0x5f7
+ 1625 09f1 02       		.byte	0x2
+ 1626 09f2 23       		.byte	0x23
+ 1627 09f3 00       		.uleb128 0
+ 1628 09f4 06       		.uleb128 0x6
+ 1629 09f5 1B040000 		.4byte	.LASF124
+ 1630 09f9 0E       		.byte	0xe
+ 1631 09fa 7D       		.byte	0x7d
+ 1632 09fb 17060000 		.4byte	0x617
+ 1633 09ff 02       		.byte	0x2
+ 1634 0a00 23       		.byte	0x23
+ 1635 0a01 04       		.uleb128 0x4
+ 1636 0a02 07       		.uleb128 0x7
+ 1637 0a03 70757400 		.ascii	"put\000"
+ 1638 0a07 0E       		.byte	0xe
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 30
+
+
+ 1639 0a08 7D       		.byte	0x7d
+ 1640 0a09 32060000 		.4byte	0x632
+ 1641 0a0d 02       		.byte	0x2
+ 1642 0a0e 23       		.byte	0x23
+ 1643 0a0f 08       		.uleb128 0x8
+ 1644 0a10 07       		.uleb128 0x7
+ 1645 0a11 67657400 		.ascii	"get\000"
+ 1646 0a15 0E       		.byte	0xe
+ 1647 0a16 7D       		.byte	0x7d
+ 1648 0a17 F5040000 		.4byte	0x4f5
+ 1649 0a1b 02       		.byte	0x2
+ 1650 0a1c 23       		.byte	0x23
+ 1651 0a1d 0C       		.uleb128 0xc
+ 1652 0a1e 06       		.uleb128 0x6
+ 1653 0a1f B5010000 		.4byte	.LASF125
+ 1654 0a23 0E       		.byte	0xe
+ 1655 0a24 7D       		.byte	0x7d
+ 1656 0a25 5D070000 		.4byte	0x75d
+ 1657 0a29 02       		.byte	0x2
+ 1658 0a2a 23       		.byte	0x23
+ 1659 0a2b 10       		.uleb128 0x10
+ 1660 0a2c 06       		.uleb128 0x6
+ 1661 0a2d 4D040000 		.4byte	.LASF126
+ 1662 0a31 0E       		.byte	0xe
+ 1663 0a32 7D       		.byte	0x7d
+ 1664 0a33 78070000 		.4byte	0x778
+ 1665 0a37 02       		.byte	0x2
+ 1666 0a38 23       		.byte	0x23
+ 1667 0a39 14       		.uleb128 0x14
+ 1668 0a3a 06       		.uleb128 0x6
+ 1669 0a3b 12010000 		.4byte	.LASF127
+ 1670 0a3f 0E       		.byte	0xe
+ 1671 0a40 7D       		.byte	0x7d
+ 1672 0a41 9D070000 		.4byte	0x79d
+ 1673 0a45 02       		.byte	0x2
+ 1674 0a46 23       		.byte	0x23
+ 1675 0a47 18       		.uleb128 0x18
+ 1676 0a48 06       		.uleb128 0x6
+ 1677 0a49 1A050000 		.4byte	.LASF128
+ 1678 0a4d 0E       		.byte	0xe
+ 1679 0a4e 7D       		.byte	0x7d
+ 1680 0a4f C2070000 		.4byte	0x7c2
+ 1681 0a53 02       		.byte	0x2
+ 1682 0a54 23       		.byte	0x23
+ 1683 0a55 1C       		.uleb128 0x1c
+ 1684 0a56 00       		.byte	0
+ 1685 0a57 09       		.uleb128 0x9
+ 1686 0a58 04       		.byte	0x4
+ 1687 0a59 5D0A0000 		.4byte	0xa5d
+ 1688 0a5d 0E       		.uleb128 0xe
+ 1689 0a5e DA090000 		.4byte	0x9da
+ 1690 0a62 19       		.uleb128 0x19
+ 1691 0a63 49000000 		.4byte	0x49
+ 1692 0a67 720A0000 		.4byte	0xa72
+ 1693 0a6b 1A       		.uleb128 0x1a
+ 1694 0a6c 65030000 		.4byte	0x365
+ 1695 0a70 0F       		.byte	0xf
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 31
+
+
+ 1696 0a71 00       		.byte	0
+ 1697 0a72 09       		.uleb128 0x9
+ 1698 0a73 04       		.byte	0x4
+ 1699 0a74 37070000 		.4byte	0x737
+ 1700 0a78 19       		.uleb128 0x19
+ 1701 0a79 B0020000 		.4byte	0x2b0
+ 1702 0a7d 880A0000 		.4byte	0xa88
+ 1703 0a81 1A       		.uleb128 0x1a
+ 1704 0a82 65030000 		.4byte	0x365
+ 1705 0a86 25       		.byte	0x25
+ 1706 0a87 00       		.byte	0
+ 1707 0a88 1B       		.uleb128 0x1b
+ 1708 0a89 F6040000 		.4byte	.LASF129
+ 1709 0a8d 01       		.byte	0x1
+ 1710 0a8e 29       		.byte	0x29
+ 1711 0a8f 01       		.byte	0x1
+ 1712 0a90 EF000000 		.4byte	0xef
+ 1713 0a94 00000000 		.4byte	.LFB41
+ 1714 0a98 30000000 		.4byte	.LFE41
+ 1715 0a9c 00000000 		.4byte	.LLST0
+ 1716 0aa0 01       		.byte	0x1
+ 1717 0aa1 D90A0000 		.4byte	0xad9
+ 1718 0aa5 1C       		.uleb128 0x1c
+ 1719 0aa6 61726700 		.ascii	"arg\000"
+ 1720 0aaa 01       		.byte	0x1
+ 1721 0aab 29       		.byte	0x29
+ 1722 0aac AE020000 		.4byte	0x2ae
+ 1723 0ab0 20000000 		.4byte	.LLST1
+ 1724 0ab4 1D       		.uleb128 0x1d
+ 1725 0ab5 1A000000 		.4byte	.LVL2
+ 1726 0ab9 860C0000 		.4byte	0xc86
+ 1727 0abd C80A0000 		.4byte	0xac8
+ 1728 0ac1 1E       		.uleb128 0x1e
+ 1729 0ac2 01       		.byte	0x1
+ 1730 0ac3 50       		.byte	0x50
+ 1731 0ac4 02       		.byte	0x2
+ 1732 0ac5 08       		.byte	0x8
+ 1733 0ac6 FA       		.byte	0xfa
+ 1734 0ac7 00       		.byte	0
+ 1735 0ac8 1F       		.uleb128 0x1f
+ 1736 0ac9 22000000 		.4byte	.LVL3
+ 1737 0acd 860C0000 		.4byte	0xc86
+ 1738 0ad1 1E       		.uleb128 0x1e
+ 1739 0ad2 01       		.byte	0x1
+ 1740 0ad3 50       		.byte	0x50
+ 1741 0ad4 02       		.byte	0x2
+ 1742 0ad5 08       		.byte	0x8
+ 1743 0ad6 FA       		.byte	0xfa
+ 1744 0ad7 00       		.byte	0
+ 1745 0ad8 00       		.byte	0
+ 1746 0ad9 1B       		.uleb128 0x1b
+ 1747 0ada EE040000 		.4byte	.LASF130
+ 1748 0ade 01       		.byte	0x1
+ 1749 0adf 19       		.byte	0x19
+ 1750 0ae0 01       		.byte	0x1
+ 1751 0ae1 EF000000 		.4byte	0xef
+ 1752 0ae5 00000000 		.4byte	.LFB40
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 32
+
+
+ 1753 0ae9 34000000 		.4byte	.LFE40
+ 1754 0aed 41000000 		.4byte	.LLST2
+ 1755 0af1 01       		.byte	0x1
+ 1756 0af2 2C0B0000 		.4byte	0xb2c
+ 1757 0af6 1C       		.uleb128 0x1c
+ 1758 0af7 61726700 		.ascii	"arg\000"
+ 1759 0afb 01       		.byte	0x1
+ 1760 0afc 19       		.byte	0x19
+ 1761 0afd AE020000 		.4byte	0x2ae
+ 1762 0b01 61000000 		.4byte	.LLST3
+ 1763 0b05 1D       		.uleb128 0x1d
+ 1764 0b06 1C000000 		.4byte	.LVL6
+ 1765 0b0a 860C0000 		.4byte	0xc86
+ 1766 0b0e 1A0B0000 		.4byte	0xb1a
+ 1767 0b12 1E       		.uleb128 0x1e
+ 1768 0b13 01       		.byte	0x1
+ 1769 0b14 50       		.byte	0x50
+ 1770 0b15 03       		.byte	0x3
+ 1771 0b16 0A       		.byte	0xa
+ 1772 0b17 F401     		.2byte	0x1f4
+ 1773 0b19 00       		.byte	0
+ 1774 0b1a 1F       		.uleb128 0x1f
+ 1775 0b1b 26000000 		.4byte	.LVL7
+ 1776 0b1f 860C0000 		.4byte	0xc86
+ 1777 0b23 1E       		.uleb128 0x1e
+ 1778 0b24 01       		.byte	0x1
+ 1779 0b25 50       		.byte	0x50
+ 1780 0b26 03       		.byte	0x3
+ 1781 0b27 0A       		.byte	0xa
+ 1782 0b28 F401     		.2byte	0x1f4
+ 1783 0b2a 00       		.byte	0
+ 1784 0b2b 00       		.byte	0
+ 1785 0b2c 20       		.uleb128 0x20
+ 1786 0b2d 01       		.byte	0x1
+ 1787 0b2e 44050000 		.4byte	.LASF143
+ 1788 0b32 01       		.byte	0x1
+ 1789 0b33 38       		.byte	0x38
+ 1790 0b34 01       		.byte	0x1
+ 1791 0b35 29000000 		.4byte	0x29
+ 1792 0b39 00000000 		.4byte	.LFB42
+ 1793 0b3d 88000000 		.4byte	.LFE42
+ 1794 0b41 82000000 		.4byte	.LLST4
+ 1795 0b45 01       		.byte	0x1
+ 1796 0b46 490C0000 		.4byte	0xc49
+ 1797 0b4a 21       		.uleb128 0x21
+ 1798 0b4b 08000000 		.4byte	.LVL8
+ 1799 0b4f 9B0C0000 		.4byte	0xc9b
+ 1800 0b53 21       		.uleb128 0x21
+ 1801 0b54 0C000000 		.4byte	.LVL9
+ 1802 0b58 A50C0000 		.4byte	0xca5
+ 1803 0b5c 1D       		.uleb128 0x1d
+ 1804 0b5d 16000000 		.4byte	.LVL10
+ 1805 0b61 AF0C0000 		.4byte	0xcaf
+ 1806 0b65 750B0000 		.4byte	0xb75
+ 1807 0b69 1E       		.uleb128 0x1e
+ 1808 0b6a 01       		.byte	0x1
+ 1809 0b6b 51       		.byte	0x51
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 33
+
+
+ 1810 0b6c 01       		.byte	0x1
+ 1811 0b6d 30       		.byte	0x30
+ 1812 0b6e 1E       		.uleb128 0x1e
+ 1813 0b6f 01       		.byte	0x1
+ 1814 0b70 50       		.byte	0x50
+ 1815 0b71 02       		.byte	0x2
+ 1816 0b72 76       		.byte	0x76
+ 1817 0b73 00       		.sleb128 0
+ 1818 0b74 00       		.byte	0
+ 1819 0b75 1D       		.uleb128 0x1d
+ 1820 0b76 24000000 		.4byte	.LVL11
+ 1821 0b7a DA0C0000 		.4byte	0xcda
+ 1822 0b7e 970B0000 		.4byte	0xb97
+ 1823 0b82 1E       		.uleb128 0x1e
+ 1824 0b83 01       		.byte	0x1
+ 1825 0b84 52       		.byte	0x52
+ 1826 0b85 02       		.byte	0x2
+ 1827 0b86 08       		.byte	0x8
+ 1828 0b87 82       		.byte	0x82
+ 1829 0b88 1E       		.uleb128 0x1e
+ 1830 0b89 01       		.byte	0x1
+ 1831 0b8a 51       		.byte	0x51
+ 1832 0b8b 03       		.byte	0x3
+ 1833 0b8c 0A       		.byte	0xa
+ 1834 0b8d 0002     		.2byte	0x200
+ 1835 0b8f 1E       		.uleb128 0x1e
+ 1836 0b90 01       		.byte	0x1
+ 1837 0b91 50       		.byte	0x50
+ 1838 0b92 03       		.byte	0x3
+ 1839 0b93 42       		.byte	0x42
+ 1840 0b94 4A       		.byte	0x4a
+ 1841 0b95 24       		.byte	0x24
+ 1842 0b96 00       		.byte	0
+ 1843 0b97 1D       		.uleb128 0x1d
+ 1844 0b98 36000000 		.4byte	.LVL12
+ 1845 0b9c DA0C0000 		.4byte	0xcda
+ 1846 0ba0 B90B0000 		.4byte	0xbb9
+ 1847 0ba4 1E       		.uleb128 0x1e
+ 1848 0ba5 01       		.byte	0x1
+ 1849 0ba6 52       		.byte	0x52
+ 1850 0ba7 02       		.byte	0x2
+ 1851 0ba8 08       		.byte	0x8
+ 1852 0ba9 82       		.byte	0x82
+ 1853 0baa 1E       		.uleb128 0x1e
+ 1854 0bab 01       		.byte	0x1
+ 1855 0bac 51       		.byte	0x51
+ 1856 0bad 03       		.byte	0x3
+ 1857 0bae 0A       		.byte	0xa
+ 1858 0baf 0004     		.2byte	0x400
+ 1859 0bb1 1E       		.uleb128 0x1e
+ 1860 0bb2 01       		.byte	0x1
+ 1861 0bb3 50       		.byte	0x50
+ 1862 0bb4 03       		.byte	0x3
+ 1863 0bb5 42       		.byte	0x42
+ 1864 0bb6 4A       		.byte	0x4a
+ 1865 0bb7 24       		.byte	0x24
+ 1866 0bb8 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 34
+
+
+ 1867 0bb9 1D       		.uleb128 0x1d
+ 1868 0bba 44000000 		.4byte	.LVL13
+ 1869 0bbe F90C0000 		.4byte	0xcf9
+ 1870 0bc2 EE0B0000 		.4byte	0xbee
+ 1871 0bc6 1E       		.uleb128 0x1e
+ 1872 0bc7 01       		.byte	0x1
+ 1873 0bc8 53       		.byte	0x53
+ 1874 0bc9 05       		.byte	0x5
+ 1875 0bca 03       		.byte	0x3
+ 1876 0bcb 00000000 		.4byte	Thread1
+ 1877 0bcf 1E       		.uleb128 0x1e
+ 1878 0bd0 01       		.byte	0x1
+ 1879 0bd1 52       		.byte	0x52
+ 1880 0bd2 02       		.byte	0x2
+ 1881 0bd3 08       		.byte	0x8
+ 1882 0bd4 40       		.byte	0x40
+ 1883 0bd5 1E       		.uleb128 0x1e
+ 1884 0bd6 01       		.byte	0x1
+ 1885 0bd7 51       		.byte	0x51
+ 1886 0bd8 04       		.byte	0x4
+ 1887 0bd9 75       		.byte	0x75
+ 1888 0bda 00       		.sleb128 0
+ 1889 0bdb 31       		.byte	0x31
+ 1890 0bdc 24       		.byte	0x24
+ 1891 0bdd 1E       		.uleb128 0x1e
+ 1892 0bde 01       		.byte	0x1
+ 1893 0bdf 50       		.byte	0x50
+ 1894 0be0 05       		.byte	0x5
+ 1895 0be1 03       		.byte	0x3
+ 1896 0be2 00000000 		.4byte	.LANCHOR0
+ 1897 0be6 1E       		.uleb128 0x1e
+ 1898 0be7 02       		.byte	0x2
+ 1899 0be8 7D       		.byte	0x7d
+ 1900 0be9 00       		.sleb128 0
+ 1901 0bea 02       		.byte	0x2
+ 1902 0beb 74       		.byte	0x74
+ 1903 0bec 00       		.sleb128 0
+ 1904 0bed 00       		.byte	0
+ 1905 0bee 1D       		.uleb128 0x1d
+ 1906 0bef 54000000 		.4byte	.LVL14
+ 1907 0bf3 F90C0000 		.4byte	0xcf9
+ 1908 0bf7 230C0000 		.4byte	0xc23
+ 1909 0bfb 1E       		.uleb128 0x1e
+ 1910 0bfc 01       		.byte	0x1
+ 1911 0bfd 53       		.byte	0x53
+ 1912 0bfe 05       		.byte	0x5
+ 1913 0bff 03       		.byte	0x3
+ 1914 0c00 00000000 		.4byte	Thread2
+ 1915 0c04 1E       		.uleb128 0x1e
+ 1916 0c05 01       		.byte	0x1
+ 1917 0c06 52       		.byte	0x52
+ 1918 0c07 02       		.byte	0x2
+ 1919 0c08 08       		.byte	0x8
+ 1920 0c09 40       		.byte	0x40
+ 1921 0c0a 1E       		.uleb128 0x1e
+ 1922 0c0b 01       		.byte	0x1
+ 1923 0c0c 51       		.byte	0x51
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 35
+
+
+ 1924 0c0d 04       		.byte	0x4
+ 1925 0c0e 75       		.byte	0x75
+ 1926 0c0f 00       		.sleb128 0
+ 1927 0c10 31       		.byte	0x31
+ 1928 0c11 24       		.byte	0x24
+ 1929 0c12 1E       		.uleb128 0x1e
+ 1930 0c13 01       		.byte	0x1
+ 1931 0c14 50       		.byte	0x50
+ 1932 0c15 05       		.byte	0x5
+ 1933 0c16 03       		.byte	0x3
+ 1934 0c17 00000000 		.4byte	.LANCHOR1
+ 1935 0c1b 1E       		.uleb128 0x1e
+ 1936 0c1c 02       		.byte	0x2
+ 1937 0c1d 7D       		.byte	0x7d
+ 1938 0c1e 00       		.sleb128 0
+ 1939 0c1f 02       		.byte	0x2
+ 1940 0c20 74       		.byte	0x74
+ 1941 0c21 00       		.sleb128 0
+ 1942 0c22 00       		.byte	0
+ 1943 0c23 1D       		.uleb128 0x1d
+ 1944 0c24 64000000 		.4byte	.LVL15
+ 1945 0c28 860C0000 		.4byte	0xc86
+ 1946 0c2c 380C0000 		.4byte	0xc38
+ 1947 0c30 1E       		.uleb128 0x1e
+ 1948 0c31 01       		.byte	0x1
+ 1949 0c32 50       		.byte	0x50
+ 1950 0c33 03       		.byte	0x3
+ 1951 0c34 0A       		.byte	0xa
+ 1952 0c35 F401     		.2byte	0x1f4
+ 1953 0c37 00       		.byte	0
+ 1954 0c38 1F       		.uleb128 0x1f
+ 1955 0c39 70000000 		.4byte	.LVL16
+ 1956 0c3d 260D0000 		.4byte	0xd26
+ 1957 0c41 1E       		.uleb128 0x1e
+ 1958 0c42 01       		.byte	0x1
+ 1959 0c43 50       		.byte	0x50
+ 1960 0c44 02       		.byte	0x2
+ 1961 0c45 76       		.byte	0x76
+ 1962 0c46 00       		.sleb128 0
+ 1963 0c47 00       		.byte	0
+ 1964 0c48 00       		.byte	0
+ 1965 0c49 22       		.uleb128 0x22
+ 1966 0c4a 98040000 		.4byte	.LASF131
+ 1967 0c4e 01       		.byte	0x1
+ 1968 0c4f 18       		.byte	0x18
+ 1969 0c50 780A0000 		.4byte	0xa78
+ 1970 0c54 05       		.byte	0x5
+ 1971 0c55 03       		.byte	0x3
+ 1972 0c56 00000000 		.4byte	waThread1
+ 1973 0c5a 22       		.uleb128 0x22
+ 1974 0c5b A2040000 		.4byte	.LASF132
+ 1975 0c5f 01       		.byte	0x1
+ 1976 0c60 28       		.byte	0x28
+ 1977 0c61 780A0000 		.4byte	0xa78
+ 1978 0c65 05       		.byte	0x5
+ 1979 0c66 03       		.byte	0x3
+ 1980 0c67 00000000 		.4byte	waThread2
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 36
+
+
+ 1981 0c6b 23       		.uleb128 0x23
+ 1982 0c6c 0A040000 		.4byte	.LASF133
+ 1983 0c70 08       		.byte	0x8
+ 1984 0c71 6F       		.byte	0x6f
+ 1985 0c72 CE030000 		.4byte	0x3ce
+ 1986 0c76 01       		.byte	0x1
+ 1987 0c77 01       		.byte	0x1
+ 1988 0c78 24       		.uleb128 0x24
+ 1989 0c79 53443100 		.ascii	"SD1\000"
+ 1990 0c7d 0F       		.byte	0xf
+ 1991 0c7e 1101     		.2byte	0x111
+ 1992 0c80 FA080000 		.4byte	0x8fa
+ 1993 0c84 01       		.byte	0x1
+ 1994 0c85 01       		.byte	0x1
+ 1995 0c86 25       		.uleb128 0x25
+ 1996 0c87 01       		.byte	0x1
+ 1997 0c88 CB040000 		.4byte	.LASF136
+ 1998 0c8c 06       		.byte	0x6
+ 1999 0c8d 7501     		.2byte	0x175
+ 2000 0c8f 01       		.byte	0x1
+ 2001 0c90 01       		.byte	0x1
+ 2002 0c91 9B0C0000 		.4byte	0xc9b
+ 2003 0c95 10       		.uleb128 0x10
+ 2004 0c96 10010000 		.4byte	0x110
+ 2005 0c9a 00       		.byte	0
+ 2006 0c9b 26       		.uleb128 0x26
+ 2007 0c9c 01       		.byte	0x1
+ 2008 0c9d 65020000 		.4byte	.LASF134
+ 2009 0ca1 10       		.byte	0x10
+ 2010 0ca2 D0       		.byte	0xd0
+ 2011 0ca3 01       		.byte	0x1
+ 2012 0ca4 01       		.byte	0x1
+ 2013 0ca5 26       		.uleb128 0x26
+ 2014 0ca6 01       		.byte	0x1
+ 2015 0ca7 3B020000 		.4byte	.LASF135
+ 2016 0cab 11       		.byte	0x11
+ 2017 0cac F6       		.byte	0xf6
+ 2018 0cad 01       		.byte	0x1
+ 2019 0cae 01       		.byte	0x1
+ 2020 0caf 25       		.uleb128 0x25
+ 2021 0cb0 01       		.byte	0x1
+ 2022 0cb1 85010000 		.4byte	.LASF137
+ 2023 0cb5 0E       		.byte	0xe
+ 2024 0cb6 3701     		.2byte	0x137
+ 2025 0cb8 01       		.byte	0x1
+ 2026 0cb9 01       		.byte	0x1
+ 2027 0cba C90C0000 		.4byte	0xcc9
+ 2028 0cbe 10       		.uleb128 0x10
+ 2029 0cbf C90C0000 		.4byte	0xcc9
+ 2030 0cc3 10       		.uleb128 0x10
+ 2031 0cc4 CF0C0000 		.4byte	0xccf
+ 2032 0cc8 00       		.byte	0
+ 2033 0cc9 09       		.uleb128 0x9
+ 2034 0cca 04       		.byte	0x4
+ 2035 0ccb FA080000 		.4byte	0x8fa
+ 2036 0ccf 09       		.uleb128 0x9
+ 2037 0cd0 04       		.byte	0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 37
+
+
+ 2038 0cd1 D50C0000 		.4byte	0xcd5
+ 2039 0cd5 0E       		.uleb128 0xe
+ 2040 0cd6 CF090000 		.4byte	0x9cf
+ 2041 0cda 25       		.uleb128 0x25
+ 2042 0cdb 01       		.byte	0x1
+ 2043 0cdc C7000000 		.4byte	.LASF138
+ 2044 0ce0 0D       		.byte	0xd
+ 2045 0ce1 BA01     		.2byte	0x1ba
+ 2046 0ce3 01       		.byte	0x1
+ 2047 0ce4 01       		.byte	0x1
+ 2048 0ce5 F90C0000 		.4byte	0xcf9
+ 2049 0ce9 10       		.uleb128 0x10
+ 2050 0cea C3080000 		.4byte	0x8c3
+ 2051 0cee 10       		.uleb128 0x10
+ 2052 0cef AD080000 		.4byte	0x8ad
+ 2053 0cf3 10       		.uleb128 0x10
+ 2054 0cf4 B8080000 		.4byte	0x8b8
+ 2055 0cf8 00       		.byte	0
+ 2056 0cf9 27       		.uleb128 0x27
+ 2057 0cfa 01       		.byte	0x1
+ 2058 0cfb 13030000 		.4byte	.LASF144
+ 2059 0cff 06       		.byte	0x6
+ 2060 0d00 7001     		.2byte	0x170
+ 2061 0d02 01       		.byte	0x1
+ 2062 0d03 70020000 		.4byte	0x270
+ 2063 0d07 01       		.byte	0x1
+ 2064 0d08 260D0000 		.4byte	0xd26
+ 2065 0d0c 10       		.uleb128 0x10
+ 2066 0d0d AE020000 		.4byte	0x2ae
+ 2067 0d11 10       		.uleb128 0x10
+ 2068 0d12 30000000 		.4byte	0x30
+ 2069 0d16 10       		.uleb128 0x10
+ 2070 0d17 E4000000 		.4byte	0xe4
+ 2071 0d1b 10       		.uleb128 0x10
+ 2072 0d1c EA040000 		.4byte	0x4ea
+ 2073 0d20 10       		.uleb128 0x10
+ 2074 0d21 AE020000 		.4byte	0x2ae
+ 2075 0d25 00       		.byte	0
+ 2076 0d26 28       		.uleb128 0x28
+ 2077 0d27 01       		.byte	0x1
+ 2078 0d28 E1020000 		.4byte	.LASF139
+ 2079 0d2c 12       		.byte	0x12
+ 2080 0d2d 52       		.byte	0x52
+ 2081 0d2e 01       		.byte	0x1
+ 2082 0d2f EF000000 		.4byte	0xef
+ 2083 0d33 01       		.byte	0x1
+ 2084 0d34 10       		.uleb128 0x10
+ 2085 0d35 AE020000 		.4byte	0x2ae
+ 2086 0d39 00       		.byte	0
+ 2087 0d3a 00       		.byte	0
+ 2088              		.section	.debug_abbrev,"",%progbits
+ 2089              	.Ldebug_abbrev0:
+ 2090 0000 01       		.uleb128 0x1
+ 2091 0001 11       		.uleb128 0x11
+ 2092 0002 01       		.byte	0x1
+ 2093 0003 25       		.uleb128 0x25
+ 2094 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 38
+
+
+ 2095 0005 13       		.uleb128 0x13
+ 2096 0006 0B       		.uleb128 0xb
+ 2097 0007 03       		.uleb128 0x3
+ 2098 0008 0E       		.uleb128 0xe
+ 2099 0009 1B       		.uleb128 0x1b
+ 2100 000a 0E       		.uleb128 0xe
+ 2101 000b 55       		.uleb128 0x55
+ 2102 000c 06       		.uleb128 0x6
+ 2103 000d 11       		.uleb128 0x11
+ 2104 000e 01       		.uleb128 0x1
+ 2105 000f 52       		.uleb128 0x52
+ 2106 0010 01       		.uleb128 0x1
+ 2107 0011 10       		.uleb128 0x10
+ 2108 0012 06       		.uleb128 0x6
+ 2109 0013 00       		.byte	0
+ 2110 0014 00       		.byte	0
+ 2111 0015 02       		.uleb128 0x2
+ 2112 0016 24       		.uleb128 0x24
+ 2113 0017 00       		.byte	0
+ 2114 0018 0B       		.uleb128 0xb
+ 2115 0019 0B       		.uleb128 0xb
+ 2116 001a 3E       		.uleb128 0x3e
+ 2117 001b 0B       		.uleb128 0xb
+ 2118 001c 03       		.uleb128 0x3
+ 2119 001d 08       		.uleb128 0x8
+ 2120 001e 00       		.byte	0
+ 2121 001f 00       		.byte	0
+ 2122 0020 03       		.uleb128 0x3
+ 2123 0021 16       		.uleb128 0x16
+ 2124 0022 00       		.byte	0
+ 2125 0023 03       		.uleb128 0x3
+ 2126 0024 0E       		.uleb128 0xe
+ 2127 0025 3A       		.uleb128 0x3a
+ 2128 0026 0B       		.uleb128 0xb
+ 2129 0027 3B       		.uleb128 0x3b
+ 2130 0028 0B       		.uleb128 0xb
+ 2131 0029 49       		.uleb128 0x49
+ 2132 002a 13       		.uleb128 0x13
+ 2133 002b 00       		.byte	0
+ 2134 002c 00       		.byte	0
+ 2135 002d 04       		.uleb128 0x4
+ 2136 002e 24       		.uleb128 0x24
+ 2137 002f 00       		.byte	0
+ 2138 0030 0B       		.uleb128 0xb
+ 2139 0031 0B       		.uleb128 0xb
+ 2140 0032 3E       		.uleb128 0x3e
+ 2141 0033 0B       		.uleb128 0xb
+ 2142 0034 03       		.uleb128 0x3
+ 2143 0035 0E       		.uleb128 0xe
+ 2144 0036 00       		.byte	0
+ 2145 0037 00       		.byte	0
+ 2146 0038 05       		.uleb128 0x5
+ 2147 0039 13       		.uleb128 0x13
+ 2148 003a 01       		.byte	0x1
+ 2149 003b 03       		.uleb128 0x3
+ 2150 003c 0E       		.uleb128 0xe
+ 2151 003d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 39
+
+
+ 2152 003e 0B       		.uleb128 0xb
+ 2153 003f 3A       		.uleb128 0x3a
+ 2154 0040 0B       		.uleb128 0xb
+ 2155 0041 3B       		.uleb128 0x3b
+ 2156 0042 0B       		.uleb128 0xb
+ 2157 0043 01       		.uleb128 0x1
+ 2158 0044 13       		.uleb128 0x13
+ 2159 0045 00       		.byte	0
+ 2160 0046 00       		.byte	0
+ 2161 0047 06       		.uleb128 0x6
+ 2162 0048 0D       		.uleb128 0xd
+ 2163 0049 00       		.byte	0
+ 2164 004a 03       		.uleb128 0x3
+ 2165 004b 0E       		.uleb128 0xe
+ 2166 004c 3A       		.uleb128 0x3a
+ 2167 004d 0B       		.uleb128 0xb
+ 2168 004e 3B       		.uleb128 0x3b
+ 2169 004f 0B       		.uleb128 0xb
+ 2170 0050 49       		.uleb128 0x49
+ 2171 0051 13       		.uleb128 0x13
+ 2172 0052 38       		.uleb128 0x38
+ 2173 0053 0A       		.uleb128 0xa
+ 2174 0054 00       		.byte	0
+ 2175 0055 00       		.byte	0
+ 2176 0056 07       		.uleb128 0x7
+ 2177 0057 0D       		.uleb128 0xd
+ 2178 0058 00       		.byte	0
+ 2179 0059 03       		.uleb128 0x3
+ 2180 005a 08       		.uleb128 0x8
+ 2181 005b 3A       		.uleb128 0x3a
+ 2182 005c 0B       		.uleb128 0xb
+ 2183 005d 3B       		.uleb128 0x3b
+ 2184 005e 0B       		.uleb128 0xb
+ 2185 005f 49       		.uleb128 0x49
+ 2186 0060 13       		.uleb128 0x13
+ 2187 0061 38       		.uleb128 0x38
+ 2188 0062 0A       		.uleb128 0xa
+ 2189 0063 00       		.byte	0
+ 2190 0064 00       		.byte	0
+ 2191 0065 08       		.uleb128 0x8
+ 2192 0066 13       		.uleb128 0x13
+ 2193 0067 01       		.byte	0x1
+ 2194 0068 0B       		.uleb128 0xb
+ 2195 0069 0B       		.uleb128 0xb
+ 2196 006a 3A       		.uleb128 0x3a
+ 2197 006b 0B       		.uleb128 0xb
+ 2198 006c 3B       		.uleb128 0x3b
+ 2199 006d 0B       		.uleb128 0xb
+ 2200 006e 01       		.uleb128 0x1
+ 2201 006f 13       		.uleb128 0x13
+ 2202 0070 00       		.byte	0
+ 2203 0071 00       		.byte	0
+ 2204 0072 09       		.uleb128 0x9
+ 2205 0073 0F       		.uleb128 0xf
+ 2206 0074 00       		.byte	0
+ 2207 0075 0B       		.uleb128 0xb
+ 2208 0076 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 40
+
+
+ 2209 0077 49       		.uleb128 0x49
+ 2210 0078 13       		.uleb128 0x13
+ 2211 0079 00       		.byte	0
+ 2212 007a 00       		.byte	0
+ 2213 007b 0A       		.uleb128 0xa
+ 2214 007c 0F       		.uleb128 0xf
+ 2215 007d 00       		.byte	0
+ 2216 007e 0B       		.uleb128 0xb
+ 2217 007f 0B       		.uleb128 0xb
+ 2218 0080 00       		.byte	0
+ 2219 0081 00       		.byte	0
+ 2220 0082 0B       		.uleb128 0xb
+ 2221 0083 35       		.uleb128 0x35
+ 2222 0084 00       		.byte	0
+ 2223 0085 49       		.uleb128 0x49
+ 2224 0086 13       		.uleb128 0x13
+ 2225 0087 00       		.byte	0
+ 2226 0088 00       		.byte	0
+ 2227 0089 0C       		.uleb128 0xc
+ 2228 008a 17       		.uleb128 0x17
+ 2229 008b 01       		.byte	0x1
+ 2230 008c 0B       		.uleb128 0xb
+ 2231 008d 0B       		.uleb128 0xb
+ 2232 008e 3A       		.uleb128 0x3a
+ 2233 008f 0B       		.uleb128 0xb
+ 2234 0090 3B       		.uleb128 0x3b
+ 2235 0091 0B       		.uleb128 0xb
+ 2236 0092 01       		.uleb128 0x1
+ 2237 0093 13       		.uleb128 0x13
+ 2238 0094 00       		.byte	0
+ 2239 0095 00       		.byte	0
+ 2240 0096 0D       		.uleb128 0xd
+ 2241 0097 0D       		.uleb128 0xd
+ 2242 0098 00       		.byte	0
+ 2243 0099 03       		.uleb128 0x3
+ 2244 009a 0E       		.uleb128 0xe
+ 2245 009b 3A       		.uleb128 0x3a
+ 2246 009c 0B       		.uleb128 0xb
+ 2247 009d 3B       		.uleb128 0x3b
+ 2248 009e 0B       		.uleb128 0xb
+ 2249 009f 49       		.uleb128 0x49
+ 2250 00a0 13       		.uleb128 0x13
+ 2251 00a1 00       		.byte	0
+ 2252 00a2 00       		.byte	0
+ 2253 00a3 0E       		.uleb128 0xe
+ 2254 00a4 26       		.uleb128 0x26
+ 2255 00a5 00       		.byte	0
+ 2256 00a6 49       		.uleb128 0x49
+ 2257 00a7 13       		.uleb128 0x13
+ 2258 00a8 00       		.byte	0
+ 2259 00a9 00       		.byte	0
+ 2260 00aa 0F       		.uleb128 0xf
+ 2261 00ab 15       		.uleb128 0x15
+ 2262 00ac 01       		.byte	0x1
+ 2263 00ad 27       		.uleb128 0x27
+ 2264 00ae 0C       		.uleb128 0xc
+ 2265 00af 49       		.uleb128 0x49
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 41
+
+
+ 2266 00b0 13       		.uleb128 0x13
+ 2267 00b1 01       		.uleb128 0x1
+ 2268 00b2 13       		.uleb128 0x13
+ 2269 00b3 00       		.byte	0
+ 2270 00b4 00       		.byte	0
+ 2271 00b5 10       		.uleb128 0x10
+ 2272 00b6 05       		.uleb128 0x5
+ 2273 00b7 00       		.byte	0
+ 2274 00b8 49       		.uleb128 0x49
+ 2275 00b9 13       		.uleb128 0x13
+ 2276 00ba 00       		.byte	0
+ 2277 00bb 00       		.byte	0
+ 2278 00bc 11       		.uleb128 0x11
+ 2279 00bd 15       		.uleb128 0x15
+ 2280 00be 01       		.byte	0x1
+ 2281 00bf 27       		.uleb128 0x27
+ 2282 00c0 0C       		.uleb128 0xc
+ 2283 00c1 01       		.uleb128 0x1
+ 2284 00c2 13       		.uleb128 0x13
+ 2285 00c3 00       		.byte	0
+ 2286 00c4 00       		.byte	0
+ 2287 00c5 12       		.uleb128 0x12
+ 2288 00c6 13       		.uleb128 0x13
+ 2289 00c7 01       		.byte	0x1
+ 2290 00c8 0B       		.uleb128 0xb
+ 2291 00c9 0B       		.uleb128 0xb
+ 2292 00ca 3A       		.uleb128 0x3a
+ 2293 00cb 0B       		.uleb128 0xb
+ 2294 00cc 3B       		.uleb128 0x3b
+ 2295 00cd 05       		.uleb128 0x5
+ 2296 00ce 01       		.uleb128 0x1
+ 2297 00cf 13       		.uleb128 0x13
+ 2298 00d0 00       		.byte	0
+ 2299 00d1 00       		.byte	0
+ 2300 00d2 13       		.uleb128 0x13
+ 2301 00d3 0D       		.uleb128 0xd
+ 2302 00d4 00       		.byte	0
+ 2303 00d5 03       		.uleb128 0x3
+ 2304 00d6 08       		.uleb128 0x8
+ 2305 00d7 3A       		.uleb128 0x3a
+ 2306 00d8 0B       		.uleb128 0xb
+ 2307 00d9 3B       		.uleb128 0x3b
+ 2308 00da 05       		.uleb128 0x5
+ 2309 00db 49       		.uleb128 0x49
+ 2310 00dc 13       		.uleb128 0x13
+ 2311 00dd 38       		.uleb128 0x38
+ 2312 00de 0A       		.uleb128 0xa
+ 2313 00df 00       		.byte	0
+ 2314 00e0 00       		.byte	0
+ 2315 00e1 14       		.uleb128 0x14
+ 2316 00e2 0D       		.uleb128 0xd
+ 2317 00e3 00       		.byte	0
+ 2318 00e4 03       		.uleb128 0x3
+ 2319 00e5 0E       		.uleb128 0xe
+ 2320 00e6 3A       		.uleb128 0x3a
+ 2321 00e7 0B       		.uleb128 0xb
+ 2322 00e8 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 42
+
+
+ 2323 00e9 05       		.uleb128 0x5
+ 2324 00ea 49       		.uleb128 0x49
+ 2325 00eb 13       		.uleb128 0x13
+ 2326 00ec 38       		.uleb128 0x38
+ 2327 00ed 0A       		.uleb128 0xa
+ 2328 00ee 00       		.byte	0
+ 2329 00ef 00       		.byte	0
+ 2330 00f0 15       		.uleb128 0x15
+ 2331 00f1 16       		.uleb128 0x16
+ 2332 00f2 00       		.byte	0
+ 2333 00f3 03       		.uleb128 0x3
+ 2334 00f4 0E       		.uleb128 0xe
+ 2335 00f5 3A       		.uleb128 0x3a
+ 2336 00f6 0B       		.uleb128 0xb
+ 2337 00f7 3B       		.uleb128 0x3b
+ 2338 00f8 05       		.uleb128 0x5
+ 2339 00f9 49       		.uleb128 0x49
+ 2340 00fa 13       		.uleb128 0x13
+ 2341 00fb 00       		.byte	0
+ 2342 00fc 00       		.byte	0
+ 2343 00fd 16       		.uleb128 0x16
+ 2344 00fe 0D       		.uleb128 0xd
+ 2345 00ff 00       		.byte	0
+ 2346 0100 03       		.uleb128 0x3
+ 2347 0101 08       		.uleb128 0x8
+ 2348 0102 3A       		.uleb128 0x3a
+ 2349 0103 0B       		.uleb128 0xb
+ 2350 0104 3B       		.uleb128 0x3b
+ 2351 0105 0B       		.uleb128 0xb
+ 2352 0106 49       		.uleb128 0x49
+ 2353 0107 13       		.uleb128 0x13
+ 2354 0108 00       		.byte	0
+ 2355 0109 00       		.byte	0
+ 2356 010a 17       		.uleb128 0x17
+ 2357 010b 04       		.uleb128 0x4
+ 2358 010c 01       		.byte	0x1
+ 2359 010d 0B       		.uleb128 0xb
+ 2360 010e 0B       		.uleb128 0xb
+ 2361 010f 3A       		.uleb128 0x3a
+ 2362 0110 0B       		.uleb128 0xb
+ 2363 0111 3B       		.uleb128 0x3b
+ 2364 0112 0B       		.uleb128 0xb
+ 2365 0113 01       		.uleb128 0x1
+ 2366 0114 13       		.uleb128 0x13
+ 2367 0115 00       		.byte	0
+ 2368 0116 00       		.byte	0
+ 2369 0117 18       		.uleb128 0x18
+ 2370 0118 28       		.uleb128 0x28
+ 2371 0119 00       		.byte	0
+ 2372 011a 03       		.uleb128 0x3
+ 2373 011b 0E       		.uleb128 0xe
+ 2374 011c 1C       		.uleb128 0x1c
+ 2375 011d 0D       		.uleb128 0xd
+ 2376 011e 00       		.byte	0
+ 2377 011f 00       		.byte	0
+ 2378 0120 19       		.uleb128 0x19
+ 2379 0121 01       		.uleb128 0x1
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 43
+
+
+ 2380 0122 01       		.byte	0x1
+ 2381 0123 49       		.uleb128 0x49
+ 2382 0124 13       		.uleb128 0x13
+ 2383 0125 01       		.uleb128 0x1
+ 2384 0126 13       		.uleb128 0x13
+ 2385 0127 00       		.byte	0
+ 2386 0128 00       		.byte	0
+ 2387 0129 1A       		.uleb128 0x1a
+ 2388 012a 21       		.uleb128 0x21
+ 2389 012b 00       		.byte	0
+ 2390 012c 49       		.uleb128 0x49
+ 2391 012d 13       		.uleb128 0x13
+ 2392 012e 2F       		.uleb128 0x2f
+ 2393 012f 0B       		.uleb128 0xb
+ 2394 0130 00       		.byte	0
+ 2395 0131 00       		.byte	0
+ 2396 0132 1B       		.uleb128 0x1b
+ 2397 0133 2E       		.uleb128 0x2e
+ 2398 0134 01       		.byte	0x1
+ 2399 0135 03       		.uleb128 0x3
+ 2400 0136 0E       		.uleb128 0xe
+ 2401 0137 3A       		.uleb128 0x3a
+ 2402 0138 0B       		.uleb128 0xb
+ 2403 0139 3B       		.uleb128 0x3b
+ 2404 013a 0B       		.uleb128 0xb
+ 2405 013b 27       		.uleb128 0x27
+ 2406 013c 0C       		.uleb128 0xc
+ 2407 013d 49       		.uleb128 0x49
+ 2408 013e 13       		.uleb128 0x13
+ 2409 013f 11       		.uleb128 0x11
+ 2410 0140 01       		.uleb128 0x1
+ 2411 0141 12       		.uleb128 0x12
+ 2412 0142 01       		.uleb128 0x1
+ 2413 0143 40       		.uleb128 0x40
+ 2414 0144 06       		.uleb128 0x6
+ 2415 0145 9742     		.uleb128 0x2117
+ 2416 0147 0C       		.uleb128 0xc
+ 2417 0148 01       		.uleb128 0x1
+ 2418 0149 13       		.uleb128 0x13
+ 2419 014a 00       		.byte	0
+ 2420 014b 00       		.byte	0
+ 2421 014c 1C       		.uleb128 0x1c
+ 2422 014d 05       		.uleb128 0x5
+ 2423 014e 00       		.byte	0
+ 2424 014f 03       		.uleb128 0x3
+ 2425 0150 08       		.uleb128 0x8
+ 2426 0151 3A       		.uleb128 0x3a
+ 2427 0152 0B       		.uleb128 0xb
+ 2428 0153 3B       		.uleb128 0x3b
+ 2429 0154 0B       		.uleb128 0xb
+ 2430 0155 49       		.uleb128 0x49
+ 2431 0156 13       		.uleb128 0x13
+ 2432 0157 02       		.uleb128 0x2
+ 2433 0158 06       		.uleb128 0x6
+ 2434 0159 00       		.byte	0
+ 2435 015a 00       		.byte	0
+ 2436 015b 1D       		.uleb128 0x1d
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 44
+
+
+ 2437 015c 898201   		.uleb128 0x4109
+ 2438 015f 01       		.byte	0x1
+ 2439 0160 11       		.uleb128 0x11
+ 2440 0161 01       		.uleb128 0x1
+ 2441 0162 31       		.uleb128 0x31
+ 2442 0163 13       		.uleb128 0x13
+ 2443 0164 01       		.uleb128 0x1
+ 2444 0165 13       		.uleb128 0x13
+ 2445 0166 00       		.byte	0
+ 2446 0167 00       		.byte	0
+ 2447 0168 1E       		.uleb128 0x1e
+ 2448 0169 8A8201   		.uleb128 0x410a
+ 2449 016c 00       		.byte	0
+ 2450 016d 02       		.uleb128 0x2
+ 2451 016e 0A       		.uleb128 0xa
+ 2452 016f 9142     		.uleb128 0x2111
+ 2453 0171 0A       		.uleb128 0xa
+ 2454 0172 00       		.byte	0
+ 2455 0173 00       		.byte	0
+ 2456 0174 1F       		.uleb128 0x1f
+ 2457 0175 898201   		.uleb128 0x4109
+ 2458 0178 01       		.byte	0x1
+ 2459 0179 11       		.uleb128 0x11
+ 2460 017a 01       		.uleb128 0x1
+ 2461 017b 31       		.uleb128 0x31
+ 2462 017c 13       		.uleb128 0x13
+ 2463 017d 00       		.byte	0
+ 2464 017e 00       		.byte	0
+ 2465 017f 20       		.uleb128 0x20
+ 2466 0180 2E       		.uleb128 0x2e
+ 2467 0181 01       		.byte	0x1
+ 2468 0182 3F       		.uleb128 0x3f
+ 2469 0183 0C       		.uleb128 0xc
+ 2470 0184 03       		.uleb128 0x3
+ 2471 0185 0E       		.uleb128 0xe
+ 2472 0186 3A       		.uleb128 0x3a
+ 2473 0187 0B       		.uleb128 0xb
+ 2474 0188 3B       		.uleb128 0x3b
+ 2475 0189 0B       		.uleb128 0xb
+ 2476 018a 27       		.uleb128 0x27
+ 2477 018b 0C       		.uleb128 0xc
+ 2478 018c 49       		.uleb128 0x49
+ 2479 018d 13       		.uleb128 0x13
+ 2480 018e 11       		.uleb128 0x11
+ 2481 018f 01       		.uleb128 0x1
+ 2482 0190 12       		.uleb128 0x12
+ 2483 0191 01       		.uleb128 0x1
+ 2484 0192 40       		.uleb128 0x40
+ 2485 0193 06       		.uleb128 0x6
+ 2486 0194 9742     		.uleb128 0x2117
+ 2487 0196 0C       		.uleb128 0xc
+ 2488 0197 01       		.uleb128 0x1
+ 2489 0198 13       		.uleb128 0x13
+ 2490 0199 00       		.byte	0
+ 2491 019a 00       		.byte	0
+ 2492 019b 21       		.uleb128 0x21
+ 2493 019c 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 45
+
+
+ 2494 019f 00       		.byte	0
+ 2495 01a0 11       		.uleb128 0x11
+ 2496 01a1 01       		.uleb128 0x1
+ 2497 01a2 31       		.uleb128 0x31
+ 2498 01a3 13       		.uleb128 0x13
+ 2499 01a4 00       		.byte	0
+ 2500 01a5 00       		.byte	0
+ 2501 01a6 22       		.uleb128 0x22
+ 2502 01a7 34       		.uleb128 0x34
+ 2503 01a8 00       		.byte	0
+ 2504 01a9 03       		.uleb128 0x3
+ 2505 01aa 0E       		.uleb128 0xe
+ 2506 01ab 3A       		.uleb128 0x3a
+ 2507 01ac 0B       		.uleb128 0xb
+ 2508 01ad 3B       		.uleb128 0x3b
+ 2509 01ae 0B       		.uleb128 0xb
+ 2510 01af 49       		.uleb128 0x49
+ 2511 01b0 13       		.uleb128 0x13
+ 2512 01b1 02       		.uleb128 0x2
+ 2513 01b2 0A       		.uleb128 0xa
+ 2514 01b3 00       		.byte	0
+ 2515 01b4 00       		.byte	0
+ 2516 01b5 23       		.uleb128 0x23
+ 2517 01b6 34       		.uleb128 0x34
+ 2518 01b7 00       		.byte	0
+ 2519 01b8 03       		.uleb128 0x3
+ 2520 01b9 0E       		.uleb128 0xe
+ 2521 01ba 3A       		.uleb128 0x3a
+ 2522 01bb 0B       		.uleb128 0xb
+ 2523 01bc 3B       		.uleb128 0x3b
+ 2524 01bd 0B       		.uleb128 0xb
+ 2525 01be 49       		.uleb128 0x49
+ 2526 01bf 13       		.uleb128 0x13
+ 2527 01c0 3F       		.uleb128 0x3f
+ 2528 01c1 0C       		.uleb128 0xc
+ 2529 01c2 3C       		.uleb128 0x3c
+ 2530 01c3 0C       		.uleb128 0xc
+ 2531 01c4 00       		.byte	0
+ 2532 01c5 00       		.byte	0
+ 2533 01c6 24       		.uleb128 0x24
+ 2534 01c7 34       		.uleb128 0x34
+ 2535 01c8 00       		.byte	0
+ 2536 01c9 03       		.uleb128 0x3
+ 2537 01ca 08       		.uleb128 0x8
+ 2538 01cb 3A       		.uleb128 0x3a
+ 2539 01cc 0B       		.uleb128 0xb
+ 2540 01cd 3B       		.uleb128 0x3b
+ 2541 01ce 05       		.uleb128 0x5
+ 2542 01cf 49       		.uleb128 0x49
+ 2543 01d0 13       		.uleb128 0x13
+ 2544 01d1 3F       		.uleb128 0x3f
+ 2545 01d2 0C       		.uleb128 0xc
+ 2546 01d3 3C       		.uleb128 0x3c
+ 2547 01d4 0C       		.uleb128 0xc
+ 2548 01d5 00       		.byte	0
+ 2549 01d6 00       		.byte	0
+ 2550 01d7 25       		.uleb128 0x25
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 46
+
+
+ 2551 01d8 2E       		.uleb128 0x2e
+ 2552 01d9 01       		.byte	0x1
+ 2553 01da 3F       		.uleb128 0x3f
+ 2554 01db 0C       		.uleb128 0xc
+ 2555 01dc 03       		.uleb128 0x3
+ 2556 01dd 0E       		.uleb128 0xe
+ 2557 01de 3A       		.uleb128 0x3a
+ 2558 01df 0B       		.uleb128 0xb
+ 2559 01e0 3B       		.uleb128 0x3b
+ 2560 01e1 05       		.uleb128 0x5
+ 2561 01e2 27       		.uleb128 0x27
+ 2562 01e3 0C       		.uleb128 0xc
+ 2563 01e4 3C       		.uleb128 0x3c
+ 2564 01e5 0C       		.uleb128 0xc
+ 2565 01e6 01       		.uleb128 0x1
+ 2566 01e7 13       		.uleb128 0x13
+ 2567 01e8 00       		.byte	0
+ 2568 01e9 00       		.byte	0
+ 2569 01ea 26       		.uleb128 0x26
+ 2570 01eb 2E       		.uleb128 0x2e
+ 2571 01ec 00       		.byte	0
+ 2572 01ed 3F       		.uleb128 0x3f
+ 2573 01ee 0C       		.uleb128 0xc
+ 2574 01ef 03       		.uleb128 0x3
+ 2575 01f0 0E       		.uleb128 0xe
+ 2576 01f1 3A       		.uleb128 0x3a
+ 2577 01f2 0B       		.uleb128 0xb
+ 2578 01f3 3B       		.uleb128 0x3b
+ 2579 01f4 0B       		.uleb128 0xb
+ 2580 01f5 27       		.uleb128 0x27
+ 2581 01f6 0C       		.uleb128 0xc
+ 2582 01f7 3C       		.uleb128 0x3c
+ 2583 01f8 0C       		.uleb128 0xc
+ 2584 01f9 00       		.byte	0
+ 2585 01fa 00       		.byte	0
+ 2586 01fb 27       		.uleb128 0x27
+ 2587 01fc 2E       		.uleb128 0x2e
+ 2588 01fd 01       		.byte	0x1
+ 2589 01fe 3F       		.uleb128 0x3f
+ 2590 01ff 0C       		.uleb128 0xc
+ 2591 0200 03       		.uleb128 0x3
+ 2592 0201 0E       		.uleb128 0xe
+ 2593 0202 3A       		.uleb128 0x3a
+ 2594 0203 0B       		.uleb128 0xb
+ 2595 0204 3B       		.uleb128 0x3b
+ 2596 0205 05       		.uleb128 0x5
+ 2597 0206 27       		.uleb128 0x27
+ 2598 0207 0C       		.uleb128 0xc
+ 2599 0208 49       		.uleb128 0x49
+ 2600 0209 13       		.uleb128 0x13
+ 2601 020a 3C       		.uleb128 0x3c
+ 2602 020b 0C       		.uleb128 0xc
+ 2603 020c 01       		.uleb128 0x1
+ 2604 020d 13       		.uleb128 0x13
+ 2605 020e 00       		.byte	0
+ 2606 020f 00       		.byte	0
+ 2607 0210 28       		.uleb128 0x28
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 47
+
+
+ 2608 0211 2E       		.uleb128 0x2e
+ 2609 0212 01       		.byte	0x1
+ 2610 0213 3F       		.uleb128 0x3f
+ 2611 0214 0C       		.uleb128 0xc
+ 2612 0215 03       		.uleb128 0x3
+ 2613 0216 0E       		.uleb128 0xe
+ 2614 0217 3A       		.uleb128 0x3a
+ 2615 0218 0B       		.uleb128 0xb
+ 2616 0219 3B       		.uleb128 0x3b
+ 2617 021a 0B       		.uleb128 0xb
+ 2618 021b 27       		.uleb128 0x27
+ 2619 021c 0C       		.uleb128 0xc
+ 2620 021d 49       		.uleb128 0x49
+ 2621 021e 13       		.uleb128 0x13
+ 2622 021f 3C       		.uleb128 0x3c
+ 2623 0220 0C       		.uleb128 0xc
+ 2624 0221 00       		.byte	0
+ 2625 0222 00       		.byte	0
+ 2626 0223 00       		.byte	0
+ 2627              		.section	.debug_loc,"",%progbits
+ 2628              	.Ldebug_loc0:
+ 2629              	.LLST0:
+ 2630 0000 00000000 		.4byte	.LFB41
+ 2631 0004 04000000 		.4byte	.LCFI0
+ 2632 0008 0200     		.2byte	0x2
+ 2633 000a 7D       		.byte	0x7d
+ 2634 000b 00       		.sleb128 0
+ 2635 000c 04000000 		.4byte	.LCFI0
+ 2636 0010 30000000 		.4byte	.LFE41
+ 2637 0014 0200     		.2byte	0x2
+ 2638 0016 7D       		.byte	0x7d
+ 2639 0017 10       		.sleb128 16
+ 2640 0018 00000000 		.4byte	0
+ 2641 001c 00000000 		.4byte	0
+ 2642              	.LLST1:
+ 2643 0020 00000000 		.4byte	.LVL0
+ 2644 0024 06000000 		.4byte	.LVL1
+ 2645 0028 0100     		.2byte	0x1
+ 2646 002a 50       		.byte	0x50
+ 2647 002b 06000000 		.4byte	.LVL1
+ 2648 002f 30000000 		.4byte	.LFE41
+ 2649 0033 0400     		.2byte	0x4
+ 2650 0035 F3       		.byte	0xf3
+ 2651 0036 01       		.uleb128 0x1
+ 2652 0037 50       		.byte	0x50
+ 2653 0038 9F       		.byte	0x9f
+ 2654 0039 00000000 		.4byte	0
+ 2655 003d 00000000 		.4byte	0
+ 2656              	.LLST2:
+ 2657 0041 00000000 		.4byte	.LFB40
+ 2658 0045 04000000 		.4byte	.LCFI1
+ 2659 0049 0200     		.2byte	0x2
+ 2660 004b 7D       		.byte	0x7d
+ 2661 004c 00       		.sleb128 0
+ 2662 004d 04000000 		.4byte	.LCFI1
+ 2663 0051 34000000 		.4byte	.LFE40
+ 2664 0055 0200     		.2byte	0x2
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 48
+
+
+ 2665 0057 7D       		.byte	0x7d
+ 2666 0058 10       		.sleb128 16
+ 2667 0059 00000000 		.4byte	0
+ 2668 005d 00000000 		.4byte	0
+ 2669              	.LLST3:
+ 2670 0061 00000000 		.4byte	.LVL4
+ 2671 0065 06000000 		.4byte	.LVL5
+ 2672 0069 0100     		.2byte	0x1
+ 2673 006b 50       		.byte	0x50
+ 2674 006c 06000000 		.4byte	.LVL5
+ 2675 0070 34000000 		.4byte	.LFE40
+ 2676 0074 0400     		.2byte	0x4
+ 2677 0076 F3       		.byte	0xf3
+ 2678 0077 01       		.uleb128 0x1
+ 2679 0078 50       		.byte	0x50
+ 2680 0079 9F       		.byte	0x9f
+ 2681 007a 00000000 		.4byte	0
+ 2682 007e 00000000 		.4byte	0
+ 2683              	.LLST4:
+ 2684 0082 00000000 		.4byte	.LFB42
+ 2685 0086 02000000 		.4byte	.LCFI2
+ 2686 008a 0200     		.2byte	0x2
+ 2687 008c 7D       		.byte	0x7d
+ 2688 008d 00       		.sleb128 0
+ 2689 008e 02000000 		.4byte	.LCFI2
+ 2690 0092 04000000 		.4byte	.LCFI3
+ 2691 0096 0200     		.2byte	0x2
+ 2692 0098 7D       		.byte	0x7d
+ 2693 0099 10       		.sleb128 16
+ 2694 009a 04000000 		.4byte	.LCFI3
+ 2695 009e 88000000 		.4byte	.LFE42
+ 2696 00a2 0200     		.2byte	0x2
+ 2697 00a4 7D       		.byte	0x7d
+ 2698 00a5 18       		.sleb128 24
+ 2699 00a6 00000000 		.4byte	0
+ 2700 00aa 00000000 		.4byte	0
+ 2701              		.section	.debug_aranges,"",%progbits
+ 2702 0000 2C000000 		.4byte	0x2c
+ 2703 0004 0200     		.2byte	0x2
+ 2704 0006 00000000 		.4byte	.Ldebug_info0
+ 2705 000a 04       		.byte	0x4
+ 2706 000b 00       		.byte	0
+ 2707 000c 0000     		.2byte	0
+ 2708 000e 0000     		.2byte	0
+ 2709 0010 00000000 		.4byte	.LFB41
+ 2710 0014 30000000 		.4byte	.LFE41-.LFB41
+ 2711 0018 00000000 		.4byte	.LFB40
+ 2712 001c 34000000 		.4byte	.LFE40-.LFB40
+ 2713 0020 00000000 		.4byte	.LFB42
+ 2714 0024 88000000 		.4byte	.LFE42-.LFB42
+ 2715 0028 00000000 		.4byte	0
+ 2716 002c 00000000 		.4byte	0
+ 2717              		.section	.debug_ranges,"",%progbits
+ 2718              	.Ldebug_ranges0:
+ 2719 0000 00000000 		.4byte	.LFB41
+ 2720 0004 30000000 		.4byte	.LFE41
+ 2721 0008 00000000 		.4byte	.LFB40
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 49
+
+
+ 2722 000c 34000000 		.4byte	.LFE40
+ 2723 0010 00000000 		.4byte	.LFB42
+ 2724 0014 88000000 		.4byte	.LFE42
+ 2725 0018 00000000 		.4byte	0
+ 2726 001c 00000000 		.4byte	0
+ 2727              		.section	.debug_line,"",%progbits
+ 2728              	.Ldebug_line0:
+ 2729 0000 65030000 		.section	.debug_str,"MS",%progbits,1
+ 2729      0200DF02 
+ 2729      00000201 
+ 2729      FB0E0D00 
+ 2729      01010101 
+ 2730              	.LASF46:
+ 2731 0000 54687265 		.ascii	"ThreadsList\000"
+ 2731      6164734C 
+ 2731      69737400 
+ 2732              	.LASF38:
+ 2733 000c 705F7761 		.ascii	"p_waiting\000"
+ 2733      6974696E 
+ 2733      6700
+ 2734              	.LASF140:
+ 2735 0016 474E5520 		.ascii	"GNU C 4.7.4 20130913 (prerelease)\000"
+ 2735      4320342E 
+ 2735      372E3420 
+ 2735      32303133 
+ 2735      30393133 
+ 2736              	.LASF113:
+ 2737 0038 53657269 		.ascii	"SerialDriver\000"
+ 2737      616C4472 
+ 2737      69766572 
+ 2737      00
+ 2738              	.LASF141:
+ 2739 0045 6D61696E 		.ascii	"main.c\000"
+ 2739      2E6300
+ 2740              	.LASF37:
+ 2741 004c 705F7469 		.ascii	"p_time\000"
+ 2741      6D6500
+ 2742              	.LASF101:
+ 2743 0053 42535252 		.ascii	"BSRR\000"
+ 2743      00
+ 2744              	.LASF47:
+ 2745 0058 72656761 		.ascii	"regarm_t\000"
+ 2745      726D5F74 
+ 2745      00
+ 2746              	.LASF28:
+ 2747 0061 705F7072 		.ascii	"p_prio\000"
+ 2747      696F00
+ 2748              	.LASF24:
+ 2749 0068 73797374 		.ascii	"systime_t\000"
+ 2749      696D655F 
+ 2749      7400
+ 2750              	.LASF61:
+ 2751 0072 6D5F6F77 		.ascii	"m_owner\000"
+ 2751      6E657200 
+ 2752              	.LASF39:
+ 2753 007a 705F6D73 		.ascii	"p_msgqueue\000"
+ 2753      67717565 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 50
+
+
+ 2753      756500
+ 2754              	.LASF0:
+ 2755 0085 756E7369 		.ascii	"unsigned int\000"
+ 2755      676E6564 
+ 2755      20696E74 
+ 2755      00
+ 2756              	.LASF142:
+ 2757 0092 433A5C73 		.ascii	"C:\\stm32f0-Discovery_Tools\\Projects\\ChibiOS_Temp"
+ 2757      746D3332 
+ 2757      66302D44 
+ 2757      6973636F 
+ 2757      76657279 
+ 2758 00c2 6C617465 		.ascii	"late\000"
+ 2758      00
+ 2759              	.LASF138:
+ 2760 00c7 5F70616C 		.ascii	"_pal_lld_setgroupmode\000"
+ 2760      5F6C6C64 
+ 2760      5F736574 
+ 2760      67726F75 
+ 2760      706D6F64 
+ 2761              	.LASF82:
+ 2762 00dd 715F7264 		.ascii	"q_rdptr\000"
+ 2762      70747200 
+ 2763              	.LASF85:
+ 2764 00e5 716E6F74 		.ascii	"qnotify_t\000"
+ 2764      6966795F 
+ 2764      7400
+ 2765              	.LASF66:
+ 2766 00ef 656C5F6D 		.ascii	"el_mask\000"
+ 2766      61736B00 
+ 2767              	.LASF72:
+ 2768 00f7 77746F62 		.ascii	"wtobjp\000"
+ 2768      6A7000
+ 2769              	.LASF84:
+ 2770 00fe 715F6C69 		.ascii	"q_link\000"
+ 2770      6E6B00
+ 2771              	.LASF73:
+ 2772 0105 65776D61 		.ascii	"ewmask\000"
+ 2772      736B00
+ 2773              	.LASF120:
+ 2774 010c 73706565 		.ascii	"speed\000"
+ 2774      6400
+ 2775              	.LASF127:
+ 2776 0112 77726974 		.ascii	"writet\000"
+ 2776      657400
+ 2777              	.LASF89:
+ 2778 0119 47545052 		.ascii	"GTPR\000"
+ 2778      00
+ 2779              	.LASF116:
+ 2780 011e 69717565 		.ascii	"iqueue\000"
+ 2780      756500
+ 2781              	.LASF10:
+ 2782 0125 75696E74 		.ascii	"uint32_t\000"
+ 2782      33325F74 
+ 2782      00
+ 2783              	.LASF22:
+ 2784 012e 6576656E 		.ascii	"eventmask_t\000"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 51
+
+
+ 2784      746D6173 
+ 2784      6B5F7400 
+ 2785              	.LASF53:
+ 2786 013a 725F7072 		.ascii	"r_prio\000"
+ 2786      696F00
+ 2787              	.LASF121:
+ 2788 0141 53657269 		.ascii	"SerialConfig\000"
+ 2788      616C436F 
+ 2788      6E666967 
+ 2788      00
+ 2789              	.LASF112:
+ 2790 014e 73647374 		.ascii	"sdstate_t\000"
+ 2790      6174655F 
+ 2790      7400
+ 2791              	.LASF114:
+ 2792 0158 6576656E 		.ascii	"event\000"
+ 2792      7400
+ 2793              	.LASF20:
+ 2794 015e 74707269 		.ascii	"tprio_t\000"
+ 2794      6F5F7400 
+ 2795              	.LASF75:
+ 2796 0166 7466756E 		.ascii	"tfunc_t\000"
+ 2796      635F7400 
+ 2797              	.LASF14:
+ 2798 016e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2798      206C6F6E 
+ 2798      6720756E 
+ 2798      7369676E 
+ 2798      65642069 
+ 2799              	.LASF137:
+ 2800 0185 73645374 		.ascii	"sdStart\000"
+ 2800      61727400 
+ 2801              	.LASF97:
+ 2802 018d 4D4F4445 		.ascii	"MODER\000"
+ 2802      5200
+ 2803              	.LASF104:
+ 2804 0193 41465248 		.ascii	"AFRH\000"
+ 2804      00
+ 2805              	.LASF103:
+ 2806 0198 4146524C 		.ascii	"AFRL\000"
+ 2806      00
+ 2807              	.LASF30:
+ 2808 019d 705F6E65 		.ascii	"p_newer\000"
+ 2808      77657200 
+ 2809              	.LASF96:
+ 2810 01a5 636C6561 		.ascii	"clear\000"
+ 2810      7200
+ 2811              	.LASF77:
+ 2812 01ab 715F7761 		.ascii	"q_waiting\000"
+ 2812      6974696E 
+ 2812      6700
+ 2813              	.LASF125:
+ 2814 01b5 70757474 		.ascii	"putt\000"
+ 2814      00
+ 2815              	.LASF68:
+ 2816 01ba 4576656E 		.ascii	"EventSource\000"
+ 2816      74536F75 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 52
+
+
+ 2816      72636500 
+ 2817              	.LASF2:
+ 2818 01c6 73697A65 		.ascii	"size_t\000"
+ 2818      5F7400
+ 2819              	.LASF70:
+ 2820 01cd 7264796D 		.ascii	"rdymsg\000"
+ 2820      736700
+ 2821              	.LASF15:
+ 2822 01d4 5F426F6F 		.ascii	"_Bool\000"
+ 2822      6C00
+ 2823              	.LASF110:
+ 2824 01da 53445F53 		.ascii	"SD_STOP\000"
+ 2824      544F5000 
+ 2825              	.LASF95:
+ 2826 01e2 55534152 		.ascii	"USART_TypeDef\000"
+ 2826      545F5479 
+ 2826      70654465 
+ 2826      6600
+ 2827              	.LASF59:
+ 2828 01f0 4D757465 		.ascii	"Mutex\000"
+ 2828      7800
+ 2829              	.LASF87:
+ 2830 01f6 4F757470 		.ascii	"OutputQueue\000"
+ 2830      75745175 
+ 2830      65756500 
+ 2831              	.LASF83:
+ 2832 0202 715F6E6F 		.ascii	"q_notify\000"
+ 2832      74696679 
+ 2832      00
+ 2833              	.LASF119:
+ 2834 020b 636C6F63 		.ascii	"clock\000"
+ 2834      6B00
+ 2835              	.LASF100:
+ 2836 0211 50555044 		.ascii	"PUPDR\000"
+ 2836      5200
+ 2837              	.LASF32:
+ 2838 0217 705F6E61 		.ascii	"p_name\000"
+ 2838      6D6500
+ 2839              	.LASF86:
+ 2840 021e 496E7075 		.ascii	"InputQueue\000"
+ 2840      74517565 
+ 2840      756500
+ 2841              	.LASF45:
+ 2842 0229 54687265 		.ascii	"ThreadsQueue\000"
+ 2842      61647351 
+ 2842      75657565 
+ 2842      00
+ 2843              	.LASF74:
+ 2844 0236 63686172 		.ascii	"char\000"
+ 2844      00
+ 2845              	.LASF135:
+ 2846 023b 63685379 		.ascii	"chSysInit\000"
+ 2846      73496E69 
+ 2846      7400
+ 2847              	.LASF55:
+ 2848 0245 725F6E65 		.ascii	"r_newer\000"
+ 2848      77657200 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 53
+
+
+ 2849              	.LASF81:
+ 2850 024d 715F7772 		.ascii	"q_wrptr\000"
+ 2850      70747200 
+ 2851              	.LASF25:
+ 2852 0255 54687265 		.ascii	"Thread\000"
+ 2852      616400
+ 2853              	.LASF17:
+ 2854 025c 74737461 		.ascii	"tstate_t\000"
+ 2854      74655F74 
+ 2854      00
+ 2855              	.LASF134:
+ 2856 0265 68616C49 		.ascii	"halInit\000"
+ 2856      6E697400 
+ 2857              	.LASF31:
+ 2858 026d 705F6F6C 		.ascii	"p_older\000"
+ 2858      64657200 
+ 2859              	.LASF33:
+ 2860 0275 705F7374 		.ascii	"p_state\000"
+ 2860      61746500 
+ 2861              	.LASF3:
+ 2862 027d 75696E74 		.ascii	"uint8_t\000"
+ 2862      385F7400 
+ 2863              	.LASF23:
+ 2864 0285 666C6167 		.ascii	"flagsmask_t\000"
+ 2864      736D6173 
+ 2864      6B5F7400 
+ 2865              	.LASF91:
+ 2866 0291 52544F52 		.ascii	"RTOR\000"
+ 2866      00
+ 2867              	.LASF44:
+ 2868 0296 705F6D70 		.ascii	"p_mpool\000"
+ 2868      6F6F6C00 
+ 2869              	.LASF42:
+ 2870 029e 705F6D74 		.ascii	"p_mtxlist\000"
+ 2870      786C6973 
+ 2870      7400
+ 2871              	.LASF118:
+ 2872 02a8 75736172 		.ascii	"usart\000"
+ 2872      7400
+ 2873              	.LASF12:
+ 2874 02ae 6C6F6E67 		.ascii	"long long int\000"
+ 2874      206C6F6E 
+ 2874      6720696E 
+ 2874      7400
+ 2875              	.LASF123:
+ 2876 02bc 77726974 		.ascii	"write\000"
+ 2876      6500
+ 2877              	.LASF79:
+ 2878 02c2 715F6275 		.ascii	"q_buffer\000"
+ 2878      66666572 
+ 2878      00
+ 2879              	.LASF52:
+ 2880 02cb 725F7175 		.ascii	"r_queue\000"
+ 2880      65756500 
+ 2881              	.LASF21:
+ 2882 02d3 6D73675F 		.ascii	"msg_t\000"
+ 2882      7400
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 54
+
+
+ 2883              	.LASF50:
+ 2884 02d9 636F6E74 		.ascii	"context\000"
+ 2884      65787400 
+ 2885              	.LASF139:
+ 2886 02e1 54657374 		.ascii	"TestThread\000"
+ 2886      54687265 
+ 2886      616400
+ 2887              	.LASF34:
+ 2888 02ec 705F666C 		.ascii	"p_flags\000"
+ 2888      61677300 
+ 2889              	.LASF106:
+ 2890 02f4 696F706F 		.ascii	"ioportmask_t\000"
+ 2890      72746D61 
+ 2890      736B5F74 
+ 2890      00
+ 2891              	.LASF19:
+ 2892 0301 74736C69 		.ascii	"tslices_t\000"
+ 2892      6365735F 
+ 2892      7400
+ 2893              	.LASF56:
+ 2894 030b 725F6F6C 		.ascii	"r_older\000"
+ 2894      64657200 
+ 2895              	.LASF144:
+ 2896 0313 63685468 		.ascii	"chThdCreateStatic\000"
+ 2896      64437265 
+ 2896      61746553 
+ 2896      74617469 
+ 2896      6300
+ 2897              	.LASF64:
+ 2898 0325 656C5F6E 		.ascii	"el_next\000"
+ 2898      65787400 
+ 2899              	.LASF40:
+ 2900 032d 705F6D73 		.ascii	"p_msg\000"
+ 2900      6700
+ 2901              	.LASF16:
+ 2902 0333 746D6F64 		.ascii	"tmode_t\000"
+ 2902      655F7400 
+ 2903              	.LASF99:
+ 2904 033b 4F535045 		.ascii	"OSPEEDR\000"
+ 2904      45445200 
+ 2905              	.LASF76:
+ 2906 0343 47656E65 		.ascii	"GenericQueue\000"
+ 2906      72696351 
+ 2906      75657565 
+ 2906      00
+ 2907              	.LASF117:
+ 2908 0350 6F717565 		.ascii	"oqueue\000"
+ 2908      756500
+ 2909              	.LASF6:
+ 2910 0357 75696E74 		.ascii	"uint16_t\000"
+ 2910      31365F74 
+ 2910      00
+ 2911              	.LASF49:
+ 2912 0360 696E7463 		.ascii	"intctx\000"
+ 2912      747800
+ 2913              	.LASF111:
+ 2914 0367 53445F52 		.ascii	"SD_READY\000"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 55
+
+
+ 2914      45414459 
+ 2914      00
+ 2915              	.LASF122:
+ 2916 0370 53657269 		.ascii	"SerialDriverVMT\000"
+ 2916      616C4472 
+ 2916      69766572 
+ 2916      564D5400 
+ 2917              	.LASF43:
+ 2918 0380 705F7265 		.ascii	"p_realprio\000"
+ 2918      616C7072 
+ 2918      696F00
+ 2919              	.LASF88:
+ 2920 038b 52455345 		.ascii	"RESERVED1\000"
+ 2920      52564544 
+ 2920      3100
+ 2921              	.LASF90:
+ 2922 0395 52455345 		.ascii	"RESERVED2\000"
+ 2922      52564544 
+ 2922      3200
+ 2923              	.LASF92:
+ 2924 039f 52455345 		.ascii	"RESERVED3\000"
+ 2924      52564544 
+ 2924      3300
+ 2925              	.LASF93:
+ 2926 03a9 52455345 		.ascii	"RESERVED4\000"
+ 2926      52564544 
+ 2926      3400
+ 2927              	.LASF94:
+ 2928 03b3 52455345 		.ascii	"RESERVED5\000"
+ 2928      52564544 
+ 2928      3500
+ 2929              	.LASF5:
+ 2930 03bd 73686F72 		.ascii	"short int\000"
+ 2930      7420696E 
+ 2930      7400
+ 2931              	.LASF57:
+ 2932 03c7 725F6375 		.ascii	"r_current\000"
+ 2932      7272656E 
+ 2932      7400
+ 2933              	.LASF41:
+ 2934 03d1 705F6570 		.ascii	"p_epending\000"
+ 2934      656E6469 
+ 2934      6E6700
+ 2935              	.LASF60:
+ 2936 03dc 6D5F7175 		.ascii	"m_queue\000"
+ 2936      65756500 
+ 2937              	.LASF9:
+ 2938 03e4 6C6F6E67 		.ascii	"long int\000"
+ 2938      20696E74 
+ 2938      00
+ 2939              	.LASF98:
+ 2940 03ed 4F545950 		.ascii	"OTYPER\000"
+ 2940      455200
+ 2941              	.LASF26:
+ 2942 03f4 705F6E65 		.ascii	"p_next\000"
+ 2942      787400
+ 2943              	.LASF13:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 56
+
+
+ 2944 03fb 75696E74 		.ascii	"uint64_t\000"
+ 2944      36345F74 
+ 2944      00
+ 2945              	.LASF29:
+ 2946 0404 705F6374 		.ascii	"p_ctx\000"
+ 2946      7800
+ 2947              	.LASF133:
+ 2948 040a 726C6973 		.ascii	"rlist\000"
+ 2948      7400
+ 2949              	.LASF108:
+ 2950 0410 696F706F 		.ascii	"ioportid_t\000"
+ 2950      72746964 
+ 2950      5F7400
+ 2951              	.LASF124:
+ 2952 041b 72656164 		.ascii	"read\000"
+ 2952      00
+ 2953              	.LASF65:
+ 2954 0420 656C5F6C 		.ascii	"el_listener\000"
+ 2954      69737465 
+ 2954      6E657200 
+ 2955              	.LASF109:
+ 2956 042c 53445F55 		.ascii	"SD_UNINIT\000"
+ 2956      4E494E49 
+ 2956      5400
+ 2957              	.LASF105:
+ 2958 0436 4750494F 		.ascii	"GPIO_TypeDef\000"
+ 2958      5F547970 
+ 2958      65446566 
+ 2958      00
+ 2959              	.LASF78:
+ 2960 0443 715F636F 		.ascii	"q_counter\000"
+ 2960      756E7465 
+ 2960      7200
+ 2961              	.LASF126:
+ 2962 044d 67657474 		.ascii	"gett\000"
+ 2962      00
+ 2963              	.LASF80:
+ 2964 0452 715F746F 		.ascii	"q_top\000"
+ 2964      7000
+ 2965              	.LASF27:
+ 2966 0458 705F7072 		.ascii	"p_prev\000"
+ 2966      657600
+ 2967              	.LASF51:
+ 2968 045f 73697A65 		.ascii	"sizetype\000"
+ 2968      74797065 
+ 2968      00
+ 2969              	.LASF18:
+ 2970 0468 74726566 		.ascii	"trefs_t\000"
+ 2970      735F7400 
+ 2971              	.LASF63:
+ 2972 0470 4576656E 		.ascii	"EventListener\000"
+ 2972      744C6973 
+ 2972      74656E65 
+ 2972      7200
+ 2973              	.LASF11:
+ 2974 047e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2974      20756E73 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 57
+
+
+ 2974      69676E65 
+ 2974      6420696E 
+ 2974      7400
+ 2975              	.LASF8:
+ 2976 0490 696E7433 		.ascii	"int32_t\000"
+ 2976      325F7400 
+ 2977              	.LASF131:
+ 2978 0498 77615468 		.ascii	"waThread1\000"
+ 2978      72656164 
+ 2978      3100
+ 2979              	.LASF132:
+ 2980 04a2 77615468 		.ascii	"waThread2\000"
+ 2980      72656164 
+ 2980      3200
+ 2981              	.LASF4:
+ 2982 04ac 756E7369 		.ascii	"unsigned char\000"
+ 2982      676E6564 
+ 2982      20636861 
+ 2982      7200
+ 2983              	.LASF35:
+ 2984 04ba 705F7265 		.ascii	"p_refs\000"
+ 2984      667300
+ 2985              	.LASF58:
+ 2986 04c1 52656164 		.ascii	"ReadyList\000"
+ 2986      794C6973 
+ 2986      7400
+ 2987              	.LASF136:
+ 2988 04cb 63685468 		.ascii	"chThdSleep\000"
+ 2988      64536C65 
+ 2988      657000
+ 2989              	.LASF36:
+ 2990 04d6 705F7072 		.ascii	"p_preempt\000"
+ 2990      65656D70 
+ 2990      7400
+ 2991              	.LASF69:
+ 2992 04e0 65735F6E 		.ascii	"es_next\000"
+ 2992      65787400 
+ 2993              	.LASF115:
+ 2994 04e8 73746174 		.ascii	"state\000"
+ 2994      6500
+ 2995              	.LASF130:
+ 2996 04ee 54687265 		.ascii	"Thread1\000"
+ 2996      61643100 
+ 2997              	.LASF129:
+ 2998 04f6 54687265 		.ascii	"Thread2\000"
+ 2998      61643200 
+ 2999              	.LASF107:
+ 3000 04fe 696F6D6F 		.ascii	"iomode_t\000"
+ 3000      64655F74 
+ 3000      00
+ 3001              	.LASF62:
+ 3002 0507 6D5F6E65 		.ascii	"m_next\000"
+ 3002      787400
+ 3003              	.LASF1:
+ 3004 050e 7369676E 		.ascii	"signed char\000"
+ 3004      65642063 
+ 3004      68617200 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 58
+
+
+ 3005              	.LASF128:
+ 3006 051a 72656164 		.ascii	"readt\000"
+ 3006      7400
+ 3007              	.LASF7:
+ 3008 0520 73686F72 		.ascii	"short unsigned int\000"
+ 3008      7420756E 
+ 3008      7369676E 
+ 3008      65642069 
+ 3008      6E7400
+ 3009              	.LASF54:
+ 3010 0533 725F6374 		.ascii	"r_ctx\000"
+ 3010      7800
+ 3011              	.LASF48:
+ 3012 0539 73746B61 		.ascii	"stkalign_t\000"
+ 3012      6C69676E 
+ 3012      5F7400
+ 3013              	.LASF143:
+ 3014 0544 6D61696E 		.ascii	"main\000"
+ 3014      00
+ 3015              	.LASF67:
+ 3016 0549 656C5F66 		.ascii	"el_flags\000"
+ 3016      6C616773 
+ 3016      00
+ 3017              	.LASF71:
+ 3018 0552 65786974 		.ascii	"exitcode\000"
+ 3018      636F6465 
+ 3018      00
+ 3019              	.LASF102:
+ 3020 055b 4C434B52 		.ascii	"LCKR\000"
+ 3020      00
+ 3021              		.ident	"GCC: (GNU Tools for ARM Embedded Processors / bleeding-edge-toolchain-131005) 4.7.4 201309
+ARM GAS  C:\Users\3130\AppData\Local\Temp\cczaoBTT.s 			page 59
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:18     .text.Thread2:00000000 $t
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:23     .text.Thread2:00000000 Thread2
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:68     .text.Thread2:00000024 $d
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:75     .text.Thread1:00000000 $t
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:80     .text.Thread1:00000000 Thread1
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:128    .text.Thread1:00000028 $d
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:135    .text.startup.main:00000000 $t
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:141    .text.startup.main:00000000 main
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:230    .text.startup.main:00000074 $d
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:239    .bss.waThread1:00000000 $d
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:243    .bss.waThread1:00000000 waThread1
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:246    .bss.waThread2:00000000 $d
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:250    .bss.waThread2:00000000 waThread2
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:253    .rodata.str1.4:00000000 $d
+                     .debug_frame:00000010 $d
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:134    .text.Thread1:00000034 $t
+C:\Users\3130\AppData\Local\Temp\cczaoBTT.s:238    .text.startup.main:00000088 $t
+
+UNDEFINED SYMBOLS
+chThdSleep
+rlist
+halInit
+chSysInit
+sdStart
+_pal_lld_setgroupmode
+chThdCreateStatic
+TestThread
+SD1

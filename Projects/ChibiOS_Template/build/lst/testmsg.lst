@@ -1,0 +1,2252 @@
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"testmsg.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.msg1_execute,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	msg1_execute, %function
+  23              	msg1_execute:
+  24              	.LFB8:
+  25              		.file 1 "../../ChibiOS_2.6.1/test/testmsg.c"
+  26              		.loc 1 67 0
+  27              		.cfi_startproc
+  28 0000 10B5     		push	{r4, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 4, -8
+  32              		.cfi_offset 14, -4
+  33              		.loc 1 74 0
+  34 0002 184B     		ldr	r3, .L2
+  35 0004 184A     		ldr	r2, .L2+4
+  36 0006 9969     		ldr	r1, [r3, #24]
+  37 0008 1068     		ldr	r0, [r2]
+  38 000a 8A68     		ldr	r2, [r1, #8]
+  39              		.loc 1 67 0
+  40 000c 82B0     		sub	sp, sp, #8
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 16
+  43              		.loc 1 74 0
+  44 000e 9824     		mov	r4, #152
+  45 0010 0132     		add	r2, r2, #1
+  46 0012 0091     		str	r1, [sp]
+  47 0014 154B     		ldr	r3, .L2+8
+  48 0016 6100     		lsl	r1, r4, #1
+  49 0018 FFF7FEFF 		bl	chThdCreateStatic
+  50              	.LVL0:
+  51 001c 144B     		ldr	r3, .L2+12
+  52 001e 1860     		str	r0, [r3]
+  53              		.loc 1 76 0
+  54 0020 FFF7FEFF 		bl	chMsgWait
+  55              	.LVL1:
+  56              		.loc 1 77 0
+  57 0024 446B     		ldr	r4, [r0, #52]
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 2
+
+
+  58              	.LVL2:
+  59              		.loc 1 78 0
+  60 0026 211C     		mov	r1, r4
+  61 0028 FFF7FEFF 		bl	chMsgRelease
+  62              	.LVL3:
+  63              		.loc 1 79 0
+  64 002c E0B2     		uxtb	r0, r4
+  65 002e FFF7FEFF 		bl	test_emit_token
+  66              	.LVL4:
+  67              		.loc 1 80 0
+  68 0032 FFF7FEFF 		bl	chMsgWait
+  69              	.LVL5:
+  70              		.loc 1 81 0
+  71 0036 446B     		ldr	r4, [r0, #52]
+  72              	.LVL6:
+  73              		.loc 1 82 0
+  74 0038 211C     		mov	r1, r4
+  75 003a FFF7FEFF 		bl	chMsgRelease
+  76              	.LVL7:
+  77              		.loc 1 83 0
+  78 003e E0B2     		uxtb	r0, r4
+  79 0040 FFF7FEFF 		bl	test_emit_token
+  80              	.LVL8:
+  81              		.loc 1 84 0
+  82 0044 FFF7FEFF 		bl	chMsgWait
+  83              	.LVL9:
+  84              		.loc 1 85 0
+  85 0048 446B     		ldr	r4, [r0, #52]
+  86              	.LVL10:
+  87              		.loc 1 86 0
+  88 004a 211C     		mov	r1, r4
+  89 004c FFF7FEFF 		bl	chMsgRelease
+  90              	.LVL11:
+  91              		.loc 1 87 0
+  92 0050 E0B2     		uxtb	r0, r4
+  93 0052 FFF7FEFF 		bl	test_emit_token
+  94              	.LVL12:
+  95              		.loc 1 88 0
+  96 0056 0749     		ldr	r1, .L2+16
+  97 0058 0120     		mov	r0, #1
+  98 005a FFF7FEFF 		bl	_test_assert_sequence
+  99              	.LVL13:
+ 100              		.loc 1 89 0
+ 101 005e 02B0     		add	sp, sp, #8
+ 102              		@ sp needed for prologue
+ 103              	.LVL14:
+ 104 0060 10BD     		pop	{r4, pc}
+ 105              	.L3:
+ 106 0062 C046     		.align	2
+ 107              	.L2:
+ 108 0064 00000000 		.word	rlist
+ 109 0068 00000000 		.word	wa
+ 110 006c 00000000 		.word	thread
+ 111 0070 00000000 		.word	threads
+ 112 0074 00000000 		.word	.LC4
+ 113              		.cfi_endproc
+ 114              	.LFE8:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 3
+
+
+ 115              		.size	msg1_execute, .-msg1_execute
+ 116 0078 C046C046 		.section	.text.thread,"ax",%progbits
+ 116      C046C046 
+ 117              		.align	2
+ 118              		.p2align 4,,15
+ 119              		.code	16
+ 120              		.thumb_func
+ 121              		.type	thread, %function
+ 122              	thread:
+ 123              	.LFB7:
+ 124              		.loc 1 59 0
+ 125              		.cfi_startproc
+ 126              	.LVL15:
+ 127 0000 10B5     		push	{r4, lr}
+ 128              	.LCFI2:
+ 129              		.cfi_def_cfa_offset 8
+ 130              		.cfi_offset 4, -8
+ 131              		.cfi_offset 14, -4
+ 132              		.loc 1 61 0
+ 133 0002 4121     		mov	r1, #65
+ 134              		.loc 1 59 0
+ 135 0004 041C     		mov	r4, r0
+ 136              		.loc 1 61 0
+ 137 0006 FFF7FEFF 		bl	chMsgSend
+ 138              	.LVL16:
+ 139              		.loc 1 62 0
+ 140 000a 201C     		mov	r0, r4
+ 141 000c 4221     		mov	r1, #66
+ 142 000e FFF7FEFF 		bl	chMsgSend
+ 143              	.LVL17:
+ 144              		.loc 1 63 0
+ 145 0012 201C     		mov	r0, r4
+ 146 0014 4321     		mov	r1, #67
+ 147 0016 FFF7FEFF 		bl	chMsgSend
+ 148              	.LVL18:
+ 149              		.loc 1 65 0
+ 150              		@ sp needed for prologue
+ 151 001a 0020     		mov	r0, #0
+ 152              	.LVL19:
+ 153 001c 10BD     		pop	{r4, pc}
+ 154              		.cfi_endproc
+ 155              	.LFE7:
+ 156              		.size	thread, .-thread
+ 157              		.global	patternmsg
+ 158              		.global	testmsg1
+ 159 001e C046     		.section	.rodata.testmsg1,"a",%progbits
+ 160              		.align	2
+ 161              		.type	testmsg1, %object
+ 162              		.size	testmsg1, 16
+ 163              	testmsg1:
+ 164 0000 04000000 		.word	.LC6
+ 165 0004 00000000 		.word	0
+ 166 0008 00000000 		.word	0
+ 167 000c 00000000 		.word	msg1_execute
+ 168              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 169              		.align	2
+ 170              	.LC4:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 4
+
+
+ 171 0000 41424300 		.ascii	"ABC\000"
+ 172              	.LC6:
+ 173 0004 4D657373 		.ascii	"Messages, loop\000"
+ 173      61676573 
+ 173      2C206C6F 
+ 173      6F7000
+ 174 0013 00       		.section	.rodata.patternmsg,"a",%progbits
+ 175              		.align	2
+ 176              		.type	patternmsg, %object
+ 177              		.size	patternmsg, 8
+ 178              	patternmsg:
+ 179 0000 00000000 		.word	testmsg1
+ 180 0004 00000000 		.word	0
+ 181              		.text
+ 182              	.Letext0:
+ 183              		.file 2 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/inclu
+ 184              		.file 3 "c:\\stm32f0-discovery_tools\\gcc-arm-none-eabi\\bin\\../lib/gcc/arm-none-eabi/4.7.4/../..
+ 185              		.file 4 "../../ChibiOS_2.6.1/os/ports/GCC/ARMCMx/chtypes.h"
+ 186              		.file 5 "../../ChibiOS_2.6.1/os/kernel/include/chlists.h"
+ 187              		.file 6 "../../ChibiOS_2.6.1/os/kernel/include/chthreads.h"
+ 188              		.file 7 "../../ChibiOS_2.6.1/os/ports/GCC/ARMCMx/chcore_v6m.h"
+ 189              		.file 8 "../../ChibiOS_2.6.1/os/kernel/include/chschd.h"
+ 190              		.file 9 "../../ChibiOS_2.6.1/os/kernel/include/chmtx.h"
+ 191              		.file 10 "../../ChibiOS_2.6.1/test/test.h"
+ 192              		.file 11 "../../ChibiOS_2.6.1/os/kernel/include/chmsg.h"
+ 193              		.section	.debug_info,"",%progbits
+ 194              	.Ldebug_info0:
+ 195 0000 57070000 		.4byte	0x757
+ 196 0004 0200     		.2byte	0x2
+ 197 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 198 000a 04       		.byte	0x4
+ 199 000b 01       		.uleb128 0x1
+ 200 000c 3D030000 		.4byte	.LASF80
+ 201 0010 01       		.byte	0x1
+ 202 0011 3C000000 		.4byte	.LASF81
+ 203 0015 C0020000 		.4byte	.LASF82
+ 204 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 205 001d 00000000 		.4byte	0
+ 206 0021 00000000 		.4byte	0
+ 207 0025 00000000 		.4byte	.Ldebug_line0
+ 208 0029 02       		.uleb128 0x2
+ 209 002a 04       		.byte	0x4
+ 210 002b 05       		.byte	0x5
+ 211 002c 696E7400 		.ascii	"int\000"
+ 212 0030 03       		.uleb128 0x3
+ 213 0031 0E000000 		.4byte	.LASF2
+ 214 0035 02       		.byte	0x2
+ 215 0036 D5       		.byte	0xd5
+ 216 0037 3B000000 		.4byte	0x3b
+ 217 003b 04       		.uleb128 0x4
+ 218 003c 04       		.byte	0x4
+ 219 003d 07       		.byte	0x7
+ 220 003e E6000000 		.4byte	.LASF0
+ 221 0042 04       		.uleb128 0x4
+ 222 0043 01       		.byte	0x1
+ 223 0044 06       		.byte	0x6
+ 224 0045 74000000 		.4byte	.LASF1
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 5
+
+
+ 225 0049 03       		.uleb128 0x3
+ 226 004a 28030000 		.4byte	.LASF3
+ 227 004e 03       		.byte	0x3
+ 228 004f 2A       		.byte	0x2a
+ 229 0050 54000000 		.4byte	0x54
+ 230 0054 04       		.uleb128 0x4
+ 231 0055 01       		.byte	0x1
+ 232 0056 08       		.byte	0x8
+ 233 0057 FD010000 		.4byte	.LASF4
+ 234 005b 04       		.uleb128 0x4
+ 235 005c 02       		.byte	0x2
+ 236 005d 05       		.byte	0x5
+ 237 005e 15020000 		.4byte	.LASF5
+ 238 0062 04       		.uleb128 0x4
+ 239 0063 02       		.byte	0x2
+ 240 0064 07       		.byte	0x7
+ 241 0065 1B010000 		.4byte	.LASF6
+ 242 0069 03       		.uleb128 0x3
+ 243 006a F5010000 		.4byte	.LASF7
+ 244 006e 03       		.byte	0x3
+ 245 006f 4F       		.byte	0x4f
+ 246 0070 74000000 		.4byte	0x74
+ 247 0074 04       		.uleb128 0x4
+ 248 0075 04       		.byte	0x4
+ 249 0076 05       		.byte	0x5
+ 250 0077 B1000000 		.4byte	.LASF8
+ 251 007b 03       		.uleb128 0x3
+ 252 007c 87020000 		.4byte	.LASF9
+ 253 0080 03       		.byte	0x3
+ 254 0081 50       		.byte	0x50
+ 255 0082 86000000 		.4byte	0x86
+ 256 0086 04       		.uleb128 0x4
+ 257 0087 04       		.byte	0x4
+ 258 0088 07       		.byte	0x7
+ 259 0089 F3000000 		.4byte	.LASF10
+ 260 008d 04       		.uleb128 0x4
+ 261 008e 08       		.byte	0x8
+ 262 008f 05       		.byte	0x5
+ 263 0090 66000000 		.4byte	.LASF11
+ 264 0094 04       		.uleb128 0x4
+ 265 0095 08       		.byte	0x8
+ 266 0096 07       		.byte	0x7
+ 267 0097 1C000000 		.4byte	.LASF12
+ 268 009b 03       		.uleb128 0x3
+ 269 009c 88000000 		.4byte	.LASF13
+ 270 00a0 04       		.byte	0x4
+ 271 00a1 2B       		.byte	0x2b
+ 272 00a2 A6000000 		.4byte	0xa6
+ 273 00a6 04       		.uleb128 0x4
+ 274 00a7 01       		.byte	0x1
+ 275 00a8 02       		.byte	0x2
+ 276 00a9 EF010000 		.4byte	.LASF14
+ 277 00ad 03       		.uleb128 0x3
+ 278 00ae 34010000 		.4byte	.LASF15
+ 279 00b2 04       		.byte	0x4
+ 280 00b3 2C       		.byte	0x2c
+ 281 00b4 49000000 		.4byte	0x49
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 6
+
+
+ 282 00b8 03       		.uleb128 0x3
+ 283 00b9 C4000000 		.4byte	.LASF16
+ 284 00bd 04       		.byte	0x4
+ 285 00be 2D       		.byte	0x2d
+ 286 00bf 49000000 		.4byte	0x49
+ 287 00c3 03       		.uleb128 0x3
+ 288 00c4 C9010000 		.4byte	.LASF17
+ 289 00c8 04       		.byte	0x4
+ 290 00c9 2E       		.byte	0x2e
+ 291 00ca 49000000 		.4byte	0x49
+ 292 00ce 03       		.uleb128 0x3
+ 293 00cf A7000000 		.4byte	.LASF18
+ 294 00d3 04       		.byte	0x4
+ 295 00d4 2F       		.byte	0x2f
+ 296 00d5 49000000 		.4byte	0x49
+ 297 00d9 03       		.uleb128 0x3
+ 298 00da E0010000 		.4byte	.LASF19
+ 299 00de 04       		.byte	0x4
+ 300 00df 30       		.byte	0x30
+ 301 00e0 7B000000 		.4byte	0x7b
+ 302 00e4 03       		.uleb128 0x3
+ 303 00e5 2E010000 		.4byte	.LASF20
+ 304 00e9 04       		.byte	0x4
+ 305 00ea 31       		.byte	0x31
+ 306 00eb 69000000 		.4byte	0x69
+ 307 00ef 03       		.uleb128 0x3
+ 308 00f0 48010000 		.4byte	.LASF21
+ 309 00f4 04       		.byte	0x4
+ 310 00f5 33       		.byte	0x33
+ 311 00f6 7B000000 		.4byte	0x7b
+ 312 00fa 03       		.uleb128 0x3
+ 313 00fb A4020000 		.4byte	.LASF22
+ 314 00ff 04       		.byte	0x4
+ 315 0100 35       		.byte	0x35
+ 316 0101 7B000000 		.4byte	0x7b
+ 317 0105 03       		.uleb128 0x3
+ 318 0106 5F020000 		.4byte	.LASF23
+ 319 010a 05       		.byte	0x5
+ 320 010b 2A       		.byte	0x2a
+ 321 010c 10010000 		.4byte	0x110
+ 322 0110 05       		.uleb128 0x5
+ 323 0111 5F020000 		.4byte	.LASF23
+ 324 0115 48       		.byte	0x48
+ 325 0116 06       		.byte	0x6
+ 326 0117 5E       		.byte	0x5e
+ 327 0118 35020000 		.4byte	0x235
+ 328 011c 06       		.uleb128 0x6
+ 329 011d 50020000 		.4byte	.LASF24
+ 330 0121 06       		.byte	0x6
+ 331 0122 5F       		.byte	0x5f
+ 332 0123 5A020000 		.4byte	0x25a
+ 333 0127 02       		.byte	0x2
+ 334 0128 23       		.byte	0x23
+ 335 0129 00       		.uleb128 0
+ 336 012a 06       		.uleb128 0x6
+ 337 012b D1010000 		.4byte	.LASF25
+ 338 012f 06       		.byte	0x6
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 7
+
+
+ 339 0130 61       		.byte	0x61
+ 340 0131 5A020000 		.4byte	0x25a
+ 341 0135 02       		.byte	0x2
+ 342 0136 23       		.byte	0x23
+ 343 0137 04       		.uleb128 0x4
+ 344 0138 06       		.uleb128 0x6
+ 345 0139 5F000000 		.4byte	.LASF26
+ 346 013d 06       		.byte	0x6
+ 347 013e 63       		.byte	0x63
+ 348 013f D9000000 		.4byte	0xd9
+ 349 0143 02       		.byte	0x2
+ 350 0144 23       		.byte	0x23
+ 351 0145 08       		.uleb128 0x8
+ 352 0146 06       		.uleb128 0x6
+ 353 0147 75030000 		.4byte	.LASF27
+ 354 014b 06       		.byte	0x6
+ 355 014c 64       		.byte	0x64
+ 356 014d 1E030000 		.4byte	0x31e
+ 357 0151 02       		.byte	0x2
+ 358 0152 23       		.byte	0x23
+ 359 0153 0C       		.uleb128 0xc
+ 360 0154 06       		.uleb128 0x6
+ 361 0155 CD000000 		.4byte	.LASF28
+ 362 0159 06       		.byte	0x6
+ 363 015a 66       		.byte	0x66
+ 364 015b 5A020000 		.4byte	0x25a
+ 365 015f 02       		.byte	0x2
+ 366 0160 23       		.byte	0x23
+ 367 0161 10       		.uleb128 0x10
+ 368 0162 06       		.uleb128 0x6
+ 369 0163 80010000 		.4byte	.LASF29
+ 370 0167 06       		.byte	0x6
+ 371 0168 67       		.byte	0x67
+ 372 0169 5A020000 		.4byte	0x25a
+ 373 016d 02       		.byte	0x2
+ 374 016e 23       		.byte	0x23
+ 375 016f 14       		.uleb128 0x14
+ 376 0170 06       		.uleb128 0x6
+ 377 0171 66030000 		.4byte	.LASF30
+ 378 0175 06       		.byte	0x6
+ 379 0176 6E       		.byte	0x6e
+ 380 0177 30040000 		.4byte	0x430
+ 381 017b 02       		.byte	0x2
+ 382 017c 23       		.byte	0x23
+ 383 017d 18       		.uleb128 0x18
+ 384 017e 06       		.uleb128 0x6
+ 385 017f 1F020000 		.4byte	.LASF31
+ 386 0183 06       		.byte	0x6
+ 387 0184 79       		.byte	0x79
+ 388 0185 B8000000 		.4byte	0xb8
+ 389 0189 02       		.byte	0x2
+ 390 018a 23       		.byte	0x23
+ 391 018b 1C       		.uleb128 0x1c
+ 392 018c 06       		.uleb128 0x6
+ 393 018d 57020000 		.4byte	.LASF32
+ 394 0191 06       		.byte	0x6
+ 395 0192 7D       		.byte	0x7d
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 8
+
+
+ 396 0193 AD000000 		.4byte	0xad
+ 397 0197 02       		.byte	0x2
+ 398 0198 23       		.byte	0x23
+ 399 0199 1D       		.uleb128 0x1d
+ 400 019a 06       		.uleb128 0x6
+ 401 019b 11030000 		.4byte	.LASF33
+ 402 019f 06       		.byte	0x6
+ 403 01a0 82       		.byte	0x82
+ 404 01a1 C3000000 		.4byte	0xc3
+ 405 01a5 02       		.byte	0x2
+ 406 01a6 23       		.byte	0x23
+ 407 01a7 1E       		.uleb128 0x1e
+ 408 01a8 06       		.uleb128 0x6
+ 409 01a9 27020000 		.4byte	.LASF34
+ 410 01ad 06       		.byte	0x6
+ 411 01ae 88       		.byte	0x88
+ 412 01af CE000000 		.4byte	0xce
+ 413 01b3 02       		.byte	0x2
+ 414 01b4 23       		.byte	0x23
+ 415 01b5 1F       		.uleb128 0x1f
+ 416 01b6 06       		.uleb128 0x6
+ 417 01b7 B9020000 		.4byte	.LASF35
+ 418 01bb 06       		.byte	0x6
+ 419 01bc 8F       		.byte	0x8f
+ 420 01bd 46030000 		.4byte	0x346
+ 421 01c1 02       		.byte	0x2
+ 422 01c2 23       		.byte	0x23
+ 423 01c3 20       		.uleb128 0x20
+ 424 01c4 07       		.uleb128 0x7
+ 425 01c5 705F7500 		.ascii	"p_u\000"
+ 426 01c9 06       		.byte	0x6
+ 427 01ca B4       		.byte	0xb4
+ 428 01cb FB030000 		.4byte	0x3fb
+ 429 01cf 02       		.byte	0x2
+ 430 01d0 23       		.byte	0x23
+ 431 01d1 24       		.uleb128 0x24
+ 432 01d2 06       		.uleb128 0x6
+ 433 01d3 7B030000 		.4byte	.LASF36
+ 434 01d7 06       		.byte	0x6
+ 435 01d8 B9       		.byte	0xb9
+ 436 01d9 82020000 		.4byte	0x282
+ 437 01dd 02       		.byte	0x2
+ 438 01de 23       		.byte	0x23
+ 439 01df 28       		.uleb128 0x28
+ 440 01e0 06       		.uleb128 0x6
+ 441 01e1 FC020000 		.4byte	.LASF37
+ 442 01e5 06       		.byte	0x6
+ 443 01e6 BF       		.byte	0xbf
+ 444 01e7 60020000 		.4byte	0x260
+ 445 01eb 02       		.byte	0x2
+ 446 01ec 23       		.byte	0x23
+ 447 01ed 2C       		.uleb128 0x2c
+ 448 01ee 06       		.uleb128 0x6
+ 449 01ef 08000000 		.4byte	.LASF38
+ 450 01f3 06       		.byte	0x6
+ 451 01f4 C3       		.byte	0xc3
+ 452 01f5 E4000000 		.4byte	0xe4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 9
+
+
+ 453 01f9 02       		.byte	0x2
+ 454 01fa 23       		.byte	0x23
+ 455 01fb 34       		.uleb128 0x34
+ 456 01fc 06       		.uleb128 0x6
+ 457 01fd 7C020000 		.4byte	.LASF39
+ 458 0201 06       		.byte	0x6
+ 459 0202 C9       		.byte	0xc9
+ 460 0203 EF000000 		.4byte	0xef
+ 461 0207 02       		.byte	0x2
+ 462 0208 23       		.byte	0x23
+ 463 0209 38       		.uleb128 0x38
+ 464 020a 06       		.uleb128 0x6
+ 465 020b 0B020000 		.4byte	.LASF40
+ 466 020f 06       		.byte	0x6
+ 467 0210 D0       		.byte	0xd0
+ 468 0211 42040000 		.4byte	0x442
+ 469 0215 02       		.byte	0x2
+ 470 0216 23       		.byte	0x23
+ 471 0217 3C       		.uleb128 0x3c
+ 472 0218 06       		.uleb128 0x6
+ 473 0219 AE020000 		.4byte	.LASF41
+ 474 021d 06       		.byte	0x6
+ 475 021e D4       		.byte	0xd4
+ 476 021f D9000000 		.4byte	0xd9
+ 477 0223 02       		.byte	0x2
+ 478 0224 23       		.byte	0x23
+ 479 0225 40       		.uleb128 0x40
+ 480 0226 06       		.uleb128 0x6
+ 481 0227 80000000 		.4byte	.LASF42
+ 482 022b 06       		.byte	0x6
+ 483 022c DA       		.byte	0xda
+ 484 022d 98020000 		.4byte	0x298
+ 485 0231 02       		.byte	0x2
+ 486 0232 23       		.byte	0x23
+ 487 0233 44       		.uleb128 0x44
+ 488 0234 00       		.byte	0
+ 489 0235 08       		.uleb128 0x8
+ 490 0236 08       		.byte	0x8
+ 491 0237 05       		.byte	0x5
+ 492 0238 61       		.byte	0x61
+ 493 0239 5A020000 		.4byte	0x25a
+ 494 023d 06       		.uleb128 0x6
+ 495 023e 50020000 		.4byte	.LASF24
+ 496 0242 05       		.byte	0x5
+ 497 0243 62       		.byte	0x62
+ 498 0244 5A020000 		.4byte	0x25a
+ 499 0248 02       		.byte	0x2
+ 500 0249 23       		.byte	0x23
+ 501 024a 00       		.uleb128 0
+ 502 024b 06       		.uleb128 0x6
+ 503 024c D1010000 		.4byte	.LASF25
+ 504 0250 05       		.byte	0x5
+ 505 0251 64       		.byte	0x64
+ 506 0252 5A020000 		.4byte	0x25a
+ 507 0256 02       		.byte	0x2
+ 508 0257 23       		.byte	0x23
+ 509 0258 04       		.uleb128 0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 10
+
+
+ 510 0259 00       		.byte	0
+ 511 025a 09       		.uleb128 0x9
+ 512 025b 04       		.byte	0x4
+ 513 025c 05010000 		.4byte	0x105
+ 514 0260 03       		.uleb128 0x3
+ 515 0261 8E010000 		.4byte	.LASF43
+ 516 0265 05       		.byte	0x5
+ 517 0266 66       		.byte	0x66
+ 518 0267 35020000 		.4byte	0x235
+ 519 026b 08       		.uleb128 0x8
+ 520 026c 04       		.byte	0x4
+ 521 026d 05       		.byte	0x5
+ 522 026e 6B       		.byte	0x6b
+ 523 026f 82020000 		.4byte	0x282
+ 524 0273 06       		.uleb128 0x6
+ 525 0274 50020000 		.4byte	.LASF24
+ 526 0278 05       		.byte	0x5
+ 527 0279 6D       		.byte	0x6d
+ 528 027a 5A020000 		.4byte	0x25a
+ 529 027e 02       		.byte	0x2
+ 530 027f 23       		.byte	0x23
+ 531 0280 00       		.uleb128 0
+ 532 0281 00       		.byte	0
+ 533 0282 03       		.uleb128 0x3
+ 534 0283 3C010000 		.4byte	.LASF44
+ 535 0287 05       		.byte	0x5
+ 536 0288 70       		.byte	0x70
+ 537 0289 6B020000 		.4byte	0x26b
+ 538 028d 03       		.uleb128 0x3
+ 539 028e DD000000 		.4byte	.LASF45
+ 540 0292 07       		.byte	0x7
+ 541 0293 A7       		.byte	0xa7
+ 542 0294 98020000 		.4byte	0x298
+ 543 0298 0A       		.uleb128 0xa
+ 544 0299 04       		.byte	0x4
+ 545 029a 05       		.uleb128 0x5
+ 546 029b F5020000 		.4byte	.LASF46
+ 547 029f 24       		.byte	0x24
+ 548 02a0 07       		.byte	0x7
+ 549 02a1 BA       		.byte	0xba
+ 550 02a2 1E030000 		.4byte	0x31e
+ 551 02a6 07       		.uleb128 0x7
+ 552 02a7 723800   		.ascii	"r8\000"
+ 553 02aa 07       		.byte	0x7
+ 554 02ab BB       		.byte	0xbb
+ 555 02ac 8D020000 		.4byte	0x28d
+ 556 02b0 02       		.byte	0x2
+ 557 02b1 23       		.byte	0x23
+ 558 02b2 00       		.uleb128 0
+ 559 02b3 07       		.uleb128 0x7
+ 560 02b4 723900   		.ascii	"r9\000"
+ 561 02b7 07       		.byte	0x7
+ 562 02b8 BC       		.byte	0xbc
+ 563 02b9 8D020000 		.4byte	0x28d
+ 564 02bd 02       		.byte	0x2
+ 565 02be 23       		.byte	0x23
+ 566 02bf 04       		.uleb128 0x4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 11
+
+
+ 567 02c0 07       		.uleb128 0x7
+ 568 02c1 72313000 		.ascii	"r10\000"
+ 569 02c5 07       		.byte	0x7
+ 570 02c6 BD       		.byte	0xbd
+ 571 02c7 8D020000 		.4byte	0x28d
+ 572 02cb 02       		.byte	0x2
+ 573 02cc 23       		.byte	0x23
+ 574 02cd 08       		.uleb128 0x8
+ 575 02ce 07       		.uleb128 0x7
+ 576 02cf 72313100 		.ascii	"r11\000"
+ 577 02d3 07       		.byte	0x7
+ 578 02d4 BE       		.byte	0xbe
+ 579 02d5 8D020000 		.4byte	0x28d
+ 580 02d9 02       		.byte	0x2
+ 581 02da 23       		.byte	0x23
+ 582 02db 0C       		.uleb128 0xc
+ 583 02dc 07       		.uleb128 0x7
+ 584 02dd 723400   		.ascii	"r4\000"
+ 585 02e0 07       		.byte	0x7
+ 586 02e1 BF       		.byte	0xbf
+ 587 02e2 8D020000 		.4byte	0x28d
+ 588 02e6 02       		.byte	0x2
+ 589 02e7 23       		.byte	0x23
+ 590 02e8 10       		.uleb128 0x10
+ 591 02e9 07       		.uleb128 0x7
+ 592 02ea 723500   		.ascii	"r5\000"
+ 593 02ed 07       		.byte	0x7
+ 594 02ee C0       		.byte	0xc0
+ 595 02ef 8D020000 		.4byte	0x28d
+ 596 02f3 02       		.byte	0x2
+ 597 02f4 23       		.byte	0x23
+ 598 02f5 14       		.uleb128 0x14
+ 599 02f6 07       		.uleb128 0x7
+ 600 02f7 723600   		.ascii	"r6\000"
+ 601 02fa 07       		.byte	0x7
+ 602 02fb C1       		.byte	0xc1
+ 603 02fc 8D020000 		.4byte	0x28d
+ 604 0300 02       		.byte	0x2
+ 605 0301 23       		.byte	0x23
+ 606 0302 18       		.uleb128 0x18
+ 607 0303 07       		.uleb128 0x7
+ 608 0304 723700   		.ascii	"r7\000"
+ 609 0307 07       		.byte	0x7
+ 610 0308 C2       		.byte	0xc2
+ 611 0309 8D020000 		.4byte	0x28d
+ 612 030d 02       		.byte	0x2
+ 613 030e 23       		.byte	0x23
+ 614 030f 1C       		.uleb128 0x1c
+ 615 0310 07       		.uleb128 0x7
+ 616 0311 6C7200   		.ascii	"lr\000"
+ 617 0314 07       		.byte	0x7
+ 618 0315 C3       		.byte	0xc3
+ 619 0316 8D020000 		.4byte	0x28d
+ 620 031a 02       		.byte	0x2
+ 621 031b 23       		.byte	0x23
+ 622 031c 20       		.uleb128 0x20
+ 623 031d 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 12
+
+
+ 624 031e 05       		.uleb128 0x5
+ 625 031f 13010000 		.4byte	.LASF47
+ 626 0323 04       		.byte	0x4
+ 627 0324 07       		.byte	0x7
+ 628 0325 CD       		.byte	0xcd
+ 629 0326 39030000 		.4byte	0x339
+ 630 032a 07       		.uleb128 0x7
+ 631 032b 72313300 		.ascii	"r13\000"
+ 632 032f 07       		.byte	0x7
+ 633 0330 CE       		.byte	0xce
+ 634 0331 39030000 		.4byte	0x339
+ 635 0335 02       		.byte	0x2
+ 636 0336 23       		.byte	0x23
+ 637 0337 00       		.uleb128 0
+ 638 0338 00       		.byte	0
+ 639 0339 09       		.uleb128 0x9
+ 640 033a 04       		.byte	0x4
+ 641 033b 9A020000 		.4byte	0x29a
+ 642 033f 04       		.uleb128 0x4
+ 643 0340 04       		.byte	0x4
+ 644 0341 07       		.byte	0x7
+ 645 0342 77010000 		.4byte	.LASF48
+ 646 0346 0B       		.uleb128 0xb
+ 647 0347 FA000000 		.4byte	0xfa
+ 648 034b 08       		.uleb128 0x8
+ 649 034c 1C       		.byte	0x1c
+ 650 034d 08       		.byte	0x8
+ 651 034e 5E       		.byte	0x5e
+ 652 034f A8030000 		.4byte	0x3a8
+ 653 0353 06       		.uleb128 0x6
+ 654 0354 90020000 		.4byte	.LASF49
+ 655 0358 08       		.byte	0x8
+ 656 0359 5F       		.byte	0x5f
+ 657 035a 60020000 		.4byte	0x260
+ 658 035e 02       		.byte	0x2
+ 659 035f 23       		.byte	0x23
+ 660 0360 00       		.uleb128 0
+ 661 0361 06       		.uleb128 0x6
+ 662 0362 39020000 		.4byte	.LASF50
+ 663 0366 08       		.byte	0x8
+ 664 0367 60       		.byte	0x60
+ 665 0368 D9000000 		.4byte	0xd9
+ 666 036c 02       		.byte	0x2
+ 667 036d 23       		.byte	0x23
+ 668 036e 08       		.uleb128 0x8
+ 669 036f 06       		.uleb128 0x6
+ 670 0370 88010000 		.4byte	.LASF51
+ 671 0374 08       		.byte	0x8
+ 672 0375 62       		.byte	0x62
+ 673 0376 1E030000 		.4byte	0x31e
+ 674 037a 02       		.byte	0x2
+ 675 037b 23       		.byte	0x23
+ 676 037c 0C       		.uleb128 0xc
+ 677 037d 06       		.uleb128 0x6
+ 678 037e D5000000 		.4byte	.LASF52
+ 679 0382 08       		.byte	0x8
+ 680 0383 65       		.byte	0x65
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 13
+
+
+ 681 0384 5A020000 		.4byte	0x25a
+ 682 0388 02       		.byte	0x2
+ 683 0389 23       		.byte	0x23
+ 684 038a 10       		.uleb128 0x10
+ 685 038b 06       		.uleb128 0x6
+ 686 038c C1010000 		.4byte	.LASF53
+ 687 0390 08       		.byte	0x8
+ 688 0391 66       		.byte	0x66
+ 689 0392 5A020000 		.4byte	0x25a
+ 690 0396 02       		.byte	0x2
+ 691 0397 23       		.byte	0x23
+ 692 0398 14       		.uleb128 0x14
+ 693 0399 06       		.uleb128 0x6
+ 694 039a B7010000 		.4byte	.LASF54
+ 695 039e 08       		.byte	0x8
+ 696 039f 69       		.byte	0x69
+ 697 03a0 5A020000 		.4byte	0x25a
+ 698 03a4 02       		.byte	0x2
+ 699 03a5 23       		.byte	0x23
+ 700 03a6 18       		.uleb128 0x18
+ 701 03a7 00       		.byte	0
+ 702 03a8 03       		.uleb128 0x3
+ 703 03a9 18030000 		.4byte	.LASF55
+ 704 03ad 08       		.byte	0x8
+ 705 03ae 6B       		.byte	0x6b
+ 706 03af 4B030000 		.4byte	0x34b
+ 707 03b3 05       		.uleb128 0x5
+ 708 03b4 54010000 		.4byte	.LASF56
+ 709 03b8 10       		.byte	0x10
+ 710 03b9 09       		.byte	0x9
+ 711 03ba 2C       		.byte	0x2c
+ 712 03bb EA030000 		.4byte	0x3ea
+ 713 03bf 06       		.uleb128 0x6
+ 714 03c0 8F000000 		.4byte	.LASF57
+ 715 03c4 09       		.byte	0x9
+ 716 03c5 2D       		.byte	0x2d
+ 717 03c6 60020000 		.4byte	0x260
+ 718 03ca 02       		.byte	0x2
+ 719 03cb 23       		.byte	0x23
+ 720 03cc 00       		.uleb128 0
+ 721 03cd 06       		.uleb128 0x6
+ 722 03ce 6D030000 		.4byte	.LASF58
+ 723 03d2 09       		.byte	0x9
+ 724 03d3 2F       		.byte	0x2f
+ 725 03d4 5A020000 		.4byte	0x25a
+ 726 03d8 02       		.byte	0x2
+ 727 03d9 23       		.byte	0x23
+ 728 03da 08       		.uleb128 0x8
+ 729 03db 06       		.uleb128 0x6
+ 730 03dc 9D020000 		.4byte	.LASF59
+ 731 03e0 09       		.byte	0x9
+ 732 03e1 31       		.byte	0x31
+ 733 03e2 EA030000 		.4byte	0x3ea
+ 734 03e6 02       		.byte	0x2
+ 735 03e7 23       		.byte	0x23
+ 736 03e8 0C       		.uleb128 0xc
+ 737 03e9 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 14
+
+
+ 738 03ea 09       		.uleb128 0x9
+ 739 03eb 04       		.byte	0x4
+ 740 03ec B3030000 		.4byte	0x3b3
+ 741 03f0 03       		.uleb128 0x3
+ 742 03f1 54010000 		.4byte	.LASF56
+ 743 03f5 09       		.byte	0x9
+ 744 03f6 33       		.byte	0x33
+ 745 03f7 B3030000 		.4byte	0x3b3
+ 746 03fb 0C       		.uleb128 0xc
+ 747 03fc 04       		.byte	0x4
+ 748 03fd 06       		.byte	0x6
+ 749 03fe 96       		.byte	0x96
+ 750 03ff 30040000 		.4byte	0x430
+ 751 0403 0D       		.uleb128 0xd
+ 752 0404 15000000 		.4byte	.LASF60
+ 753 0408 06       		.byte	0x6
+ 754 0409 9D       		.byte	0x9d
+ 755 040a E4000000 		.4byte	0xe4
+ 756 040e 0D       		.uleb128 0xd
+ 757 040f 33000000 		.4byte	.LASF61
+ 758 0413 06       		.byte	0x6
+ 759 0414 A4       		.byte	0xa4
+ 760 0415 E4000000 		.4byte	0xe4
+ 761 0419 0D       		.uleb128 0xd
+ 762 041a 5F030000 		.4byte	.LASF62
+ 763 041e 06       		.byte	0x6
+ 764 041f AB       		.byte	0xab
+ 765 0420 98020000 		.4byte	0x298
+ 766 0424 0D       		.uleb128 0xd
+ 767 0425 49020000 		.4byte	.LASF63
+ 768 0429 06       		.byte	0x6
+ 769 042a B2       		.byte	0xb2
+ 770 042b EF000000 		.4byte	0xef
+ 771 042f 00       		.byte	0
+ 772 0430 09       		.uleb128 0x9
+ 773 0431 04       		.byte	0x4
+ 774 0432 36040000 		.4byte	0x436
+ 775 0436 0E       		.uleb128 0xe
+ 776 0437 3B040000 		.4byte	0x43b
+ 777 043b 04       		.uleb128 0x4
+ 778 043c 01       		.byte	0x1
+ 779 043d 08       		.byte	0x8
+ 780 043e 98020000 		.4byte	.LASF64
+ 781 0442 09       		.uleb128 0x9
+ 782 0443 04       		.byte	0x4
+ 783 0444 F0030000 		.4byte	0x3f0
+ 784 0448 03       		.uleb128 0x3
+ 785 0449 00000000 		.4byte	.LASF65
+ 786 044d 06       		.byte	0x6
+ 787 044e E5       		.byte	0xe5
+ 788 044f 53040000 		.4byte	0x453
+ 789 0453 09       		.uleb128 0x9
+ 790 0454 04       		.byte	0x4
+ 791 0455 59040000 		.4byte	0x459
+ 792 0459 0F       		.uleb128 0xf
+ 793 045a 01       		.byte	0x1
+ 794 045b E4000000 		.4byte	0xe4
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 15
+
+
+ 795 045f 69040000 		.4byte	0x469
+ 796 0463 10       		.uleb128 0x10
+ 797 0464 98020000 		.4byte	0x298
+ 798 0468 00       		.byte	0
+ 799 0469 05       		.uleb128 0x5
+ 800 046a 73020000 		.4byte	.LASF66
+ 801 046e 10       		.byte	0x10
+ 802 046f 0A       		.byte	0xa
+ 803 0470 3B       		.byte	0x3b
+ 804 0471 AE040000 		.4byte	0x4ae
+ 805 0475 06       		.uleb128 0x6
+ 806 0476 0E010000 		.4byte	.LASF67
+ 807 047a 0A       		.byte	0xa
+ 808 047b 3C       		.byte	0x3c
+ 809 047c 30040000 		.4byte	0x430
+ 810 0480 02       		.byte	0x2
+ 811 0481 23       		.byte	0x23
+ 812 0482 00       		.uleb128 0
+ 813 0483 06       		.uleb128 0x6
+ 814 0484 9B010000 		.4byte	.LASF68
+ 815 0488 0A       		.byte	0xa
+ 816 0489 3D       		.byte	0x3d
+ 817 048a B0040000 		.4byte	0x4b0
+ 818 048e 02       		.byte	0x2
+ 819 048f 23       		.byte	0x23
+ 820 0490 04       		.uleb128 0x4
+ 821 0491 06       		.uleb128 0x6
+ 822 0492 05010000 		.4byte	.LASF69
+ 823 0496 0A       		.byte	0xa
+ 824 0497 3E       		.byte	0x3e
+ 825 0498 B0040000 		.4byte	0x4b0
+ 826 049c 02       		.byte	0x2
+ 827 049d 23       		.byte	0x23
+ 828 049e 08       		.uleb128 0x8
+ 829 049f 06       		.uleb128 0x6
+ 830 04a0 D8010000 		.4byte	.LASF70
+ 831 04a4 0A       		.byte	0xa
+ 832 04a5 3F       		.byte	0x3f
+ 833 04a6 B0040000 		.4byte	0x4b0
+ 834 04aa 02       		.byte	0x2
+ 835 04ab 23       		.byte	0x23
+ 836 04ac 0C       		.uleb128 0xc
+ 837 04ad 00       		.byte	0
+ 838 04ae 11       		.uleb128 0x11
+ 839 04af 01       		.byte	0x1
+ 840 04b0 09       		.uleb128 0x9
+ 841 04b1 04       		.byte	0x4
+ 842 04b2 AE040000 		.4byte	0x4ae
+ 843 04b6 12       		.uleb128 0x12
+ 844 04b7 30030000 		.4byte	.LASF83
+ 845 04bb 01       		.byte	0x1
+ 846 04bc 43       		.byte	0x43
+ 847 04bd 01       		.byte	0x1
+ 848 04be 00000000 		.4byte	.LFB8
+ 849 04c2 78000000 		.4byte	.LFE8
+ 850 04c6 00000000 		.4byte	.LLST0
+ 851 04ca 01       		.byte	0x1
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 16
+
+
+ 852 04cb B7050000 		.4byte	0x5b7
+ 853 04cf 13       		.uleb128 0x13
+ 854 04d0 747000   		.ascii	"tp\000"
+ 855 04d3 01       		.byte	0x1
+ 856 04d4 44       		.byte	0x44
+ 857 04d5 5A020000 		.4byte	0x25a
+ 858 04d9 2C000000 		.4byte	.LLST1
+ 859 04dd 13       		.uleb128 0x13
+ 860 04de 6D736700 		.ascii	"msg\000"
+ 861 04e2 01       		.byte	0x1
+ 862 04e3 45       		.byte	0x45
+ 863 04e4 E4000000 		.4byte	0xe4
+ 864 04e8 55000000 		.4byte	.LLST2
+ 865 04ec 14       		.uleb128 0x14
+ 866 04ed 1C000000 		.4byte	.LVL0
+ 867 04f1 B6060000 		.4byte	0x6b6
+ 868 04f5 0B050000 		.4byte	0x50b
+ 869 04f9 15       		.uleb128 0x15
+ 870 04fa 01       		.byte	0x1
+ 871 04fb 53       		.byte	0x53
+ 872 04fc 05       		.byte	0x5
+ 873 04fd 03       		.byte	0x3
+ 874 04fe 00000000 		.4byte	thread
+ 875 0502 15       		.uleb128 0x15
+ 876 0503 01       		.byte	0x1
+ 877 0504 51       		.byte	0x51
+ 878 0505 04       		.byte	0x4
+ 879 0506 74       		.byte	0x74
+ 880 0507 00       		.sleb128 0
+ 881 0508 31       		.byte	0x31
+ 882 0509 24       		.byte	0x24
+ 883 050a 00       		.byte	0
+ 884 050b 16       		.uleb128 0x16
+ 885 050c 24000000 		.4byte	.LVL1
+ 886 0510 E3060000 		.4byte	0x6e3
+ 887 0514 14       		.uleb128 0x14
+ 888 0515 2C000000 		.4byte	.LVL3
+ 889 0519 F1060000 		.4byte	0x6f1
+ 890 051d 28050000 		.4byte	0x528
+ 891 0521 15       		.uleb128 0x15
+ 892 0522 01       		.byte	0x1
+ 893 0523 51       		.byte	0x51
+ 894 0524 02       		.byte	0x2
+ 895 0525 74       		.byte	0x74
+ 896 0526 00       		.sleb128 0
+ 897 0527 00       		.byte	0
+ 898 0528 14       		.uleb128 0x14
+ 899 0529 32000000 		.4byte	.LVL4
+ 900 052d 0A070000 		.4byte	0x70a
+ 901 0531 3C050000 		.4byte	0x53c
+ 902 0535 15       		.uleb128 0x15
+ 903 0536 01       		.byte	0x1
+ 904 0537 50       		.byte	0x50
+ 905 0538 02       		.byte	0x2
+ 906 0539 74       		.byte	0x74
+ 907 053a 00       		.sleb128 0
+ 908 053b 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 17
+
+
+ 909 053c 16       		.uleb128 0x16
+ 910 053d 36000000 		.4byte	.LVL5
+ 911 0541 E3060000 		.4byte	0x6e3
+ 912 0545 14       		.uleb128 0x14
+ 913 0546 3E000000 		.4byte	.LVL7
+ 914 054a F1060000 		.4byte	0x6f1
+ 915 054e 59050000 		.4byte	0x559
+ 916 0552 15       		.uleb128 0x15
+ 917 0553 01       		.byte	0x1
+ 918 0554 51       		.byte	0x51
+ 919 0555 02       		.byte	0x2
+ 920 0556 74       		.byte	0x74
+ 921 0557 00       		.sleb128 0
+ 922 0558 00       		.byte	0
+ 923 0559 14       		.uleb128 0x14
+ 924 055a 44000000 		.4byte	.LVL8
+ 925 055e 0A070000 		.4byte	0x70a
+ 926 0562 6D050000 		.4byte	0x56d
+ 927 0566 15       		.uleb128 0x15
+ 928 0567 01       		.byte	0x1
+ 929 0568 50       		.byte	0x50
+ 930 0569 02       		.byte	0x2
+ 931 056a 74       		.byte	0x74
+ 932 056b 00       		.sleb128 0
+ 933 056c 00       		.byte	0
+ 934 056d 16       		.uleb128 0x16
+ 935 056e 48000000 		.4byte	.LVL9
+ 936 0572 E3060000 		.4byte	0x6e3
+ 937 0576 14       		.uleb128 0x14
+ 938 0577 50000000 		.4byte	.LVL11
+ 939 057b F1060000 		.4byte	0x6f1
+ 940 057f 8A050000 		.4byte	0x58a
+ 941 0583 15       		.uleb128 0x15
+ 942 0584 01       		.byte	0x1
+ 943 0585 51       		.byte	0x51
+ 944 0586 02       		.byte	0x2
+ 945 0587 74       		.byte	0x74
+ 946 0588 00       		.sleb128 0
+ 947 0589 00       		.byte	0
+ 948 058a 14       		.uleb128 0x14
+ 949 058b 56000000 		.4byte	.LVL12
+ 950 058f 0A070000 		.4byte	0x70a
+ 951 0593 9E050000 		.4byte	0x59e
+ 952 0597 15       		.uleb128 0x15
+ 953 0598 01       		.byte	0x1
+ 954 0599 50       		.byte	0x50
+ 955 059a 02       		.byte	0x2
+ 956 059b 74       		.byte	0x74
+ 957 059c 00       		.sleb128 0
+ 958 059d 00       		.byte	0
+ 959 059e 17       		.uleb128 0x17
+ 960 059f 5E000000 		.4byte	.LVL13
+ 961 05a3 1E070000 		.4byte	0x71e
+ 962 05a7 15       		.uleb128 0x15
+ 963 05a8 01       		.byte	0x1
+ 964 05a9 51       		.byte	0x51
+ 965 05aa 05       		.byte	0x5
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 18
+
+
+ 966 05ab 03       		.byte	0x3
+ 967 05ac 00000000 		.4byte	.LC4
+ 968 05b0 15       		.uleb128 0x15
+ 969 05b1 01       		.byte	0x1
+ 970 05b2 50       		.byte	0x50
+ 971 05b3 01       		.byte	0x1
+ 972 05b4 31       		.byte	0x31
+ 973 05b5 00       		.byte	0
+ 974 05b6 00       		.byte	0
+ 975 05b7 18       		.uleb128 0x18
+ 976 05b8 E8010000 		.4byte	.LASF84
+ 977 05bc 01       		.byte	0x1
+ 978 05bd 3B       		.byte	0x3b
+ 979 05be 01       		.byte	0x1
+ 980 05bf E4000000 		.4byte	0xe4
+ 981 05c3 00000000 		.4byte	.LFB7
+ 982 05c7 1E000000 		.4byte	.LFE7
+ 983 05cb 68000000 		.4byte	.LLST3
+ 984 05cf 01       		.byte	0x1
+ 985 05d0 2C060000 		.4byte	0x62c
+ 986 05d4 19       		.uleb128 0x19
+ 987 05d5 7000     		.ascii	"p\000"
+ 988 05d7 01       		.byte	0x1
+ 989 05d8 3B       		.byte	0x3b
+ 990 05d9 98020000 		.4byte	0x298
+ 991 05dd 88000000 		.4byte	.LLST4
+ 992 05e1 14       		.uleb128 0x14
+ 993 05e2 0A000000 		.4byte	.LVL16
+ 994 05e6 41070000 		.4byte	0x741
+ 995 05ea FB050000 		.4byte	0x5fb
+ 996 05ee 15       		.uleb128 0x15
+ 997 05ef 01       		.byte	0x1
+ 998 05f0 51       		.byte	0x51
+ 999 05f1 02       		.byte	0x2
+ 1000 05f2 08       		.byte	0x8
+ 1001 05f3 41       		.byte	0x41
+ 1002 05f4 15       		.uleb128 0x15
+ 1003 05f5 01       		.byte	0x1
+ 1004 05f6 50       		.byte	0x50
+ 1005 05f7 02       		.byte	0x2
+ 1006 05f8 74       		.byte	0x74
+ 1007 05f9 00       		.sleb128 0
+ 1008 05fa 00       		.byte	0
+ 1009 05fb 14       		.uleb128 0x14
+ 1010 05fc 12000000 		.4byte	.LVL17
+ 1011 0600 41070000 		.4byte	0x741
+ 1012 0604 15060000 		.4byte	0x615
+ 1013 0608 15       		.uleb128 0x15
+ 1014 0609 01       		.byte	0x1
+ 1015 060a 51       		.byte	0x51
+ 1016 060b 02       		.byte	0x2
+ 1017 060c 08       		.byte	0x8
+ 1018 060d 42       		.byte	0x42
+ 1019 060e 15       		.uleb128 0x15
+ 1020 060f 01       		.byte	0x1
+ 1021 0610 50       		.byte	0x50
+ 1022 0611 02       		.byte	0x2
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 19
+
+
+ 1023 0612 74       		.byte	0x74
+ 1024 0613 00       		.sleb128 0
+ 1025 0614 00       		.byte	0
+ 1026 0615 17       		.uleb128 0x17
+ 1027 0616 1A000000 		.4byte	.LVL18
+ 1028 061a 41070000 		.4byte	0x741
+ 1029 061e 15       		.uleb128 0x15
+ 1030 061f 01       		.byte	0x1
+ 1031 0620 51       		.byte	0x51
+ 1032 0621 02       		.byte	0x2
+ 1033 0622 08       		.byte	0x8
+ 1034 0623 43       		.byte	0x43
+ 1035 0624 15       		.uleb128 0x15
+ 1036 0625 01       		.byte	0x1
+ 1037 0626 50       		.byte	0x50
+ 1038 0627 02       		.byte	0x2
+ 1039 0628 74       		.byte	0x74
+ 1040 0629 00       		.sleb128 0
+ 1041 062a 00       		.byte	0
+ 1042 062b 00       		.byte	0
+ 1043 062c 1A       		.uleb128 0x1a
+ 1044 062d 22030000 		.4byte	.LASF71
+ 1045 0631 08       		.byte	0x8
+ 1046 0632 6F       		.byte	0x6f
+ 1047 0633 A8030000 		.4byte	0x3a8
+ 1048 0637 01       		.byte	0x1
+ 1049 0638 01       		.byte	0x1
+ 1050 0639 1B       		.uleb128 0x1b
+ 1051 063a 5A020000 		.4byte	0x25a
+ 1052 063e 49060000 		.4byte	0x649
+ 1053 0642 1C       		.uleb128 0x1c
+ 1054 0643 3F030000 		.4byte	0x33f
+ 1055 0647 04       		.byte	0x4
+ 1056 0648 00       		.byte	0
+ 1057 0649 1A       		.uleb128 0x1a
+ 1058 064a 31020000 		.4byte	.LASF72
+ 1059 064e 0A       		.byte	0xa
+ 1060 064f A5       		.byte	0xa5
+ 1061 0650 39060000 		.4byte	0x639
+ 1062 0654 01       		.byte	0x1
+ 1063 0655 01       		.byte	0x1
+ 1064 0656 1B       		.uleb128 0x1b
+ 1065 0657 98020000 		.4byte	0x298
+ 1066 065b 61060000 		.4byte	0x661
+ 1067 065f 1D       		.uleb128 0x1d
+ 1068 0660 00       		.byte	0
+ 1069 0661 1E       		.uleb128 0x1e
+ 1070 0662 776100   		.ascii	"wa\000"
+ 1071 0665 0A       		.byte	0xa
+ 1072 0666 A7       		.byte	0xa7
+ 1073 0667 6D060000 		.4byte	0x66d
+ 1074 066b 01       		.byte	0x1
+ 1075 066c 01       		.byte	0x1
+ 1076 066d 0E       		.uleb128 0xe
+ 1077 066e 56060000 		.4byte	0x656
+ 1078 0672 1F       		.uleb128 0x1f
+ 1079 0673 40020000 		.4byte	.LASF73
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 20
+
+
+ 1080 0677 01       		.byte	0x1
+ 1081 0678 5B       		.byte	0x5b
+ 1082 0679 84060000 		.4byte	0x684
+ 1083 067d 01       		.byte	0x1
+ 1084 067e 05       		.byte	0x5
+ 1085 067f 03       		.byte	0x3
+ 1086 0680 00000000 		.4byte	testmsg1
+ 1087 0684 0E       		.uleb128 0xe
+ 1088 0685 69040000 		.4byte	0x469
+ 1089 0689 1B       		.uleb128 0x1b
+ 1090 068a 99060000 		.4byte	0x699
+ 1091 068e 99060000 		.4byte	0x699
+ 1092 0692 1C       		.uleb128 0x1c
+ 1093 0693 3F030000 		.4byte	0x33f
+ 1094 0697 01       		.byte	0x1
+ 1095 0698 00       		.byte	0
+ 1096 0699 09       		.uleb128 0x9
+ 1097 069a 04       		.byte	0x4
+ 1098 069b 84060000 		.4byte	0x684
+ 1099 069f 1F       		.uleb128 0x1f
+ 1100 06a0 6C010000 		.4byte	.LASF74
+ 1101 06a4 01       		.byte	0x1
+ 1102 06a5 67       		.byte	0x67
+ 1103 06a6 B1060000 		.4byte	0x6b1
+ 1104 06aa 01       		.byte	0x1
+ 1105 06ab 05       		.byte	0x5
+ 1106 06ac 03       		.byte	0x3
+ 1107 06ad 00000000 		.4byte	patternmsg
+ 1108 06b1 0E       		.uleb128 0xe
+ 1109 06b2 89060000 		.4byte	0x689
+ 1110 06b6 20       		.uleb128 0x20
+ 1111 06b7 01       		.byte	0x1
+ 1112 06b8 5A010000 		.4byte	.LASF77
+ 1113 06bc 06       		.byte	0x6
+ 1114 06bd 7001     		.2byte	0x170
+ 1115 06bf 01       		.byte	0x1
+ 1116 06c0 5A020000 		.4byte	0x25a
+ 1117 06c4 01       		.byte	0x1
+ 1118 06c5 E3060000 		.4byte	0x6e3
+ 1119 06c9 10       		.uleb128 0x10
+ 1120 06ca 98020000 		.4byte	0x298
+ 1121 06ce 10       		.uleb128 0x10
+ 1122 06cf 30000000 		.4byte	0x30
+ 1123 06d3 10       		.uleb128 0x10
+ 1124 06d4 D9000000 		.4byte	0xd9
+ 1125 06d8 10       		.uleb128 0x10
+ 1126 06d9 48040000 		.4byte	0x448
+ 1127 06dd 10       		.uleb128 0x10
+ 1128 06de 98020000 		.4byte	0x298
+ 1129 06e2 00       		.byte	0
+ 1130 06e3 21       		.uleb128 0x21
+ 1131 06e4 01       		.byte	0x1
+ 1132 06e5 07030000 		.4byte	.LASF85
+ 1133 06e9 0B       		.byte	0xb
+ 1134 06ea 52       		.byte	0x52
+ 1135 06eb 01       		.byte	0x1
+ 1136 06ec 5A020000 		.4byte	0x25a
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 21
+
+
+ 1137 06f0 01       		.byte	0x1
+ 1138 06f1 22       		.uleb128 0x22
+ 1139 06f2 01       		.byte	0x1
+ 1140 06f3 66020000 		.4byte	.LASF75
+ 1141 06f7 0B       		.byte	0xb
+ 1142 06f8 53       		.byte	0x53
+ 1143 06f9 01       		.byte	0x1
+ 1144 06fa 01       		.byte	0x1
+ 1145 06fb 0A070000 		.4byte	0x70a
+ 1146 06ff 10       		.uleb128 0x10
+ 1147 0700 5A020000 		.4byte	0x25a
+ 1148 0704 10       		.uleb128 0x10
+ 1149 0705 E4000000 		.4byte	0xe4
+ 1150 0709 00       		.byte	0
+ 1151 070a 22       		.uleb128 0x22
+ 1152 070b 01       		.byte	0x1
+ 1153 070c 97000000 		.4byte	.LASF76
+ 1154 0710 0A       		.byte	0xa
+ 1155 0711 56       		.byte	0x56
+ 1156 0712 01       		.byte	0x1
+ 1157 0713 01       		.byte	0x1
+ 1158 0714 1E070000 		.4byte	0x71e
+ 1159 0718 10       		.uleb128 0x10
+ 1160 0719 3B040000 		.4byte	0x43b
+ 1161 071d 00       		.byte	0
+ 1162 071e 23       		.uleb128 0x23
+ 1163 071f 01       		.byte	0x1
+ 1164 0720 A1010000 		.4byte	.LASF78
+ 1165 0724 0A       		.byte	0xa
+ 1166 0725 59       		.byte	0x59
+ 1167 0726 01       		.byte	0x1
+ 1168 0727 9B000000 		.4byte	0x9b
+ 1169 072b 01       		.byte	0x1
+ 1170 072c 3B070000 		.4byte	0x73b
+ 1171 0730 10       		.uleb128 0x10
+ 1172 0731 3B000000 		.4byte	0x3b
+ 1173 0735 10       		.uleb128 0x10
+ 1174 0736 3B070000 		.4byte	0x73b
+ 1175 073a 00       		.byte	0
+ 1176 073b 09       		.uleb128 0x9
+ 1177 073c 04       		.byte	0x4
+ 1178 073d 3B040000 		.4byte	0x43b
+ 1179 0741 24       		.uleb128 0x24
+ 1180 0742 01       		.byte	0x1
+ 1181 0743 BA000000 		.4byte	.LASF79
+ 1182 0747 0B       		.byte	0xb
+ 1183 0748 51       		.byte	0x51
+ 1184 0749 01       		.byte	0x1
+ 1185 074a E4000000 		.4byte	0xe4
+ 1186 074e 01       		.byte	0x1
+ 1187 074f 10       		.uleb128 0x10
+ 1188 0750 5A020000 		.4byte	0x25a
+ 1189 0754 10       		.uleb128 0x10
+ 1190 0755 E4000000 		.4byte	0xe4
+ 1191 0759 00       		.byte	0
+ 1192 075a 00       		.byte	0
+ 1193              		.section	.debug_abbrev,"",%progbits
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 22
+
+
+ 1194              	.Ldebug_abbrev0:
+ 1195 0000 01       		.uleb128 0x1
+ 1196 0001 11       		.uleb128 0x11
+ 1197 0002 01       		.byte	0x1
+ 1198 0003 25       		.uleb128 0x25
+ 1199 0004 0E       		.uleb128 0xe
+ 1200 0005 13       		.uleb128 0x13
+ 1201 0006 0B       		.uleb128 0xb
+ 1202 0007 03       		.uleb128 0x3
+ 1203 0008 0E       		.uleb128 0xe
+ 1204 0009 1B       		.uleb128 0x1b
+ 1205 000a 0E       		.uleb128 0xe
+ 1206 000b 55       		.uleb128 0x55
+ 1207 000c 06       		.uleb128 0x6
+ 1208 000d 11       		.uleb128 0x11
+ 1209 000e 01       		.uleb128 0x1
+ 1210 000f 52       		.uleb128 0x52
+ 1211 0010 01       		.uleb128 0x1
+ 1212 0011 10       		.uleb128 0x10
+ 1213 0012 06       		.uleb128 0x6
+ 1214 0013 00       		.byte	0
+ 1215 0014 00       		.byte	0
+ 1216 0015 02       		.uleb128 0x2
+ 1217 0016 24       		.uleb128 0x24
+ 1218 0017 00       		.byte	0
+ 1219 0018 0B       		.uleb128 0xb
+ 1220 0019 0B       		.uleb128 0xb
+ 1221 001a 3E       		.uleb128 0x3e
+ 1222 001b 0B       		.uleb128 0xb
+ 1223 001c 03       		.uleb128 0x3
+ 1224 001d 08       		.uleb128 0x8
+ 1225 001e 00       		.byte	0
+ 1226 001f 00       		.byte	0
+ 1227 0020 03       		.uleb128 0x3
+ 1228 0021 16       		.uleb128 0x16
+ 1229 0022 00       		.byte	0
+ 1230 0023 03       		.uleb128 0x3
+ 1231 0024 0E       		.uleb128 0xe
+ 1232 0025 3A       		.uleb128 0x3a
+ 1233 0026 0B       		.uleb128 0xb
+ 1234 0027 3B       		.uleb128 0x3b
+ 1235 0028 0B       		.uleb128 0xb
+ 1236 0029 49       		.uleb128 0x49
+ 1237 002a 13       		.uleb128 0x13
+ 1238 002b 00       		.byte	0
+ 1239 002c 00       		.byte	0
+ 1240 002d 04       		.uleb128 0x4
+ 1241 002e 24       		.uleb128 0x24
+ 1242 002f 00       		.byte	0
+ 1243 0030 0B       		.uleb128 0xb
+ 1244 0031 0B       		.uleb128 0xb
+ 1245 0032 3E       		.uleb128 0x3e
+ 1246 0033 0B       		.uleb128 0xb
+ 1247 0034 03       		.uleb128 0x3
+ 1248 0035 0E       		.uleb128 0xe
+ 1249 0036 00       		.byte	0
+ 1250 0037 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 23
+
+
+ 1251 0038 05       		.uleb128 0x5
+ 1252 0039 13       		.uleb128 0x13
+ 1253 003a 01       		.byte	0x1
+ 1254 003b 03       		.uleb128 0x3
+ 1255 003c 0E       		.uleb128 0xe
+ 1256 003d 0B       		.uleb128 0xb
+ 1257 003e 0B       		.uleb128 0xb
+ 1258 003f 3A       		.uleb128 0x3a
+ 1259 0040 0B       		.uleb128 0xb
+ 1260 0041 3B       		.uleb128 0x3b
+ 1261 0042 0B       		.uleb128 0xb
+ 1262 0043 01       		.uleb128 0x1
+ 1263 0044 13       		.uleb128 0x13
+ 1264 0045 00       		.byte	0
+ 1265 0046 00       		.byte	0
+ 1266 0047 06       		.uleb128 0x6
+ 1267 0048 0D       		.uleb128 0xd
+ 1268 0049 00       		.byte	0
+ 1269 004a 03       		.uleb128 0x3
+ 1270 004b 0E       		.uleb128 0xe
+ 1271 004c 3A       		.uleb128 0x3a
+ 1272 004d 0B       		.uleb128 0xb
+ 1273 004e 3B       		.uleb128 0x3b
+ 1274 004f 0B       		.uleb128 0xb
+ 1275 0050 49       		.uleb128 0x49
+ 1276 0051 13       		.uleb128 0x13
+ 1277 0052 38       		.uleb128 0x38
+ 1278 0053 0A       		.uleb128 0xa
+ 1279 0054 00       		.byte	0
+ 1280 0055 00       		.byte	0
+ 1281 0056 07       		.uleb128 0x7
+ 1282 0057 0D       		.uleb128 0xd
+ 1283 0058 00       		.byte	0
+ 1284 0059 03       		.uleb128 0x3
+ 1285 005a 08       		.uleb128 0x8
+ 1286 005b 3A       		.uleb128 0x3a
+ 1287 005c 0B       		.uleb128 0xb
+ 1288 005d 3B       		.uleb128 0x3b
+ 1289 005e 0B       		.uleb128 0xb
+ 1290 005f 49       		.uleb128 0x49
+ 1291 0060 13       		.uleb128 0x13
+ 1292 0061 38       		.uleb128 0x38
+ 1293 0062 0A       		.uleb128 0xa
+ 1294 0063 00       		.byte	0
+ 1295 0064 00       		.byte	0
+ 1296 0065 08       		.uleb128 0x8
+ 1297 0066 13       		.uleb128 0x13
+ 1298 0067 01       		.byte	0x1
+ 1299 0068 0B       		.uleb128 0xb
+ 1300 0069 0B       		.uleb128 0xb
+ 1301 006a 3A       		.uleb128 0x3a
+ 1302 006b 0B       		.uleb128 0xb
+ 1303 006c 3B       		.uleb128 0x3b
+ 1304 006d 0B       		.uleb128 0xb
+ 1305 006e 01       		.uleb128 0x1
+ 1306 006f 13       		.uleb128 0x13
+ 1307 0070 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 24
+
+
+ 1308 0071 00       		.byte	0
+ 1309 0072 09       		.uleb128 0x9
+ 1310 0073 0F       		.uleb128 0xf
+ 1311 0074 00       		.byte	0
+ 1312 0075 0B       		.uleb128 0xb
+ 1313 0076 0B       		.uleb128 0xb
+ 1314 0077 49       		.uleb128 0x49
+ 1315 0078 13       		.uleb128 0x13
+ 1316 0079 00       		.byte	0
+ 1317 007a 00       		.byte	0
+ 1318 007b 0A       		.uleb128 0xa
+ 1319 007c 0F       		.uleb128 0xf
+ 1320 007d 00       		.byte	0
+ 1321 007e 0B       		.uleb128 0xb
+ 1322 007f 0B       		.uleb128 0xb
+ 1323 0080 00       		.byte	0
+ 1324 0081 00       		.byte	0
+ 1325 0082 0B       		.uleb128 0xb
+ 1326 0083 35       		.uleb128 0x35
+ 1327 0084 00       		.byte	0
+ 1328 0085 49       		.uleb128 0x49
+ 1329 0086 13       		.uleb128 0x13
+ 1330 0087 00       		.byte	0
+ 1331 0088 00       		.byte	0
+ 1332 0089 0C       		.uleb128 0xc
+ 1333 008a 17       		.uleb128 0x17
+ 1334 008b 01       		.byte	0x1
+ 1335 008c 0B       		.uleb128 0xb
+ 1336 008d 0B       		.uleb128 0xb
+ 1337 008e 3A       		.uleb128 0x3a
+ 1338 008f 0B       		.uleb128 0xb
+ 1339 0090 3B       		.uleb128 0x3b
+ 1340 0091 0B       		.uleb128 0xb
+ 1341 0092 01       		.uleb128 0x1
+ 1342 0093 13       		.uleb128 0x13
+ 1343 0094 00       		.byte	0
+ 1344 0095 00       		.byte	0
+ 1345 0096 0D       		.uleb128 0xd
+ 1346 0097 0D       		.uleb128 0xd
+ 1347 0098 00       		.byte	0
+ 1348 0099 03       		.uleb128 0x3
+ 1349 009a 0E       		.uleb128 0xe
+ 1350 009b 3A       		.uleb128 0x3a
+ 1351 009c 0B       		.uleb128 0xb
+ 1352 009d 3B       		.uleb128 0x3b
+ 1353 009e 0B       		.uleb128 0xb
+ 1354 009f 49       		.uleb128 0x49
+ 1355 00a0 13       		.uleb128 0x13
+ 1356 00a1 00       		.byte	0
+ 1357 00a2 00       		.byte	0
+ 1358 00a3 0E       		.uleb128 0xe
+ 1359 00a4 26       		.uleb128 0x26
+ 1360 00a5 00       		.byte	0
+ 1361 00a6 49       		.uleb128 0x49
+ 1362 00a7 13       		.uleb128 0x13
+ 1363 00a8 00       		.byte	0
+ 1364 00a9 00       		.byte	0
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 25
+
+
+ 1365 00aa 0F       		.uleb128 0xf
+ 1366 00ab 15       		.uleb128 0x15
+ 1367 00ac 01       		.byte	0x1
+ 1368 00ad 27       		.uleb128 0x27
+ 1369 00ae 0C       		.uleb128 0xc
+ 1370 00af 49       		.uleb128 0x49
+ 1371 00b0 13       		.uleb128 0x13
+ 1372 00b1 01       		.uleb128 0x1
+ 1373 00b2 13       		.uleb128 0x13
+ 1374 00b3 00       		.byte	0
+ 1375 00b4 00       		.byte	0
+ 1376 00b5 10       		.uleb128 0x10
+ 1377 00b6 05       		.uleb128 0x5
+ 1378 00b7 00       		.byte	0
+ 1379 00b8 49       		.uleb128 0x49
+ 1380 00b9 13       		.uleb128 0x13
+ 1381 00ba 00       		.byte	0
+ 1382 00bb 00       		.byte	0
+ 1383 00bc 11       		.uleb128 0x11
+ 1384 00bd 15       		.uleb128 0x15
+ 1385 00be 00       		.byte	0
+ 1386 00bf 27       		.uleb128 0x27
+ 1387 00c0 0C       		.uleb128 0xc
+ 1388 00c1 00       		.byte	0
+ 1389 00c2 00       		.byte	0
+ 1390 00c3 12       		.uleb128 0x12
+ 1391 00c4 2E       		.uleb128 0x2e
+ 1392 00c5 01       		.byte	0x1
+ 1393 00c6 03       		.uleb128 0x3
+ 1394 00c7 0E       		.uleb128 0xe
+ 1395 00c8 3A       		.uleb128 0x3a
+ 1396 00c9 0B       		.uleb128 0xb
+ 1397 00ca 3B       		.uleb128 0x3b
+ 1398 00cb 0B       		.uleb128 0xb
+ 1399 00cc 27       		.uleb128 0x27
+ 1400 00cd 0C       		.uleb128 0xc
+ 1401 00ce 11       		.uleb128 0x11
+ 1402 00cf 01       		.uleb128 0x1
+ 1403 00d0 12       		.uleb128 0x12
+ 1404 00d1 01       		.uleb128 0x1
+ 1405 00d2 40       		.uleb128 0x40
+ 1406 00d3 06       		.uleb128 0x6
+ 1407 00d4 9742     		.uleb128 0x2117
+ 1408 00d6 0C       		.uleb128 0xc
+ 1409 00d7 01       		.uleb128 0x1
+ 1410 00d8 13       		.uleb128 0x13
+ 1411 00d9 00       		.byte	0
+ 1412 00da 00       		.byte	0
+ 1413 00db 13       		.uleb128 0x13
+ 1414 00dc 34       		.uleb128 0x34
+ 1415 00dd 00       		.byte	0
+ 1416 00de 03       		.uleb128 0x3
+ 1417 00df 08       		.uleb128 0x8
+ 1418 00e0 3A       		.uleb128 0x3a
+ 1419 00e1 0B       		.uleb128 0xb
+ 1420 00e2 3B       		.uleb128 0x3b
+ 1421 00e3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 26
+
+
+ 1422 00e4 49       		.uleb128 0x49
+ 1423 00e5 13       		.uleb128 0x13
+ 1424 00e6 02       		.uleb128 0x2
+ 1425 00e7 06       		.uleb128 0x6
+ 1426 00e8 00       		.byte	0
+ 1427 00e9 00       		.byte	0
+ 1428 00ea 14       		.uleb128 0x14
+ 1429 00eb 898201   		.uleb128 0x4109
+ 1430 00ee 01       		.byte	0x1
+ 1431 00ef 11       		.uleb128 0x11
+ 1432 00f0 01       		.uleb128 0x1
+ 1433 00f1 31       		.uleb128 0x31
+ 1434 00f2 13       		.uleb128 0x13
+ 1435 00f3 01       		.uleb128 0x1
+ 1436 00f4 13       		.uleb128 0x13
+ 1437 00f5 00       		.byte	0
+ 1438 00f6 00       		.byte	0
+ 1439 00f7 15       		.uleb128 0x15
+ 1440 00f8 8A8201   		.uleb128 0x410a
+ 1441 00fb 00       		.byte	0
+ 1442 00fc 02       		.uleb128 0x2
+ 1443 00fd 0A       		.uleb128 0xa
+ 1444 00fe 9142     		.uleb128 0x2111
+ 1445 0100 0A       		.uleb128 0xa
+ 1446 0101 00       		.byte	0
+ 1447 0102 00       		.byte	0
+ 1448 0103 16       		.uleb128 0x16
+ 1449 0104 898201   		.uleb128 0x4109
+ 1450 0107 00       		.byte	0
+ 1451 0108 11       		.uleb128 0x11
+ 1452 0109 01       		.uleb128 0x1
+ 1453 010a 31       		.uleb128 0x31
+ 1454 010b 13       		.uleb128 0x13
+ 1455 010c 00       		.byte	0
+ 1456 010d 00       		.byte	0
+ 1457 010e 17       		.uleb128 0x17
+ 1458 010f 898201   		.uleb128 0x4109
+ 1459 0112 01       		.byte	0x1
+ 1460 0113 11       		.uleb128 0x11
+ 1461 0114 01       		.uleb128 0x1
+ 1462 0115 31       		.uleb128 0x31
+ 1463 0116 13       		.uleb128 0x13
+ 1464 0117 00       		.byte	0
+ 1465 0118 00       		.byte	0
+ 1466 0119 18       		.uleb128 0x18
+ 1467 011a 2E       		.uleb128 0x2e
+ 1468 011b 01       		.byte	0x1
+ 1469 011c 03       		.uleb128 0x3
+ 1470 011d 0E       		.uleb128 0xe
+ 1471 011e 3A       		.uleb128 0x3a
+ 1472 011f 0B       		.uleb128 0xb
+ 1473 0120 3B       		.uleb128 0x3b
+ 1474 0121 0B       		.uleb128 0xb
+ 1475 0122 27       		.uleb128 0x27
+ 1476 0123 0C       		.uleb128 0xc
+ 1477 0124 49       		.uleb128 0x49
+ 1478 0125 13       		.uleb128 0x13
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 27
+
+
+ 1479 0126 11       		.uleb128 0x11
+ 1480 0127 01       		.uleb128 0x1
+ 1481 0128 12       		.uleb128 0x12
+ 1482 0129 01       		.uleb128 0x1
+ 1483 012a 40       		.uleb128 0x40
+ 1484 012b 06       		.uleb128 0x6
+ 1485 012c 9742     		.uleb128 0x2117
+ 1486 012e 0C       		.uleb128 0xc
+ 1487 012f 01       		.uleb128 0x1
+ 1488 0130 13       		.uleb128 0x13
+ 1489 0131 00       		.byte	0
+ 1490 0132 00       		.byte	0
+ 1491 0133 19       		.uleb128 0x19
+ 1492 0134 05       		.uleb128 0x5
+ 1493 0135 00       		.byte	0
+ 1494 0136 03       		.uleb128 0x3
+ 1495 0137 08       		.uleb128 0x8
+ 1496 0138 3A       		.uleb128 0x3a
+ 1497 0139 0B       		.uleb128 0xb
+ 1498 013a 3B       		.uleb128 0x3b
+ 1499 013b 0B       		.uleb128 0xb
+ 1500 013c 49       		.uleb128 0x49
+ 1501 013d 13       		.uleb128 0x13
+ 1502 013e 02       		.uleb128 0x2
+ 1503 013f 06       		.uleb128 0x6
+ 1504 0140 00       		.byte	0
+ 1505 0141 00       		.byte	0
+ 1506 0142 1A       		.uleb128 0x1a
+ 1507 0143 34       		.uleb128 0x34
+ 1508 0144 00       		.byte	0
+ 1509 0145 03       		.uleb128 0x3
+ 1510 0146 0E       		.uleb128 0xe
+ 1511 0147 3A       		.uleb128 0x3a
+ 1512 0148 0B       		.uleb128 0xb
+ 1513 0149 3B       		.uleb128 0x3b
+ 1514 014a 0B       		.uleb128 0xb
+ 1515 014b 49       		.uleb128 0x49
+ 1516 014c 13       		.uleb128 0x13
+ 1517 014d 3F       		.uleb128 0x3f
+ 1518 014e 0C       		.uleb128 0xc
+ 1519 014f 3C       		.uleb128 0x3c
+ 1520 0150 0C       		.uleb128 0xc
+ 1521 0151 00       		.byte	0
+ 1522 0152 00       		.byte	0
+ 1523 0153 1B       		.uleb128 0x1b
+ 1524 0154 01       		.uleb128 0x1
+ 1525 0155 01       		.byte	0x1
+ 1526 0156 49       		.uleb128 0x49
+ 1527 0157 13       		.uleb128 0x13
+ 1528 0158 01       		.uleb128 0x1
+ 1529 0159 13       		.uleb128 0x13
+ 1530 015a 00       		.byte	0
+ 1531 015b 00       		.byte	0
+ 1532 015c 1C       		.uleb128 0x1c
+ 1533 015d 21       		.uleb128 0x21
+ 1534 015e 00       		.byte	0
+ 1535 015f 49       		.uleb128 0x49
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 28
+
+
+ 1536 0160 13       		.uleb128 0x13
+ 1537 0161 2F       		.uleb128 0x2f
+ 1538 0162 0B       		.uleb128 0xb
+ 1539 0163 00       		.byte	0
+ 1540 0164 00       		.byte	0
+ 1541 0165 1D       		.uleb128 0x1d
+ 1542 0166 21       		.uleb128 0x21
+ 1543 0167 00       		.byte	0
+ 1544 0168 00       		.byte	0
+ 1545 0169 00       		.byte	0
+ 1546 016a 1E       		.uleb128 0x1e
+ 1547 016b 34       		.uleb128 0x34
+ 1548 016c 00       		.byte	0
+ 1549 016d 03       		.uleb128 0x3
+ 1550 016e 08       		.uleb128 0x8
+ 1551 016f 3A       		.uleb128 0x3a
+ 1552 0170 0B       		.uleb128 0xb
+ 1553 0171 3B       		.uleb128 0x3b
+ 1554 0172 0B       		.uleb128 0xb
+ 1555 0173 49       		.uleb128 0x49
+ 1556 0174 13       		.uleb128 0x13
+ 1557 0175 3F       		.uleb128 0x3f
+ 1558 0176 0C       		.uleb128 0xc
+ 1559 0177 3C       		.uleb128 0x3c
+ 1560 0178 0C       		.uleb128 0xc
+ 1561 0179 00       		.byte	0
+ 1562 017a 00       		.byte	0
+ 1563 017b 1F       		.uleb128 0x1f
+ 1564 017c 34       		.uleb128 0x34
+ 1565 017d 00       		.byte	0
+ 1566 017e 03       		.uleb128 0x3
+ 1567 017f 0E       		.uleb128 0xe
+ 1568 0180 3A       		.uleb128 0x3a
+ 1569 0181 0B       		.uleb128 0xb
+ 1570 0182 3B       		.uleb128 0x3b
+ 1571 0183 0B       		.uleb128 0xb
+ 1572 0184 49       		.uleb128 0x49
+ 1573 0185 13       		.uleb128 0x13
+ 1574 0186 3F       		.uleb128 0x3f
+ 1575 0187 0C       		.uleb128 0xc
+ 1576 0188 02       		.uleb128 0x2
+ 1577 0189 0A       		.uleb128 0xa
+ 1578 018a 00       		.byte	0
+ 1579 018b 00       		.byte	0
+ 1580 018c 20       		.uleb128 0x20
+ 1581 018d 2E       		.uleb128 0x2e
+ 1582 018e 01       		.byte	0x1
+ 1583 018f 3F       		.uleb128 0x3f
+ 1584 0190 0C       		.uleb128 0xc
+ 1585 0191 03       		.uleb128 0x3
+ 1586 0192 0E       		.uleb128 0xe
+ 1587 0193 3A       		.uleb128 0x3a
+ 1588 0194 0B       		.uleb128 0xb
+ 1589 0195 3B       		.uleb128 0x3b
+ 1590 0196 05       		.uleb128 0x5
+ 1591 0197 27       		.uleb128 0x27
+ 1592 0198 0C       		.uleb128 0xc
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 29
+
+
+ 1593 0199 49       		.uleb128 0x49
+ 1594 019a 13       		.uleb128 0x13
+ 1595 019b 3C       		.uleb128 0x3c
+ 1596 019c 0C       		.uleb128 0xc
+ 1597 019d 01       		.uleb128 0x1
+ 1598 019e 13       		.uleb128 0x13
+ 1599 019f 00       		.byte	0
+ 1600 01a0 00       		.byte	0
+ 1601 01a1 21       		.uleb128 0x21
+ 1602 01a2 2E       		.uleb128 0x2e
+ 1603 01a3 00       		.byte	0
+ 1604 01a4 3F       		.uleb128 0x3f
+ 1605 01a5 0C       		.uleb128 0xc
+ 1606 01a6 03       		.uleb128 0x3
+ 1607 01a7 0E       		.uleb128 0xe
+ 1608 01a8 3A       		.uleb128 0x3a
+ 1609 01a9 0B       		.uleb128 0xb
+ 1610 01aa 3B       		.uleb128 0x3b
+ 1611 01ab 0B       		.uleb128 0xb
+ 1612 01ac 27       		.uleb128 0x27
+ 1613 01ad 0C       		.uleb128 0xc
+ 1614 01ae 49       		.uleb128 0x49
+ 1615 01af 13       		.uleb128 0x13
+ 1616 01b0 3C       		.uleb128 0x3c
+ 1617 01b1 0C       		.uleb128 0xc
+ 1618 01b2 00       		.byte	0
+ 1619 01b3 00       		.byte	0
+ 1620 01b4 22       		.uleb128 0x22
+ 1621 01b5 2E       		.uleb128 0x2e
+ 1622 01b6 01       		.byte	0x1
+ 1623 01b7 3F       		.uleb128 0x3f
+ 1624 01b8 0C       		.uleb128 0xc
+ 1625 01b9 03       		.uleb128 0x3
+ 1626 01ba 0E       		.uleb128 0xe
+ 1627 01bb 3A       		.uleb128 0x3a
+ 1628 01bc 0B       		.uleb128 0xb
+ 1629 01bd 3B       		.uleb128 0x3b
+ 1630 01be 0B       		.uleb128 0xb
+ 1631 01bf 27       		.uleb128 0x27
+ 1632 01c0 0C       		.uleb128 0xc
+ 1633 01c1 3C       		.uleb128 0x3c
+ 1634 01c2 0C       		.uleb128 0xc
+ 1635 01c3 01       		.uleb128 0x1
+ 1636 01c4 13       		.uleb128 0x13
+ 1637 01c5 00       		.byte	0
+ 1638 01c6 00       		.byte	0
+ 1639 01c7 23       		.uleb128 0x23
+ 1640 01c8 2E       		.uleb128 0x2e
+ 1641 01c9 01       		.byte	0x1
+ 1642 01ca 3F       		.uleb128 0x3f
+ 1643 01cb 0C       		.uleb128 0xc
+ 1644 01cc 03       		.uleb128 0x3
+ 1645 01cd 0E       		.uleb128 0xe
+ 1646 01ce 3A       		.uleb128 0x3a
+ 1647 01cf 0B       		.uleb128 0xb
+ 1648 01d0 3B       		.uleb128 0x3b
+ 1649 01d1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 30
+
+
+ 1650 01d2 27       		.uleb128 0x27
+ 1651 01d3 0C       		.uleb128 0xc
+ 1652 01d4 49       		.uleb128 0x49
+ 1653 01d5 13       		.uleb128 0x13
+ 1654 01d6 3C       		.uleb128 0x3c
+ 1655 01d7 0C       		.uleb128 0xc
+ 1656 01d8 01       		.uleb128 0x1
+ 1657 01d9 13       		.uleb128 0x13
+ 1658 01da 00       		.byte	0
+ 1659 01db 00       		.byte	0
+ 1660 01dc 24       		.uleb128 0x24
+ 1661 01dd 2E       		.uleb128 0x2e
+ 1662 01de 01       		.byte	0x1
+ 1663 01df 3F       		.uleb128 0x3f
+ 1664 01e0 0C       		.uleb128 0xc
+ 1665 01e1 03       		.uleb128 0x3
+ 1666 01e2 0E       		.uleb128 0xe
+ 1667 01e3 3A       		.uleb128 0x3a
+ 1668 01e4 0B       		.uleb128 0xb
+ 1669 01e5 3B       		.uleb128 0x3b
+ 1670 01e6 0B       		.uleb128 0xb
+ 1671 01e7 27       		.uleb128 0x27
+ 1672 01e8 0C       		.uleb128 0xc
+ 1673 01e9 49       		.uleb128 0x49
+ 1674 01ea 13       		.uleb128 0x13
+ 1675 01eb 3C       		.uleb128 0x3c
+ 1676 01ec 0C       		.uleb128 0xc
+ 1677 01ed 00       		.byte	0
+ 1678 01ee 00       		.byte	0
+ 1679 01ef 00       		.byte	0
+ 1680              		.section	.debug_loc,"",%progbits
+ 1681              	.Ldebug_loc0:
+ 1682              	.LLST0:
+ 1683 0000 00000000 		.4byte	.LFB8
+ 1684 0004 02000000 		.4byte	.LCFI0
+ 1685 0008 0200     		.2byte	0x2
+ 1686 000a 7D       		.byte	0x7d
+ 1687 000b 00       		.sleb128 0
+ 1688 000c 02000000 		.4byte	.LCFI0
+ 1689 0010 0E000000 		.4byte	.LCFI1
+ 1690 0014 0200     		.2byte	0x2
+ 1691 0016 7D       		.byte	0x7d
+ 1692 0017 08       		.sleb128 8
+ 1693 0018 0E000000 		.4byte	.LCFI1
+ 1694 001c 78000000 		.4byte	.LFE8
+ 1695 0020 0200     		.2byte	0x2
+ 1696 0022 7D       		.byte	0x7d
+ 1697 0023 10       		.sleb128 16
+ 1698 0024 00000000 		.4byte	0
+ 1699 0028 00000000 		.4byte	0
+ 1700              	.LLST1:
+ 1701 002c 24000000 		.4byte	.LVL1
+ 1702 0030 2B000000 		.4byte	.LVL3-1
+ 1703 0034 0100     		.2byte	0x1
+ 1704 0036 50       		.byte	0x50
+ 1705 0037 36000000 		.4byte	.LVL5
+ 1706 003b 3D000000 		.4byte	.LVL7-1
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 31
+
+
+ 1707 003f 0100     		.2byte	0x1
+ 1708 0041 50       		.byte	0x50
+ 1709 0042 48000000 		.4byte	.LVL9
+ 1710 0046 4F000000 		.4byte	.LVL11-1
+ 1711 004a 0100     		.2byte	0x1
+ 1712 004c 50       		.byte	0x50
+ 1713 004d 00000000 		.4byte	0
+ 1714 0051 00000000 		.4byte	0
+ 1715              	.LLST2:
+ 1716 0055 26000000 		.4byte	.LVL2
+ 1717 0059 60000000 		.4byte	.LVL14
+ 1718 005d 0100     		.2byte	0x1
+ 1719 005f 54       		.byte	0x54
+ 1720 0060 00000000 		.4byte	0
+ 1721 0064 00000000 		.4byte	0
+ 1722              	.LLST3:
+ 1723 0068 00000000 		.4byte	.LFB7
+ 1724 006c 02000000 		.4byte	.LCFI2
+ 1725 0070 0200     		.2byte	0x2
+ 1726 0072 7D       		.byte	0x7d
+ 1727 0073 00       		.sleb128 0
+ 1728 0074 02000000 		.4byte	.LCFI2
+ 1729 0078 1E000000 		.4byte	.LFE7
+ 1730 007c 0200     		.2byte	0x2
+ 1731 007e 7D       		.byte	0x7d
+ 1732 007f 08       		.sleb128 8
+ 1733 0080 00000000 		.4byte	0
+ 1734 0084 00000000 		.4byte	0
+ 1735              	.LLST4:
+ 1736 0088 00000000 		.4byte	.LVL15
+ 1737 008c 09000000 		.4byte	.LVL16-1
+ 1738 0090 0100     		.2byte	0x1
+ 1739 0092 50       		.byte	0x50
+ 1740 0093 09000000 		.4byte	.LVL16-1
+ 1741 0097 1C000000 		.4byte	.LVL19
+ 1742 009b 0100     		.2byte	0x1
+ 1743 009d 54       		.byte	0x54
+ 1744 009e 1C000000 		.4byte	.LVL19
+ 1745 00a2 1E000000 		.4byte	.LFE7
+ 1746 00a6 0400     		.2byte	0x4
+ 1747 00a8 F3       		.byte	0xf3
+ 1748 00a9 01       		.uleb128 0x1
+ 1749 00aa 50       		.byte	0x50
+ 1750 00ab 9F       		.byte	0x9f
+ 1751 00ac 00000000 		.4byte	0
+ 1752 00b0 00000000 		.4byte	0
+ 1753              		.section	.debug_aranges,"",%progbits
+ 1754 0000 24000000 		.4byte	0x24
+ 1755 0004 0200     		.2byte	0x2
+ 1756 0006 00000000 		.4byte	.Ldebug_info0
+ 1757 000a 04       		.byte	0x4
+ 1758 000b 00       		.byte	0
+ 1759 000c 0000     		.2byte	0
+ 1760 000e 0000     		.2byte	0
+ 1761 0010 00000000 		.4byte	.LFB8
+ 1762 0014 78000000 		.4byte	.LFE8-.LFB8
+ 1763 0018 00000000 		.4byte	.LFB7
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 32
+
+
+ 1764 001c 1E000000 		.4byte	.LFE7-.LFB7
+ 1765 0020 00000000 		.4byte	0
+ 1766 0024 00000000 		.4byte	0
+ 1767              		.section	.debug_ranges,"",%progbits
+ 1768              	.Ldebug_ranges0:
+ 1769 0000 00000000 		.4byte	.LFB8
+ 1770 0004 78000000 		.4byte	.LFE8
+ 1771 0008 00000000 		.4byte	.LFB7
+ 1772 000c 1E000000 		.4byte	.LFE7
+ 1773 0010 00000000 		.4byte	0
+ 1774 0014 00000000 		.4byte	0
+ 1775              		.section	.debug_line,"",%progbits
+ 1776              	.Ldebug_line0:
+ 1777 0000 0C020000 		.section	.debug_str,"MS",%progbits,1
+ 1777      0200CE01 
+ 1777      00000201 
+ 1777      FB0E0D00 
+ 1777      01010101 
+ 1778              	.LASF65:
+ 1779 0000 7466756E 		.ascii	"tfunc_t\000"
+ 1779      635F7400 
+ 1780              	.LASF38:
+ 1781 0008 705F6D73 		.ascii	"p_msg\000"
+ 1781      6700
+ 1782              	.LASF2:
+ 1783 000e 73697A65 		.ascii	"size_t\000"
+ 1783      5F7400
+ 1784              	.LASF60:
+ 1785 0015 7264796D 		.ascii	"rdymsg\000"
+ 1785      736700
+ 1786              	.LASF12:
+ 1787 001c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1787      206C6F6E 
+ 1787      6720756E 
+ 1787      7369676E 
+ 1787      65642069 
+ 1788              	.LASF61:
+ 1789 0033 65786974 		.ascii	"exitcode\000"
+ 1789      636F6465 
+ 1789      00
+ 1790              	.LASF81:
+ 1791 003c 2E2E2F2E 		.ascii	"../../ChibiOS_2.6.1/test/testmsg.c\000"
+ 1791      2E2F4368 
+ 1791      6962694F 
+ 1791      535F322E 
+ 1791      362E312F 
+ 1792              	.LASF26:
+ 1793 005f 705F7072 		.ascii	"p_prio\000"
+ 1793      696F00
+ 1794              	.LASF11:
+ 1795 0066 6C6F6E67 		.ascii	"long long int\000"
+ 1795      206C6F6E 
+ 1795      6720696E 
+ 1795      7400
+ 1796              	.LASF1:
+ 1797 0074 7369676E 		.ascii	"signed char\000"
+ 1797      65642063 
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 33
+
+
+ 1797      68617200 
+ 1798              	.LASF42:
+ 1799 0080 705F6D70 		.ascii	"p_mpool\000"
+ 1799      6F6F6C00 
+ 1800              	.LASF13:
+ 1801 0088 626F6F6C 		.ascii	"bool_t\000"
+ 1801      5F7400
+ 1802              	.LASF57:
+ 1803 008f 6D5F7175 		.ascii	"m_queue\000"
+ 1803      65756500 
+ 1804              	.LASF76:
+ 1805 0097 74657374 		.ascii	"test_emit_token\000"
+ 1805      5F656D69 
+ 1805      745F746F 
+ 1805      6B656E00 
+ 1806              	.LASF18:
+ 1807 00a7 74736C69 		.ascii	"tslices_t\000"
+ 1807      6365735F 
+ 1807      7400
+ 1808              	.LASF8:
+ 1809 00b1 6C6F6E67 		.ascii	"long int\000"
+ 1809      20696E74 
+ 1809      00
+ 1810              	.LASF79:
+ 1811 00ba 63684D73 		.ascii	"chMsgSend\000"
+ 1811      6753656E 
+ 1811      6400
+ 1812              	.LASF16:
+ 1813 00c4 74737461 		.ascii	"tstate_t\000"
+ 1813      74655F74 
+ 1813      00
+ 1814              	.LASF28:
+ 1815 00cd 705F6E65 		.ascii	"p_newer\000"
+ 1815      77657200 
+ 1816              	.LASF52:
+ 1817 00d5 725F6E65 		.ascii	"r_newer\000"
+ 1817      77657200 
+ 1818              	.LASF45:
+ 1819 00dd 72656761 		.ascii	"regarm_t\000"
+ 1819      726D5F74 
+ 1819      00
+ 1820              	.LASF0:
+ 1821 00e6 756E7369 		.ascii	"unsigned int\000"
+ 1821      676E6564 
+ 1821      20696E74 
+ 1821      00
+ 1822              	.LASF10:
+ 1823 00f3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1823      20756E73 
+ 1823      69676E65 
+ 1823      6420696E 
+ 1823      7400
+ 1824              	.LASF69:
+ 1825 0105 74656172 		.ascii	"teardown\000"
+ 1825      646F776E 
+ 1825      00
+ 1826              	.LASF67:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 34
+
+
+ 1827 010e 6E616D65 		.ascii	"name\000"
+ 1827      00
+ 1828              	.LASF47:
+ 1829 0113 636F6E74 		.ascii	"context\000"
+ 1829      65787400 
+ 1830              	.LASF6:
+ 1831 011b 73686F72 		.ascii	"short unsigned int\000"
+ 1831      7420756E 
+ 1831      7369676E 
+ 1831      65642069 
+ 1831      6E7400
+ 1832              	.LASF20:
+ 1833 012e 6D73675F 		.ascii	"msg_t\000"
+ 1833      7400
+ 1834              	.LASF15:
+ 1835 0134 746D6F64 		.ascii	"tmode_t\000"
+ 1835      655F7400 
+ 1836              	.LASF44:
+ 1837 013c 54687265 		.ascii	"ThreadsList\000"
+ 1837      6164734C 
+ 1837      69737400 
+ 1838              	.LASF21:
+ 1839 0148 6576656E 		.ascii	"eventmask_t\000"
+ 1839      746D6173 
+ 1839      6B5F7400 
+ 1840              	.LASF56:
+ 1841 0154 4D757465 		.ascii	"Mutex\000"
+ 1841      7800
+ 1842              	.LASF77:
+ 1843 015a 63685468 		.ascii	"chThdCreateStatic\000"
+ 1843      64437265 
+ 1843      61746553 
+ 1843      74617469 
+ 1843      6300
+ 1844              	.LASF74:
+ 1845 016c 70617474 		.ascii	"patternmsg\000"
+ 1845      65726E6D 
+ 1845      736700
+ 1846              	.LASF48:
+ 1847 0177 73697A65 		.ascii	"sizetype\000"
+ 1847      74797065 
+ 1847      00
+ 1848              	.LASF29:
+ 1849 0180 705F6F6C 		.ascii	"p_older\000"
+ 1849      64657200 
+ 1850              	.LASF51:
+ 1851 0188 725F6374 		.ascii	"r_ctx\000"
+ 1851      7800
+ 1852              	.LASF43:
+ 1853 018e 54687265 		.ascii	"ThreadsQueue\000"
+ 1853      61647351 
+ 1853      75657565 
+ 1853      00
+ 1854              	.LASF68:
+ 1855 019b 73657475 		.ascii	"setup\000"
+ 1855      7000
+ 1856              	.LASF78:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 35
+
+
+ 1857 01a1 5F746573 		.ascii	"_test_assert_sequence\000"
+ 1857      745F6173 
+ 1857      73657274 
+ 1857      5F736571 
+ 1857      75656E63 
+ 1858              	.LASF54:
+ 1859 01b7 725F6375 		.ascii	"r_current\000"
+ 1859      7272656E 
+ 1859      7400
+ 1860              	.LASF53:
+ 1861 01c1 725F6F6C 		.ascii	"r_older\000"
+ 1861      64657200 
+ 1862              	.LASF17:
+ 1863 01c9 74726566 		.ascii	"trefs_t\000"
+ 1863      735F7400 
+ 1864              	.LASF25:
+ 1865 01d1 705F7072 		.ascii	"p_prev\000"
+ 1865      657600
+ 1866              	.LASF70:
+ 1867 01d8 65786563 		.ascii	"execute\000"
+ 1867      75746500 
+ 1868              	.LASF19:
+ 1869 01e0 74707269 		.ascii	"tprio_t\000"
+ 1869      6F5F7400 
+ 1870              	.LASF84:
+ 1871 01e8 74687265 		.ascii	"thread\000"
+ 1871      616400
+ 1872              	.LASF14:
+ 1873 01ef 5F426F6F 		.ascii	"_Bool\000"
+ 1873      6C00
+ 1874              	.LASF7:
+ 1875 01f5 696E7433 		.ascii	"int32_t\000"
+ 1875      325F7400 
+ 1876              	.LASF4:
+ 1877 01fd 756E7369 		.ascii	"unsigned char\000"
+ 1877      676E6564 
+ 1877      20636861 
+ 1877      7200
+ 1878              	.LASF40:
+ 1879 020b 705F6D74 		.ascii	"p_mtxlist\000"
+ 1879      786C6973 
+ 1879      7400
+ 1880              	.LASF5:
+ 1881 0215 73686F72 		.ascii	"short int\000"
+ 1881      7420696E 
+ 1881      7400
+ 1882              	.LASF31:
+ 1883 021f 705F7374 		.ascii	"p_state\000"
+ 1883      61746500 
+ 1884              	.LASF34:
+ 1885 0227 705F7072 		.ascii	"p_preempt\000"
+ 1885      65656D70 
+ 1885      7400
+ 1886              	.LASF72:
+ 1887 0231 74687265 		.ascii	"threads\000"
+ 1887      61647300 
+ 1888              	.LASF50:
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 36
+
+
+ 1889 0239 725F7072 		.ascii	"r_prio\000"
+ 1889      696F00
+ 1890              	.LASF73:
+ 1891 0240 74657374 		.ascii	"testmsg1\000"
+ 1891      6D736731 
+ 1891      00
+ 1892              	.LASF63:
+ 1893 0249 65776D61 		.ascii	"ewmask\000"
+ 1893      736B00
+ 1894              	.LASF24:
+ 1895 0250 705F6E65 		.ascii	"p_next\000"
+ 1895      787400
+ 1896              	.LASF32:
+ 1897 0257 705F666C 		.ascii	"p_flags\000"
+ 1897      61677300 
+ 1898              	.LASF23:
+ 1899 025f 54687265 		.ascii	"Thread\000"
+ 1899      616400
+ 1900              	.LASF75:
+ 1901 0266 63684D73 		.ascii	"chMsgRelease\000"
+ 1901      6752656C 
+ 1901      65617365 
+ 1901      00
+ 1902              	.LASF66:
+ 1903 0273 74657374 		.ascii	"testcase\000"
+ 1903      63617365 
+ 1903      00
+ 1904              	.LASF39:
+ 1905 027c 705F6570 		.ascii	"p_epending\000"
+ 1905      656E6469 
+ 1905      6E6700
+ 1906              	.LASF9:
+ 1907 0287 75696E74 		.ascii	"uint32_t\000"
+ 1907      33325F74 
+ 1907      00
+ 1908              	.LASF49:
+ 1909 0290 725F7175 		.ascii	"r_queue\000"
+ 1909      65756500 
+ 1910              	.LASF64:
+ 1911 0298 63686172 		.ascii	"char\000"
+ 1911      00
+ 1912              	.LASF59:
+ 1913 029d 6D5F6E65 		.ascii	"m_next\000"
+ 1913      787400
+ 1914              	.LASF22:
+ 1915 02a4 73797374 		.ascii	"systime_t\000"
+ 1915      696D655F 
+ 1915      7400
+ 1916              	.LASF41:
+ 1917 02ae 705F7265 		.ascii	"p_realprio\000"
+ 1917      616C7072 
+ 1917      696F00
+ 1918              	.LASF35:
+ 1919 02b9 705F7469 		.ascii	"p_time\000"
+ 1919      6D6500
+ 1920              	.LASF82:
+ 1921 02c0 433A5C73 		.ascii	"C:\\stm32f0-Discovery_Tools\\Projects\\ChibiOS_Temp"
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 37
+
+
+ 1921      746D3332 
+ 1921      66302D44 
+ 1921      6973636F 
+ 1921      76657279 
+ 1922 02f0 6C617465 		.ascii	"late\000"
+ 1922      00
+ 1923              	.LASF46:
+ 1924 02f5 696E7463 		.ascii	"intctx\000"
+ 1924      747800
+ 1925              	.LASF37:
+ 1926 02fc 705F6D73 		.ascii	"p_msgqueue\000"
+ 1926      67717565 
+ 1926      756500
+ 1927              	.LASF85:
+ 1928 0307 63684D73 		.ascii	"chMsgWait\000"
+ 1928      67576169 
+ 1928      7400
+ 1929              	.LASF33:
+ 1930 0311 705F7265 		.ascii	"p_refs\000"
+ 1930      667300
+ 1931              	.LASF55:
+ 1932 0318 52656164 		.ascii	"ReadyList\000"
+ 1932      794C6973 
+ 1932      7400
+ 1933              	.LASF71:
+ 1934 0322 726C6973 		.ascii	"rlist\000"
+ 1934      7400
+ 1935              	.LASF3:
+ 1936 0328 75696E74 		.ascii	"uint8_t\000"
+ 1936      385F7400 
+ 1937              	.LASF83:
+ 1938 0330 6D736731 		.ascii	"msg1_execute\000"
+ 1938      5F657865 
+ 1938      63757465 
+ 1938      00
+ 1939              	.LASF80:
+ 1940 033d 474E5520 		.ascii	"GNU C 4.7.4 20130913 (prerelease)\000"
+ 1940      4320342E 
+ 1940      372E3420 
+ 1940      32303133 
+ 1940      30393133 
+ 1941              	.LASF62:
+ 1942 035f 77746F62 		.ascii	"wtobjp\000"
+ 1942      6A7000
+ 1943              	.LASF30:
+ 1944 0366 705F6E61 		.ascii	"p_name\000"
+ 1944      6D6500
+ 1945              	.LASF58:
+ 1946 036d 6D5F6F77 		.ascii	"m_owner\000"
+ 1946      6E657200 
+ 1947              	.LASF27:
+ 1948 0375 705F6374 		.ascii	"p_ctx\000"
+ 1948      7800
+ 1949              	.LASF36:
+ 1950 037b 705F7761 		.ascii	"p_waiting\000"
+ 1950      6974696E 
+ 1950      6700
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 38
+
+
+ 1951              		.ident	"GCC: (GNU Tools for ARM Embedded Processors / bleeding-edge-toolchain-131005) 4.7.4 201309
+ARM GAS  C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s 			page 39
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 testmsg.c
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:18     .text.msg1_execute:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:23     .text.msg1_execute:00000000 msg1_execute
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:108    .text.msg1_execute:00000064 $d
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:122    .text.thread:00000000 thread
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:117    .text.thread:00000000 $t
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:178    .rodata.patternmsg:00000000 patternmsg
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:163    .rodata.testmsg1:00000000 testmsg1
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:160    .rodata.testmsg1:00000000 $d
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:169    .rodata.str1.4:00000000 $d
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:175    .rodata.patternmsg:00000000 $d
+                     .debug_frame:00000010 $d
+C:\Users\3130\AppData\Local\Temp\ccbyNKTe.s:116    .text.msg1_execute:00000078 $t
+
+UNDEFINED SYMBOLS
+chThdCreateStatic
+chMsgWait
+chMsgRelease
+test_emit_token
+_test_assert_sequence
+rlist
+wa
+threads
+chMsgSend

@@ -1,0 +1,6 @@
+00:42:54 **** Incremental Build of configuration Default for project ChibiOS_Template ****
+make -j4 all 
+make: Nothing to be done for `all'.
+
+00:42:57 Build Finished (took 2s.883ms)
+
