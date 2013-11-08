@@ -1,0 +1,6 @@
+<map id="geventSendEvent" name="geventSendEvent">
+<area shape="rect" id="node2" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="164,5,255,29"/>
+<area shape="rect" id="node3" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="168,53,251,77"/>
+<area shape="rect" id="node4" href="$gos_8h.html#a2c9c471ce112d0a9210a5e84d996aca7" title="Get the current semaphore count. " alt="" coords="161,101,258,125"/>
+<area shape="rect" id="node5" href="$gos_8h.html#aaedf65e9e766d053a2a9cd947f190743" title="Signal a semaphore. " alt="" coords="166,149,253,173"/>
+</map>

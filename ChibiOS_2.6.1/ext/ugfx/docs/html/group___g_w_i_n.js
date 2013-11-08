@@ -1,0 +1,28 @@
+var group___g_w_i_n =
+[
+    [ "Button", "group___button.html", "group___button" ],
+    [ "Checkbox", "group___checkbox.html", "group___checkbox" ],
+    [ "Internal", "group___internal.html", "group___internal" ],
+    [ "Console", "group___console.html", "group___console" ],
+    [ "Graph", "group___graph.html", "group___graph" ],
+    [ "Widget", "group___widget.html", "group___widget" ],
+    [ "Window", "group___window.html", "group___window" ],
+    [ "Image", "group___image.html", "group___image" ],
+    [ "Label", "group___label.html", "group___label" ],
+    [ "List", "group___list.html", "group___list" ],
+    [ "RadioButton", "group___radio_button.html", "group___radio_button" ],
+    [ "Slider", "group___slider.html", "group___slider" ],
+    [ "GWIN_NEED_WIDGET", "group___g_w_i_n.html#ga96847fc1d1fab843fccf17bad47aa1f9", null ],
+    [ "GWIN_NEED_CONSOLE", "group___g_w_i_n.html#ga54a1200a7f5a2251a0275c49062f87c0", null ],
+    [ "GWIN_NEED_GRAPH", "group___g_w_i_n.html#gac250fa3bd08851f8b3516caf9de2e474", null ],
+    [ "GWIN_NEED_BUTTON", "group___g_w_i_n.html#ga4033e8048e4f909808ac50d5a8643305", null ],
+    [ "GWIN_NEED_SLIDER", "group___g_w_i_n.html#ga8f9211775ba7b3790a502d36b37f3f03", null ],
+    [ "GWIN_NEED_CHECKBOX", "group___g_w_i_n.html#ga369e22be2a91b50f75594759c91f2774", null ],
+    [ "GWIN_NEED_IMAGE", "group___g_w_i_n.html#ga4060441a43c9715c1288796a71b5a35d", null ],
+    [ "GWIN_NEED_LABEL", "group___g_w_i_n.html#gaaa555713b8b26e90a0b4a6af411cb346", null ],
+    [ "GWIN_NEED_RADIO", "group___g_w_i_n.html#ga369c996807b21ae9c0030ea3323488c0", null ],
+    [ "GWIN_BUTTON_LAZY_RELEASE", "group___g_w_i_n.html#ga30760d8498b3b78f6788b9b05eaaeb78", null ],
+    [ "GWIN_CONSOLE_USE_FLOAT", "group___g_w_i_n.html#gabc52f0bf3e70636a5ec44ab0f180d4fb", null ],
+    [ "GWIN_CONSOLE_USE_BASESTREAM", "group___g_w_i_n.html#ga02f503e0aa12cb4c13557dcc6f575fc3", null ],
+    [ "GWIN_NEED_IMAGE_ANIMATION", "group___g_w_i_n.html#ga18dc862565c75c1b8d3f41e38cefc35e", null ]
+];

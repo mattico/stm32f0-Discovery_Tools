@@ -1,0 +1,5 @@
+<map id="gwinCheckboxDraw_CheckOnLeft" name="gwinCheckboxDraw_CheckOnLeft">
+<area shape="rect" id="node2" href="$group___g_d_i_s_p.html#ga3a33df810e35f7cc95ed429f0af43783" title="Draw a rectangular box. " alt="" coords="248,5,339,29"/>
+<area shape="rect" id="node3" href="$group___g_d_i_s_p.html#ga33311df67c49115f758c63903a014e5c" title="Fill an area with a color. " alt="" coords="252,53,335,77"/>
+<area shape="rect" id="node4" href="$group___g_d_i_s_p.html#gafa8991e3e020cee0a89683af195137fb" title="Draw a text string vertically centered within the specified box. The box background is filled with th..." alt="" coords="240,101,347,125"/>
+</map>

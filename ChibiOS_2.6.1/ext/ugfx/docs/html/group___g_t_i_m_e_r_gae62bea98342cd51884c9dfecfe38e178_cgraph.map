@@ -1,0 +1,5 @@
+<map id="gtimerJab" name="gtimerJab">
+<area shape="rect" id="node2" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="123,5,213,29"/>
+<area shape="rect" id="node3" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="127,53,209,77"/>
+<area shape="rect" id="node4" href="$gos_8h.html#aaedf65e9e766d053a2a9cd947f190743" title="Signal a semaphore. " alt="" coords="125,101,211,125"/>
+</map>

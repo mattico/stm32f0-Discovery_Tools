@@ -1,0 +1,4 @@
+<map id="gtimerStop" name="gtimerStop">
+<area shape="rect" id="node2" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="128,5,219,29"/>
+<area shape="rect" id="node3" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="132,53,215,77"/>
+</map>

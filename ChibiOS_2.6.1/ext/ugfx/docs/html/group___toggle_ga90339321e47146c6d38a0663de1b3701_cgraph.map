@@ -1,0 +1,11 @@
+<map id="ginputGetToggle" name="ginputGetToggle">
+<area shape="rect" id="node2" href="$group___g_t_i_m_e_r.html#ga1debe80bec2a14baaa7b5ef54b857bc1" title="Test if a timer is currently active. " alt="" coords="155,101,243,125"/>
+<area shape="rect" id="node3" href="$group___g_t_i_m_e_r.html#gac5391b998453315ac451780abc7ed40b" title="Set a timer going or alter its properties if it is already going. " alt="" coords="161,149,236,173"/>
+<area shape="rect" id="node4" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="311,5,401,29"/>
+<area shape="rect" id="node5" href="$gos_8h.html#aee5bfa81d284cf05bceaa54094e14377" title="Start a new thread. " alt="" coords="304,53,408,77"/>
+<area shape="rect" id="node6" href="$gos_8h.html#a3537b26f39e3389827635dcf370ab134" title="Close the thread handle. " alt="" coords="307,101,405,125"/>
+<area shape="rect" id="node7" href="$gos_8h.html#a41d570620c96ea96590535f6e91a2c50" title="Convert a given number of millseconds to a number of operating system ticks. " alt="" coords="291,149,421,173"/>
+<area shape="rect" id="node8" href="$gos_8h.html#a19830585f588833a50c6e8c81f32bc23" title="Get the current operating system tick time. " alt="" coords="309,197,403,221"/>
+<area shape="rect" id="node9" href="$gos_8h.html#aaedf65e9e766d053a2a9cd947f190743" title="Signal a semaphore. " alt="" coords="313,245,399,269"/>
+<area shape="rect" id="node10" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="315,293,397,317"/>
+</map>

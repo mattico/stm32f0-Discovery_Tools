@@ -1,0 +1,5 @@
+<map id="gfxInit" name="gfxInit">
+<area shape="rect" id="node2" href="$group___g_d_i_s_p.html#ga312d66e03a8dd80b2220cb1d231a309f" title="Clear the display to the specified color. " alt="" coords="105,5,178,29"/>
+<area shape="rect" id="node3" href="$group___t_d_i_s_p.html#gab5391e1ea6dfddb1e0289bc1d510479d" title="Clears the display. " alt="" coords="106,53,177,77"/>
+<area shape="rect" id="node4" href="$group___t_d_i_s_p.html#ga0abb87c1d6c0ceaca9cb56b1ed4ccd1c" title="Sets the cursor to it&#39;s home position ( 0, 0 ) " alt="" coords="105,101,178,125"/>
+</map>

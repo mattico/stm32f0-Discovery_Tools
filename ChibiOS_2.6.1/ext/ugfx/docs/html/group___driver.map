@@ -1,0 +1,4 @@
+<map id="Driver" name="Driver">
+<area shape="rect" id="node1" href="$group___g_a_u_d_i_n.html" title="Module to read audio inputs (under development) " alt="" coords="5,5,69,29"/>
+<area shape="rect" id="node3" href="$group___g_a_d_c.html" title="Module to abstract the very variable ADC interfaces of the underlying systems. " alt="" coords="11,53,64,77"/>
+</map>

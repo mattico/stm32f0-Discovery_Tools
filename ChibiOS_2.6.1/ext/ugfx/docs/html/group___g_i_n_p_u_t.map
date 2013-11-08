@@ -1,0 +1,6 @@
+<map id="GINPUT" name="GINPUT">
+<area shape="rect" id="node1" href="$group___dial.html" title="Dial" alt="" coords="132,5,172,29"/>
+<area shape="rect" id="node2" href="$group___toggle.html" title="Toggle" alt="" coords="125,53,179,77"/>
+<area shape="rect" id="node3" href="$group___keyboard.html" title="Keyboard" alt="" coords="118,101,186,125"/>
+<area shape="rect" id="node4" href="$group___mouse.html" title="Mouse" alt="" coords="125,149,179,173"/>
+</map>

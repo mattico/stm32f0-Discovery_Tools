@@ -1,0 +1,6 @@
+<map id="geventAttachSource" name="geventAttachSource">
+<area shape="rect" id="node2" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="173,5,264,29"/>
+<area shape="rect" id="node3" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="177,53,260,77"/>
+<area shape="rect" id="node4" href="$gos_8h.html#aaedf65e9e766d053a2a9cd947f190743" title="Signal a semaphore. " alt="" coords="175,101,262,125"/>
+<area shape="rect" id="node5" href="$gos_8h.html#ac3d1b2e8df8c9d69ddc4df6df650563a" title="Wait on a semaphore. " alt="" coords="179,149,258,173"/>
+</map>

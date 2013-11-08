@@ -1,0 +1,4 @@
+<map id="geventDetachSourceListeners" name="geventDetachSourceListeners">
+<area shape="rect" id="node2" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="219,5,309,29"/>
+<area shape="rect" id="node3" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="223,53,305,77"/>
+</map>

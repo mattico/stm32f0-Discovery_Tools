@@ -1,0 +1,19 @@
+<map id="ginputCalibrateMouse" name="ginputCalibrateMouse">
+<area shape="rect" id="node2" href="$group___g_d_i_s_p.html#ga312d66e03a8dd80b2220cb1d231a309f" title="Clear the display to the specified color. " alt="" coords="213,5,286,29"/>
+<area shape="rect" id="node3" href="$group___g_d_i_s_p.html#gad5ea140d00623763cb977acbe3b4c294" title="Release a font after use. " alt="" coords="201,53,297,77"/>
+<area shape="rect" id="node4" href="$group___g_d_i_s_p.html#ga33311df67c49115f758c63903a014e5c" title="Fill an area with a color. " alt="" coords="208,101,291,125"/>
+<area shape="rect" id="node5" href="$group___g_d_i_s_p.html#gafa8991e3e020cee0a89683af195137fb" title="Draw a text string vertically centered within the specified box. The box background is filled with th..." alt="" coords="196,149,303,173"/>
+<area shape="rect" id="node6" href="$group___g_d_i_s_p.html#ga589d5ea552fc59d62d17cdeb2fd4c408" title="Find a font and return it. " alt="" coords="202,197,297,221"/>
+<area shape="rect" id="node7" href="$group___g_d_i_s_p.html#ga2cb599195b51d3f32a738782fc1c9c80" title="Clip all drawing to the defined area. " alt="" coords="209,245,290,269"/>
+<area shape="rect" id="node8" href="$gos_8h.html#a9c25311a0069cb77efef056190c6adb4" title="Put the current thread to sleep for the specified period in milliseconds. " alt="" coords="190,293,309,317"/>
+<area shape="rect" id="node9" href="$group___g_t_i_m_e_r.html#gac5391b998453315ac451780abc7ed40b" title="Set a timer going or alter its properties if it is already going. " alt="" coords="212,389,287,413"/>
+<area shape="rect" id="node17" href="$group___g_t_i_m_e_r.html#gad0d6b97232566e6203fa900a475d0aa5" title="Stop a timer (periodic or otherwise) " alt="" coords="212,341,287,365"/>
+<area shape="rect" id="node18" href="$group___window.html#ga03754773124ae12518ed635a0f300f43" title="Get the default background color for all new GWIN windows. " alt="" coords="182,437,317,461"/>
+<area shape="rect" id="node10" href="$gos_8h.html#a64bf76af754056cb06ec673944203350" title="Enter the critical code region protected by the mutex. " alt="" coords="385,341,476,365"/>
+<area shape="rect" id="node11" href="$gos_8h.html#aee5bfa81d284cf05bceaa54094e14377" title="Start a new thread. " alt="" coords="379,437,483,461"/>
+<area shape="rect" id="node12" href="$gos_8h.html#a3537b26f39e3389827635dcf370ab134" title="Close the thread handle. " alt="" coords="381,485,480,509"/>
+<area shape="rect" id="node13" href="$gos_8h.html#a41d570620c96ea96590535f6e91a2c50" title="Convert a given number of millseconds to a number of operating system ticks. " alt="" coords="366,533,495,557"/>
+<area shape="rect" id="node14" href="$gos_8h.html#a19830585f588833a50c6e8c81f32bc23" title="Get the current operating system tick time. " alt="" coords="383,581,478,605"/>
+<area shape="rect" id="node15" href="$gos_8h.html#aaedf65e9e766d053a2a9cd947f190743" title="Signal a semaphore. " alt="" coords="387,389,474,413"/>
+<area shape="rect" id="node16" href="$gos_8h.html#a39ca335a027a51d07559e2740b22518b" title="Exit the critical code region protected by the mutex. " alt="" coords="389,293,472,317"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="GWidgetInit" name="GWidgetInit">
+<area shape="rect" id="node2" href="$struct_g_widget_style.html" title="The GWidgetStyle structure. " alt="" coords="151,244,237,313"/>
+<area shape="rect" id="node5" href="$struct_g_widget_object.html" title="The GWIN Widget structure. " alt="" coords="8,429,101,510"/>
+<area shape="rect" id="node3" href="$struct_g_color_set.html" title="The GColorSet structure. " alt="" coords="158,11,231,117"/>
+<area shape="rect" id="node4" href="$struct_g_window_init.html" title="The structure to initialise a GWIN. " alt="" coords="309,411,391,528"/>
+<area shape="rect" id="node6" href="$struct_g_window_object.html" title="A window object structure. " alt="" coords="5,208,104,349"/>
+<area shape="rect" id="node7" href="$structgwin_v_m_t.html" title="The Virtual Method Table for a GWIN window. " alt="" coords="14,5,95,123"/>
+</map>

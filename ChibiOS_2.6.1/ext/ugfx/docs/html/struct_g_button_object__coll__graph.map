@@ -1,0 +1,7 @@
+<map id="GButtonObject" name="GButtonObject">
+<area shape="rect" id="node2" href="$struct_g_widget_object.html" title="The GWIN Widget structure. " alt="" coords="65,411,159,493"/>
+<area shape="rect" id="node3" href="$struct_g_widget_style.html" title="The GWidgetStyle structure. " alt="" coords="5,244,91,313"/>
+<area shape="rect" id="node4" href="$struct_g_color_set.html" title="The GColorSet structure. " alt="" coords="11,11,84,117"/>
+<area shape="rect" id="node5" href="$struct_g_window_object.html" title="A window object structure. " alt="" coords="116,208,215,349"/>
+<area shape="rect" id="node6" href="$structgwin_v_m_t.html" title="The Virtual Method Table for a GWIN window. " alt="" coords="125,5,205,123"/>
+</map>

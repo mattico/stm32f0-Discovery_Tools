@@ -1,0 +1,4 @@
+<map id="geventEventWait" name="geventEventWait">
+<area shape="rect" id="node2" href="$gos_8h.html#a2c9c471ce112d0a9210a5e84d996aca7" title="Get the current semaphore count. " alt="" coords="158,5,255,29"/>
+<area shape="rect" id="node3" href="$gos_8h.html#ac3d1b2e8df8c9d69ddc4df6df650563a" title="Wait on a semaphore. " alt="" coords="167,53,246,77"/>
+</map>
