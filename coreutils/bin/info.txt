@@ -1,0 +1,4 @@
+GNU Coreutils
+installer date: 04.06.2009
+
+All 6 Coreutils files were borrowed from WinAVR-20090313 package. The installer was created using Wix 3.0.5217
